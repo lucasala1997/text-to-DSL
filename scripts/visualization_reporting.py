@@ -2,6 +2,7 @@ import logging
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#TODO: check and adjust to the ne files configuration
 def generate_visualizations():
     """Generates visual reports to compare model performance based on metrics like accuracy and BLEU scores.
 

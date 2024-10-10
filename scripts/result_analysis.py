@@ -3,6 +3,8 @@ import logging
 import nltk  # For BLEU score calculation
 from nltk.translate.bleu_score import sentence_bleu
 
+
+#TODO: check and adjust to the ne files configuration
 def analyze_results():
     """Analyzes the logged test results and calculates evaluation metrics.
 

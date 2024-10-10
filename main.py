@@ -4,7 +4,6 @@ from utils import load_config
 from scripts.data_validation import validate_data
 from scripts.model_parameter_config import configure_model_parameters
 from scripts.prompt_version import configure_prompt_version
-from scripts.model_deployment import deploy_model
 from scripts.model_testing import test_model
 from scripts.result_analysis import analyze_results
 from scripts.experiment_log_manager import manage_experiment_logs
@@ -20,7 +19,7 @@ logging.basicConfig(
     format=config['logging']['format']
 )
 
-def deploy_selected_model():
+def deploy_selected_model(system_prompt_version=None):
     """Handles the deployment of the selected model using the latest parameters."""
     # First, configure model parameters (including model selection)
     selected_model = configure_model_parameters()
@@ -28,7 +27,7 @@ def deploy_selected_model():
     # Proceed to deploy the model if configuration was successful
     if selected_model:
         print(f"Deploying the model: {selected_model}")
-        deploy_model(selected_model)
+        test_model(selected_model, system_prompt_version)
         logging.info(f"Model {selected_model} deployed successfully.")
 
 def run_pipeline(selected_steps):
@@ -39,18 +38,16 @@ def run_pipeline(selected_steps):
         #     logging.info('Starting data validation...')
         #     validate_data()
 
-        if 'select_model' in selected_steps:
+        if 'configure_prompt_version' in selected_steps:
+            logging.info('Updating prompt versions...')
+            prompt_version = configure_prompt_version()
+
+        if 'test_model' in selected_steps:
             print('Deploying models...')
             logging.info('Deploying models...')
-            deploy_selected_model()
+            #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
+            deploy_selected_model(prompt_version) if prompt_version else deploy_selected_model()
 
-        # if 'configure_prompt_version' in selected_steps:
-        #     logging.info('Updating prompt versions...')
-        #     configure_prompt_version()
-
-        # if 'test_model' in selected_steps:
-        #     logging.info('Testing models...')
-        #     test_model()
 
         # if 'analyze_results' in selected_steps:
         #     logging.info('Analyzing results...')
@@ -78,15 +75,14 @@ def main():
         type=str,
         nargs='+',
         default=[
-            'data_validation', 'select_model', 'configure_prompt_version',
+            'data_validation', 'configure_prompt_version', 'test_model', 
             'test_model', 'analyze_results', 'manage_experiment_logs',
             'generate_visualizations'
         ],
         help="""Specify which steps to run in the pipeline. Options include:
     data_validation             : Validates data before using it.
-    select_model                : Deploys a specified model locally or on a server.
+    test_model                : Deploys a specified model locally or on a server.
     configure_prompt_version        : Tracks and updates the versions of prompts used for testing.
-    test_model                  : Tests the deployed model's performance.
     analyze_results             : Analyzes model test results.
     manage_experiment_logs      : Manages the logs of your experiments.
     generate_visualizations     : Creates visual reports of model performance.

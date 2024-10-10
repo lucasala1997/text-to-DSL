@@ -8,7 +8,7 @@ config = load_config()
 def load_prompt_versions():
     """Load prompt versions from the JSON file located in the metadata folder."""
     try:
-        prompt_file_path = config['paths']['prompt_versions_file']
+        prompt_file_path = config['paths']['system_prompt_versions']
         with open(prompt_file_path, 'r') as file:
             prompt_versions = json.load(file)
         return prompt_versions
@@ -35,8 +35,8 @@ def configure_prompt_version():
 
     # Display available prompt versions
     print("Available prompt versions:")
-    for i, prompt_version in enumerate(prompt_versions, 1):
-        print(f"{i}. Version: {prompt_version['version']} - Prompt: {prompt_version['prompt']}")
+    for i, system_prompt_version in enumerate(prompt_versions, 1):
+        print(f"{i}. Version: {system_prompt_version['version']} - Prompt: {system_prompt_version['prompt']}")
 
     # Keep prompting the user until a valid choice is made
     while True:

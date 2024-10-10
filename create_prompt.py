@@ -7,8 +7,8 @@ from utils import load_config
 config = load_config()
 
 def append_new_prompt():
-    """Append a new prompt to the prompt_version.json file in the metadata folder."""
-    prompt_file_path = config['paths']['prompt_versions_file']
+    """Append a new system prompt to the system_prompt_version.json file in the metadata folder."""
+    prompt_file_path = config['paths']['system_prompt_versions']
 
     # Check if the file exists, create it if it doesn't
     if not os.path.exists(prompt_file_path):

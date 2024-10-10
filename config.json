@@ -4,7 +4,7 @@
       "log_directory": "logs/",
       "metadata_directory": "metadata/",
       "model_parameters_file": "metadata/model_parameters.json",
-      "prompt_versions_file": "metadata/prompt_versions.json",
+      "system_prompt_versions": "metadata/system_prompt_versions.json",
       "test_results_file": "logs/test_results.json",
       "individual_metrics_file": "logs/individual_metrics.json",
       "overall_metrics_file": "logs/overall_metrics.json",

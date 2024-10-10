@@ -1,6 +1,7 @@
 import json
 import logging
 
+#TODO: REWRITE
 def manage_experiment_logs():
     """Manages the experiment logs by recording each test run, model configurations, and prompts.
 
