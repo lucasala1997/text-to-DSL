@@ -1,0 +1,4 @@
+.env
+setup.py
+tests/
+env_ollama/

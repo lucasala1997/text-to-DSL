@@ -1,0 +1,30 @@
+{
+    "paths": {
+      "data_directory": "data/",
+      "log_directory": "logs/",
+      "metadata_directory": "metadata/",
+      "model_parameters_file": "metadata/model_parameters.json",
+      "prompt_versions_file": "metadata/prompt_versions.json",
+      "test_results_file": "logs/test_results.json",
+      "individual_metrics_file": "logs/individual_metrics.json",
+      "overall_metrics_file": "logs/overall_metrics.json",
+      "project_log_file": "logs/project.log"
+    },
+    "logging": {
+      "level": "INFO",
+      "format": "%(asctime)s:%(levelname)s:%(message)s"
+    },
+    "model_defaults": {
+      "temperature": 0.7,
+      "max_tokens": 256,
+      "top_p": 0.9,
+      "frequency_penalty": 0.0,
+      "presence_penalty": 0.0,
+      "top_k": 50
+    },
+    "retry_settings": {
+      "max_retries": 3,
+      "retry_delay": 2
+    }
+  }
+  
