@@ -11,7 +11,7 @@ config = load_config()
 MAX_RETRIES = config['retry_settings']['max_retries']
 RETRY_DELAY = config['retry_settings']['retry_delay']
 
-def load_model_config(model_name):
+def load_model_config(dataset_name, model_name):
     """
     Loads the configuration for a specified model from a configuration file.
 
@@ -22,7 +22,6 @@ def load_model_config(model_name):
         dict: A dictionary containing the model's configuration parameters.
     """
     model_config_file = config['paths']['model_parameters_file']
-    
     try:
         with open(model_config_file, 'r') as file:
             all_model_configs = json.load(file)
@@ -107,9 +106,9 @@ def test_model(model_name, system_prompt_version=None, data_type='both', example
         expected_output = example['expected_dsl_output']
         response = None
 
-        #TODO: find the model to implement
+        #TODO: find the models to implement
         #TODO: implement the function to load the right schema for each model
-        #message = set_message(model_name, prompt)
+        #message = build_message(model_name, system_prompt, prompt)
 
         #TODO: gestisci il caso del modello non local
         #TODO: chose how to manage the documentation

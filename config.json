@@ -1,6 +1,8 @@
 {
     "paths": {
       "data_directory": "data/",
+      "GIS_directory": "data/GIS/",
+      "sensors_directory": "data/sensors/",
       "log_directory": "logs/",
       "metadata_directory": "metadata/",
       "model_parameters_file": "metadata/model_parameters.json",

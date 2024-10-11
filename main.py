@@ -4,10 +4,10 @@ from utils import load_config
 from scripts.data_validation import validate_data
 from scripts.model_parameter_config import configure_model_parameters
 from scripts.prompt_version import configure_prompt_version
-from scripts.model_testing import test_model
-from scripts.result_analysis import analyze_results
-from scripts.experiment_log_manager import manage_experiment_logs
-from scripts.visualization_reporting import generate_visualizations
+# from scripts.model_testing import test_model
+# from scripts.result_analysis import analyze_results
+# from scripts.experiment_log_manager import manage_experiment_logs
+# from scripts.visualization_reporting import generate_visualizations
 
 # Load configuration
 config = load_config()
@@ -32,11 +32,13 @@ def deploy_selected_model(system_prompt_version=None):
 
 def run_pipeline(selected_steps):
     """Runs the specified steps in the Text-to-DSL project workflow."""
+
+    dataset_name = "GIS"
     try:
-        # if 'data_validation' in selected_steps:
-        #     print('Starting data validation...')
-        #     logging.info('Starting data validation...')
-        #     validate_data()
+        if 'data_validation' in selected_steps:
+            print('Starting data validation...')
+            logging.info('Starting data validation...')
+            dataset_name = validate_data()
 
         if 'configure_prompt_version' in selected_steps:
             logging.info('Updating prompt versions...')
@@ -45,8 +47,10 @@ def run_pipeline(selected_steps):
         if 'test_model' in selected_steps:
             print('Deploying models...')
             logging.info('Deploying models...')
+            print(f"dataset_name: {dataset_name}")
+
             #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
-            deploy_selected_model(prompt_version) if prompt_version else deploy_selected_model()
+            #deploy_selected_model(dataset_name, prompt_version) if prompt_version else deploy_selected_model(dataset_name)
 
 
         # if 'analyze_results' in selected_steps:
