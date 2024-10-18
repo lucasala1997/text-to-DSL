@@ -4,7 +4,9 @@ import time
 import openai
 #import ollama
 import requests
+import subprocess
 import traceback
+from datetime import datetime
 from utils import load_config
 from scripts.message_builder import build_message
 
@@ -92,19 +94,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         data_to_test.extend(real_data)
     if data_type == 'synthetic' or data_type == 'both':
         data_to_test.extend(synthetic_data)
-
-    # Load model parameters from the JSON configuration file
-    model_config = load_model_config(model_name)
-    parameters = model_config.get('parameters', {})
-
-    logging.info(f"Testing model {model_name} with {len(data_to_test)} examples and parameters: {parameters}.")
-
-    #TODO: change to requests
-    # client = OpenAI(
-    #     base_url = 'http://localhost:11434/v1',
-    #     api_key='ollama', # required, but unused
-    # )
-
+        
     #TODO: system_prompt should contain the user choice
     # system_prompt_file = config['paths']['system_prompt_versions']
     # try: 
@@ -129,7 +119,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
     #         logging.error(f"System prompt file {system_prompt_file} not found.")
     #         system_prompt = ''
 
-# Load the relevant system prompt based on the user's choice (or default to "1.0" if None)
     # Load the relevant system prompt based on the user's choice (or default to "1.0" if None)
     system_prompt_file = config['paths']['system_prompt_versions']
     system_prompt = ""
@@ -174,9 +163,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         logging.error(f"Traceback: {traceback.format_exc()}")
         print(f"Error: Grammar file for {dataset_name} dataset not found.")
         return False
-
-    logging.info(f"Using grammar: {grammar}")
-
     
     # Load few-shot examples
     few_shot_examples_file = f"data/{dataset_name}/few_shot_examples.json"
@@ -193,40 +179,98 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         logging.error(f"Traceback: {traceback.format_exc()}")
         return False
     
+
+    # Load model parameters from the JSON configuration file
+    model_config = load_model_config(model_name)
+    parameters = model_config.get('parameters', {})
+
+    logging.info(f"Testing model {model_name} with {len(data_to_test)} examples and parameters: {parameters}.")
+
+    # Initialize base URL and headers for the LLM API request
+    base_url = "http://localhost:11434/v1/chat/completions"  # Example URL for Ollama
+    headers = {
+        'Authorization': 'Bearer ollama',  # required, but unused
+        'Content-Type': 'application/json'
+    }
+
+    # Retrieve the ollama_command from the model configuration
+    ollama_model = model_config.get("ollama_command", "")
+    if not ollama_model:
+        logging.error(f"Ollama command for model {model_name} not found.")
+        return False
+
     #TODO check the logic of the loop
-    for example in data_to_test:
-        
-        
+    for example in data_to_test:     
         nl_dsl = example['input_text']
         expected_output = example['expected_dsl_output']
         response = None
 
+        #Build the input message
         message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
+        # Prepare the data payload for the API request
+        data = {
+            "model": ollama_model,  # Model name like 'llama3.1:8b'
+            "messages": [
+                {"role": "system", "content": system_prompt},  # System prompt
+                {"role": "user", "content": message}  # The message generated for the user
+            ],
+            #"max_tokens": parameters.get('max_tokens', 2048),
+            "temperature": parameters.get('temperature'),
+            #"top_p": parameters.get('top_p', 1.0), #TODO:Default = 1.0. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+            #"frequency_penalty": parameters.get('frequency_penalty', 0), #Default = 0. We do not want to penalize the repetition of the same token
+            #"presence_penalty": parameters.get('presence_penalty', 0) #Default = 0.  A positive value makes the model more likely to introduce novel tokens, encouraging the generation of new ideas or content. A value of 0 means no encouragement for novelty, allowing repetition or common tokens.
+        }
+
 
         #TODO: gestisci il caso del modello non local
         #TODO: inserisci il system prompt
         for attempt in range(MAX_RETRIES):
             try:
-                response = client.chat.completions.create(
-                    model_name=model_name,
-                    prompt=message,
-                    #TODO: see how to pass the parameters
-                    parameters=parameters
-                )
-                log_result(message, expected_output, response, success=(response == expected_output),
-                        example_id=example['example_id'], model_name=model_name,
-                        system_prompt_version='prompt_1')
-                break
+                # Send the request to the API
+                response = requests.post(base_url, headers=headers, json=data)
+
+                # Check if the request was successful
+                if response.status_code == 200:
+                    result = response.json()
+                    generated_dsl_output = result['choices'][0]['message']['content'].strip()
+                    
+                    print("______________________________________________________")
+                    print(f"response: {result}")
+                    print("______________________________________________________")
+                    print(f"generated_dsl_output: {generated_dsl_output}")
+                    print("______________________________________________________")
+
+                    # Log the result
+                    log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, success=(generated_dsl_output == expected_output))
+                    break  # Exit loop on success
+                elif response.status_code == 404:
+                    logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
+                    
+                    # Run the `ollama pull` command using subprocess to pull the model
+                    try:
+                        subprocess.run(["ollama", "pull", ollama_model], check=True)
+                        logging.info(f"Model {ollama_model} successfully pulled.")
+                    except subprocess.CalledProcessError as e:
+                        logging.error(f"Failed to pull model {ollama_model}: {e}")
+                        return False
+                else:
+                    logging.info(f"Payload sent to API: {json.dumps(data, indent=4)}")
+                    logging.error(f"Error: {response.status_code} - {response.text}")
+                    raise Exception(f"API request failed with status code {response.status_code}")
+
             except Exception as e:
                 logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{message}': {e}")
                 if attempt < MAX_RETRIES - 1:
-                    time.sleep(RETRY_DELAY)
+                    time.sleep(RETRY_DELAY)  # Retry after a delay
                 else:
-                    log_result(message, expected_output, response, success=False)
-                    logging.error(f"Maximum retries reached for model {model_name} on input '{prompt}'.")
+                    # Log the result in case of failure
+                    log_result(message, expected_output, None, example['example_id'], model_name, system_prompt_version, success=False)
+                    logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
+        
     return True
 
-def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version):
+
+def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, success):
     """Logs the result of each inference attempt with detailed information."""
     log_file = config['paths']['test_results_file']
     log_entry = {
@@ -237,10 +281,13 @@ def log_result(prompt, expected_output, response, example_id, model_name, system
         'input_text': prompt,
         'expected_dsl_output': expected_output,
         'generated_dsl_output': response,
-        'timestamp': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+        'success': success,  # Include success status
+        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
     }
     
     with open(log_file, 'a') as file:
-        json.dump(log_entry, file)
+        json.dump(log_entry, file, indent=4)  # Add indentation for better formatting
         file.write('\n')
+
+
 

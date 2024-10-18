@@ -2,19 +2,10 @@
   {
       "example_id": "example_001",
       "DSL_type": "sensors",
-      "input_text": "Calculate the sum of two numbers.",
-      "expected_dsl_output": "SUM(number1, number2)",
+      "input_text": "Create a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
+      "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
       "complexity_level": "simple",
-      "description": "A simple example of adding two numbers.",
+      "description": "An example of creating a spatial dimension with a geometry and property.",
       "synthetic_data": false
-  },
-  {
-      "example_id": "example_002",
-      "DSL_type": "sensors",
-      "input_text": "Find the maximum of three numbers.",
-      "expected_dsl_output": "MAX(number1, number2, number3)",
-      "complexity_level": "medium",
-      "description": "An example of finding the maximum value.",
-      "synthetic_data": true
   }
 ]

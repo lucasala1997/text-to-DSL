@@ -1,5 +1,3 @@
-I need you to use this grammar for a set of instructions that I will be giving you:
-
 root ::= parse
 parse ::= sentence+
 sentence ::= createStatement
