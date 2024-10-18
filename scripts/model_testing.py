@@ -4,6 +4,7 @@ import time
 import openai
 #import ollama
 import requests
+import os
 import subprocess
 import traceback
 from datetime import datetime
@@ -94,7 +95,9 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         data_to_test.extend(real_data)
     if data_type == 'synthetic' or data_type == 'both':
         data_to_test.extend(synthetic_data)
-        
+
+    
+
     #TODO: system_prompt should contain the user choice
     # system_prompt_file = config['paths']['system_prompt_versions']
     # try: 
@@ -129,7 +132,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
             if system_prompt_version:
                 # Search for the specific system prompt version
-                system_prompt = next((sp['prompt'] for sp in system_prompts if sp['version'] == system_prompt_version), "")
+                system_prompt = system_prompt_version.get('prompt', None)
                 if not system_prompt:
                     logging.warning(f"System prompt version {system_prompt_version} not found. Defaulting to version 1.0.")
             if not system_prompt:  # Load default if version is None or not found
@@ -273,6 +276,18 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, success):
     """Logs the result of each inference attempt with detailed information."""
     log_file = config['paths']['test_results_file']
+    
+    # Load existing log entries if the file exists and is not empty
+    if os.path.exists(log_file) and os.path.getsize(log_file) > 0:
+        with open(log_file, 'r') as file:
+            try:
+                log_data = json.load(file)  # Load existing entries
+            except json.JSONDecodeError:
+                log_data = []  # If the file is corrupted or empty, initialize as an empty list
+    else:
+        log_data = []  # Initialize as an empty list if no file exists or is empty
+    
+    # Create new log entry
     log_entry = {
         'test_id': f"test_run_{int(time.time())}",
         'example_id': example_id,
@@ -285,9 +300,12 @@ def log_result(prompt, expected_output, response, example_id, model_name, system
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
     }
     
-    with open(log_file, 'a') as file:
-        json.dump(log_entry, file, indent=4)  # Add indentation for better formatting
-        file.write('\n')
+    # Append the new log entry to the existing log data
+    log_data.append(log_entry)
+    
+    # Write the updated log data back to the file with proper formatting
+    with open(log_file, 'w') as file:
+        json.dump(log_data, file, indent=4)  # Write entire log data back as an array
 
 
 

@@ -1,18 +1,17 @@
-2024-10-18 17:22:32,898:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-18 17:22:32,898:INFO:Starting data validation...
-2024-10-18 17:22:33,744:INFO:Simple examples loaded successfully.
-2024-10-18 17:22:33,744:INFO:Complex examples loaded successfully.
-2024-10-18 17:22:33,761:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-18 17:22:33,761:INFO:Updating prompt versions...
-2024-10-18 17:22:34,288:INFO:Deploying models...
-2024-10-18 17:22:34,289:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-18 17:22:35,962:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-18 17:22:36,534:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-18 17:22:36,535:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-18 17:22:36,535:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
-2024-10-18 17:22:36,535:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-18 17:22:36,537:INFO:Grammar for sensors loaded successfully.
-2024-10-18 17:22:36,538:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-18 17:22:36,538:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 1 examples and parameters: {'temperature': 0.7, 'num_ctx': 128000, 'num_predict': 2024}.
-2024-10-18 17:22:49,389:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-18 17:22:49,390:INFO:Process completed successfully.
+2024-10-18 17:58:51,431:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 17:58:51,432:INFO:Starting data validation...
+2024-10-18 17:58:52,274:INFO:Simple examples loaded successfully.
+2024-10-18 17:58:52,275:INFO:Complex examples loaded successfully.
+2024-10-18 17:58:52,293:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 17:58:52,293:INFO:Updating prompt versions...
+2024-10-18 17:58:52,594:INFO:Deploying models...
+2024-10-18 17:58:52,596:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 17:58:52,859:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-18 17:58:53,758:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
+2024-10-18 17:58:53,758:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 17:58:53,759:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-18 17:58:53,759:INFO:Grammar for sensors loaded successfully.
+2024-10-18 17:58:53,759:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 17:58:53,760:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 1 examples and parameters: {'temperature': 0.7, 'num_ctx': 128000, 'num_predict': 2024}.
+2024-10-18 17:59:05,097:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
+2024-10-18 17:59:05,098:INFO:Process completed successfully.

@@ -62,6 +62,7 @@ def run_pipeline(selected_steps):
         if 'configure_prompt_version' in selected_steps:
             logging.info('Updating prompt versions...')
             prompt_version = configure_prompt_version()
+            print(f"Selected prompt version: {prompt_version}")
 
         if 'test_model' in selected_steps:
             print('Deploying models...')

@@ -1,6 +1,7 @@
 import json
 import logging
 from utils import load_config
+from datetime import datetime
 
 # Load configuration
 config = load_config()
@@ -11,6 +12,13 @@ def load_prompt_versions():
         prompt_file_path = config['paths']['system_prompt_versions']
         with open(prompt_file_path, 'r') as file:
             prompt_versions = json.load(file)
+        
+        # Optional validation to ensure correct structure
+        if not all('version' in pv and 'prompt' in pv and 'timestamp' in pv for pv in prompt_versions):
+            logging.error("Invalid prompt version format in the file.")
+            print("Error: Invalid prompt version format in the file.")
+            return []
+        
         return prompt_versions
     except FileNotFoundError:
         logging.error(f"Prompt version file {prompt_file_path} not found.")
@@ -33,10 +41,17 @@ def configure_prompt_version():
         print("No prompt versions available to configure.")
         return None
 
-    # Display available prompt versions
+    # Display available prompt versions with timestamp formatting
     print("Available prompt versions:")
     for i, system_prompt_version in enumerate(prompt_versions, 1):
-        print(f"{i}. Version: {system_prompt_version['version']} - Prompt: {system_prompt_version['prompt']}")
+        # Parsing the timestamp to a more readable format
+        timestamp_str = system_prompt_version.get('timestamp')
+        try:
+            timestamp = datetime.fromisoformat(timestamp_str).strftime('%Y-%m-%d %H:%M:%S')
+        except ValueError:
+            timestamp = "Invalid timestamp"
+        
+        print(f"{i}. Version: {system_prompt_version['version']} - Prompt: {system_prompt_version['prompt']} (Timestamp: {timestamp})")
 
     # Keep prompting the user until a valid choice is made
     while True:
@@ -50,3 +65,10 @@ def configure_prompt_version():
                 print("Invalid choice. Please enter a number corresponding to the available prompt versions.")
         except ValueError:
             print("Invalid input. Please enter a valid number.")
+
+
+# Log message example when defaulting to version 1.0
+def log_default_prompt_version(selected_version):
+    if selected_version is None:
+        logging.warning("No prompt version selected. Defaulting to version 1.0.")
+        print("No prompt version selected. Defaulting to version 1.0.")

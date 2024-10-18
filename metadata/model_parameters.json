@@ -12,6 +12,19 @@
             "num_predict": 2024
         }
     },
+    "(LOCAL_TEST) Llama3.1 (8B) quantized 4bit": {
+        "model_name": "(LOCAL_TEST) Llama3.1 (8B) quantized 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "codellama:llama3.1:8b-instruct-q4_K_M",
+        "vram_requirement": "5GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.7,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
+    },
     "Qwen 2.5-coder (7B) quantized 4bit": {
         "model_name": "Qwen 2.5-coder quantized 4bit",
         "type": "open source",
