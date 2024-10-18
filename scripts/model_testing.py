@@ -219,10 +219,12 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
             ],
             #"max_tokens": parameters.get('max_tokens', 2048),
             "temperature": parameters.get('temperature'),
-            #"top_p": parameters.get('top_p', 1.0), #TODO:Default = 1.0. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
-            #"frequency_penalty": parameters.get('frequency_penalty', 0), #Default = 0. We do not want to penalize the repetition of the same token
-            #"presence_penalty": parameters.get('presence_penalty', 0) #Default = 0.  A positive value makes the model more likely to introduce novel tokens, encouraging the generation of new ideas or content. A value of 0 means no encouragement for novelty, allowing repetition or common tokens.
-        }
+            "seed": parameters.get('seed'), # Set at 7. Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
+            "num_predict": parameters.get('num_predict'), #Default = -2. Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
+            "num_ctx": parameters.get('num_ctx'), #Default = 2048. Sets the size of the context window used to generate the next token.
+            "top_p": parameters.get('top_p'), #Default = 0.9 Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+            "top_k": parameters.get('top_k'), #Default = 40. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+     }
 
 
         #TODO: gestisci il caso del modello non local
@@ -244,7 +246,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                     print("______________________________________________________")
 
                     # Log the result
-                    log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, success=(generated_dsl_output == expected_output))
+                    log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, success=(generated_dsl_output == expected_output), parameters=parameters)
                     break  # Exit loop on success
                 elif response.status_code == 404:
                     logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
@@ -267,13 +269,13 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                     time.sleep(RETRY_DELAY)  # Retry after a delay
                 else:
                     # Log the result in case of failure
-                    log_result(message, expected_output, None, example['example_id'], model_name, system_prompt_version, success=False)
+                    log_result(message, expected_output, None, example['example_id'], model_name, system_prompt_version, success=False, parameters=parameters)
                     logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
         
     return True
 
 
-def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, success):
+def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, success, parameters=None):
     """Logs the result of each inference attempt with detailed information."""
     log_file = config['paths']['test_results_file']
     
@@ -292,6 +294,7 @@ def log_result(prompt, expected_output, response, example_id, model_name, system
         'test_id': f"test_run_{int(time.time())}",
         'example_id': example_id,
         'model_name': model_name,
+        'parameters': parameters,
         'system_prompt_version': system_prompt_version,
         'input_text': prompt,
         'expected_dsl_output': expected_output,
@@ -306,6 +309,5 @@ def log_result(prompt, expected_output, response, example_id, model_name, system
     # Write the updated log data back to the file with proper formatting
     with open(log_file, 'w') as file:
         json.dump(log_data, file, indent=4)  # Write entire log data back as an array
-
 
 

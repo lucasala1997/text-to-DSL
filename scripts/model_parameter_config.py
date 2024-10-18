@@ -24,7 +24,7 @@ def configure_model_parameters(model_name=None):
         with open(config_file, 'r') as file:
             model_configs = json.load(file)
 
-        # Filter models where "supported" is "True" (handle string or boolean)
+        # Filter models where "supported" is True
         supported_models = {model: params for model, params in model_configs.items() if str(params.get("supported")).lower() == "true"}
 
         if not supported_models:
@@ -54,25 +54,74 @@ def configure_model_parameters(model_name=None):
                     logging.error(f"Invalid input in model selection: {ve}")
                     print("Invalid input. Please enter a valid number.")
 
-        # Fields that should only be displayed (read-only)
+        # Read-only fields outside the "parameters" key
         read_only_fields = [
-            "model_name", "ollama_command", "vram_requirement", "type", "supported", "deployment_type", "num_ctx", "num_predict"
+            "model_name", "ollama_command", "vram_requirement", "type", "supported", "deployment_type"
         ]
 
-        # Display current parameters and prompt for updates only on editable fields
+        # Read-only fields inside the "parameters" key
+        parameters_read_only_fields = ["seed", "num_predict", "num_ctx"]
+
+        # Display current parameters and allow updates only on editable fields
+        model_data = supported_models[model_name]
         print(f"Current parameters for {model_name}:\n")
-        for key, value in supported_models[model_name].items():
-            if key in read_only_fields:
-                print(f"{key}: {value} (read-only)")
-            else:
-                new_value = input(f"{key} (current: {value}) [Press Enter to keep current]: ")
-                if new_value.strip():
-                    try:
-                        new_value = eval(new_value)  # Convert to correct data type if possible
-                    except (NameError, SyntaxError):
-                        logging.error(f"Error evaluating input for {key}: {new_value}")
-                        pass  # Leave as string if conversion fails
-                    supported_models[model_name][key] = new_value
+
+        # Display read-only fields (top-level)
+        for key in read_only_fields:
+            print(f"{key}: {model_data.get(key)} (read-only)")
+
+        # Display parameters (editable and read-only)
+        if "parameters" in model_data:
+            print("\nEditable and read-only parameters:\n")
+            for key, value in model_data["parameters"].items():
+                if key in parameters_read_only_fields:
+                    print(f"{key}: {value} (read-only)")
+                else:
+                    while True:  # Keep asking until a valid value is provided
+                        new_value = input(f"{key} (current: {value}) [Press Enter to keep current]: ").strip()
+
+                        # Enforce constraints for specific parameters
+                        if new_value:
+                            if key == "temperature":
+                                try:
+                                    new_value = float(new_value)
+                                    if 0 <= new_value <= 1:
+                                        model_data["parameters"][key] = new_value
+                                        break
+                                    else:
+                                        raise ValueError
+                                except ValueError:
+                                    print("Invalid value. Temperature must be between 0 and 1. Please try again.")
+                            elif key == "top_k":
+                                try:
+                                    new_value = int(new_value)
+                                    if 10 <= new_value <= 100:
+                                        model_data["parameters"][key] = new_value
+                                        break
+                                    else:
+                                        raise ValueError
+                                except ValueError:
+                                    print("Invalid value. Top_k must be an integer between 10 and 100. Please try again.")
+                            elif key == "top_p":
+                                try:
+                                    new_value = float(new_value)
+                                    if 0.5 <= new_value <= 0.95:
+                                        model_data["parameters"][key] = new_value
+                                        break
+                                    else:
+                                        raise ValueError
+                                except ValueError:
+                                    print("Invalid value. Top_p must be between 0.5 and 0.95. Please try again.")
+                            else:
+                                # For non-constrained fields, just update the value
+                                try:
+                                    new_value = eval(new_value)  # Convert to correct data type if possible
+                                except (NameError, SyntaxError):
+                                    pass  # Leave as string if conversion fails
+                                model_data["parameters"][key] = new_value
+                                break
+                        else:
+                            break  # Keep the current value if the user presses Enter
 
         # Save the updated configurations back to the JSON file
         with open(config_file, 'w') as file:
@@ -81,7 +130,7 @@ def configure_model_parameters(model_name=None):
         logging.info(f"Parameters for model {model_name} configured successfully.")
         print(f"Parameters for model {model_name} have been successfully updated.")
 
-        return supported_models[model_name]
+        return model_data
     
     except FileNotFoundError as fnfe:
         logging.error(f"Model configuration file {config_file} not found: {fnfe}")

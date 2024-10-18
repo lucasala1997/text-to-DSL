@@ -1,8 +1,40 @@
 [
     {
-        "test_id": "test_run_1729267023",
+        "test_id": "test_run_1729270474",
         "example_id": "example_001",
         "model_name": "(LOCAL_TEST) Codellama (7B) quantized 4bit",
+        "system_prompt_version": {
+            "version": "1.1",
+            "prompt": "You are a helpful assistant.",
+            "rationale": "Testing the model's ability to condense information.",
+            "timestamp": "2024-10-11T09:00:00"
+        },
+        "input_text": "Create a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\\n\\tgeometry: Geometry,\\n\\tcMun: Integer\\n) WITH PROPERTIES (cMun: Integer);",
+        "success": false,
+        "timestamp": "2024-10-18 18:54:34",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -2,
+            "num_ctx": 128000,
+            "top_k": 41,
+            "top_p": 0.9,
+            "temperature": 0.7
+        }
+    },
+    {
+        "test_id": "test_run_1729270811",
+        "example_id": "example_001",
+        "model_name": "(LOCAL_TEST) Codellama (7B) quantized 4bit",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -2,
+            "num_ctx": 128000,
+            "top_k": 41,
+            "top_p": 0.9,
+            "temperature": 0.7
+        },
         "system_prompt_version": {
             "version": "1.0",
             "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
@@ -11,56 +43,32 @@
         },
         "input_text": "Create a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
-        "generated_dsl_output": "createSpatialDimension Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun: Integer",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\\n\\tgeometry: Geometry,\\n\\tcMun: Integer\\n);",
         "success": false,
-        "timestamp": "2024-10-18 17:57:03"
+        "timestamp": "2024-10-18 19:00:11"
     },
     {
-        "test_id": "test_run_1729267049",
+        "test_id": "test_run_1729271203",
         "example_id": "example_001",
         "model_name": "(LOCAL_TEST) Codellama (7B) quantized 4bit",
-        "system_prompt_version": {
-            "version": "1.0",
-            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
-            "rationale": "Basic system prompt",
-            "timestamp": "2024-10-10T10:00:00"
+        "parameters": {
+            "seed": 7,
+            "num_predict": -2,
+            "num_ctx": 128000,
+            "top_k": 99,
+            "top_p": 0.9,
+            "temperature": 0.7
         },
-        "input_text": "Rules that need to be followed to write the code:\nroot ::= parse\nparse ::= sentence+\nsentence ::= createStatement\ncreateStatement ::= \"CREATE \" (createProduct | createRange | createDimension | createSensor)\ncreateProduct ::= \"PRODUCT \" identifier \" USING \" srid \";\\n\\n\"\ncreateRange ::= \"RANGE \" identifier \" (\\n\" rangeProperty (\",\\n\" rangeProperty)* \"\\n)\" \";\\n\\n\"\nrangeProperty ::= rangeNumber (\" TO \" rangeNumber)? \" AS \" text (\" COLOR \" hexColor)? | \" DEFAULT \" \"AS \" text (\" COLOR \" hexColor)?\nrangeNumber ::= identifier | floatNumber | intNumber | \"INFINITY\" | \"-INFINITY\"\ncreateDimension ::= createSpatialDimension | createCategoricalDimension\ncreateSpatialDimension ::= \"SPATIAL DIMENSION \" identifier \" (\\n\" \"\\tgeometry\" \":\" (type | \" Geometry\") \"\\n)\" createDimensionProperties createParentDimension? \";\\n\\n\"\ncreateCategoricalDimension ::= \"CATEGORICAL DIMENSION \" identifier \" (\\n\" \"FIELD\" \":\" identifier \")\" \";\\n\\n\"\ncreateParentDimension ::= \" WITH PARENT \" \"(\\n\" identifier (\",\\n\" identifier)* \"\\n)\"\ncreateDimensionProperties ::= \" WITH PROPERTIES \" \"(\\n\" dimPropertyDefinition (\",\\n\" dimPropertyDefinition)* \"\\n)\"\ndimPropertyDefinition ::= \"\\t\" identifier type\ncreateSensor ::= \"SENSOR \" identifier \" (\\n\" \"\\tinterval\" \": \" intNumber \",\\n\" \"\\tdatasource\" \": \" dataSource \",\\n\" \"\\tgeometry\" \":\" type \"\\n)\" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? \";\\n\\n\"\ncreateSensorProperties ::= \" WITH PROPERTIES \" \"(\\n\" sensorPropertyDefinition (\",\\n\" sensorPropertyDefinition)* \"\\n)\"\nsensorPropertyDefinition ::= \"\\t\" identifier type\ncreateSensorMeasurementData ::= \" WITH MEASUREMENT DATA \" \"(\\n\" createMeasurementProperty (\",\\n\" createMeasurementProperty)* \"\\n)\"\ncreateMeasurementProperty ::= \"\\t\" identifier type (\" UNITS \" text)? (\" ICON \" text)? (\" RANGE \" identifier)?\naddSpatialDimensionToSensor ::= \" WITH SPATIAL DIMENSIONS \" identifier \"(\\n\" \"\\t\" identifier (\",\\n\" \"\\t\" identifier)* \"\\n)\"\naddCategoricalDimensionToSensor ::= \" WITH CATEGORICAL DIMENSIONS \" \"(\\n\" \"\\t\" identifier (\" RANGE \" identifier)? (\",\\n\" \"\\t\" identifier (\" RANGE \" identifier)?)* \"\\n)\"\naddBBXToSensor ::= \" WITH BBOX \" \"(\" (\"[\")? coordinate (\"]\")? \", \" intNumber\")\"\nsrid ::= intNumber\nidentifier ::= text\ntext ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?\nquotedText ::= \"\\\"\" text \"\\\"\"\nws ::= ([ \\t\\n] ws)?\ntype ::= \" Long\" | \" Boolean\" | \" Float\" | \" Integer\" | \" Double\" | \" Localdate\" | \" String\" | \" Datetime\" | \" Linestring\" | \" Multilinestring\" | \" Polygon\" | \" Multipolygon\" | \" Point\" | \" Multipoint\"\ndataSource ::= \"postgres\" | \"elasticsearch\"\nhexColor ::= \"#\" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]\ndigit ::= [0-9]\ndigits ::= digit+\nintNumber ::= digits\nfloatNumber ::= (digits? \".\")? digits\nnegativeFloat ::= (\"-\")? floatNumber\ncoordinate ::= negativeFloat \", \" negativeFloat\n\n\n################\nExamples:\nExample 1:\nQuestion: Create a product called intecmar with an SRID of 4326.\nAnswer: CREATE PRODUCT intecmar USING 4326;\n\nExample 2:\nQuestion: Create a categorical dimension called Depth with a field called depth.\nAnswer: CREATE CATEGORICAL DIMENSION Depth (\n    field: depth\n);\n\nExample 3:\nQuestion: Create a range called MagnitudRange with the following definitions: 0-3 for surface, 4.75-5.25 for 5m, 9.75-10.25 for 10m, 14.75-15.25 for 15m and 19.75-20.25 for 20m.\nAnswer: CREATE RANGE MagnitudRange (\n    0 TO 3 AS \"surface\",\n    4.75 TO 5.25 AS \"5m\",\n    9.75 TO 10.25 AS \"10m\",\n    14.75 TO 15.25 AS \"15m\",\n    19.75 TO 20.25 AS \"20m\"\n);\n\nExample 4:\nQuestion: Create a sensor called StationObservation with a 300 interval, an elasticsearch datasource and a Point geometry. It also has several different properties called as follows, with their datatype between parenthesis: maxDepth (Float), code (String), name (String), descripcion (String), startTime (DateTime) and endTime (DateTime). It also has the following measurement data names, along with their datatypes, units, icon and range between parenthesis (note that many of them may lack the range and the icon information): temperature_ITS90 (Double, '\u00b0C', 'thermometer-low', TempRange), salinity (Double, 'PSU'), pressure (Double, 'dbar', 'speedometer'), ph (Double, 'pH', 'ph'), oxygen (Double, 'mg/l', 'gas-cylinder'), transmittance (Double, 'm'), irradiance (Double, 'W/m2'), uv_flourescence (Double, 'mg/m3'), density (Double, 'kg/m3') and conductivity (Double, 'S/m'). It also has one spatial dimension called Estuary, which includes the Estuary dimension. It also has one categorical dimension called Depth with a range called DepthRange.\nAnswer: CREATE SENSOR StationObservation (\n    interval: 300,\n    datasource: elasticsearch,\n    geometry: Point\n) WITH PROPERTIES (\n    maxDepth Float,\n    code String,\n    name String,\n    descripcion String,\n    startTime DateTime,\n    endTime DateTime\n) WITH MEASUREMENT DATA (\n    temperature_ITS90 Double UNITS \"\u00b0C\" ICON \"thermometer-low\" RANGE TempRange,\n    salinity Double UNITS \"PSU\",\n    pressure Double UNITS \"dbar\" ICON \"speedometer\",\n    ph Double UNITS \"pH\" ICON \"ph\",\n    oxygen Double UNITS \"mg/l\" ICON \"gas-cylinder\",\n    transmittance Double UNITS \"m\",\n    irradiance Double UNITS \"W/m2\",\n    uv_flourescence Double UNITS \"mg/m3\",\n    density Double UNITS \"kg/m3\",\n    conductivity Double UNITS \"S/m\"\n) WITH SPATIAL DIMENSIONS Estuary (\n    Estuary\n) WITH CATEGORICAL DIMENSIONS (\n    Depth RANGE DepthRange\n);\n\n################\nconvert the following sentence.\nCreate a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
-        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
-        "generated_dsl_output": null,
-        "success": false,
-        "timestamp": "2024-10-18 17:57:29"
-    },
-    {
-        "test_id": "test_run_1729267105",
-        "example_id": "example_001",
-        "model_name": "(LOCAL_TEST) Codellama (7B) quantized 4bit",
         "system_prompt_version": {
-            "version": "1.0",
-            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
-            "rationale": "Basic system prompt",
-            "timestamp": "2024-10-10T10:00:00"
-        },
-        "input_text": "Rules that need to be followed to write the code:\nroot ::= parse\nparse ::= sentence+\nsentence ::= createStatement\ncreateStatement ::= \"CREATE \" (createProduct | createRange | createDimension | createSensor)\ncreateProduct ::= \"PRODUCT \" identifier \" USING \" srid \";\\n\\n\"\ncreateRange ::= \"RANGE \" identifier \" (\\n\" rangeProperty (\",\\n\" rangeProperty)* \"\\n)\" \";\\n\\n\"\nrangeProperty ::= rangeNumber (\" TO \" rangeNumber)? \" AS \" text (\" COLOR \" hexColor)? | \" DEFAULT \" \"AS \" text (\" COLOR \" hexColor)?\nrangeNumber ::= identifier | floatNumber | intNumber | \"INFINITY\" | \"-INFINITY\"\ncreateDimension ::= createSpatialDimension | createCategoricalDimension\ncreateSpatialDimension ::= \"SPATIAL DIMENSION \" identifier \" (\\n\" \"\\tgeometry\" \":\" (type | \" Geometry\") \"\\n)\" createDimensionProperties createParentDimension? \";\\n\\n\"\ncreateCategoricalDimension ::= \"CATEGORICAL DIMENSION \" identifier \" (\\n\" \"FIELD\" \":\" identifier \")\" \";\\n\\n\"\ncreateParentDimension ::= \" WITH PARENT \" \"(\\n\" identifier (\",\\n\" identifier)* \"\\n)\"\ncreateDimensionProperties ::= \" WITH PROPERTIES \" \"(\\n\" dimPropertyDefinition (\",\\n\" dimPropertyDefinition)* \"\\n)\"\ndimPropertyDefinition ::= \"\\t\" identifier type\ncreateSensor ::= \"SENSOR \" identifier \" (\\n\" \"\\tinterval\" \": \" intNumber \",\\n\" \"\\tdatasource\" \": \" dataSource \",\\n\" \"\\tgeometry\" \":\" type \"\\n)\" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? \";\\n\\n\"\ncreateSensorProperties ::= \" WITH PROPERTIES \" \"(\\n\" sensorPropertyDefinition (\",\\n\" sensorPropertyDefinition)* \"\\n)\"\nsensorPropertyDefinition ::= \"\\t\" identifier type\ncreateSensorMeasurementData ::= \" WITH MEASUREMENT DATA \" \"(\\n\" createMeasurementProperty (\",\\n\" createMeasurementProperty)* \"\\n)\"\ncreateMeasurementProperty ::= \"\\t\" identifier type (\" UNITS \" text)? (\" ICON \" text)? (\" RANGE \" identifier)?\naddSpatialDimensionToSensor ::= \" WITH SPATIAL DIMENSIONS \" identifier \"(\\n\" \"\\t\" identifier (\",\\n\" \"\\t\" identifier)* \"\\n)\"\naddCategoricalDimensionToSensor ::= \" WITH CATEGORICAL DIMENSIONS \" \"(\\n\" \"\\t\" identifier (\" RANGE \" identifier)? (\",\\n\" \"\\t\" identifier (\" RANGE \" identifier)?)* \"\\n)\"\naddBBXToSensor ::= \" WITH BBOX \" \"(\" (\"[\")? coordinate (\"]\")? \", \" intNumber\")\"\nsrid ::= intNumber\nidentifier ::= text\ntext ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?\nquotedText ::= \"\\\"\" text \"\\\"\"\nws ::= ([ \\t\\n] ws)?\ntype ::= \" Long\" | \" Boolean\" | \" Float\" | \" Integer\" | \" Double\" | \" Localdate\" | \" String\" | \" Datetime\" | \" Linestring\" | \" Multilinestring\" | \" Polygon\" | \" Multipolygon\" | \" Point\" | \" Multipoint\"\ndataSource ::= \"postgres\" | \"elasticsearch\"\nhexColor ::= \"#\" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]\ndigit ::= [0-9]\ndigits ::= digit+\nintNumber ::= digits\nfloatNumber ::= (digits? \".\")? digits\nnegativeFloat ::= (\"-\")? floatNumber\ncoordinate ::= negativeFloat \", \" negativeFloat\n\n\n################\nExamples:\nExample 1:\nQuestion: Create a product called intecmar with an SRID of 4326.\nAnswer: CREATE PRODUCT intecmar USING 4326;\n\nExample 2:\nQuestion: Create a categorical dimension called Depth with a field called depth.\nAnswer: CREATE CATEGORICAL DIMENSION Depth (\n    field: depth\n);\n\nExample 3:\nQuestion: Create a range called MagnitudRange with the following definitions: 0-3 for surface, 4.75-5.25 for 5m, 9.75-10.25 for 10m, 14.75-15.25 for 15m and 19.75-20.25 for 20m.\nAnswer: CREATE RANGE MagnitudRange (\n    0 TO 3 AS \"surface\",\n    4.75 TO 5.25 AS \"5m\",\n    9.75 TO 10.25 AS \"10m\",\n    14.75 TO 15.25 AS \"15m\",\n    19.75 TO 20.25 AS \"20m\"\n);\n\nExample 4:\nQuestion: Create a sensor called StationObservation with a 300 interval, an elasticsearch datasource and a Point geometry. It also has several different properties called as follows, with their datatype between parenthesis: maxDepth (Float), code (String), name (String), descripcion (String), startTime (DateTime) and endTime (DateTime). It also has the following measurement data names, along with their datatypes, units, icon and range between parenthesis (note that many of them may lack the range and the icon information): temperature_ITS90 (Double, '\u00b0C', 'thermometer-low', TempRange), salinity (Double, 'PSU'), pressure (Double, 'dbar', 'speedometer'), ph (Double, 'pH', 'ph'), oxygen (Double, 'mg/l', 'gas-cylinder'), transmittance (Double, 'm'), irradiance (Double, 'W/m2'), uv_flourescence (Double, 'mg/m3'), density (Double, 'kg/m3') and conductivity (Double, 'S/m'). It also has one spatial dimension called Estuary, which includes the Estuary dimension. It also has one categorical dimension called Depth with a range called DepthRange.\nAnswer: CREATE SENSOR StationObservation (\n    interval: 300,\n    datasource: elasticsearch,\n    geometry: Point\n) WITH PROPERTIES (\n    maxDepth Float,\n    code String,\n    name String,\n    descripcion String,\n    startTime DateTime,\n    endTime DateTime\n) WITH MEASUREMENT DATA (\n    temperature_ITS90 Double UNITS \"\u00b0C\" ICON \"thermometer-low\" RANGE TempRange,\n    salinity Double UNITS \"PSU\",\n    pressure Double UNITS \"dbar\" ICON \"speedometer\",\n    ph Double UNITS \"pH\" ICON \"ph\",\n    oxygen Double UNITS \"mg/l\" ICON \"gas-cylinder\",\n    transmittance Double UNITS \"m\",\n    irradiance Double UNITS \"W/m2\",\n    uv_flourescence Double UNITS \"mg/m3\",\n    density Double UNITS \"kg/m3\",\n    conductivity Double UNITS \"S/m\"\n) WITH SPATIAL DIMENSIONS Estuary (\n    Estuary\n) WITH CATEGORICAL DIMENSIONS (\n    Depth RANGE DepthRange\n);\n\n################\nconvert the following sentence.\nCreate a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
-        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
-        "generated_dsl_output": null,
-        "success": false,
-        "timestamp": "2024-10-18 17:58:25"
-    },
-    {
-        "test_id": "test_run_1729267145",
-        "example_id": "example_001",
-        "model_name": "(LOCAL_TEST) Codellama (7B) quantized 4bit",
-        "system_prompt_version": {
-            "version": "1.0",
-            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
-            "rationale": "Basic system prompt",
-            "timestamp": "2024-10-10T10:00:00"
+            "version": "1.1",
+            "prompt": "You are a helpful assistant.",
+            "rationale": "Testing the model's ability to condense information.",
+            "timestamp": "2024-10-11T09:00:00"
         },
         "input_text": "Create a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
-        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\\n\\tgeometry: type,\\ncMun: Integer\\n);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\\n\\tgeometry: Geometry,\\n\\tcMun: Integer\\n) WITH PROPERTIES (cMun: Integer);",
         "success": false,
-        "timestamp": "2024-10-18 17:59:05"
+        "timestamp": "2024-10-18 19:06:43"
     }
 ]
