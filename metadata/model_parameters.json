@@ -1,157 +1,282 @@
 {
-    "GPT-J (6B)": {
-        "model_name": "GPT-J (6B)",
-        "supported": "False",
-        "vram_requirement": "24GB",
-        "precision": "full",
-        "quantization": null,
+    "Qwen 2.5-coder (7B) quantized 4bit": {
+        "model_name": "Qwen 2.5-coder quantized 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run qwen2.5-coder:7b-instruct-q4_1",
+        "vram_requirement": "5GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": 1
     },
-    "GPT-NeoX (20B)": {
-        "model_name": "GPT-NeoX (20B)",
-        "supported": "False",
-        "vram_requirement": "24GB",
-        "precision": "full",
-        "quantization": null,
+    "Qwen 2.5-coder (7B) full precision": {
+        "model_name": "Qwen 2.5-coder quantized 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run qwen2.5-coder:7b-instruct-fp16",
+        "vram_requirement": "16GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
     },
-    "CodeGen-2 (6B)": {
-        "model_name": "CodeGen-2 (6B)",
-        "supported": "False",
-        "vram_requirement": "24GB",
-        "precision": "full",
-        "quantization": null,
+    "Qwen 2.5 (32B) full precision": {
+        "model_name": "Qwen 2.5 (72B) quantized 4bit",
+        "supported": true,
+        "ollama_command": "ollama run qwen2.5:32b-instruct-fp16",
+        "vram_requirement": "66GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
     },
-    "LLaMA 3.1 (8B)": {
-        "model_name": "LLaMA 3.1 (8B)",
-        "supported": "True",
-        "ollama_command": "ollama run vanilj/llama-3-14b-instruct-v1:Q8_0",
-        "vram_requirement": "24GB",
-        "precision": "full",
-        "quantization": null,
+    "Qwen 2.5 (72B) quantized 4bit": {
+        "model_name": "Qwen 2.5 (72B) quantized 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run qwen2.5:72b-instruct-q4_K_M",
+        "vram_requirement": "47GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
     },
-    "PolyCoder": {
-        "model_name": "PolyCoder",
-        "supported": "False",
-        "vram_requirement": "24GB",
-        "precision": "full",
-        "quantization": null,
+    "Qwen 2.5 (72B) quantized 8bit": {
+        "model_name": "Qwen 2.5 (72B) quantized 8bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run qwen2.5:72b-instruct-q8_0",
+        "vram_requirement": "77GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
     },
-    "Qwen 2.5-code": {
-        "model_name": "Qwen 2.5-code",
-        "supported": "False",
-        "vram_requirement": "48GB",
-        "precision": "full",
-        "quantization": null,
+    "Codellama (7B) full precision": {
+        "model_name": "Codellama (7B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run codellama:7b-code-fp16",
+        "vram_requirement": "16GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
     },
-    "StarCoder": {
-        "model_name": "StarCoder",
-        "supported": "False",
-        "vram_requirement": "48GB",
-        "precision": "full",
-        "quantization": null,
+    "Codellama (13B) full precision": {
+        "model_name": "Codellama (13B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run codellama:13b-code-fp16",
+        "vram_requirement": "16GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
     },
-    "LLaMA 3.1 (70B quantized)": {
+    "Codellama (34B) full precision": {
+        "model_name": "Codellama (34B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run codellama:34b-code-fp16",
+        "vram_requirement": "67GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
+    },
+    "Codellama (70B) full precision": {
+        "model_name": "Codellama (70B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run codellama:34b-code-fp16",
+        "vram_requirement": "138GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
+    },
+    "LLaMA 3.1 (8B) full precision": {
+        "model_name": "LLaMA 3.1 (8B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run llama3.1:8b-instruct-fp16",
+        "vram_requirement": "16GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
+    },
+    "LLaMA 3.1 (70B) quantized 4bit": {
         "model_name": "LLaMA 3.1 (70B)",
-        "supported": "False",
-        "vram_requirement": "48GB",
-        "precision": "quantized",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run llama3.1:70b-instruct-q4_K_M",
+        "vram_requirement": "50GB",
         "quantization": "4-bit",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
     },
-    "CodeGen (16B)": {
-        "model_name": "CodeGen (16B)",
-        "supported": "False",
-        "vram_requirement": "96GB",
-        "precision": "full",
-        "quantization": null,
+    "LLaMA 3.1 (70B) quantized 8bit": {
+        "model_name": "LLaMA 3.1 (70B)",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run llama3.1:70b-instruct-q8_0",
+        "vram_requirement": "75GB",
+        "quantization": "8-bit",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
     },
-    "LLaMA-2 (70B)": {
-        "model_name": "LLaMA-2 (70B)",
-        "supported": "False",
-        "vram_requirement": "96GB",
-        "precision": "full",
-        "quantization": null,
+    "StarCoder2 (3B) full precision": {
+        "model_name": "StarCoder (3B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run starcoder2:3b-fp16",
+        "vram_requirement": "6.1GB",
         "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
+    },
+    "StarCoder2 (7B) full precision": {
+        "model_name": "StarCoder (7B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run starcoder2:7b-fp16",
+        "vram_requirement": "14GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
+    },
+    "StarCoder2 (15B) full precision": {
+        "model_name": "StarCoder (15B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run starcoder2:15b-instruct-v0.1-fp16",
+        "vram_requirement": "32GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 16000,
+            "num_predict": 2024
+        }
+    },
+    "Mistral (7B) full precision": {
+        "model_name": "Mistral (7B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "ollama run mistral:7b-instruct-fp16",
+        "vram_requirement": "16GB",
+        "deployment_type": "local",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 8000,
+            "num_predict": 2024
+        }
+    },
+    "OpenAI GPT4o": {
+        "model_name": "OpenAI GPT4o",
+        "type": "closed source",
+        "supported": true,
+        "deployment_type": "remote",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
+    },
+    "OpenAI GPT4o mini": {
+        "model_name": "OpenAI GPT4o mini",
+        "type": "closed source",
+        "supported": false,
+        "deployment_type": "remote",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 128000,
+            "num_predict": 2024
+        }
+    },
+    "Claude 3.5 sonnet": {
+        "model_name": "Claude 3.5 sonnet",
+        "type": "closed source",
+        "supported": false,
+        "deployment_type": "remote",
+        "parameters": {
+            "temperature": 0.0,
+            "num_ctx": 200000,
+            "num_predict": 2024
+        }
     },
     "PaLM (62B)": {
         "model_name": "PaLM (62B)",
-        "supported": "False",
+        "type": "open source",
+        "supported": false,
         "vram_requirement": "128GB",
-        "precision": "full",
-        "quantization": null,
-        "deployment_type": "local",
-        "temperature": 0.7,
-        "max_tokens": 256,
-        "top_p": 0.9,
-        "frequency_penalty": 0.0,
-        "presence_penalty": 0.0,
-        "top_k": 50
+        "deployment_type": "local"
+    },
+    "CodeGen (16B)": {
+        "model_name": "CodeGen (16B)",
+        "type": "open source",
+        "supported": false,
+        "vram_requirement": "96GB",
+        "deployment_type": "local"
+    },
+    "GPT-J (6B)": {
+        "model_name": "GPT-J (6B)",
+        "type": "open source",
+        "supported": false,
+        "vram_requirement": "24GB",
+        "deployment_type": "local"
+    },
+    "GPT-NeoX (20B)": {
+        "model_name": "GPT-NeoX (20B)",
+        "type": "open source",
+        "supported": false,
+        "vram_requirement": "24GB",
+        "deployment_type": "local"
+    },
+    "CodeGen-2 (6B)": {
+        "model_name": "CodeGen-2 (6B)",
+        "type": "open source",
+        "supported": false,
+        "vram_requirement": "24GB",
+        "deployment_type": "local"
+    },
+    "PolyCoder": {
+        "model_name": "PolyCoder",
+        "type": "open source",
+        "supported": false,
+        "vram_requirement": "24GB",
+        "deployment_type": "local"
     }
 }

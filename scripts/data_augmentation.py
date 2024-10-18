@@ -14,7 +14,7 @@ nlp = spacy.load("en_core_web_sm")
 # Load environment variables from the .env file
 load_dotenv()
 
-def augment_data(method='nltk'):
+def augment_data(dataset_name, method='nltk'):
     """Augments the JSON data by creating synthetic examples through specified augmentation techniques.
 
     This function generates synthetic data entries based on existing examples using one of three methods: 
@@ -29,11 +29,11 @@ def augment_data(method='nltk'):
     """
     try:
         # Load the examples
-        with open('data/simple_examples.json', 'r') as file:
+        with open(f'data/{dataset_name}/simple_examples.json', 'r') as file:
             simple_examples = json.load(file)
         logging.info('Simple examples loaded successfully for augmentation.')
 
-        with open('data/complex_examples.json', 'r') as file:
+        with open(f'data/{dataset_name}/complex_examples.json', 'r') as file:
             complex_examples = json.load(file)
         logging.info('Complex examples loaded successfully for augmentation.')
 
