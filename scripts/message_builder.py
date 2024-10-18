@@ -1,4 +1,4 @@
-def build_message(model_name, system_prompt, grammar, few_shot_examples, example):
+def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl):
     """
     Constructs a message for a language model based on the provided parameters.
 
@@ -30,9 +30,14 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, example
             message += f"Question: {ex['input_text']}\n"
             message += f"Answer: {ex['expected_dsl_output']}\n\n"
 
+    message += f"################\n"
     # Append the specific example to be processed
-    message += "Please process the following example:\n"
-    message += example
+
+    #TODO: it is needed?
+    message += "convert the following sentence.\n"
+
+    # Append the specific description of a DSL to be processed
+    message += nl_dsl
 
     print("______________Begin of the prompt________________")
     print(message)

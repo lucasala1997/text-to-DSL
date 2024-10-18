@@ -1,13 +1,13 @@
 [
     {
         "version": "1.0",
-        "prompt": "You are a helpful assistant.",
+        "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
         "rationale": "Basic system prompt",
         "timestamp": "2024-10-10T10:00:00"
     },
     {
         "version": "1.1",
-        "prompt": "You are a helpful assistant. You are tasked with generate DSL code for a given input.",
+        "prompt": "You are a helpful assistant.",
         "rationale": "Testing the model's ability to condense information.",
         "timestamp": "2024-10-11T09:00:00"
     }

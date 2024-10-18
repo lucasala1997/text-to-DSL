@@ -179,7 +179,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
     
     # Load few-shot examples
-    few_shot_examples_file = f"{dataset_name}/few_shot_examples.json"
+    few_shot_examples_file = f"data/{dataset_name}/few_shot_examples.json"
     few_shot_examples = []
 
     try:
@@ -197,11 +197,11 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
     for example in data_to_test:
         
         
-        example = example['input_text']
-        # expected_output = example['expected_dsl_output']
+        nl_dsl = example['input_text']
+        expected_output = example['expected_dsl_output']
         response = None
 
-        message = build_message(model_name, system_prompt, grammar, few_shot_examples, example)
+        message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
 
         #TODO: gestisci il caso del modello non local
         #TODO: inserisci il system prompt
@@ -213,16 +213,16 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                     #TODO: see how to pass the parameters
                     parameters=parameters
                 )
-                log_result(prompt, expected_output, response, success=(response == expected_output),
+                log_result(message, expected_output, response, success=(response == expected_output),
                         example_id=example['example_id'], model_name=model_name,
                         system_prompt_version='prompt_1')
                 break
             except Exception as e:
-                logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{message}': {e}")
                 if attempt < MAX_RETRIES - 1:
                     time.sleep(RETRY_DELAY)
                 else:
-                    log_result(prompt, expected_output, response, success=False)
+                    log_result(message, expected_output, response, success=False)
                     logging.error(f"Maximum retries reached for model {model_name} on input '{prompt}'.")
     return True
 

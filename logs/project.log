@@ -734,3 +734,648 @@ Traceback (most recent call last):
 NameError: name 'prompt' is not defined
 
 2024-10-18 12:51:18,909:INFO:Process completed successfully.
+2024-10-18 13:10:43,686:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:10:43,687:INFO:Starting data validation...
+2024-10-18 13:10:44,179:INFO:Simple examples loaded successfully.
+2024-10-18 13:10:44,180:INFO:Complex examples loaded successfully.
+2024-10-18 13:10:44,218:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:10:44,218:INFO:Updating prompt versions...
+2024-10-18 13:10:44,368:INFO:Deploying models...
+2024-10-18 13:10:44,370:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:10:44,686:ERROR:Invalid input in model selection: invalid literal for int() with base 10: ''
+2024-10-18 13:10:46,443:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:10:47,468:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:10:47,469:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:10:47,469:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:10:47,469:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:10:47,469:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:10:47,469:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:10:47,469:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:10:47,469:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:10:47,470:WARNING:Few-shot examples file sensors/few_shot_examples.json not found: [Errno 2] No such file or directory: 'sensors/few_shot_examples.json'. Continuing without few-shot examples.
+2024-10-18 13:10:47,470:ERROR:Unexpected error in __main__.deploy_selected_model: name 'prompt' is not defined
+2024-10-18 13:10:47,472:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 221, in test_model
+    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                                                                                     ^^^^^^
+NameError: name 'prompt' is not defined
+
+2024-10-18 13:10:47,472:INFO:Process completed successfully.
+2024-10-18 13:11:09,626:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:11:09,626:INFO:Starting data validation...
+2024-10-18 13:11:09,994:INFO:Simple examples loaded successfully.
+2024-10-18 13:11:09,994:INFO:Complex examples loaded successfully.
+2024-10-18 13:11:10,026:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:11:10,026:INFO:Updating prompt versions...
+2024-10-18 13:11:10,209:INFO:Deploying models...
+2024-10-18 13:11:10,211:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:11:10,526:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:11:10,863:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:11:10,864:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:11:10,864:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:11:10,864:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:11:10,864:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:11:10,864:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:11:10,865:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:11:10,865:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:11:10,865:WARNING:Few-shot examples file sensors/few_shot_examples.json not found: [Errno 2] No such file or directory: 'sensors/few_shot_examples.json'. Continuing without few-shot examples.
+2024-10-18 13:11:10,865:ERROR:Unexpected error in __main__.deploy_selected_model: name 'prompt' is not defined
+2024-10-18 13:11:10,868:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 221, in test_model
+    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                                                                                     ^^^^^^
+NameError: name 'prompt' is not defined
+
+2024-10-18 13:11:10,868:INFO:Process completed successfully.
+2024-10-18 13:11:57,764:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:11:57,764:INFO:Starting data validation...
+2024-10-18 13:11:58,312:INFO:Simple examples loaded successfully.
+2024-10-18 13:11:58,313:INFO:Complex examples loaded successfully.
+2024-10-18 13:11:58,354:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:11:58,354:INFO:Updating prompt versions...
+2024-10-18 13:11:58,517:INFO:Deploying models...
+2024-10-18 13:11:58,517:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:11:58,812:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:11:59,376:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:11:59,377:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:11:59,377:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:11:59,377:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:11:59,377:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:11:59,377:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:11:59,378:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:11:59,378:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:11:59,378:WARNING:Few-shot examples file sensors/few_shot_examples.json not found: [Errno 2] No such file or directory: 'sensors/few_shot_examples.json'. Continuing without few-shot examples.
+2024-10-18 13:11:59,378:INFO:Model Qwen 2.5-coder quantized 4bit tested successfully.
+2024-10-18 13:11:59,378:INFO:Process completed successfully.
+2024-10-18 13:12:23,444:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:12:23,445:INFO:Starting data validation...
+2024-10-18 13:12:23,905:INFO:Simple examples loaded successfully.
+2024-10-18 13:12:23,906:INFO:Complex examples loaded successfully.
+2024-10-18 13:12:23,945:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:12:23,946:INFO:Updating prompt versions...
+2024-10-18 13:12:24,114:INFO:Deploying models...
+2024-10-18 13:12:24,114:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:12:24,371:ERROR:Invalid input in model selection: invalid literal for int() with base 10: ''
+2024-10-18 13:12:24,948:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:12:25,370:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:12:25,371:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:12:25,371:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:12:25,372:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:12:25,372:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:12:25,372:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:12:25,373:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:12:25,373:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:12:25,374:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 13:12:25,374:INFO:Model Qwen 2.5-coder quantized 4bit tested successfully.
+2024-10-18 13:12:25,374:INFO:Process completed successfully.
+2024-10-18 13:12:41,469:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:12:41,469:INFO:Starting data validation...
+2024-10-18 13:12:42,042:INFO:Simple examples loaded successfully.
+2024-10-18 13:12:42,043:INFO:Complex examples loaded successfully.
+2024-10-18 13:12:42,085:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:12:42,085:INFO:Updating prompt versions...
+2024-10-18 13:12:42,303:INFO:Deploying models...
+2024-10-18 13:12:42,304:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:12:42,519:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:12:42,746:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:12:42,746:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:12:42,747:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:12:42,747:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:12:42,747:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:12:42,747:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:12:42,748:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:12:42,748:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:12:42,748:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 13:12:42,748:ERROR:Unexpected error in __main__.deploy_selected_model: name 'prompt' is not defined
+2024-10-18 13:12:42,752:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 221, in test_model
+    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                                                                                     ^^^^^^
+NameError: name 'prompt' is not defined
+
+2024-10-18 13:12:42,752:INFO:Process completed successfully.
+2024-10-18 13:13:16,704:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:13:16,704:INFO:Starting data validation...
+2024-10-18 13:13:17,957:INFO:Simple examples loaded successfully.
+2024-10-18 13:13:17,958:INFO:Complex examples loaded successfully.
+2024-10-18 13:13:18,005:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:13:18,005:INFO:Updating prompt versions...
+2024-10-18 13:13:18,226:INFO:Deploying models...
+2024-10-18 13:13:18,226:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:13:18,538:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:13:19,069:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:13:19,070:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:13:19,070:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:13:19,071:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:13:19,071:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:13:19,071:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:13:19,072:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:13:19,072:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:13:19,072:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 13:13:19,073:ERROR:Unexpected error in __main__.deploy_selected_model: name 'prompt' is not defined
+2024-10-18 13:13:19,078:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 221, in test_model
+    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                                                                                     ^^^^^^
+NameError: name 'prompt' is not defined
+
+2024-10-18 13:13:19,078:INFO:Process completed successfully.
+2024-10-18 13:16:44,104:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:16:44,105:INFO:Starting data validation...
+2024-10-18 13:16:44,646:INFO:Simple examples loaded successfully.
+2024-10-18 13:16:44,647:INFO:Complex examples loaded successfully.
+2024-10-18 13:16:44,692:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:16:44,692:INFO:Updating prompt versions...
+2024-10-18 13:16:44,956:INFO:Deploying models...
+2024-10-18 13:16:44,958:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:16:45,260:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:16:45,724:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:16:45,725:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:16:45,725:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:16:45,726:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:16:45,726:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:16:45,726:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:16:45,727:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:16:45,727:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:16:45,727:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 13:16:45,728:ERROR:Unexpected error in __main__.deploy_selected_model: name 'prompt' is not defined
+2024-10-18 13:16:45,732:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 221, in test_model
+    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                                                                                     ^^^^^^
+NameError: name 'prompt' is not defined
+
+2024-10-18 13:16:45,732:INFO:Process completed successfully.
+2024-10-18 13:22:33,302:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:22:33,303:INFO:Starting data validation...
+2024-10-18 13:22:33,842:INFO:Simple examples loaded successfully.
+2024-10-18 13:22:33,843:INFO:Complex examples loaded successfully.
+2024-10-18 13:22:33,889:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:22:33,889:INFO:Updating prompt versions...
+2024-10-18 13:22:34,119:INFO:Deploying models...
+2024-10-18 13:22:34,120:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:22:34,403:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:22:34,865:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:22:34,865:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:22:34,866:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:22:34,866:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:22:34,866:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:22:34,866:INFO:Using system prompt: You are a helpful assistant.
+2024-10-18 13:22:34,867:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:22:34,867:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:22:34,867:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 13:22:34,868:ERROR:Unexpected error in __main__.deploy_selected_model: name 'prompt' is not defined
+2024-10-18 13:22:34,871:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 221, in test_model
+    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{prompt}': {e}")
+                                                                                     ^^^^^^
+NameError: name 'prompt' is not defined
+
+2024-10-18 13:22:34,871:INFO:Process completed successfully.
+2024-10-18 13:27:04,380:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-18 13:27:04,380:INFO:Starting data validation...
+2024-10-18 13:27:05,031:INFO:Simple examples loaded successfully.
+2024-10-18 13:27:05,032:INFO:Complex examples loaded successfully.
+2024-10-18 13:27:05,078:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-18 13:27:05,079:INFO:Updating prompt versions...
+2024-10-18 13:27:05,339:INFO:Deploying models...
+2024-10-18 13:27:05,340:INFO:Available supported models: ['Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
+2024-10-18 13:27:05,625:INFO:Selected model: Qwen 2.5-coder (7B) quantized 4bit
+2024-10-18 13:27:06,113:INFO:Parameters for model Qwen 2.5-coder (7B) quantized 4bit configured successfully.
+2024-10-18 13:27:06,114:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-18 13:27:06,114:WARNING:No specific configuration found for model Qwen 2.5-coder quantized 4bit. Using default settings.
+2024-10-18 13:27:06,114:INFO:Testing model Qwen 2.5-coder quantized 4bit with 4 examples and parameters: {}.
+2024-10-18 13:27:06,115:WARNING:System prompt version {'version': '1.0', 'prompt': 'You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.', 'rationale': 'Basic system prompt', 'timestamp': '2024-10-10T10:00:00'} not found. Defaulting to version 1.0.
+2024-10-18 13:27:06,115:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-18 13:27:06,115:INFO:Grammar for sensors loaded successfully.
+2024-10-18 13:27:06,116:INFO:Using grammar: I need you to use this grammar for a set of instructions that I will be giving you:
+
+root ::= parse
+parse ::= sentence+
+sentence ::= createStatement
+createStatement ::= "CREATE " (createProduct | createRange | createDimension | createSensor)
+createProduct ::= "PRODUCT " identifier " USING " srid ";\n\n"
+createRange ::= "RANGE " identifier " (\n" rangeProperty (",\n" rangeProperty)* "\n)" ";\n\n"
+rangeProperty ::= rangeNumber (" TO " rangeNumber)? " AS " text (" COLOR " hexColor)? | " DEFAULT " "AS " text (" COLOR " hexColor)?
+rangeNumber ::= identifier | floatNumber | intNumber | "INFINITY" | "-INFINITY"
+createDimension ::= createSpatialDimension | createCategoricalDimension
+createSpatialDimension ::= "SPATIAL DIMENSION " identifier " (\n" "\tgeometry" ":" (type | " Geometry") "\n)" createDimensionProperties createParentDimension? ";\n\n"
+createCategoricalDimension ::= "CATEGORICAL DIMENSION " identifier " (\n" "FIELD" ":" identifier ")" ";\n\n"
+createParentDimension ::= " WITH PARENT " "(\n" identifier (",\n" identifier)* "\n)"
+createDimensionProperties ::= " WITH PROPERTIES " "(\n" dimPropertyDefinition (",\n" dimPropertyDefinition)* "\n)"
+dimPropertyDefinition ::= "\t" identifier type
+createSensor ::= "SENSOR " identifier " (\n" "\tinterval" ": " intNumber ",\n" "\tdatasource" ": " dataSource ",\n" "\tgeometry" ":" type "\n)" createSensorProperties createSensorMeasurementData (addSpatialDimensionToSensor)* (addCategoricalDimensionToSensor)? (addBBXToSensor)? ";\n\n"
+createSensorProperties ::= " WITH PROPERTIES " "(\n" sensorPropertyDefinition (",\n" sensorPropertyDefinition)* "\n)"
+sensorPropertyDefinition ::= "\t" identifier type
+createSensorMeasurementData ::= " WITH MEASUREMENT DATA " "(\n" createMeasurementProperty (",\n" createMeasurementProperty)* "\n)"
+createMeasurementProperty ::= "\t" identifier type (" UNITS " text)? (" ICON " text)? (" RANGE " identifier)?
+addSpatialDimensionToSensor ::= " WITH SPATIAL DIMENSIONS " identifier "(\n" "\t" identifier (",\n" "\t" identifier)* "\n)"
+addCategoricalDimensionToSensor ::= " WITH CATEGORICAL DIMENSIONS " "(\n" "\t" identifier (" RANGE " identifier)? (",\n" "\t" identifier (" RANGE " identifier)?)* "\n)"
+addBBXToSensor ::= " WITH BBOX " "(" ("[")? coordinate ("]")? ", " intNumber")"
+srid ::= intNumber
+identifier ::= text
+text ::= [a-zA-Z] [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]? [a-zA-Z]?
+quotedText ::= "\"" text "\""
+ws ::= ([ \t\n] ws)?
+type ::= " Long" | " Boolean" | " Float" | " Integer" | " Double" | " Localdate" | " String" | " Datetime" | " Linestring" | " Multilinestring" | " Polygon" | " Multipolygon" | " Point" | " Multipoint"
+dataSource ::= "postgres" | "elasticsearch"
+hexColor ::= "#" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
+digit ::= [0-9]
+digits ::= digit+
+intNumber ::= digits
+floatNumber ::= (digits? ".")? digits
+negativeFloat ::= ("-")? floatNumber
+coordinate ::= negativeFloat ", " negativeFloat
+
+2024-10-18 13:27:06,116:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-18 13:27:06,118:WARNING:Attempt 1 failed for model Qwen 2.5-coder quantized 4bit on input 'None': name 'client' is not defined
+2024-10-18 13:27:08,122:WARNING:Attempt 2 failed for model Qwen 2.5-coder quantized 4bit on input 'None': name 'client' is not defined
+2024-10-18 13:27:10,127:WARNING:Attempt 3 failed for model Qwen 2.5-coder quantized 4bit on input 'None': name 'client' is not defined
+2024-10-18 13:27:10,127:ERROR:Unexpected error in __main__.deploy_selected_model: log_result() got an unexpected keyword argument 'success'
+2024-10-18 13:27:10,132:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 210, in test_model
+    response = client.chat.completions.create(
+               ^^^^^^
+NameError: name 'client' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 41, in deploy_selected_model
+    if test_model(dataset_name, selected_model_name, system_prompt_version):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/model_testing.py", line 225, in test_model
+    log_result(message, expected_output, response, success=False)
+TypeError: log_result() got an unexpected keyword argument 'success'
+
+2024-10-18 13:27:10,132:INFO:Process completed successfully.
