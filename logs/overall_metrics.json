@@ -1,0 +1,36 @@
+{
+    "overall_exact_match_accuracy": 0.0,
+    "overall_average_bleu_score": 0.4128602311460389,
+    "detailed_metrics": {
+        "(LOCAL_TEST) Codellama (7B) quantized 4bit": [
+            {
+                "exact_match_accuracy": 0.0,
+                "average_bleu_score": 0.48017715840118913,
+                "total_examples": 12,
+                "system_prompt_version": "1.0",
+                "parameters": {
+                    "seed": 7,
+                    "num_predict": -2,
+                    "num_ctx": 128000,
+                    "top_k": 40,
+                    "top_p": 0.9,
+                    "temperature": 0.7
+                }
+            },
+            {
+                "exact_match_accuracy": 0.0,
+                "average_bleu_score": 0.21090944938058814,
+                "total_examples": 4,
+                "system_prompt_version": "1.1",
+                "parameters": {
+                    "seed": 7,
+                    "num_predict": -2,
+                    "num_ctx": 128000,
+                    "top_k": 40,
+                    "top_p": 0.9,
+                    "temperature": 0.7
+                }
+            }
+        ]
+    }
+}

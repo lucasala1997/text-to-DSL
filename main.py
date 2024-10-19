@@ -6,7 +6,7 @@ from scripts.data_validation import validate_data
 from scripts.model_parameter_config import configure_model_parameters
 from scripts.prompt_version import configure_prompt_version
 from scripts.model_testing import test_model
-# from scripts.result_analysis import analyze_results
+from scripts.result_analysis import analyze_results
 # from scripts.experiment_log_manager import manage_experiment_logs
 # from scripts.visualization_reporting import generate_visualizations
 
@@ -16,7 +16,7 @@ try:
 except Exception as e:
     logging.error(f"Error loading config in {__name__}: {e}")
     logging.error(f"Traceback: {traceback.format_exc()}")  # Log the detailed traceback
-    print(f"An unexpected error occurred while loading config: {e}")
+    (f"An unexpected error occurred while loading config: {e}")
 
 # Setup logging based on config settings (config.json)
 try:
@@ -37,7 +37,7 @@ def deploy_selected_model(dataset_name, system_prompt_version=None):
 
         if selected_model:
             selected_model_name = selected_model.get('model_name')  # Extract the model name
-            print(f"Deploying the model: {selected_model_name}")
+            print(f"\nDeploying and prompting the model: {selected_model_name}")
             if test_model(dataset_name, selected_model_name, system_prompt_version):
                 logging.info(f"Model {selected_model_name} tested successfully.")
                 print(f"Model {selected_model_name} tested successfully.")
@@ -58,33 +58,37 @@ def run_pipeline(selected_steps):
             print('Starting data validation...')
             logging.info('Starting data validation...')
             dataset_name = validate_data()
+            print('Data validated successfully.')
+            print('--------------------------')
 
         if 'configure_prompt_version' in selected_steps:
+            print('Updating prompt versions...')
             logging.info('Updating prompt versions...')
             prompt_version = configure_prompt_version()
             print(f"Selected prompt version: {prompt_version}")
+            print('--------------------------')
 
         if 'test_model' in selected_steps:
             print('Deploying models...')
             logging.info('Deploying models...')
-
             #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
             deploy_selected_model(dataset_name, prompt_version) if prompt_version else deploy_selected_model(dataset_name)
+            print('--------------------------')
 
 
-        # if 'analyze_results' in selected_steps:
-        #     logging.info('Analyzing results...')
-        #     analyze_results()
-
-        # if 'manage_experiment_logs' in selected_steps:
-        #     logging.info('Managing experiment logs...')
-        #     manage_experiment_logs()
+        if 'analyze_results' in selected_steps:
+            print('Analyzing results...')
+            logging.info('Analyzing results...')
+            analyze_results()
+            print('Analysis saved.')
+            print('--------------------------')
 
         # if 'generate_visualizations' in selected_steps:
         #     logging.info('Generating visualizations...')
         #     generate_visualizations()
 
         logging.info('Process completed successfully.')
+        print('Process completed successfully.')
 
     except Exception as e:
         logging.error(f"Unexpected error in {__name__}.run_pipeline: {e}")

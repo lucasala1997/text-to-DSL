@@ -1,6 +1,6 @@
 [
     {
-        "example_id": "example_1",
+        "example_id": "fewshot_1",
         "DSL_type": "sensors",
         "input_text": "Create a product called intecmar with an SRID of 4326.",
         "expected_dsl_output": "CREATE PRODUCT intecmar USING 4326;",
@@ -9,7 +9,7 @@
         "synthetic_data": false
     },    
     {
-        "example_id": "example_3",
+        "example_id": "fewshot_2",
         "DSL_type": "sensors",
         "input_text": "Create a categorical dimension called Depth with a field called depth.",
         "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Depth (\n    field: depth\n);",
@@ -18,7 +18,7 @@
         "synthetic_data": false
     },    
     {
-        "example_id": "example_4",
+        "example_id": "fewshot_3",
         "DSL_type": "sensors",
         "input_text": "Create a range called MagnitudRange with the following definitions: 0-3 for surface, 4.75-5.25 for 5m, 9.75-10.25 for 10m, 14.75-15.25 for 15m and 19.75-20.25 for 20m.",
         "expected_dsl_output": "CREATE RANGE MagnitudRange (\n    0 TO 3 AS \"surface\",\n    4.75 TO 5.25 AS \"5m\",\n    9.75 TO 10.25 AS \"10m\",\n    14.75 TO 15.25 AS \"15m\",\n    19.75 TO 20.25 AS \"20m\"\n);",
@@ -27,7 +27,7 @@
         "synthetic_data": false
     },
     {
-        "example_id": "example_5",
+        "example_id": "example_4",
         "DSL_type": "sensors",
         "input_text": "Create a sensor called StationObservation with a 300 interval, an elasticsearch datasource and a Point geometry. It also has several different properties called as follows, with their datatype between parenthesis: maxDepth (Float), code (String), name (String), descripcion (String), startTime (DateTime) and endTime (DateTime). It also has the following measurement data names, along with their datatypes, units, icon and range between parenthesis (note that many of them may lack the range and the icon information): temperature_ITS90 (Double, '°C', 'thermometer-low', TempRange), salinity (Double, 'PSU'), pressure (Double, 'dbar', 'speedometer'), ph (Double, 'pH', 'ph'), oxygen (Double, 'mg/l', 'gas-cylinder'), transmittance (Double, 'm'), irradiance (Double, 'W/m2'), uv_flourescence (Double, 'mg/m3'), density (Double, 'kg/m3') and conductivity (Double, 'S/m'). It also has one spatial dimension called Estuary, which includes the Estuary dimension. It also has one categorical dimension called Depth with a range called DepthRange.",
         "expected_dsl_output": "CREATE SENSOR StationObservation (\n    interval: 300,\n    datasource: elasticsearch,\n    geometry: Point\n) WITH PROPERTIES (\n    maxDepth Float,\n    code String,\n    name String,\n    descripcion String,\n    startTime DateTime,\n    endTime DateTime\n) WITH MEASUREMENT DATA (\n    temperature_ITS90 Double UNITS \"°C\" ICON \"thermometer-low\" RANGE TempRange,\n    salinity Double UNITS \"PSU\",\n    pressure Double UNITS \"dbar\" ICON \"speedometer\",\n    ph Double UNITS \"pH\" ICON \"ph\",\n    oxygen Double UNITS \"mg/l\" ICON \"gas-cylinder\",\n    transmittance Double UNITS \"m\",\n    irradiance Double UNITS \"W/m2\",\n    uv_flourescence Double UNITS \"mg/m3\",\n    density Double UNITS \"kg/m3\",\n    conductivity Double UNITS \"S/m\"\n) WITH SPATIAL DIMENSIONS Estuary (\n    Estuary\n) WITH CATEGORICAL DIMENSIONS (\n    Depth RANGE DepthRange\n);",

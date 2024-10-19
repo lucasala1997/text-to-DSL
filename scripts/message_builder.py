@@ -39,7 +39,4 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
     # Append the specific description of a DSL to be processed
     message += nl_dsl
 
-    print("______________Begin of the prompt________________")
-    print(message)
-    print("______________End of the prompt________________")
     return message

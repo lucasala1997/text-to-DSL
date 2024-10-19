@@ -64,15 +64,9 @@ def configure_model_parameters(model_name=None):
 
         # Display current parameters and allow updates only on editable fields
         model_data = supported_models[model_name]
-        print(f"Current parameters for {model_name}:\n")
-
-        # Display read-only fields (top-level)
-        for key in read_only_fields:
-            print(f"{key}: {model_data.get(key)} (read-only)")
 
         # Display parameters (editable and read-only)
         if "parameters" in model_data:
-            print("\nEditable and read-only parameters:\n")
             for key, value in model_data["parameters"].items():
                 if key in parameters_read_only_fields:
                     print(f"{key}: {value} (read-only)")
@@ -128,7 +122,6 @@ def configure_model_parameters(model_name=None):
             json.dump(model_configs, file, indent=4)
 
         logging.info(f"Parameters for model {model_name} configured successfully.")
-        print(f"Parameters for model {model_name} have been successfully updated.")
 
         return model_data
     

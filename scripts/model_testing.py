@@ -10,6 +10,7 @@ import traceback
 from datetime import datetime
 from utils import load_config
 from scripts.message_builder import build_message
+from tqdm import tqdm
 
 
 # Load configuration
@@ -151,7 +152,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         return False
 
     logging.info(f"Using system prompt: {system_prompt}")
-    print(f"Using system prompt: {system_prompt}")
 
     # Load the grammar file
     grammar_file = f"data/{dataset_name}/grammar.txt"
@@ -164,7 +164,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
     except FileNotFoundError as e:
         logging.error(f"Grammar file {grammar_file} not found: {e}")
         logging.error(f"Traceback: {traceback.format_exc()}")
-        print(f"Error: Grammar file for {dataset_name} dataset not found.")
         return False
     
     # Load few-shot examples
@@ -203,79 +202,80 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         return False
 
     #TODO check the logic of the loop
-    for example in data_to_test:     
-        nl_dsl = example['input_text']
-        expected_output = example['expected_dsl_output']
-        response = None
+    
+    # Initialize progress bar using tqdm
+    with tqdm(total=len(data_to_test), desc="Processing examples", unit="example") as pbar:
+        for example in data_to_test:     
+            nl_dsl = example['input_text']
+            expected_output = example['expected_dsl_output']
+            complexity_level = example['complexity_level']
 
-        #Build the input message
-        message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
-        # Prepare the data payload for the API request
-        data = {
-            "model": ollama_model,  # Model name like 'llama3.1:8b'
-            "messages": [
-                {"role": "system", "content": system_prompt},  # System prompt
-                {"role": "user", "content": message}  # The message generated for the user
-            ],
-            #"max_tokens": parameters.get('max_tokens', 2048),
-            "temperature": parameters.get('temperature'),
-            "seed": parameters.get('seed'), # Set at 7. Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
-            "num_predict": parameters.get('num_predict'), #Default = -2. Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
-            "num_ctx": parameters.get('num_ctx'), #Default = 2048. Sets the size of the context window used to generate the next token.
-            "top_p": parameters.get('top_p'), #Default = 0.9 Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
-            "top_k": parameters.get('top_k'), #Default = 40. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
-     }
+            response = None
 
-
-        #TODO: gestisci il caso del modello non local
-        #TODO: inserisci il system prompt
-        for attempt in range(MAX_RETRIES):
-            try:
-                # Send the request to the API
-                response = requests.post(base_url, headers=headers, json=data)
-
-                # Check if the request was successful
-                if response.status_code == 200:
-                    result = response.json()
-                    generated_dsl_output = result['choices'][0]['message']['content'].strip()
-                    
-                    print("______________________________________________________")
-                    print(f"response: {result}")
-                    print("______________________________________________________")
-                    print(f"generated_dsl_output: {generated_dsl_output}")
-                    print("______________________________________________________")
-
-                    # Log the result
-                    log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, success=(generated_dsl_output == expected_output), parameters=parameters)
-                    break  # Exit loop on success
-                elif response.status_code == 404:
-                    logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
-                    
-                    # Run the `ollama pull` command using subprocess to pull the model
-                    try:
-                        subprocess.run(["ollama", "pull", ollama_model], check=True)
-                        logging.info(f"Model {ollama_model} successfully pulled.")
-                    except subprocess.CalledProcessError as e:
-                        logging.error(f"Failed to pull model {ollama_model}: {e}")
-                        return False
-                else:
-                    logging.info(f"Payload sent to API: {json.dumps(data, indent=4)}")
-                    logging.error(f"Error: {response.status_code} - {response.text}")
-                    raise Exception(f"API request failed with status code {response.status_code}")
-
-            except Exception as e:
-                logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{message}': {e}")
-                if attempt < MAX_RETRIES - 1:
-                    time.sleep(RETRY_DELAY)  # Retry after a delay
-                else:
-                    # Log the result in case of failure
-                    log_result(message, expected_output, None, example['example_id'], model_name, system_prompt_version, success=False, parameters=parameters)
-                    logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
-        
-    return True
+            #Build the input message
+            message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
+            # Prepare the data payload for the API request
+            data = {
+                "model": ollama_model,  # Model name like 'llama3.1:8b'
+                "messages": [
+                    {"role": "system", "content": system_prompt},  # System prompt
+                    {"role": "user", "content": message}  # The message generated for the user
+                ],
+                #"max_tokens": parameters.get('max_tokens', 2048),
+                "temperature": parameters.get('temperature'),
+                "seed": parameters.get('seed'), # Set at 7. Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
+                "num_predict": parameters.get('num_predict'), #Default = -2. Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
+                "num_ctx": parameters.get('num_ctx'), #Default = 2048. Sets the size of the context window used to generate the next token.
+                "top_p": parameters.get('top_p'), #Default = 0.9 Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+                "top_k": parameters.get('top_k'), #Default = 40. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+            }
 
 
-def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, success, parameters=None):
+            #TODO: gestisci il caso del modello non local
+            #TODO: inserisci il system prompt
+            for attempt in range(MAX_RETRIES):
+                try:
+                    # Send the request to the API
+                    response = requests.post(base_url, headers=headers, json=data)
+
+                    # Check if the request was successful
+                    if response.status_code == 200:
+                        result = response.json()
+                        generated_dsl_output = result['choices'][0]['message']['content'].strip()
+                        
+                        # Log the result
+                        log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=(generated_dsl_output == expected_output), parameters=parameters)
+                        break  # Exit loop on success
+                    elif response.status_code == 404:
+                        logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
+                        
+                        # Run the `ollama pull` command using subprocess to pull the model
+                        try:
+                            subprocess.run(["ollama", "pull", ollama_model], check=True)
+                            logging.info(f"Model {ollama_model} successfully pulled.")
+                        except subprocess.CalledProcessError as e:
+                            logging.error(f"Failed to pull model {ollama_model}: {e}")
+                            return False
+                    else:
+                        logging.info(f"Payload sent to API: {json.dumps(data, indent=4)}")
+                        logging.error(f"Error: {response.status_code} - {response.text}")
+                        raise Exception(f"API request failed with status code {response.status_code}")
+
+                except Exception as e:
+                    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{message}': {e}")
+                    if attempt < MAX_RETRIES - 1:
+                        time.sleep(RETRY_DELAY)  # Retry after a delay
+                    else:
+                        # Log the result in case of failure
+                        log_result(message, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, success=False, parameters=parameters)
+                        logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
+            
+            pbar.update(1)  # Update progress bar after each example is processed
+
+        return True
+
+
+def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, complexity_level, success, parameters=None):
     """Logs the result of each inference attempt with detailed information."""
     log_file = config['paths']['test_results_file']
     
@@ -299,6 +299,7 @@ def log_result(prompt, expected_output, response, example_id, model_name, system
         'input_text': prompt,
         'expected_dsl_output': expected_output,
         'generated_dsl_output': response,
+        'complexity_level': complexity_level,
         'success': success,  # Include success status
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
     }
