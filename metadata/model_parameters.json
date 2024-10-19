@@ -9,7 +9,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 16384,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.7
@@ -25,7 +25,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 132000,
             "top_k": 41,
             "top_p": 0.9,
             "temperature": 0.7
@@ -41,7 +41,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 32768,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -57,7 +57,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 32768,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -184,7 +184,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 132000,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -201,7 +201,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 132000,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -218,7 +218,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 128000,
+            "num_ctx": 132000,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -234,7 +234,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 16000,
+            "num_ctx": 8192,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -250,7 +250,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 16000,
+            "num_ctx": 8192,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
@@ -266,7 +266,7 @@
         "parameters": {
             "seed": 7,
             "num_predict": -2,
-            "num_ctx": 16000,
+            "num_ctx": 8192,
             "top_k": 40,
             "top_p": 0.9,
             "temperature": 0.0
