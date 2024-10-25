@@ -16,27 +16,37 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
     # TODO: Implement the message construction logic for each model (if needed)
     # TODO: Create a dict of models and separators
 
-    # Include grammar rules
-    message = f"Rules that need to be followed to write the code:\n{grammar}\n\n"
+    message = ""
+    if model_name == "Claude 3.5 sonnet":
+        # Add system prompt if available
+        if system_prompt:
+            message += f"{system_prompt}\n\n"
 
-    # TODO: Include separators
-    message += f"################\n"
+        # Start with "Human:" turn
+        message += f"Human: Rules that need to be followed to write the code:\n{grammar}\n\n"
 
-    # Include few-shot examples if any
-    if few_shot_examples:
-        message += "Examples:\n"
-        for idx, ex in enumerate(few_shot_examples, 1):
-            message += f"Example {idx}:\n"
-            message += f"Question: {ex['input_text']}\n"
-            message += f"Answer: {ex['expected_dsl_output']}\n\n"
+        # Add few-shot examples
+        if few_shot_examples:
+            for idx, ex in enumerate(few_shot_examples, 1):
+                message += f"Human: {ex['input_text']}\n"
+                message += f"Assistant: {ex['expected_dsl_output']}\n\n"
 
-    message += f"################\n"
-    # Append the specific example to be processed
-
-    #TODO: it is needed?
-    message += "convert the following sentence.\n"
-
-    # Append the specific description of a DSL to be processed
-    message += nl_dsl
-
+        # Add the final user input (question)
+        message += f"Human: {nl_dsl}\n\nAssistant:"
+    
+    else:
+        # General message construction for other models
+        message += f"Rules that need to be followed to write the code:\n{grammar}\n\n"
+        message += f"###\n"
+        
+        if few_shot_examples:
+            for idx, ex in enumerate(few_shot_examples, 1):
+                message += f"Example {idx}:\n"
+                message += f"Question: {ex['input_text']}\n"
+                message += f"Answer: {ex['expected_dsl_output']}\n\n"
+        
+        message += f"###\n\n"
+        message += f"Question: {nl_dsl}\n"
+        message += f"Answer:"
+    
     return message

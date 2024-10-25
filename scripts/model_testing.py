@@ -1,8 +1,6 @@
 import json
 import logging
 import time
-import openai
-#import ollama
 import requests
 import os
 import subprocess
@@ -12,11 +10,56 @@ from utils import load_config
 from scripts.message_builder import build_message
 from tqdm import tqdm
 
-
 # Load configuration
 config = load_config()
 MAX_RETRIES = config['retry_settings']['max_retries']
 RETRY_DELAY = config['retry_settings']['retry_delay']
+
+validator_url = "http://localhost:3000/api/sensor/validate"
+
+# Closed-source models and their APIs
+closed_source_models = {
+    "OpenAI GPT4o": {
+        "api_url": "https://api.openai.com/v1/chat/completions",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {config['api_keys']['openai_key']}"
+        },
+        "model_name_api": "gpt-4o"
+    },
+    "OpenAI GPT4o mini": {
+        "api_url": "https://api.openai.com/v1/chat/completions",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {config['api_keys']['openai_key']}"
+        },
+        "model_name_api": "gpt-4o-mini"
+    },
+    "Claude 3.5 sonnet": {
+        "api_url": "https://api.anthropic.com/v1/complete-chat",
+        "headers": {
+            "x-api-key": f"{config['api_keys']['claude_key']}",
+            "Content-Type": "application/json",
+            "anthropic-version": "2023-06-01"
+        },
+        "model_name_api": "claude-3-5-sonnet-20241022"
+    }
+}
+
+def dsl_validator(expected_dsl_output, generated_dsl_output):
+    data = {
+        "expected_dsl_output": expected_dsl_output,
+        "generated_dsl_output": generated_dsl_output
+    }
+    try:
+        response = requests.post(validator_url, json=data)
+        response.raise_for_status()
+        result = response.json()
+        #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
+        return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Request to DSL validator failed: {e}")
+        return None, {}
 
 def load_model_config(model_name):
     """
@@ -59,7 +102,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
     Raises:
         Exception: If a model fails after the maximum number of retries.
     """
-    
     # Define the paths for real data files
     real_data_files = ['simple_examples.json', 'complex_examples.json']
 
@@ -90,6 +132,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         logging.error(f"Error decoding JSON in synthetic data file: {e}")
         logging.error(f"Traceback: {traceback.format_exc()}")
         return False
+    
     # Combine data based on user preference
     data_to_test = []
     if data_type == 'real' or data_type == 'both':
@@ -97,36 +140,12 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
     if data_type == 'synthetic' or data_type == 'both':
         data_to_test.extend(synthetic_data)
 
-    
-
-    #TODO: system_prompt should contain the user choice
-    # system_prompt_file = config['paths']['system_prompt_versions']
-    # try: 
-    #     system_prompts = json.load(file)
-    # except json.JSONDecodeError:
-    #             logging.error(f"Error decoding JSON in system prompt file {system_prompt_file}.")
-    #             system_prompt = ''
-
-    # if system_prompt_version:
-    #         try:
-    #             with open(system_prompt_file, 'r') as file:
-    #                 system_prompt = next((sp['system_prompt'] for sp in system_prompts if sp['version'] == system_prompt_version), '')
-    #         except FileNotFoundError:
-    #             logging.error(f"System prompt file {system_prompt_file} not found. Loadin")
-    #             system_prompt = ''
-    #         print(f"Using system prompt version: {system_prompt_version}")
-    # else:
-    #     # Load the first system prompt if no specific version is provided
-    #     try:
-    #         system_prompt = next((sp['system_prompt'] for sp in system_prompts if sp['version'] == "1.0"), '')
-    #     except FileNotFoundError:
-    #         logging.error(f"System prompt file {system_prompt_file} not found.")
-    #         system_prompt = ''
+    # Load model configuration
+    model_config = load_model_config(model_name)
 
     # Load the relevant system prompt based on the user's choice (or default to "1.0" if None)
     system_prompt_file = config['paths']['system_prompt_versions']
     system_prompt = ""
-
     try:
         with open(system_prompt_file, 'r') as file:
             system_prompts = json.load(file)
@@ -141,22 +160,19 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                 if not system_prompt:
                     logging.error(f"Default system prompt (version 1.0) not found.")
                     return False  # Return False if no default prompt found
-
     except FileNotFoundError as e:
-        logging.error(f"System prompt file {system_prompt_file} not found: {e}")
-        logging.error(f"Traceback: {traceback.format_exc()}")
-        return False
+            logging.error(f"System prompt file {system_prompt_file} not found: {e}")
+            logging.error(f"Traceback: {traceback.format_exc()}")
+            return False
     except json.JSONDecodeError as e:
         logging.error(f"Error decoding JSON in system prompt file {system_prompt_file}: {e}")
         logging.error(f"Traceback: {traceback.format_exc()}")
         return False
-
     logging.info(f"Using system prompt: {system_prompt}")
 
     # Load the grammar file
     grammar_file = f"data/{dataset_name}/grammar.txt"
     grammar = ""
-
     try:
         with open(grammar_file, 'r') as file:
             grammar = file.read()
@@ -169,7 +185,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
     # Load few-shot examples
     few_shot_examples_file = f"data/{dataset_name}/few_shot_examples.json"
     few_shot_examples = []
-
     try:
         with open(few_shot_examples_file, 'r') as file:
             few_shot_examples = json.load(file)
@@ -182,133 +197,214 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
         return False
     
 
-    # Load model parameters from the JSON configuration file
-    model_config = load_model_config(model_name)
-    parameters = model_config.get('parameters', {})
+    if model_config.get("type") == "closed source":
+        # Closed-source model handling
+        if model_name not in closed_source_models:
+            logging.error(f"No configuration found for closed-source model: {model_name}")
+            return False
 
-    logging.info(f"Testing model {model_name} with {len(data_to_test)} examples and parameters: {parameters}.")
+        api_url = closed_source_models[model_name]['api_url']
+        headers = closed_source_models[model_name]['headers']
 
-    # Initialize base URL and headers for the LLM API request
-    base_url = "http://localhost:11434/v1/chat/completions"  # Example URL for Ollama
-    headers = {
-        'Authorization': 'Bearer ollama',  # required, but unused
-        'Content-Type': 'application/json'
-    }
+        with tqdm(total=len(data_to_test), desc="Processing examples", unit="example") as pbar:
 
-    # Retrieve the ollama_command from the model configuration
-    ollama_model = model_config.get("ollama_command", "")
-    if not ollama_model:
-        logging.error(f"Ollama command for model {model_name} not found.")
-        return False
+            for example in data_to_test:              
+                nl_dsl = example['input_text']
+                expected_output = example['expected_dsl_output']
+                complexity_level = example['complexity_level']
 
-    #TODO check the logic of the loop
-    
-    # Initialize progress bar using tqdm
-    with tqdm(total=len(data_to_test), desc="Processing examples", unit="example") as pbar:
-        for example in data_to_test:     
-            nl_dsl = example['input_text']
-            expected_output = example['expected_dsl_output']
-            complexity_level = example['complexity_level']
+                # TODO: check system prompt
+                # TODO: reimplement the message
+                message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
+                print(message)
+                if model_name == "Claude 3.5 sonnet":
+                # Claude expects a 'prompt' field
+                    data = {
+                        "model": closed_source_models[model_name]['model_name_api'],
+                        "prompt": message,  # Claude expects a single 'prompt' field
+                        "max_tokens_to_sample": 5000  # Set this value based on your needs
+                    }
+                else:
+                    # For other models like GPT-4o
+                    data = {
+                        "model": closed_source_models[model_name]['model_name_api'],
+                        "messages": [
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": message}
+                        ]
+                    }
 
-            response = None
+                # Retry logic for API requests
+                for attempt in range(MAX_RETRIES):
+                    try:
+                        response = requests.post(api_url, headers=headers, json=data)
+                        response_json = response.json()
 
-            #Build the input message
-            message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
-            # Prepare the data payload for the API request
-            data = {
-                "model": ollama_model,  # Model name like 'llama3.1:8b'
-                "messages": [
-                    {"role": "system", "content": system_prompt},  # System prompt
-                    {"role": "user", "content": message}  # The message generated for the user
-                ],
-                #"max_tokens": parameters.get('max_tokens', 2048),
-                "temperature": parameters.get('temperature'),
-                "seed": parameters.get('seed'), # Set at 7. Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
-                "num_predict": parameters.get('num_predict'), #Default = -2. Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
-                "num_ctx": parameters.get('num_ctx'), #Default = 2048. Sets the size of the context window used to generate the next token.
-                "top_p": parameters.get('top_p'), #Default = 0.9 Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
-                "top_k": parameters.get('top_k'), #Default = 40. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
-            }
-
-
-            #TODO: gestisci il caso del modello non local
-            #TODO: inserisci il system prompt
-            for attempt in range(MAX_RETRIES):
-                try:
-                    # Send the request to the API
-                    response = requests.post(base_url, headers=headers, json=data)
-
-                    # Check if the request was successful
-                    if response.status_code == 200:
-                        result = response.json()
-                        generated_dsl_output = result['choices'][0]['message']['content'].strip()
+                        if 'choices' in response_json:
+                            response_content = response_json["choices"][0]["message"]["content"]
                         
-                        # Log the result
-                        log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=(generated_dsl_output == expected_output), parameters=parameters)
-                        break  # Exit loop on success
-                    elif response.status_code == 404:
-                        logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
-                        
-                        # Run the `ollama pull` command using subprocess to pull the model
+                        #TODO: questo pezzo non credo serva più
                         try:
-                            subprocess.run(["ollama", "pull", ollama_model], check=True)
-                            logging.info(f"Model {ollama_model} successfully pulled.")
-                        except subprocess.CalledProcessError as e:
-                            logging.error(f"Failed to pull model {ollama_model}: {e}")
-                            return False
-                    else:
-                        logging.info(f"Payload sent to API: {json.dumps(data, indent=4)}")
-                        logging.error(f"Error: {response.status_code} - {response.text}")
-                        raise Exception(f"API request failed with status code {response.status_code}")
-
-                except Exception as e:
-                    logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{message}': {e}")
-                    if attempt < MAX_RETRIES - 1:
-                        time.sleep(RETRY_DELAY)  # Retry after a delay
-                    else:
-                        # Log the result in case of failure
-                        log_result(message, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, success=False, parameters=parameters)
-                        logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
-            
-            pbar.update(1)  # Update progress bar after each example is processed
-
-        return True
+                            response_json = response.json()
+                            logging.info(f"Full API response: {response_json}")
+                            
+                            if 'choices' in response_json and len(response_json['choices']) > 0:
+                                response_content = response_json["choices"][0]["message"]["content"]
+                                generated_dsl_output = response_content.strip()
+                                logging.info(f"Generated DSL output: {generated_dsl_output}")
+                                #TODO: implement success function
+                            else:
+                                logging.error("API response did not return expected 'choices' structure.")
+                                generated_dsl_output = None
+                        except Exception as e:
+                            logging.error(f"Error processing API response: {e}")
+                            generated_dsl_output = None
 
 
-def log_result(prompt, expected_output, response, example_id, model_name, system_prompt_version, complexity_level, success, parameters=None):
-    """Logs the result of each inference attempt with detailed information."""
-    log_file = config['paths']['test_results_file']
-    
-    # Load existing log entries if the file exists and is not empty
-    if os.path.exists(log_file) and os.path.getsize(log_file) > 0:
-        with open(log_file, 'r') as file:
-            try:
-                log_data = json.load(file)  # Load existing entries
-            except json.JSONDecodeError:
-                log_data = []  # If the file is corrupted or empty, initialize as an empty list
+                        if response.status_code == 200:
+                            generated_dsl_output = response_content
+                            validator_success, validator_response = dsl_validator(expected_output, generated_dsl_output)
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=validator_success, parameters=None)
+                            break
+                        else:
+                            logging.error(f"Error: {response.status_code} - {response.text}")
+                            raise Exception(f"API request failed with status code {response.status_code}")
+                    except Exception as e:
+                        logging.warning(f"Attempt {attempt + 1} failed for model {model_name}: {e}")
+                        if attempt < MAX_RETRIES - 1:
+                            time.sleep(RETRY_DELAY)
+                        else:
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, success=False, parameters=None)
+                            logging.error(f"Maximum retries reached for model {model_name}.")
+
+                pbar.update(1)
+            return True
+
     else:
-        log_data = []  # Initialize as an empty list if no file exists or is empty
+        # Open-source model handling (e.g., via Ollama)
+        base_url = "http://localhost:11434/v1/chat/completions"
+        headers = {
+            'Authorization': 'Bearer ollama',
+            'Content-Type': 'application/json'
+        }
+
+        ollama_model = model_config.get("ollama_command", "")
+        if not ollama_model:
+            logging.error(f"Ollama command for model {model_name} not found.")
+            return False
+
+        # Load model parameters from the JSON configuration file
+        model_config = load_model_config(model_name)
+        parameters = model_config.get('parameters', {})
+        logging.info(f"Testing model {model_name} with {len(data_to_test)} examples and parameters: {parameters}.")
+
+        with tqdm(total=len(data_to_test), desc="Processing examples", unit="example") as pbar:
+
+            for example in data_to_test:            
+                nl_dsl = example['input_text']
+                expected_output = example['expected_dsl_output']
+                complexity_level = example['complexity_level']
+
+                response = None
+                
+                #Build the input message
+                message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
+                
+                data = {
+                    "model": ollama_model,
+                    "messages": [
+                        {"role": "system", "content": system_prompt or "You are a helpful assistant."},
+                        {"role": "user", "content": message}
+                    ],
+                    #"max_tokens": parameters.get('max_tokens', 2048),
+                    "temperature": parameters.get('temperature'),
+                    "seed": parameters.get('seed'), # Set at 7. Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
+                    "num_predict": parameters.get('num_predict'), #Default = -2. Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
+                    "num_ctx": parameters.get('num_ctx'), #Default = 2048. Sets the size of the context window used to generate the next token.
+                    "top_p": parameters.get('top_p'), #Default = 0.9 Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+                    "top_k": parameters.get('top_k'), #Default = 40. Check if it is needed. we need to restrict the selection to a subset of the most probable tokens?
+                }
+
+                # Retry logic for API requests
+                for attempt in range(MAX_RETRIES):
+                    try:
+                        # Send the request to the API
+                        response = requests.post(base_url, headers=headers, json=data)
+
+                        # Check if the request was successful
+                        if response.status_code == 200:
+                            result = response.json()
+                            generated_dsl_output = result['choices'][0]['message']['content'].strip()
+                            validator_success, validator_response = dsl_validator(expected_output, generated_dsl_output)
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=validator_success, parameters=None)
+                            
+                            # Log the result
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=(generated_dsl_output == expected_output), parameters=parameters)
+                            break  # Exit loop on success
+                        elif response.status_code == 404:
+                            logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
+                            
+                            # Run the ollama pull command using subprocess to pull the model
+                            try:
+                                subprocess.run(["ollama", "pull", ollama_model], check=True)
+                                logging.info(f"Model {ollama_model} successfully pulled.")
+                            except subprocess.CalledProcessError as e:
+                                logging.error(f"Failed to pull model {ollama_model}: {e}")
+                                return False
+                        else:
+                            logging.info(f"Payload sent to API: {json.dumps(data, indent=4)}")
+                            logging.error(f"Error: {response.status_code} - {response.text}")
+                            raise Exception(f"API request failed with status code {response.status_code}")
+
+                    except Exception as e:
+                        logging.warning(f"Attempt {attempt + 1} failed for model {model_name} on input '{message}': {e}")
+                        if attempt < MAX_RETRIES - 1:
+                            time.sleep(RETRY_DELAY)  # Retry after a delay
+                        else:
+                            # Log the result in case of failure
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, success=False, parameters=parameters)
+                            logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
+                pbar.update(1)
+            return True
+
+
+def log_result(prompt, expected_output, generated_output, example_id, model_name, system_prompt_version, complexity_level, success, parameters):
+    """Logs the result of each inference attempt with detailed information and validates the generated DSL."""
     
-    # Create new log entry
+    # Prepare the result entry
     log_entry = {
         'test_id': f"test_run_{int(time.time())}",
         'example_id': example_id,
         'model_name': model_name,
-        'parameters': parameters,
-        'system_prompt_version': system_prompt_version,
         'input_text': prompt,
         'expected_dsl_output': expected_output,
-        'generated_dsl_output': response,
+        'generated_dsl_output': generated_output,
         'complexity_level': complexity_level,
-        'success': success,  # Include success status
+        'success': success,
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
     }
-    
-    # Append the new log entry to the existing log data
+
+    # Folder where model-specific results will be saved
+    log_folder = 'logs/models_results'
+    if not os.path.exists(log_folder):
+        os.makedirs(log_folder)
+
+    # Save results to a file based on model name
+    log_file = f"{log_folder}/{model_name.replace(' ', '_').replace('/', '_')}.json"
+
+    # Load existing log data if the file exists
+    if os.path.exists(log_file) and os.path.getsize(log_file) > 0:
+        with open(log_file, 'r') as file:
+            try:
+                log_data = json.load(file)
+            except json.JSONDecodeError:
+                log_data = []
+    else:
+        log_data = []
+
+    # Append the new result entry to the log
     log_data.append(log_entry)
-    
-    # Write the updated log data back to the file with proper formatting
+
+    # Write the updated log data to the file
     with open(log_file, 'w') as file:
-        json.dump(log_data, file, indent=4)  # Write entire log data back as an array
-
-
+        json.dump(log_data, file, indent=4)

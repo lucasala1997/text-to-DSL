@@ -7,8 +7,38 @@ from scripts.model_parameter_config import configure_model_parameters
 from scripts.prompt_version import configure_prompt_version
 from scripts.model_testing import test_model
 from scripts.result_analysis import analyze_results
+import tensorflow as tf
+
 # from scripts.experiment_log_manager import manage_experiment_logs
 # from scripts.visualization_reporting import generate_visualizations
+
+#TODO: check if VRAM usage is working
+# GPU Memory Management
+# try:
+#     # Option 1: TensorFlow VRAM limit (use if TensorFlow is in your project)
+#     import tensorflow as tf
+
+#     gpus = tf.config.experimental.list_physical_devices('GPU')
+#     if gpus:
+#         try:
+#             for gpu in gpus:
+#                 tf.config.experimental.set_memory_growth(gpu, True)  # Enable dynamic growth
+#                 tf.config.experimental.set_virtual_device_configuration(
+#                     gpu,
+#                     [tf.config.experimental.VirtualDeviceConfiguration(
+#                         memory_limit=int(0.4 * gpu.memory_info().total))]  # Set to 40% of total VRAM
+#                 )
+#         except RuntimeError as e:
+#             print(f"Error setting TensorFlow VRAM limit: {e}")
+# except ImportError:
+#     pass  # TensorFlow not installed, skipping setup
+
+# try:
+#     # Option 2: PyTorch VRAM limit (use if PyTorch is in your project)
+#     import torch
+#     torch.cuda.set_per_process_memory_fraction(0.4)  # Set memory usage limit to 40%
+# except ImportError:
+#     pass  # PyTorch not installed, skipping setup
 
 # Load configuration
 try:
@@ -76,12 +106,12 @@ def run_pipeline(selected_steps):
             print('--------------------------')
 
 
-        if 'analyze_results' in selected_steps:
-            print('Analyzing results...')
-            logging.info('Analyzing results...')
-            analyze_results()
-            print('Analysis saved.')
-            print('--------------------------')
+        # if 'analyze_results' in selected_steps:
+        #     print('Analyzing results...')
+        #     logging.info('Analyzing results...')
+        #     analyze_results()
+        #     print('Analysis saved.')
+        #     print('--------------------------')
 
         # if 'generate_visualizations' in selected_steps:
         #     logging.info('Generating visualizations...')

@@ -16,9 +16,10 @@ def load_config():
     with open(config_path, 'r') as file:
         config_data = json.load(file)
 
-    # Add environment variables to the config dictionary
+    # Add environment variables to the config dictionary for OpenAI and Claude
     config_data['api_keys'] = {
-        "openai_key": os.getenv('OPENAI_API_KEY')
+        "openai_key": os.getenv('OPENAI_API_KEY'),
+        "claude_key": os.getenv('CLAUDE_API_KEY')  # Added Claude API key
     }
 
     return config_data

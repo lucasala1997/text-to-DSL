@@ -8,11 +8,11 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 16384,
             "top_k": 40,
-            "top_p": 0.9,
-            "temperature": 0.7
+            "top_p": 0.7,
+            "temperature": 0.0
         }
     },
     "(LOCAL_TEST) Llama3.1 (8B) quantized 4bit": {
@@ -24,7 +24,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 132000,
             "top_k": 41,
             "top_p": 0.9,
@@ -40,7 +40,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 32768,
             "top_k": 40,
             "top_p": 0.9,
@@ -56,7 +56,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 32768,
             "top_k": 40,
             "top_p": 0.9,
@@ -71,7 +71,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 128000,
             "top_k": 40,
             "top_p": 0.9,
@@ -87,7 +87,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 128000,
             "top_k": 40,
             "top_p": 0.9,
@@ -103,7 +103,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 128000,
             "top_k": 40,
             "top_p": 0.9,
@@ -119,7 +119,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 16000,
             "top_k": 40,
             "top_p": 0.9,
@@ -135,7 +135,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 16000,
             "top_k": 40,
             "top_p": 0.9,
@@ -151,7 +151,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 16000,
             "top_k": 40,
             "top_p": 0.9,
@@ -167,7 +167,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 16000,
             "top_k": 40,
             "top_p": 0.9,
@@ -183,7 +183,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 132000,
             "top_k": 40,
             "top_p": 0.9,
@@ -200,7 +200,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 132000,
             "top_k": 40,
             "top_p": 0.9,
@@ -217,7 +217,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 132000,
             "top_k": 40,
             "top_p": 0.9,
@@ -233,7 +233,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 8192,
             "top_k": 40,
             "top_p": 0.9,
@@ -249,7 +249,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 8192,
             "top_k": 40,
             "top_p": 0.9,
@@ -265,7 +265,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 8192,
             "top_k": 40,
             "top_p": 0.9,
@@ -281,7 +281,7 @@
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
-            "num_predict": -2,
+            "num_predict": -1,
             "num_ctx": 8000,
             "top_k": 40,
             "top_p": 0.9,
@@ -292,43 +292,19 @@
         "model_name": "OpenAI GPT4o",
         "type": "closed source",
         "supported": true,
-        "deployment_type": "remote",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -2,
-            "num_ctx": 128000,
-            "top_k": 40,
-            "top_p": 0.9,
-            "temperature": 0.0
-        }
+        "deployment_type": "remote"
     },
     "OpenAI GPT4o mini": {
         "model_name": "OpenAI GPT4o mini",
         "type": "closed source",
-        "supported": false,
-        "deployment_type": "remote",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -2,
-            "num_ctx": 128000,
-            "top_k": 40,
-            "top_p": 0.9,
-            "temperature": 0.0
-        }
+        "supported": true,
+        "deployment_type": "remote"
     },
     "Claude 3.5 sonnet": {
         "model_name": "Claude 3.5 sonnet",
         "type": "closed source",
-        "supported": false,
-        "deployment_type": "remote",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -2,
-            "num_ctx": 200000,
-            "top_k": 40,
-            "top_p": 0.9,
-            "temperature": 0.0
-        }
+        "supported": true,
+        "deployment_type": "remote"
     },
     "PaLM (62B)": {
         "model_name": "PaLM (62B)",

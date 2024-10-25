@@ -1,144 +1,114 @@
-2024-10-20 01:02:31,696:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:02:31,696:INFO:Starting data validation...
-2024-10-20 01:02:32,896:INFO:Simple examples loaded successfully.
-2024-10-20 01:02:32,896:INFO:Complex examples loaded successfully.
-2024-10-20 01:02:32,903:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:02:32,903:INFO:Updating prompt versions...
-2024-10-20 01:02:33,549:INFO:Deploying models...
-2024-10-20 01:02:33,550:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:02:34,214:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:02:34,802:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:02:34,803:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:02:34,803:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-20 01:02:34,803:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:02:34,803:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:02:34,803:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:02:55,125:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:02:55,126:INFO:Analyzing results...
-2024-10-20 01:02:55,131:INFO:Process completed successfully.
-2024-10-20 01:06:02,747:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:06:02,747:INFO:Starting data validation...
-2024-10-20 01:06:04,598:INFO:Simple examples loaded successfully.
-2024-10-20 01:06:04,599:INFO:Complex examples loaded successfully.
-2024-10-20 01:06:04,605:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:06:04,605:INFO:Updating prompt versions...
-2024-10-20 01:06:06,716:INFO:Deploying models...
-2024-10-20 01:06:06,716:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:06:08,461:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:06:10,759:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:06:10,759:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:06:10,759:INFO:Using system prompt: You are a helpful assistant.
-2024-10-20 01:06:10,759:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:06:10,760:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:06:10,760:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:06:21,678:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:06:21,679:INFO:Analyzing results...
-2024-10-20 01:06:21,682:INFO:Process completed successfully.
-2024-10-20 01:07:09,504:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:07:09,504:INFO:Starting data validation...
-2024-10-20 01:07:10,675:INFO:Simple examples loaded successfully.
-2024-10-20 01:07:10,675:INFO:Complex examples loaded successfully.
-2024-10-20 01:07:10,680:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:07:10,680:INFO:Updating prompt versions...
-2024-10-20 01:07:10,938:INFO:Deploying models...
-2024-10-20 01:07:10,939:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:07:11,192:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:07:12,225:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:07:12,226:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:07:12,226:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-20 01:07:12,226:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:07:12,226:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:07:12,226:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:07:29,298:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:07:29,299:INFO:Analyzing results...
-2024-10-20 01:07:29,304:INFO:Process completed successfully.
-2024-10-20 01:10:19,840:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:10:19,841:INFO:Starting data validation...
-2024-10-20 01:10:35,710:INFO:Simple examples loaded successfully.
-2024-10-20 01:10:35,710:INFO:Complex examples loaded successfully.
-2024-10-20 01:10:35,718:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:10:35,718:INFO:Updating prompt versions...
-2024-10-20 01:10:45,272:INFO:Deploying models...
-2024-10-20 01:10:45,274:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:10:47,403:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:10:49,937:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:10:49,938:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:10:49,939:INFO:Using system prompt: You are a helpful assistant.
-2024-10-20 01:10:49,939:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:10:49,940:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:10:49,940:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:11:01,592:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:11:01,593:INFO:Analyzing results...
-2024-10-20 01:11:01,597:INFO:Process completed successfully.
-2024-10-20 01:12:02,100:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:12:02,100:INFO:Starting data validation...
-2024-10-20 01:12:03,656:INFO:Simple examples loaded successfully.
-2024-10-20 01:12:03,656:INFO:Complex examples loaded successfully.
-2024-10-20 01:12:03,662:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:12:03,662:INFO:Updating prompt versions...
-2024-10-20 01:12:08,118:INFO:Deploying models...
-2024-10-20 01:12:08,119:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:12:09,338:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:12:10,960:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:12:10,961:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:12:10,961:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-20 01:12:10,961:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:12:10,961:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:12:10,962:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:12:28,346:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:12:28,347:INFO:Analyzing results...
-2024-10-20 01:12:28,355:INFO:Process completed successfully.
-2024-10-20 01:13:51,859:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:13:51,860:INFO:Starting data validation...
-2024-10-20 01:13:52,657:INFO:Simple examples loaded successfully.
-2024-10-20 01:13:52,658:INFO:Complex examples loaded successfully.
-2024-10-20 01:13:52,666:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:13:52,666:INFO:Updating prompt versions...
-2024-10-20 01:13:54,650:INFO:Deploying models...
-2024-10-20 01:13:54,651:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:13:56,534:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:13:57,330:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:13:57,331:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:13:57,331:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-20 01:13:57,331:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:13:57,331:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:13:57,332:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:14:14,614:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:14:14,614:INFO:Analyzing results...
-2024-10-20 01:14:14,620:INFO:Process completed successfully.
-2024-10-20 01:33:31,887:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:33:31,887:INFO:Starting data validation...
-2024-10-20 01:33:32,889:INFO:Simple examples loaded successfully.
-2024-10-20 01:33:32,889:INFO:Complex examples loaded successfully.
-2024-10-20 01:33:32,896:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:33:32,896:INFO:Updating prompt versions...
-2024-10-20 01:33:33,896:INFO:Deploying models...
-2024-10-20 01:33:33,896:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:33:34,986:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:33:35,785:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:33:35,785:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:33:35,786:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-20 01:33:35,786:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:33:35,786:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:33:35,786:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:33:59,295:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:33:59,296:INFO:Analyzing results...
-2024-10-20 01:33:59,302:INFO:Process completed successfully.
-2024-10-20 01:35:50,998:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-20 01:35:50,998:INFO:Starting data validation...
-2024-10-20 01:35:51,829:INFO:Simple examples loaded successfully.
-2024-10-20 01:35:51,830:INFO:Complex examples loaded successfully.
-2024-10-20 01:35:51,837:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-20 01:35:51,837:INFO:Updating prompt versions...
-2024-10-20 01:35:52,527:INFO:Deploying models...
-2024-10-20 01:35:52,528:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o']
-2024-10-20 01:35:52,793:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-20 01:35:53,852:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-20 01:35:53,853:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-20 01:35:53,853:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-20 01:35:53,853:INFO:Grammar for sensors loaded successfully.
-2024-10-20 01:35:53,854:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-20 01:35:53,854:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -2, 'num_ctx': 128000, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-20 01:36:11,552:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-20 01:36:11,552:INFO:Analyzing results...
-2024-10-20 01:36:11,559:INFO:Process completed successfully.
+2024-10-24 23:20:32,914:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-24 23:20:32,914:INFO:Starting data validation...
+2024-10-24 23:20:34,037:INFO:Simple examples loaded successfully.
+2024-10-24 23:20:34,038:INFO:Complex examples loaded successfully.
+2024-10-24 23:20:34,042:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-24 23:20:34,042:INFO:Updating prompt versions...
+2024-10-24 23:20:34,464:INFO:Deploying models...
+2024-10-24 23:20:34,465:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-24 23:20:35,408:INFO:Selected model: Claude 3.5 sonnet
+2024-10-24 23:20:35,410:INFO:Parameters for model Claude 3.5 sonnet configured successfully.
+2024-10-24 23:20:35,411:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-24 23:20:35,411:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-24 23:20:35,411:INFO:Grammar for sensors loaded successfully.
+2024-10-24 23:20:35,412:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-24 23:20:35,729:INFO:Full API response: {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'prompt: Input should be a valid string'}}
+2024-10-24 23:20:35,730:ERROR:API response did not return expected 'choices' structure.
+2024-10-24 23:20:35,730:ERROR:Error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"prompt: Input should be a valid string"}}
+2024-10-24 23:20:35,730:WARNING:Attempt 1 failed for model Claude 3.5 sonnet: API request failed with status code 400
+2024-10-24 23:20:35,733:ERROR:Maximum retries reached for model Claude 3.5 sonnet.
+2024-10-24 23:20:35,734:INFO:Model Claude 3.5 sonnet tested successfully.
+2024-10-24 23:20:35,734:INFO:Process completed successfully.
+2024-10-24 23:21:04,788:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-24 23:21:04,788:INFO:Starting data validation...
+2024-10-24 23:21:05,766:INFO:Simple examples loaded successfully.
+2024-10-24 23:21:05,767:INFO:Complex examples loaded successfully.
+2024-10-24 23:21:05,770:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-24 23:21:05,770:INFO:Updating prompt versions...
+2024-10-24 23:21:06,181:INFO:Deploying models...
+2024-10-24 23:21:06,182:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-24 23:21:07,079:INFO:Selected model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-24 23:21:10,667:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-24 23:21:10,668:INFO:Starting data validation...
+2024-10-24 23:21:11,599:INFO:Simple examples loaded successfully.
+2024-10-24 23:21:11,599:INFO:Complex examples loaded successfully.
+2024-10-24 23:21:11,604:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-24 23:21:11,605:INFO:Updating prompt versions...
+2024-10-24 23:21:12,043:INFO:Deploying models...
+2024-10-24 23:21:12,044:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-24 23:21:13,173:INFO:Selected model: Claude 3.5 sonnet
+2024-10-24 23:21:13,175:INFO:Parameters for model Claude 3.5 sonnet configured successfully.
+2024-10-24 23:21:13,176:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-24 23:21:13,176:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-24 23:21:13,176:INFO:Grammar for sensors loaded successfully.
+2024-10-24 23:21:13,176:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-24 23:21:13,440:INFO:Full API response: {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '"claude-3-5-sonnet-20241022" is not supported on this API. Please use the Messages API instead.'}}
+2024-10-24 23:21:13,441:ERROR:API response did not return expected 'choices' structure.
+2024-10-24 23:21:13,441:ERROR:Error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"\"claude-3-5-sonnet-20241022\" is not supported on this API. Please use the Messages API instead."}}
+2024-10-24 23:21:13,441:WARNING:Attempt 1 failed for model Claude 3.5 sonnet: API request failed with status code 400
+2024-10-24 23:21:13,444:ERROR:Maximum retries reached for model Claude 3.5 sonnet.
+2024-10-24 23:21:13,445:INFO:Model Claude 3.5 sonnet tested successfully.
+2024-10-24 23:21:13,445:INFO:Process completed successfully.
+2024-10-24 23:29:26,411:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-24 23:29:26,415:INFO:Starting data validation...
+2024-10-24 23:29:28,408:INFO:Simple examples loaded successfully.
+2024-10-24 23:29:28,408:INFO:Complex examples loaded successfully.
+2024-10-24 23:29:28,410:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-24 23:29:28,410:INFO:Updating prompt versions...
+2024-10-24 23:29:30,355:INFO:Deploying models...
+2024-10-24 23:29:30,356:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-24 23:29:32,693:INFO:Selected model: Claude 3.5 sonnet
+2024-10-24 23:29:32,696:INFO:Parameters for model Claude 3.5 sonnet configured successfully.
+2024-10-24 23:29:32,696:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-24 23:29:32,697:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-24 23:29:32,697:INFO:Grammar for sensors loaded successfully.
+2024-10-24 23:29:32,697:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-24 23:29:33,341:INFO:Full API response: {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'Not Found'}}
+2024-10-24 23:29:33,342:ERROR:API response did not return expected 'choices' structure.
+2024-10-24 23:29:33,342:ERROR:Error: 404 - {"type":"error","error":{"type":"not_found_error","message":"Not Found"}}
+2024-10-24 23:29:33,342:WARNING:Attempt 1 failed for model Claude 3.5 sonnet: API request failed with status code 404
+2024-10-24 23:29:33,346:ERROR:Maximum retries reached for model Claude 3.5 sonnet.
+2024-10-24 23:29:33,347:INFO:Model Claude 3.5 sonnet tested successfully.
+2024-10-24 23:29:33,347:INFO:Process completed successfully.
+2024-10-24 23:37:21,745:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-24 23:37:21,745:INFO:Starting data validation...
+2024-10-24 23:37:23,642:INFO:Simple examples loaded successfully.
+2024-10-24 23:37:23,642:INFO:Complex examples loaded successfully.
+2024-10-24 23:37:23,647:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-24 23:37:23,647:INFO:Updating prompt versions...
+2024-10-24 23:37:25,049:INFO:Deploying models...
+2024-10-24 23:37:25,050:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-24 23:37:26,774:INFO:Selected model: Claude 3.5 sonnet
+2024-10-24 23:37:26,776:INFO:Parameters for model Claude 3.5 sonnet configured successfully.
+2024-10-24 23:37:26,777:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-24 23:37:26,778:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-24 23:37:26,778:INFO:Grammar for sensors loaded successfully.
+2024-10-24 23:37:26,778:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-24 23:37:27,073:INFO:Full API response: {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'Not Found'}}
+2024-10-24 23:37:27,073:ERROR:API response did not return expected 'choices' structure.
+2024-10-24 23:37:27,073:ERROR:Error: 404 - {"type":"error","error":{"type":"not_found_error","message":"Not Found"}}
+2024-10-24 23:37:27,074:WARNING:Attempt 1 failed for model Claude 3.5 sonnet: API request failed with status code 404
+2024-10-24 23:37:27,076:ERROR:Maximum retries reached for model Claude 3.5 sonnet.
+2024-10-24 23:37:27,077:INFO:Model Claude 3.5 sonnet tested successfully.
+2024-10-24 23:37:27,077:INFO:Process completed successfully.
+2024-10-24 23:38:15,264:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-24 23:38:15,264:INFO:Starting data validation...
+2024-10-24 23:38:16,607:INFO:Simple examples loaded successfully.
+2024-10-24 23:38:16,608:INFO:Complex examples loaded successfully.
+2024-10-24 23:38:16,612:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-24 23:38:16,612:INFO:Updating prompt versions...
+2024-10-24 23:38:18,148:INFO:Deploying models...
+2024-10-24 23:38:18,149:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-24 23:38:20,568:INFO:Selected model: Claude 3.5 sonnet
+2024-10-24 23:38:20,571:INFO:Parameters for model Claude 3.5 sonnet configured successfully.
+2024-10-24 23:38:20,571:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-24 23:38:20,572:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-24 23:38:20,572:INFO:Grammar for sensors loaded successfully.
+2024-10-24 23:38:20,572:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-24 23:38:20,854:INFO:Full API response: {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'Not Found'}}
+2024-10-24 23:38:20,855:ERROR:API response did not return expected 'choices' structure.
+2024-10-24 23:38:20,855:ERROR:Error: 404 - {"type":"error","error":{"type":"not_found_error","message":"Not Found"}}
+2024-10-24 23:38:20,855:WARNING:Attempt 1 failed for model Claude 3.5 sonnet: API request failed with status code 404
+2024-10-24 23:38:20,859:ERROR:Maximum retries reached for model Claude 3.5 sonnet.
+2024-10-24 23:38:20,860:INFO:Model Claude 3.5 sonnet tested successfully.
+2024-10-24 23:38:20,860:INFO:Process completed successfully.
