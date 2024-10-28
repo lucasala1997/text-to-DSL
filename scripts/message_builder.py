@@ -16,8 +16,9 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
     # TODO: Implement the message construction logic for each model (if needed)
     # TODO: Create a dict of models and separators
 
-    message = ""
+    
     if model_name == "Claude 3.5 sonnet":
+        message = ""
         # Add system prompt if available
         if system_prompt:
             message += f"{system_prompt}\n\n"
@@ -35,18 +36,27 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
         message += f"Human: {nl_dsl}\n\nAssistant:"
     
     else:
+        message = []
         # General message construction for other models
-        message += f"Rules that need to be followed to write the code:\n{grammar}\n\n"
-        message += f"###\n"
-        
+        #TODO: Ask if it's correct compared to codellama doc
+        # message += (f"Rules that need to be followed to write the code:\n{grammar}\n\n")
+
+        message.append({"role": "system", "content": system_prompt})
+
+        message.append({"role": "user", "content": "Rules that need to be followed to write the code:"})
+        message.append({"role": "user", "content": grammar})
+
         if few_shot_examples:
-            for idx, ex in enumerate(few_shot_examples, 1):
-                message += f"Example {idx}:\n"
-                message += f"Question: {ex['input_text']}\n"
-                message += f"Answer: {ex['expected_dsl_output']}\n\n"
-        
-        message += f"###\n\n"
-        message += f"Question: {nl_dsl}\n"
-        message += f"Answer:"
+            for idx, example in enumerate(few_shot_examples, 1):
+                message.append({"role": "user", "content": example['input_text']})
+                message.append({"role": "assistant", "content": example['expected_dsl_output']})
+    
+                # message += f"Example {idx}:\n"
+                # message += f"Question: {ex['input_text']}\n"
+                # message += f"Answer: {ex['expected_dsl_output']}\n\n"
+
+        message.append({"role": "user", "content": nl_dsl})
+        # message += f"Question: {nl_dsl}\n"
+        # message += f"Answer:"
     
     return message

@@ -1,10 +1,38 @@
 import json
 import os
 import logging
+import requests
 import nltk  # For BLEU score calculation
 from nltk.translate.bleu_score import sentence_bleu
 from collections import defaultdict
+from utils import load_config
 
+validator_url = "http://localhost:3000/api/sensor/validate"
+
+
+def dsl_validator(expected_dsl_output, generated_dsl_output):
+    if not expected_dsl_output.startswith("CREATE PRODUCT "):
+        expected_dsl_output = "CREATE PRODUCT " + expected_dsl_output
+    if not generated_dsl_output.startswith("CREATE PRODUCT "):
+        generated_dsl_output = "CREATE PRODUCT " + generated_dsl_output
+
+        
+    data = {
+        "expected_dsl_output": expected_dsl_output,
+        "generated_dsl_output": generated_dsl_output
+    }
+    try:
+        response = requests.post(validator_url, json=data)
+        print(response)
+        response.raise_for_status()
+        result = response.json()
+    
+        #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
+        return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Request to DSL validator failed: {e}")
+        return None, {}
+    
 def analyze_results():
     """Analyzes the logged test results for each model and calculates evaluation metrics.
 
@@ -29,13 +57,14 @@ def analyze_results():
                     results = json.load(file)
 
                 # Track metrics by model, parameters, and system prompt version
-                metrics = defaultdict(lambda: {"exact_match_count": 0, "total_examples": 0, "total_bleu_score": 0})
+                metrics = defaultdict(lambda: {"accurate_dsl": 0, "total_examples": 0, "total_bleu_score": 0})
 
                 # Overall counters for this model
                 total_examples = len(results)
-                total_exact_match = 0
+                total_correct = 0
                 total_bleu_score = 0
 
+                
                 # Analyze each result for this model
                 for result in results:
                     model_name = result['model_name']
@@ -45,12 +74,21 @@ def analyze_results():
                     key = (model_name, parameters, system_prompt_version)
 
                     metrics[key]["total_examples"] += 1
-                    if result['generated_dsl_output'] == result['expected_dsl_output']:
-                        result['success'] = True
-                        metrics[key]["exact_match_count"] += 1
-                        total_exact_match += 1
+                    
+                    # Update or set the 'success' key based on validation result
+                    result['success'] = dsl_validator(result['expected_dsl_output'], result['generated_dsl_output'])[0]
+                    
+                    # Update metrics if the validation result is successful
+                    if result['success']:
+                        metrics[key]["accurate_dsl"] += 1
+                        total_correct += 1
+                        print("\nTrue\n")
                     else:
-                        result['success'] = False
+                        print("\nFalse\n")
+
+                    # After processing all results, save the updated list back to the file
+                    with open(model_file_path, 'w') as file:
+                        json.dump(results, file, indent=4)
 
                     # Calculate BLEU score
                     bleu_score = sentence_bleu([result['expected_dsl_output'].split()], result['generated_dsl_output'].split())
@@ -59,39 +97,38 @@ def analyze_results():
                     total_bleu_score += bleu_score
 
                 # Calculate overall metrics for this model
-                overall_exact_match_accuracy = total_exact_match / total_examples
+                overrall_accuracy = total_correct / total_examples
                 overall_average_bleu_score = total_bleu_score / total_examples
 
                 # Save the updated test results back to the individual model file
                 with open(model_file_path, 'w') as file:
                     json.dump(results, file, indent=4)
 
-                # Prepare the overall metrics for this model
-                overall_metrics = {
-                    'overall_exact_match_accuracy': overall_exact_match_accuracy,
-                    'overall_average_bleu_score': overall_average_bleu_score,
-                    'detailed_metrics': {}
-                }
-
                 # Add detailed metrics for each combination of parameters and system_prompt_version
+                model_data = []
                 for key, value in metrics.items():
                     model_name, parameters, system_prompt_version = key
 
                     # Ensure dictionary format for detailed metrics
                     detailed_entry = {
-                        'exact_match_accuracy': value['exact_match_count'] / value['total_examples'],
+                        'parameters': json.loads(parameters),  # Convert parameters string back to dictionary
+                        'system_prompt_version': system_prompt_version,
+                        'overall_accuracy': value['accurate_dsl'] / value['total_examples'],
                         'average_bleu_score': value['total_bleu_score'] / value['total_examples'],
                         'total_examples': value['total_examples'],
-                        'system_prompt_version': system_prompt_version,
-                        'parameters': json.loads(parameters)  # Convert parameters string back to dictionary
+                        'system_prompt_version': system_prompt_version
                     }
-
-                    overall_metrics['detailed_metrics'][f"{system_prompt_version}"] = detailed_entry
+                    model_data.append(detailed_entry)
 
                 # Save overall metrics for this model in a separate JSON file
-                overall_metrics_file = f"logs/models_results/overall_metrics_{model_name.replace(' ', '_').replace('(', '').replace(')', '').replace(':', '').replace('-', '_')}.json"
+
+                # If the overall folder doesn't exist in the model_results folder, create it
+                overall_results_folder = os.path.join(models_results_folder, 'overall_results')
+                if not os.path.exists(overall_results_folder):
+                    os.makedirs(overall_results_folder)
+                overall_metrics_file = f"logs/models_results/overall_results/overall_metrics_{model_name.replace(' ', '_').replace('(', '').replace(')', '').replace(':', '').replace('-', '_')}.json"
                 with open(overall_metrics_file, 'w') as metrics_file:
-                    json.dump(overall_metrics, metrics_file, indent=4)
+                    json.dump(model_data, metrics_file, indent=4)
 
                 logging.info(f"Metrics analysis completed for model: {model_name}")
 

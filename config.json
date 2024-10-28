@@ -25,7 +25,7 @@
       "top_k": 40
     },
     "retry_settings": {
-      "max_retries": 1,
+      "max_retries": 3,
       "retry_delay": 5
     }
   }

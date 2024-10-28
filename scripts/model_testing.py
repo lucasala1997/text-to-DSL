@@ -46,20 +46,7 @@ closed_source_models = {
     }
 }
 
-def dsl_validator(expected_dsl_output, generated_dsl_output):
-    data = {
-        "expected_dsl_output": expected_dsl_output,
-        "generated_dsl_output": generated_dsl_output
-    }
-    try:
-        response = requests.post(validator_url, json=data)
-        response.raise_for_status()
-        result = response.json()
-        #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
-        return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Request to DSL validator failed: {e}")
-        return None, {}
+
 
 def load_model_config(model_name):
     """
@@ -228,10 +215,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                     # For other models like GPT-4o
                     data = {
                         "model": closed_source_models[model_name]['model_name_api'],
-                        "messages": [
-                            {"role": "system", "content": system_prompt},
-                            {"role": "user", "content": message}
-                        ]
+                        "messages": message
                     }
 
                 # Retry logic for API requests
@@ -263,8 +247,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
                         if response.status_code == 200:
                             generated_dsl_output = response_content
-                            validator_success, validator_response = dsl_validator(expected_output, generated_dsl_output)
-                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=validator_success, parameters=None)
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters="unknown")
                             break
                         else:
                             logging.error(f"Error: {response.status_code} - {response.text}")
@@ -274,7 +257,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if attempt < MAX_RETRIES - 1:
                             time.sleep(RETRY_DELAY)
                         else:
-                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, success=False, parameters=None)
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=None)
                             logging.error(f"Maximum retries reached for model {model_name}.")
 
                 pbar.update(1)
@@ -312,10 +295,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                 
                 data = {
                     "model": ollama_model,
-                    "messages": [
-                        {"role": "system", "content": system_prompt or "You are a helpful assistant."},
-                        {"role": "user", "content": message}
-                    ],
+                    "messages": message,
                     #"max_tokens": parameters.get('max_tokens', 2048),
                     "temperature": parameters.get('temperature'),
                     "seed": parameters.get('seed'), # Set at 7. Sets the random number seed to use for generation. Setting this to a specific number will make the model generate the same text for the same prompt. (Default: 0)
@@ -335,11 +315,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if response.status_code == 200:
                             result = response.json()
                             generated_dsl_output = result['choices'][0]['message']['content'].strip()
-                            validator_success, validator_response = dsl_validator(expected_output, generated_dsl_output)
-                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=validator_success, parameters=None)
-                            
-                            # Log the result
-                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, success=(generated_dsl_output == expected_output), parameters=parameters)
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters)
                             break  # Exit loop on success
                         elif response.status_code == 404:
                             logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
@@ -362,13 +338,13 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                             time.sleep(RETRY_DELAY)  # Retry after a delay
                         else:
                             # Log the result in case of failure
-                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, success=False, parameters=parameters)
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters)
                             logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
                 pbar.update(1)
             return True
 
 
-def log_result(prompt, expected_output, generated_output, example_id, model_name, system_prompt_version, complexity_level, success, parameters):
+def log_result(prompt, expected_output, generated_output, example_id, model_name, system_prompt_version, complexity_level, parameters):
     """Logs the result of each inference attempt with detailed information and validates the generated DSL."""
     
     # Prepare the result entry
@@ -376,11 +352,12 @@ def log_result(prompt, expected_output, generated_output, example_id, model_name
         'test_id': f"test_run_{int(time.time())}",
         'example_id': example_id,
         'model_name': model_name,
+        'system_prompt_version': system_prompt_version,
         'input_text': prompt,
         'expected_dsl_output': expected_output,
         'generated_dsl_output': generated_output,
         'complexity_level': complexity_level,
-        'success': success,
+        'parameters': parameters,
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
     }
 

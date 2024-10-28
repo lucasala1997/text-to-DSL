@@ -1,13 +1,28 @@
 [
     {
-        "test_id": "test_run_1729803902",
+        "test_id": "test_run_1730119005",
         "example_id": "example_1",
         "model_name": "(LOCAL_TEST) Codellama (7B) quantized 4bit",
-        "input_text": "Create a spatial dimension called Municipality with a Geometry geometry and a property called cMun, which is an Integer.",
-        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTIES (\n    cMun Integer\n);",
-        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n    geometry: Geometry\n) WITH PROPERTY cMun Integer;",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "New product called meteorological using 4326 as srid.",
+        "expected_dsl_output": "CREATE PRODUCT meteorological USING 4326;",
+        "generated_dsl_output": "CREATE PRODUCT \n\t meteorological USING 4326;",
         "complexity_level": "simple",
-        "success": false,
-        "timestamp": "2024-10-24 23:05:02"
+        "success": true,
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16384,
+            "top_k": 40,
+            "top_p": 0.9,
+            "temperature": 0.5
+        },
+        "timestamp": "2024-10-28 13:36:45",
+        "bleu_score": 1.0
     }
 ]
