@@ -15,7 +15,7 @@ logging.basicConfig(
     format=config['logging']['format']
 )
 
-def generate_complexity_scatter_plot(model_name, metrics_folder="logs/models_results", results_folder="results"):
+def generate_complexity_scatter_plot(metrics_folder="logs/models_results", results_folder="results"):
     """Generates scatter plots with separate points for 'simple' and 'complex' examples based on model test results."""
     
     # Ensure the results folder exists
@@ -26,6 +26,7 @@ def generate_complexity_scatter_plot(model_name, metrics_folder="logs/models_res
         if file_name.endswith(".json"):
             # Read the JSON dataå
             model_file_path = os.path.join(metrics_folder, file_name)
+            #print(model_file_path + "\n")
             with open(model_file_path, 'r') as file:
                 data = json.load(file)
             
@@ -33,6 +34,8 @@ def generate_complexity_scatter_plot(model_name, metrics_folder="logs/models_res
             df = pd.DataFrame(data)
             
             # Prepare model-specific results directory
+            
+            model_name = file_name.replace('.json', '').replace('_', ' ')   
             model_results_path = os.path.join(results_folder, model_name)
             os.makedirs(model_results_path, exist_ok=True)
             
@@ -90,7 +93,7 @@ def generate_scatter_plot(metrics_folder="logs/models_results/overall_results", 
     for file_name in os.listdir(metrics_folder):
         if file_name.endswith(".json"):
             # Derive model name from file name
-            model_name = file_name.split("overall_metrics_")[-1].replace('.json', '').replace('_', ' ')
+            model_name = file_name.replace("overall_metrics_", "").replace('.json', '').replace('_', ' ')
             
             # Read the JSON data
             with open(os.path.join(metrics_folder, file_name), 'r') as file:
@@ -125,11 +128,11 @@ def generate_scatter_plot(metrics_folder="logs/models_results/overall_results", 
             
             # Call helper function to generate bar plot for parameter combinations
             plot_parameter_combinations(df, model_name, model_results_path)
-            generate_complexity_scatter_plot(model_name)
 
 
 # Main function to generate visualizations
 def generate_visualizations(metrics_folder="logs/models_results/overall_results", results_folder="results"):
     """Generates visual reports to compare model performance based on metrics like accuracy and BLEU scores."""
     generate_scatter_plot(metrics_folder, results_folder)
+    generate_complexity_scatter_plot()
 

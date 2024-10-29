@@ -77,3 +77,216 @@
 2024-10-29 13:30:40,081:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
 2024-10-29 13:30:40,083:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
 2024-10-29 13:30:40,083:INFO:Starting data validation...
+2024-10-29 17:17:43,233:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:17:43,233:INFO:Generating plots...
+2024-10-29 17:17:43,233:INFO:Generating visualizations...
+2024-10-29 17:17:43,434:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:17:43,531:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:17:43,610:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:43,688:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:43,767:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:43,846:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:43,921:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:17:44,014:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:17:44,093:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:44,170:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:44,246:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:44,324:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:17:44,325:INFO:Process completed successfully.
+2024-10-29 17:18:51,636:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:18:51,636:INFO:Generating plots...
+2024-10-29 17:18:51,636:INFO:Generating visualizations...
+2024-10-29 17:18:51,824:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:18:51,920:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:18:52,000:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,081:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,162:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,240:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,315:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:18:52,409:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:18:52,490:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,569:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,646:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,724:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:18:52,724:INFO:Process completed successfully.
+2024-10-29 17:23:51,069:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:23:51,070:INFO:Generating plots...
+2024-10-29 17:23:51,070:INFO:Generating visualizations...
+2024-10-29 17:23:51,283:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:23:51,380:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:23:51,456:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:23:51,552:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:23:51,632:INFO:Scatter plot saved for (LOCAL_TEST)_Codellama_(7B)_quantized_4bit at results/(LOCAL_TEST)_Codellama_(7B)_quantized_4bit/(LOCAL_TEST)_Codellama_(7B)_quantized_4bit_complexity_accuracy_scatter.png
+2024-10-29 17:23:51,710:INFO:Scatter plot saved for (LOCAL_TEST)_Llama3.1_TEST at results/(LOCAL_TEST)_Llama3.1_TEST/(LOCAL_TEST)_Llama3.1_TEST_complexity_accuracy_scatter.png
+2024-10-29 17:23:51,789:INFO:Scatter plot saved for (LOCAL_TEST)_Llama3.1_(8B)_quantized_4bit at results/(LOCAL_TEST)_Llama3.1_(8B)_quantized_4bit/(LOCAL_TEST)_Llama3.1_(8B)_quantized_4bit_complexity_accuracy_scatter.png
+2024-10-29 17:23:51,868:INFO:Scatter plot saved for (LOCAL_TEST)_Codelama_TEST at results/(LOCAL_TEST)_Codelama_TEST/(LOCAL_TEST)_Codelama_TEST_complexity_accuracy_scatter.png
+2024-10-29 17:23:51,868:INFO:Process completed successfully.
+2024-10-29 17:24:39,207:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:24:39,207:INFO:Generating plots...
+2024-10-29 17:24:39,207:INFO:Generating visualizations...
+2024-10-29 17:24:39,392:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:24:39,490:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:24:39,567:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:24:39,663:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:24:39,741:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:24:39,817:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:24:39,895:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:24:39,972:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:24:39,972:INFO:Process completed successfully.
+2024-10-29 17:25:05,148:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:25:05,148:INFO:Generating plots...
+2024-10-29 17:25:05,148:INFO:Generating visualizations...
+2024-10-29 17:25:05,339:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:25:05,434:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:25:05,510:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:25:05,604:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:25:05,683:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:25:05,763:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:25:05,843:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:25:05,921:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:25:05,921:INFO:Process completed successfully.
+2024-10-29 17:26:28,452:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:26:28,452:INFO:Generating plots...
+2024-10-29 17:26:28,452:INFO:Generating visualizations...
+2024-10-29 17:26:28,637:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:26:28,733:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:26:28,810:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:26:28,904:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:26:28,983:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:26:29,059:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:26:29,137:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:26:29,213:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:26:29,213:INFO:Process completed successfully.
+2024-10-29 17:27:39,946:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:27:39,946:INFO:Generating plots...
+2024-10-29 17:27:39,946:INFO:Generating visualizations...
+2024-10-29 17:27:40,130:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:27:40,230:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:27:40,306:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:27:40,401:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:27:40,480:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:27:40,556:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:27:40,634:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:27:40,714:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:27:40,714:INFO:Process completed successfully.
+2024-10-29 17:27:56,355:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:27:56,355:INFO:Analyzing results...
+2024-10-29 17:27:56,446:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:27:56,475:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:27:56,493:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:27:56,513:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:27:56,513:INFO:Generating plots...
+2024-10-29 17:27:56,513:INFO:Generating visualizations...
+2024-10-29 17:27:56,690:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:27:56,785:INFO:Parameter combinations plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:27:56,860:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:27:56,954:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:27:57,031:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:27:57,124:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 17:27:57,201:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 17:27:57,297:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 17:27:57,376:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:27:57,454:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:27:57,534:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:27:57,613:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:27:57,613:INFO:Process completed successfully.
+2024-10-29 17:28:15,684:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:28:15,684:INFO:Analyzing results...
+2024-10-29 17:28:15,736:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:28:15,753:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:28:15,769:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:28:15,787:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:28:15,787:INFO:Generating plots...
+2024-10-29 17:28:15,787:INFO:Generating visualizations...
+2024-10-29 17:28:15,963:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:28:16,058:INFO:Parameter combinations plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:28:16,134:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:28:16,233:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:28:16,315:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:28:16,392:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:28:16,470:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:28:16,548:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:28:16,548:INFO:Process completed successfully.
+2024-10-29 17:29:15,439:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:29:15,439:INFO:Analyzing results...
+2024-10-29 17:29:15,493:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:29:15,511:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:29:15,529:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:29:15,548:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:29:15,548:INFO:Generating plots...
+2024-10-29 17:29:15,548:INFO:Generating visualizations...
+2024-10-29 17:29:15,733:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:29:15,828:INFO:Parameter combinations plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:29:15,903:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:29:15,996:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:29:16,075:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:29:16,152:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:29:16,231:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:29:16,309:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:29:16,309:INFO:Process completed successfully.
+2024-10-29 17:30:57,117:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:30:57,117:INFO:Analyzing results...
+2024-10-29 17:30:57,172:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:30:57,194:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:30:57,214:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:30:57,235:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:30:57,235:INFO:Generating plots...
+2024-10-29 17:30:57,235:INFO:Generating visualizations...
+2024-10-29 17:30:57,440:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:30:57,541:INFO:Parameter combinations plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:30:57,618:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:30:57,713:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:30:57,801:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:30:57,881:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:30:57,963:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:30:58,054:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:30:58,054:INFO:Process completed successfully.
+2024-10-29 17:32:02,165:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:32:02,165:INFO:Analyzing results...
+2024-10-29 17:32:02,216:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:32:02,251:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:32:02,276:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 17:32:02,293:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 17:32:02,293:INFO:Generating plots...
+2024-10-29 17:32:02,293:INFO:Generating visualizations...
+2024-10-29 17:32:02,479:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:32:02,575:INFO:Parameter combinations plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:32:02,651:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:32:02,742:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:32:02,819:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:32:02,895:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:32:02,970:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:32:03,046:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:32:03,046:INFO:Process completed successfully.
+2024-10-29 17:39:21,924:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:39:21,925:INFO:Analyzing results...
+2024-10-29 17:39:21,978:ERROR:Unexpected error in __main__.run_pipeline: cannot access local variable 'overall_metrics_file' where it is not associated with a value
+2024-10-29 17:39:21,978:ERROR:Traceback: Traceback (most recent call last):
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 114, in run_pipeline
+    analyze_results()
+  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/result_analysis.py", line 137, in analyze_results
+    with open(overall_metrics_file, 'w') as metrics_file:
+              ^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'overall_metrics_file' where it is not associated with a value
+
+2024-10-29 17:40:08,222:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 17:40:08,222:INFO:Analyzing results...
+2024-10-29 17:40:08,274:INFO:Metrics analysis completed for model: (LOCAL_TEST)_Codellama_(7B)_quantized_4bit
+2024-10-29 17:40:08,293:INFO:Metrics analysis completed for model: (LOCAL_TEST)_Llama3.1_TEST
+2024-10-29 17:40:08,310:INFO:Metrics analysis completed for model: (LOCAL_TEST)_Llama3.1_(8B)_quantized_4bit
+2024-10-29 17:40:08,329:INFO:Metrics analysis completed for model: (LOCAL_TEST)_Codelama_TEST
+2024-10-29 17:40:08,329:INFO:Generating plots...
+2024-10-29 17:40:08,329:INFO:Generating visualizations...
+2024-10-29 17:40:08,546:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:40:08,647:INFO:Parameter combinations plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:40:08,725:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-10-29 17:40:08,820:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-10-29 17:40:08,895:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_accuracy_scatter.png
+2024-10-29 17:40:08,989:INFO:Parameter combinations plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_parameter_combinations.png
+2024-10-29 17:40:09,067:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_accuracy_scatter.png
+2024-10-29 17:40:09,162:INFO:Parameter combinations plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_parameter_combinations.png
+2024-10-29 17:40:09,245:INFO:Scatter plot saved for (LOCAL TEST) Codellama (7B) quantized 4bit at results/(LOCAL TEST) Codellama (7B) quantized 4bit/(LOCAL TEST) Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:40:09,324:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 TEST at results/(LOCAL TEST) Llama3.1 TEST/(LOCAL TEST) Llama3.1 TEST_complexity_accuracy_scatter.png
+2024-10-29 17:40:09,403:INFO:Scatter plot saved for (LOCAL TEST) Llama3.1 (8B) quantized 4bit at results/(LOCAL TEST) Llama3.1 (8B) quantized 4bit/(LOCAL TEST) Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 17:40:09,484:INFO:Scatter plot saved for (LOCAL TEST) Codelama TEST at results/(LOCAL TEST) Codelama TEST/(LOCAL TEST) Codelama TEST_complexity_accuracy_scatter.png
+2024-10-29 17:40:09,484:INFO:Process completed successfully.

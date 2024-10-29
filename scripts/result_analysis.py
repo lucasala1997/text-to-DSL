@@ -31,10 +31,10 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
     }
     try:
         response = requests.post(validator_url, json=data)
-        print(response)
+        #print(response)
         response.raise_for_status()
         result = response.json()
-        print("\n\n\nresult: "+ str(result) + "\n\n\n")
+        #print("\n\n\nresult: "+ str(result) + "\n\n\n")
         # print("is_valid? "+ str(result.get("is_valid")))
         #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
         return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
@@ -61,6 +61,7 @@ def analyze_results():
             model_file_path = os.path.join(models_results_folder, model_file)
             
             if model_file.endswith('.json'):
+                print(f"Analyzing results for model: {model_file}")
                 # Load the test results for this model
                 with open(model_file_path, 'r') as file:
                     results = json.load(file)
@@ -75,8 +76,8 @@ def analyze_results():
 
                 
                 # Analyze each result for this model
+                model_name = os.path.splitext(model_file)[0]
                 for result in results:
-                    model_name = result['model_name']
                     parameters = json.dumps(result['parameters'])  # Use the parameters as part of the key
                     system_prompt_version = result['system_prompt_version']['version']
 
@@ -87,13 +88,10 @@ def analyze_results():
                     # Update or set the 'success' key based on validation result
                     result['success'] = dsl_validator(result['expected_dsl_output'], result['generated_dsl_output'])[0]
                     
-                    # Update metrics if the validation result is successful
+                    #TODO: Update metrics if the validation result is successful
                     if result['success']:
                         metrics[key]["accurate_dsl"] += 1
                         total_correct += 1
-                        print("\nTrue\n")
-                    else:
-                        print("\nFalse\n")
 
                     # After processing all results, save the updated list back to the file
                     with open(model_file_path, 'w') as file:
@@ -106,7 +104,7 @@ def analyze_results():
                     total_bleu_score += bleu_score
 
                 # Calculate overall metrics for this model
-                overrall_accuracy = total_correct / total_examples
+                overall_accuracy = total_correct / total_examples
                 overall_average_bleu_score = total_bleu_score / total_examples
 
                 # Save the updated test results back to the individual model file
@@ -135,7 +133,7 @@ def analyze_results():
                 overall_results_folder = os.path.join(models_results_folder, 'overall_results')
                 if not os.path.exists(overall_results_folder):
                     os.makedirs(overall_results_folder)
-                overall_metrics_file = f"logs/models_results/overall_results/overall_metrics_{model_name.replace(' ', '_').replace('(', '').replace(')', '').replace(':', '').replace('-', '_')}.json"
+                overall_metrics_file = os.path.join(overall_results_folder, f"overall_metrics_{model_name}.json")
                 with open(overall_metrics_file, 'w') as metrics_file:
                     json.dump(model_data, metrics_file, indent=4)
 
