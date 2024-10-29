@@ -12,10 +12,16 @@ from tqdm import tqdm
 
 # Load configuration
 config = load_config()
+
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
+
 MAX_RETRIES = config['retry_settings']['max_retries']
 RETRY_DELAY = config['retry_settings']['retry_delay']
-
-validator_url = "http://localhost:3000/api/sensor/validate"
 
 # Closed-source models and their APIs
 closed_source_models = {
@@ -45,8 +51,6 @@ closed_source_models = {
         "model_name_api": "claude-3-5-sonnet-20241022"
     }
 }
-
-
 
 def load_model_config(model_name):
     """

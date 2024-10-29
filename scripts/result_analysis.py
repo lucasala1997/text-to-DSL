@@ -7,16 +7,24 @@ from nltk.translate.bleu_score import sentence_bleu
 from collections import defaultdict
 from utils import load_config
 
+
+config = load_config()
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
+
 validator_url = "http://localhost:3000/api/sensor/validate"
 
 
 def dsl_validator(expected_dsl_output, generated_dsl_output):
     if not expected_dsl_output.startswith("CREATE PRODUCT "):
-        expected_dsl_output = "CREATE PRODUCT " + expected_dsl_output
+        expected_dsl_output = "CREATE PRODUCT test USING 4326; " + expected_dsl_output
     if not generated_dsl_output.startswith("CREATE PRODUCT "):
-        generated_dsl_output = "CREATE PRODUCT " + generated_dsl_output
+        generated_dsl_output = "CREATE PRODUCT test USING 4326; " + generated_dsl_output
 
-        
     data = {
         "expected_dsl_output": expected_dsl_output,
         "generated_dsl_output": generated_dsl_output
@@ -26,7 +34,8 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
         print(response)
         response.raise_for_status()
         result = response.json()
-    
+        print("\n\n\nresult: "+ str(result) + "\n\n\n")
+        # print("is_valid? "+ str(result.get("is_valid")))
         #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
         return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
     except requests.exceptions.RequestException as e:

@@ -12,7 +12,7 @@
             "num_ctx": 16384,
             "top_k": 40,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.9
         }
     },
     "(LOCAL_TEST) Llama3.1 (8B) quantized 4bit": {
@@ -28,7 +28,7 @@
             "num_ctx": 132000,
             "top_k": 41,
             "top_p": 0.9,
-            "temperature": 0.0
+            "temperature": 0.9
         }
     },
     "Qwen 2.5-coder (7B) quantized 4bit": {

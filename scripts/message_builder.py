@@ -1,3 +1,15 @@
+import logging
+from utils import load_config
+
+
+config = load_config()
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
+
 def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl):
     """
     Constructs a message for a language model based on the provided parameters.

@@ -5,6 +5,12 @@ from datetime import datetime
 
 # Load configuration
 config = load_config()
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
 
 def load_prompt_versions():
     """Load prompt versions from the JSON file located in the metadata folder."""

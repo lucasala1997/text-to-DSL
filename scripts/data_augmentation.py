@@ -7,7 +7,16 @@ import os
 from nltk.corpus import wordnet
 import spacy
 import openai  # Import OpenAI library for GPT-4 paraphrasing
+from utils import load_config
 
+
+config = load_config()
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
 # Load SpaCy model
 nlp = spacy.load("en_core_web_sm")
 

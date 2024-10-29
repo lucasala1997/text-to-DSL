@@ -1,88 +1,79 @@
-2024-10-28 13:36:39,368:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:36:39,368:INFO:Starting data validation...
-2024-10-28 13:36:40,301:INFO:Simple examples loaded successfully.
-2024-10-28 13:36:40,302:INFO:Complex examples loaded successfully.
-2024-10-28 13:36:40,307:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-28 13:36:40,307:INFO:Updating prompt versions...
-2024-10-28 13:36:40,594:INFO:Deploying models...
-2024-10-28 13:36:40,595:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
-2024-10-28 13:36:40,897:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:36:41,554:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-28 13:36:41,555:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-28 13:36:41,555:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-28 13:36:41,556:INFO:Grammar for sensors loaded successfully.
-2024-10-28 13:36:41,557:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-28 13:36:41,557:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 1 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 16384, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.5}.
-2024-10-28 13:36:45,194:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-28 13:36:45,194:INFO:Process completed successfully.
-2024-10-28 13:43:41,254:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:43:41,254:INFO:Analyzing results...
-2024-10-28 13:43:41,265:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:43:41,265:INFO:Process completed successfully.
-2024-10-28 13:43:50,935:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:43:50,935:INFO:Analyzing results...
-2024-10-28 13:43:50,947:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:43:50,947:INFO:Process completed successfully.
-2024-10-28 13:43:55,484:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:43:55,484:INFO:Analyzing results...
-2024-10-28 13:43:55,494:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:43:55,494:INFO:Process completed successfully.
-2024-10-28 13:45:36,764:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:45:36,764:INFO:Analyzing results...
-2024-10-28 13:45:36,775:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:45:36,775:INFO:Process completed successfully.
-2024-10-28 13:47:54,274:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:47:54,274:INFO:Starting data validation...
-2024-10-28 13:47:55,226:INFO:Simple examples loaded successfully.
-2024-10-28 13:47:55,227:INFO:Complex examples loaded successfully.
-2024-10-28 13:47:55,230:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-28 13:47:55,230:INFO:Updating prompt versions...
-2024-10-28 13:47:55,801:INFO:Deploying models...
-2024-10-28 13:47:55,802:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
-2024-10-28 13:47:56,668:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:47:58,943:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
-2024-10-28 13:47:58,944:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-28 13:47:58,944:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-28 13:47:58,945:INFO:Grammar for sensors loaded successfully.
-2024-10-28 13:47:58,946:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-28 13:47:58,946:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 1 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 16384, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.5}.
-2024-10-28 13:48:15,248:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
-2024-10-28 13:48:15,249:INFO:Analyzing results...
-2024-10-28 13:48:15,263:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:48:15,263:INFO:Process completed successfully.
-2024-10-28 13:50:09,474:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:50:09,475:INFO:Analyzing results...
-2024-10-28 13:50:09,497:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:50:09,497:INFO:Process completed successfully.
-2024-10-28 13:50:28,915:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:50:28,915:INFO:Analyzing results...
-2024-10-28 13:50:28,929:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:50:28,929:INFO:Process completed successfully.
-2024-10-28 13:50:54,632:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:50:54,632:INFO:Analyzing results...
-2024-10-28 13:50:54,642:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:50:54,642:INFO:Process completed successfully.
-2024-10-28 13:50:59,950:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:50:59,950:INFO:Analyzing results...
-2024-10-28 13:50:59,960:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:50:59,960:INFO:Process completed successfully.
-2024-10-28 13:51:05,959:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:51:05,959:INFO:Analyzing results...
-2024-10-28 13:51:05,970:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:51:05,970:INFO:Process completed successfully.
-2024-10-28 13:51:34,081:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:51:34,081:INFO:Analyzing results...
-2024-10-28 13:51:34,094:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:51:34,094:INFO:Process completed successfully.
-2024-10-28 13:51:39,960:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:51:39,960:INFO:Analyzing results...
-2024-10-28 13:51:39,969:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:51:39,969:INFO:Process completed successfully.
-2024-10-28 13:51:57,743:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:51:57,743:INFO:Analyzing results...
-2024-10-28 13:51:57,753:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:51:57,753:INFO:Process completed successfully.
-2024-10-28 13:54:55,497:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-28 13:54:55,497:INFO:Analyzing results...
-2024-10-28 13:54:55,505:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
-2024-10-28 13:54:55,505:INFO:Process completed successfully.
+2024-10-29 13:27:00,091:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:27:00,188:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 13:27:00,271:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:00,351:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:00,432:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:00,514:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:00,594:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:27:00,691:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 13:27:00,771:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:00,852:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:00,933:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:01,013:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:01,014:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 13:27:01,014:INFO:Starting data validation...
+2024-10-29 13:27:04,007:INFO:Simple examples loaded successfully.
+2024-10-29 13:27:04,008:INFO:Complex examples loaded successfully.
+2024-10-29 13:27:04,011:ERROR:Validation error in complex_examples.json: 0 is not of type 'string'. Problematic data: {'example_id': 0, 'example_name': 'intecmar', 'DSL_type': 'sensor', 'input_text': "Create an application with sensors that have the following properties: maxDepth as Float, code as String, name as String, description as String, startTime as DateTime and endTime as DateTime. The sensors measure the following properties: temperature_its90 as Double with units 'ºC' and icon 'thermometer-low', salinity as Double with units 'PSU', pressure as Double with units 'dbar' and icon 'speedometer', pH as Double with units 'ph' and icon 'ph', oxygen as double with units 'mg/l' and icon 'gas-cylinder', transmittance as Double with units 'm', irradiance as Double with units 'W/m2', density as Double with units 'kg/m3', and conductivity as Double with units 'S/m'. It will be necessary to aggregate by a spatial polygon dimension called estuary and a categorical dimension called depth. The categorical dimension estuary has the follwing properties: shortName as String, name as String and zone as String. The categorical dimension depth has the following ranges: surface from 0 to 3, 5m from 4.75 to 5.25, 10m from 9.75 to 10.25, 15m from 14.75 to 15.25, and 20m from 19.75 to 20.25. The data is retrieved every 300 seconds", 'expected_dsl_output': "CREATE PRODUCT intecmar USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String DISPLAY_STRING,name String,zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE SENSOR StationObservation (interval: 300, datasource: postgres, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String,description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS 'ºC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange) WITH BBOX ([42.7, -8.1], 9);", 'complexity_level': 'complex', 'description': 'Complete definition of sensors to measure sea parameters', 'synthetic_data': False}
+2024-10-29 13:27:04,011:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-10-29 13:27:04,011:INFO:Updating prompt versions...
+2024-10-29 13:27:04,393:INFO:Deploying models...
+2024-10-29 13:27:04,393:INFO:Available supported models: ['(LOCAL_TEST) Codellama (7B) quantized 4bit', '(LOCAL_TEST) Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
+2024-10-29 13:27:04,749:INFO:Selected model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 13:27:07,036:INFO:Parameters for model (LOCAL_TEST) Codellama (7B) quantized 4bit configured successfully.
+2024-10-29 13:27:07,036:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-10-29 13:27:07,036:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-10-29 13:27:07,037:INFO:Grammar for sensors loaded successfully.
+2024-10-29 13:27:07,037:INFO:Few-shot examples for sensors loaded successfully.
+2024-10-29 13:27:07,037:INFO:Testing model (LOCAL_TEST) Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 16384, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.9}.
+2024-10-29 13:27:37,521:INFO:Model (LOCAL_TEST) Codellama (7B) quantized 4bit tested successfully.
+2024-10-29 13:27:37,522:INFO:Analyzing results...
+2024-10-29 13:27:37,741:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 13:27:37,780:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 13:27:37,814:INFO:Metrics analysis completed for model: (LOCAL_TEST) Llama3.1 (8B) quantized 4bit
+2024-10-29 13:27:37,839:INFO:Metrics analysis completed for model: (LOCAL_TEST) Codellama (7B) quantized 4bit
+2024-10-29 13:27:37,839:INFO:Generating plots...
+2024-10-29 13:27:37,839:INFO:Generating visualizations...
+2024-10-29 13:27:38,005:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:27:38,108:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 13:27:38,188:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,269:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,396:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,475:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,553:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:27:38,648:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 13:27:38,731:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,818:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,895:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,972:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:27:38,972:INFO:Process completed successfully.
+2024-10-29 13:28:30,572:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:28:30,670:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 13:28:30,755:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:30,836:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:30,920:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:31,005:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:31,083:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:28:31,181:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 13:28:31,263:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:31,343:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:31,426:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:31,505:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:28:31,506:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 13:28:31,506:INFO:Starting data validation...
+2024-10-29 13:29:14,174:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 13:29:14,174:INFO:Starting data validation...
+2024-10-29 13:30:39,161:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:30:39,258:INFO:Parameter combinations plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_parameter_combinations.png
+2024-10-29 13:30:39,343:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:39,424:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:39,504:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:39,584:INFO:Scatter plot saved for LOCAL TEST Codellama 7B quantized 4bit at results/LOCAL TEST Codellama 7B quantized 4bit/LOCAL TEST Codellama 7B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:39,661:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_accuracy_scatter.png
+2024-10-29 13:30:39,758:INFO:Parameter combinations plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_parameter_combinations.png
+2024-10-29 13:30:39,838:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:39,917:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:39,998:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:40,081:INFO:Scatter plot saved for LOCAL TEST Llama3.1 8B quantized 4bit at results/LOCAL TEST Llama3.1 8B quantized 4bit/LOCAL TEST Llama3.1 8B quantized 4bit_complexity_accuracy_scatter.png
+2024-10-29 13:30:40,083:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-10-29 13:30:40,083:INFO:Starting data validation...

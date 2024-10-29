@@ -7,11 +7,9 @@ from scripts.model_parameter_config import configure_model_parameters
 from scripts.prompt_version import configure_prompt_version
 from scripts.model_testing import test_model
 from scripts.result_analysis import analyze_results
-# from scripts.visualization_reporting import generate_visualizations
+from scripts.visualization_reporting import generate_visualizations
 # import tensorflow as tf
 
-# from scripts.experiment_log_manager import manage_experiment_logs
-# from scripts.visualization_reporting import generate_visualizations
 
 #TODO: check if VRAM usage is working
 # GPU Memory Management
@@ -51,15 +49,19 @@ except Exception as e:
 
 # Setup logging based on config settings (config.json)
 try:
+    # Reset any existing handlers to avoid duplicate logs
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
+    
+    # Configure logging with the settings from config.json
     logging.basicConfig(
         filename=config['paths']['project_log_file'],
         level=config['logging']['level'],
         format=config['logging']['format']
     )
 except Exception as e:
-    logging.error(f"Error setting up logging in {__name__}: {e}")
-    logging.error(f"Traceback: {traceback.format_exc()}")  # Log the detailed traceback
-    print(f"An unexpected error occurred while setting up logging: {e}")
+    print(f"Error setting up logging: {e}")
+    print(f"Traceback: {traceback.format_exc()}")
 
 def deploy_selected_model(dataset_name, system_prompt_version=None):
     try:
@@ -85,26 +87,26 @@ def run_pipeline(selected_steps):
 
     dataset_name = "GIS"
     try:
-        # if 'data_validation' in selected_steps:
-        #     print('Starting data validation...')
-        #     logging.info('Starting data validation...')
-        #     dataset_name = validate_data()
-        #     print('Data validated successfully.')
-        #     print('--------------------------')
+        if 'data_validation' in selected_steps:
+            print('Starting data validation...')
+            logging.info('Starting data validation...')
+            dataset_name = validate_data()
+            print('Data validated successfully.')
+            print('--------------------------')
 
-        # if 'configure_prompt_version' in selected_steps:
-        #     print('Updating prompt versions...')
-        #     logging.info('Updating prompt versions...')
-        #     prompt_version = configure_prompt_version()
-        #     print(f"Selected prompt version: {prompt_version}")
-        #     print('--------------------------')
+        if 'configure_prompt_version' in selected_steps:
+            print('Updating prompt versions...')
+            logging.info('Updating prompt versions...')
+            prompt_version = configure_prompt_version()
+            print(f"Selected prompt version: {prompt_version}")
+            print('--------------------------')
 
-        # if 'test_model' in selected_steps:
-        #     print('Deploying models...')
-        #     logging.info('Deploying models...')
-        #     #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
-        #     deploy_selected_model(dataset_name, prompt_version) if prompt_version else deploy_selected_model(dataset_name)
-        #     print('--------------------------')
+        if 'test_model' in selected_steps:
+            print('Deploying models...')
+            logging.info('Deploying models...')
+            #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
+            deploy_selected_model(dataset_name, prompt_version) if prompt_version else deploy_selected_model(dataset_name)
+            print('--------------------------')
 
         if 'analyze_results' in selected_steps:
             print('Analyzing results...')
@@ -113,13 +115,13 @@ def run_pipeline(selected_steps):
             print('Analysis saved.')
             print('--------------------------')
 
-        # if 'generate_visualizations' in selected_steps:
-        # #     print('Generating plots...')
-        # #     logging.info('Generating plots...')
-        #     logging.info('Generating visualizations...')
-        #     generate_visualizations()
-        # #     print('Plot saved.')
-        # #     print('--------------------------')
+        if 'generate_visualizations' in selected_steps:
+            print('Generating plots...')
+            logging.info('Generating plots...')
+            logging.info('Generating visualizations...')
+            generate_visualizations()
+            print('Plot saved.')
+            print('--------------------------')
 
         logging.info('Process completed successfully.')
         print('Process completed successfully.')

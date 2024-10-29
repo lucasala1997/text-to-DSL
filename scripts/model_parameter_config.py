@@ -9,6 +9,13 @@ except Exception as e:
     logging.error(f"Error loading config in {__name__}: {e}")
     print(f"An unexpected error occurred while loading config: {e}")
 
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
+
 def configure_model_parameters(model_name=None):
     """Interactively configure parameters for a specific model and save updates immediately.
 

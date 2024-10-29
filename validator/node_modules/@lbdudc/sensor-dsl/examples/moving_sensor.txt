@@ -1,0 +1,22 @@
+CREATE PRODUCT ships USING 4326;
+
+// DIMENSIONS
+
+CREATE SPATIAL DIMENSION Zone (
+	geometry: Geometry
+) WITH PROPERTIES (
+	cZone Integer DISPLAY_STRING
+);
+
+// SENSORS
+
+CREATE SENSOR ShipObservation (
+	interval: 300,
+	geometry: Point
+) WITH PROPERTIES (
+	descripcion String
+) WITH MEASUREMENT DATA (
+	speed Double UNITS "knots/hour" ICON "speed"
+) WITH SPATIAL GROUP Zone (
+	Zone
+) WITH BBOX ([40.42, -3.7], 12);

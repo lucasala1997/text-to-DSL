@@ -1,5 +1,15 @@
 import json
 import logging
+from utils import load_config
+
+
+config = load_config()
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
 
 #TODO: REWRITE
 def manage_experiment_logs():

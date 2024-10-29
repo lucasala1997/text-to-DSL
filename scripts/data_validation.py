@@ -2,6 +2,16 @@ import json
 import logging
 from jsonschema import validate, ValidationError
 import os
+from utils import load_config
+
+
+config = load_config()
+# Set up logging based on config.json
+logging.basicConfig(
+    filename=config['paths']['project_log_file'],
+    level=getattr(logging, config['logging']['level'], logging.INFO),
+    format=config['logging']['format']
+)
 
 def validate_data(dataset_name=None):
     """Validates the JSON data for both simple and complex examples against a predefined schema.

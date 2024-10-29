@@ -1,0 +1,44 @@
+[
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 132000,
+            "top_k": 41,
+            "top_p": 0.9,
+            "temperature": 0.0
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.5499399869396124,
+        "total_examples": 2
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 132000,
+            "top_k": 41,
+            "top_p": 0.9,
+            "temperature": 0.7
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.558607294131037,
+        "total_examples": 2
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 132000,
+            "top_k": 41,
+            "top_p": 0.9,
+            "temperature": 0.9
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.5575836394397966,
+        "total_examples": 2
+    }
+]
