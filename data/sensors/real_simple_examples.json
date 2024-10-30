@@ -1,0 +1,165 @@
+[
+  {
+    "example_id": "0",
+    "DSL_type": "sensor",
+    "input_text": "Create a spatial dimension called Municipality representing a polygon with the attributes shortName as String, code as String and population as Integer.",
+    "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String DISPLAY_STRING, code String, population Integer);",
+    "complexity_level": "simple",
+    "description": "Simple spatial dimension creation",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "1",
+    "DSL_type": "sensor",
+    "input_text": "New product called meteorological using SRID 4326.",
+    "expected_dsl_output": "CREATE PRODUCT meteorological USING 4326;",
+    "complexity_level": "simple",
+    "description": "New product name definition",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "2",
+    "DSL_type": "sensor",
+    "input_text": "New product called magist using SRID 4326.",
+    "expected_dsl_output": "CREATE PRODUCT magist USING 4326;",
+    "complexity_level": "simple",
+    "description": "New product name definition",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "3",
+    "DSL_type": "sensor",
+    "input_text": "Create a spatial dimension called Floor representing a polygon with the attribures code as String and number as Integer.",
+    "expected_dsl_output": "CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (code String,number Integer);",
+    "complexity_level": "simple",
+    "description": "Simple spatial dimension creation",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "4",
+    "DSL_type": "sensor",
+    "input_text": "Create two spatial aggregations. The first one is called Building representing a polygon with the properties shortName as String, code as String, address as String and buildingType as String. The second one is called Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building.",
+    "expected_dsl_output": "CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);",
+    "complexity_level": "simple",
+    "description": "Spatial dimension with hierarchy",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "5",
+    "DSL_type": "sensor",
+    "input_text": "Create three sparial dimensions: The first one is called Municipality representing a polygon with the property cMum as Integer, the second one is called District representing a polygon with the property cDis as Integer and the last one is called Section representing a polygon with the property cSec as Integer. A Section is contained inside a District and a Distric is contained inside a Municipality.",
+    "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer DISPLAY_STRING); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer DISPLAY_STRING) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer DISPLAY_STRING) WITH PARENT (District);",
+    "complexity_level": "simple",
+    "description": "Spatial dimension with hierarchy",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "6",
+    "DSL_type": "sensor",
+    "input_text": "Create one spatial aggregation called Zone representing a polygon with the properties code as String, area as Integer and name as String.",
+    "expected_dsl_output": "CREATE SPATIAL DIMENSION Zone (geometry: Polygon) WITH PROPERTIES (code String, area String, name String);",
+    "complexity_level": "simple",
+    "description": "Simple spatial dimension",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "7",
+    "DSL_type": "sensor",
+    "input_text": "Create two spatial aggregations, the first one called Province representing a polygon with the property name as String, and the second one called Council representing a polygon with the property name as String. A Council is located inside a Province.",
+    "expected_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String DISPLAY_STRING); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String DISPLAY_STRING) WITH PARENT (Province);",
+    "complexity_level": "simple",
+    "description": "Spatial dimension with hierarchy",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "9",
+    "DSL_type": "sensor",
+    "input_text": "Create a categorical dimension called SensorType.",
+    "expected_dsl_output": "CREATE CATEGORICAL DIMENSION SensorType (field: sensorType);",
+    "complexity_level": "simple",
+    "description": "Categorical dimension without range",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "10",
+    "DSL_type": "sensor",
+    "input_text": "Create a categorical dimension called Alarm.",
+    "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Alarm (field: alarm);",
+    "complexity_level": "simple",
+    "description": "Categorical dimension without range",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "11",
+    "DSL_type": "sensor",
+    "input_text": "Create a categorical dimension called Level with the following ranges: low from 0 to 3, medium from 31 to 70 and high from 71 to 100.",
+    "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Level (field: level); CREATE RANGE LevelRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high');",
+    "complexity_level": "simple",
+    "description": "Categorical dimension by numeric range",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "13",
+    "DSL_type": "sensor",
+    "input_text": "Create a sensor with the property name as String and the following measurements: value as Double and quality as Integer. It will be necessary to aggregate by a spatial dimension called ZoneDimension and a categorical dimension called SensorType. The data is retrieved each 10 seconds.",
+    "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 10, geometry: Polygon) WITH PROPERTIES (name String) WITH MEASUREMENT DATA (value Double, quality Integer) WITH SPATIAL GROUP ZoneDimension (ZoneDimension) WITH CATEGORICAL GROUP (SensorType);",
+    "complexity_level": "simple",
+    "description": "Sensor observation creation with categorical aggregation",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "14",
+    "DSL_type": "sensor",
+    "input_text": "Create a sensor with properties code as String, name as String and type as String. The sensor will measure the following elements: incline as Double with units 'º' displacement as Double with units 'º' and deformation as Double with units 'º'. It will be necessary to aggregate by a spatial dimension called municipality. The data is retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+    "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS 'º', displacement Double UNITS 'º', deformation Double UNITS 'º') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
+    "complexity_level": "simple",
+    "description": "Sensor observation creation with spatial aggregation",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "15",
+    "DSL_type": "sensor",
+    "input_text": "Create a sensor that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double, min_ultrasound_bound_time as Double with units Hz, max_ultrasound_bound_time as Double with units Hz. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+    "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String,description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH BBOX ([42.7, -8.1], 9);",
+    "complexity_level": "simple",
+    "description": "Sensor observation creation without any aggregation",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "16",
+    "DSL_type": "sensor",
+    "input_text": "Create a categorical dimension called Layer with the following ranges: layer1 from 0 to 300, layer2 from 301 to 700, layer3 from 701 to 1200, layer4 from 1201 to 2000 and last_layer from 2001 to 10000.",
+    "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Layer (field: layer); CREATE RANGE LayerRange (0 TO 300 AS 'layer1', 301 TO 700 AS 'layer2', 701 TO 1200 AS 'layer3', 1201 TO 2000 AS 'layer4', 2001 TO 10000 AS 'lastLayer');",
+    "complexity_level": "simple",
+    "description": "Categorical dimension by numeric range",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "17",
+    "DSL_type": "sensor",
+    "input_text": "Create a categorical dimension called SimpleGrade with the following ranges: failed from 0 to 4.99 and approved from 5 to 10.",
+    "expected_dsl_output": "CREATE CATEGORICAL DIMENSION SimpleGrade (field: simpleGrade); CREATE RANGE LayerRange (0 TO 4.99 AS 'failed', 5 TO 10 AS 'approved');",
+    "complexity_level": "simple",
+    "description": "Categorical dimension by numeric range",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "18",
+    "DSL_type": "sensor",
+    "input_text": "Create a sensor with the following property: name as String. The sensor will measure the parameter noise_level as a Double with units 'db' and icon 'speedometer'. The data will be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 9.",
+    "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, datasource: postgres, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'dB' ICON 'speedometer') WITH BBOX ([40.42, -3.7], 12);",
+    "complexity_level": "simple",
+    "description": "Sensor observation creation without any aggregation",
+    "synthetic_data": false
+  },
+  {
+    "example_id": "19",
+    "DSL_type": "sensor",
+    "input_text": "Create a sensor with the following properties: code as Srting, name as String, description as String, material as String and date as DateTime. The sensor will measure the following properties: water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City. The data is retireved each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+    "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 900, datasource: postgres, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
+    "complexity_level": "simple",
+    "description": "Sensor observation creation without simple aggregation",
+    "synthetic_data": false
+  }
+]
+

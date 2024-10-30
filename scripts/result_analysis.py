@@ -31,11 +31,12 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
     }
     try:
         response = requests.post(validator_url, json=data)
+        #print("reuest: "+ str(data))
         #print(response)
         response.raise_for_status()
         result = response.json()
-        #print("\n\n\nresult: "+ str(result) + "\n\n\n")
-        # print("is_valid? "+ str(result.get("is_valid")))
+        #print("\nresult: "+ str(result) + "\n")
+        #print("is_valid? "+ str(result.get("is_valid")) + "\n\n\n")
         #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
         return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
     except requests.exceptions.RequestException as e:
@@ -43,11 +44,7 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
         return None, {}
     
 def analyze_results():
-    """Analyzes the logged test results for each model and calculates evaluation metrics.
-
-    This function calculates metrics like Exact Match Accuracy and BLEU score for each example
-    and saves the results into separate overall_metrics files per model.
-    """
+    """Analyzes the logged test results for each model and calculates evaluation metrics including timing metrics."""
     try:
         # Directory where individual model results are stored
         models_results_folder = 'logs/models_results'
@@ -67,28 +64,47 @@ def analyze_results():
                     results = json.load(file)
 
                 # Track metrics by model, parameters, and system prompt version
-                metrics = defaultdict(lambda: {"accurate_dsl": 0, "total_examples": 0, "total_bleu_score": 0})
+                metrics = defaultdict(lambda: {
+                    "accurate_dsl": 0,
+                    "total_examples": 0,
+                    "total_bleu_score": 0,
+                    "total_time": 0,
+                    "complex_time": 0,
+                    "simple_time": 0,
+                    "complex_count": 0,
+                    "simple_count": 0
+                })
 
                 # Overall counters for this model
                 total_examples = len(results)
                 total_correct = 0
                 total_bleu_score = 0
+                total_time = 0
 
-                
                 # Analyze each result for this model
                 model_name = os.path.splitext(model_file)[0]
                 for result in results:
                     parameters = json.dumps(result['parameters'])  # Use the parameters as part of the key
                     system_prompt_version = result['system_prompt_version']['version']
+                    time_taken = result.get('time_taken', 0)  # Ensure time_taken is available
 
                     key = (model_name, parameters, system_prompt_version)
 
                     metrics[key]["total_examples"] += 1
+                    metrics[key]["total_time"] += time_taken
+                    total_time += time_taken
+
+                    # Separate time calculation based on complexity
+                    if result['complexity_level'] == 'complex':
+                        metrics[key]["complex_time"] += time_taken
+                        metrics[key]["complex_count"] += 1
+                    elif result['complexity_level'] == 'simple':
+                        metrics[key]["simple_time"] += time_taken
+                        metrics[key]["simple_count"] += 1
                     
                     # Update or set the 'success' key based on validation result
                     result['success'] = dsl_validator(result['expected_dsl_output'], result['generated_dsl_output'])[0]
                     
-                    #TODO: Update metrics if the validation result is successful
                     if result['success']:
                         metrics[key]["accurate_dsl"] += 1
                         total_correct += 1
@@ -99,13 +115,14 @@ def analyze_results():
 
                     # Calculate BLEU score
                     bleu_score = sentence_bleu([result['expected_dsl_output'].split()], result['generated_dsl_output'].split())
-                    result['bleu_score'] = bleu_score  # Add BLEU score directly to the test result
+                    result['bleu_score'] = bleu_score
                     metrics[key]["total_bleu_score"] += bleu_score
                     total_bleu_score += bleu_score
 
                 # Calculate overall metrics for this model
                 overall_accuracy = total_correct / total_examples
                 overall_average_bleu_score = total_bleu_score / total_examples
+                overall_average_time = total_time / total_examples if total_examples > 0 else 0
 
                 # Save the updated test results back to the individual model file
                 with open(model_file_path, 'w') as file:
@@ -116,12 +133,19 @@ def analyze_results():
                 for key, value in metrics.items():
                     model_name, parameters, system_prompt_version = key
 
+                    # Calculate average times for each complexity level
+                    avg_complex_time = value["complex_time"] / value["complex_count"] if value["complex_count"] > 0 else 0
+                    avg_simple_time = value["simple_time"] / value["simple_count"] if value["simple_count"] > 0 else 0
+
                     # Ensure dictionary format for detailed metrics
                     detailed_entry = {
-                        'parameters': json.loads(parameters),  # Convert parameters string back to dictionary
+                        'parameters': json.loads(parameters),
                         'system_prompt_version': system_prompt_version,
                         'overall_accuracy': value['accurate_dsl'] / value['total_examples'],
                         'average_bleu_score': value['total_bleu_score'] / value['total_examples'],
+                        'average_time': value["total_time"] / value["total_examples"] if value["total_examples"] > 0 else 0,
+                        'average_complex_time': avg_complex_time,
+                        'average_simple_time': avg_simple_time,
                         'total_examples': value['total_examples'],
                         'system_prompt_version': system_prompt_version
                     }
@@ -143,4 +167,3 @@ def analyze_results():
         logging.error(f"Error loading test results file: {fnf_error}")
     except json.JSONDecodeError as json_error:
         logging.error(f"Error parsing test results JSON: {json_error}")
-

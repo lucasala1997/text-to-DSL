@@ -9,6 +9,8 @@ from datetime import datetime
 from utils import load_config
 from scripts.message_builder import build_message
 from tqdm import tqdm
+from time import perf_counter  # Import at the top of the file if not already
+
 
 # Load configuration
 config = load_config()
@@ -199,7 +201,9 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
         with tqdm(total=len(data_to_test), desc="Processing examples", unit="example") as pbar:
 
-            for example in data_to_test:              
+            for example in data_to_test:      
+                start_time = perf_counter()  # Start the timer
+        
                 nl_dsl = example['input_text']
                 expected_output = example['expected_dsl_output']
                 complexity_level = example['complexity_level']
@@ -240,7 +244,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                                 response_content = response_json["choices"][0]["message"]["content"]
                                 generated_dsl_output = response_content.strip()
                                 logging.info(f"Generated DSL output: {generated_dsl_output}")
-                                #TODO: implement success function
                             else:
                                 logging.error("API response did not return expected 'choices' structure.")
                                 generated_dsl_output = None
@@ -251,7 +254,12 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
                         if response.status_code == 200:
                             generated_dsl_output = response_content
-                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters="unknown")
+                            
+                            # Calculate elapsed time
+                            end_time = perf_counter()
+                            time_taken = end_time - start_time  # Calculate time taken in seconds
+                            
+                            log_result(time_taken, nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters="unknown", time_taken=time_taken)
                             break
                         else:
                             logging.error(f"Error: {response.status_code} - {response.text}")
@@ -261,9 +269,9 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if attempt < MAX_RETRIES - 1:
                             time.sleep(RETRY_DELAY)
                         else:
-                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=None)
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=None, time_taken=None)
                             logging.error(f"Maximum retries reached for model {model_name}.")
-
+                
                 pbar.update(1)
             return True
 
@@ -287,7 +295,9 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
         with tqdm(total=len(data_to_test), desc="Processing examples", unit="example") as pbar:
 
-            for example in data_to_test:            
+            for example in data_to_test:      
+                start_time = perf_counter()  # Start the timer
+      
                 nl_dsl = example['input_text']
                 expected_output = example['expected_dsl_output']
                 complexity_level = example['complexity_level']
@@ -319,7 +329,12 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if response.status_code == 200:
                             result = response.json()
                             generated_dsl_output = result['choices'][0]['message']['content'].strip()
-                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters)
+                            
+                            # Calculate elapsed time
+                            end_time = perf_counter()
+                            time_taken = end_time - start_time  # Calculate time taken in seconds
+
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters ,time_taken=time_taken)
                             break  # Exit loop on success
                         elif response.status_code == 404:
                             logging.error(f"Model {ollama_model} not found. Attempting to pull the model automatically.")
@@ -342,13 +357,13 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                             time.sleep(RETRY_DELAY)  # Retry after a delay
                         else:
                             # Log the result in case of failure
-                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters)
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters, time_taken=None)
                             logging.error(f"Maximum retries reached for model {model_name} on input '{message}'.")
                 pbar.update(1)
             return True
 
 
-def log_result(prompt, expected_output, generated_output, example_id, model_name, system_prompt_version, complexity_level, parameters):
+def log_result(prompt, expected_output, generated_output, example_id, model_name, system_prompt_version, complexity_level, parameters, time_taken):
     """Logs the result of each inference attempt with detailed information and validates the generated DSL."""
     
     # Prepare the result entry
@@ -362,6 +377,7 @@ def log_result(prompt, expected_output, generated_output, example_id, model_name
         'generated_dsl_output': generated_output,
         'complexity_level': complexity_level,
         'parameters': parameters,
+        'time_taken': time_taken, 
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
     }
 
