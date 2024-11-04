@@ -1,0 +1,70 @@
+CREATE PRODUCT intecmar USING 4326;
+
+// DIMENSIONS
+
+CREATE SPATIAL DIMENSION Estuary (
+		geometry: Polygon
+) WITH PROPERTIES (
+		shortName String DISPLAY_STRING,
+		name String,
+		zone String
+);
+
+CREATE CATEGORICAL DIMENSION Depth (
+	field: depth
+);
+
+CREATE CATEGORICAL DIMENSION NivelAlerta (
+	field: nivelAlerta
+);
+
+// RANGES
+
+CREATE RANGE DepthRange (
+  0 TO 3 AS 'surface',
+	4.75 TO 5.25 AS '5m',
+  9.75 TO 10.25 AS '10m',
+  14.75 TO 15.25 AS '15m',
+  19.75 TO 20.25 AS '20m'
+);
+
+// SENSORS
+
+CREATE SENSOR StationObservation (
+  interval: 300,
+  geometry: Point
+) WITH PROPERTIES (
+  maxDepth Float,
+  code String,
+  name String,
+  description String,
+  startTime DateTime,
+  endTime DateTime
+) WITH MEASUREMENT DATA (
+  temperature_ITS90 Double UNITS 'ºC' ICON 'thermometer-low' RANGE TempRange,
+  salinity Double UNITS 'PSU',
+  pressure Double UNITS 'dbar' ICON 'speedometer',
+  ph Double UNITS 'pH' ICON 'ph',
+  oxygen Double UNITS 'mg/l' ICON 'gas-cylinder',
+  transmittance Double UNITS 'm',
+  irradiance Double UNITS 'W/m2',
+  uv_flourescence Double UNITS 'mg/m3',
+  density Double UNITS 'kg/m3',
+  conductivity Double UNITS 'S/m'
+) WITH SPATIAL GROUP Estuary (
+  Estuary
+) WITH CATEGORICAL GROUP (
+  Depth
+) WITH BBOX ([42.7, -8.1], 9);
+
+
+SET DEPLOYMENT (
+  'client_deploy_url' 'https://pcmg.citic.udc.es',
+  'geoserver_url' 'http://cronos.lbd.org.es/geoserver',
+  'geoserver_url_wms' 'http://cronos.lbd.org.es/geoserver/wms',
+  'geoserver_user' 'admin',
+  'geoserver_password' '$$geoserver$$',
+  'server_deploy_url' 'https://pcmg.citic.udc.es/backend',
+  'server_deploy_port' '9001'
+);
+  

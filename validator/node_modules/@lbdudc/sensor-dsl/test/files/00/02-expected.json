@@ -592,6 +592,7 @@
           "defaultLayer": "qaobservation-layer",
           "time": 3600,
           "isMoving": false,
+          "factTableEntity": "QAObservationMeasurement",
           "geom": "Point",
           "measureData": [
             {
@@ -704,6 +705,7 @@
           "defaultLayer": "trafficobservation-layer",
           "time": 300,
           "isMoving": false,
+          "factTableEntity": "TrafficObservationMeasurement",
           "geom": "Point",
           "measureData": [
             {

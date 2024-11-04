@@ -196,6 +196,10 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
             logging.error(f"No configuration found for closed-source model: {model_name}")
             return False
 
+        # Load model configuration
+        model_config = load_model_config(model_name)
+        parameters = model_config.get('parameters', {})
+
         api_url = closed_source_models[model_name]['api_url']
         headers = closed_source_models[model_name]['headers']
 
@@ -211,19 +215,22 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                 # TODO: check system prompt
                 # TODO: reimplement the message
                 message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
-                print(message)
                 if model_name == "Claude 3.5 sonnet":
                 # Claude expects a 'prompt' field
                     data = {
                         "model": closed_source_models[model_name]['model_name_api'],
                         "prompt": message,  # Claude expects a single 'prompt' field
+                        "temperature": parameters.get('temperature', 0.7),
+                        "top_p": parameters.get('top_p', 1.0),
                         "max_tokens_to_sample": 5000  # Set this value based on your needs
                     }
                 else:
                     # For other models like GPT-4o
                     data = {
                         "model": closed_source_models[model_name]['model_name_api'],
-                        "messages": message
+                        "messages": message,
+                        "temperature": parameters.get('temperature', 0.7),  # Default value if not specified
+                        "top_p": parameters.get('top_p', 1.0),
                     }
 
                 # Retry logic for API requests
@@ -235,21 +242,21 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if 'choices' in response_json:
                             response_content = response_json["choices"][0]["message"]["content"]
                         
-                        #TODO: questo pezzo non credo serva più
-                        try:
-                            response_json = response.json()
-                            logging.info(f"Full API response: {response_json}")
+                        # #TODO: questo pezzo non credo serva più
+                        # try:
+                        #     response_json = response.json()
+                        #     logging.info(f"Full API response: {response_json}")
                             
-                            if 'choices' in response_json and len(response_json['choices']) > 0:
-                                response_content = response_json["choices"][0]["message"]["content"]
-                                generated_dsl_output = response_content.strip()
-                                logging.info(f"Generated DSL output: {generated_dsl_output}")
-                            else:
-                                logging.error("API response did not return expected 'choices' structure.")
-                                generated_dsl_output = None
-                        except Exception as e:
-                            logging.error(f"Error processing API response: {e}")
-                            generated_dsl_output = None
+                        #     if 'choices' in response_json and len(response_json['choices']) > 0:
+                        #         response_content = response_json["choices"][0]["message"]["content"]
+                        #         generated_dsl_output = response_content.strip()
+                        #         logging.info(f"Generated DSL output: {generated_dsl_output}")
+                        #     else:
+                        #         logging.error("API response did not return expected 'choices' structure.")
+                        #         generated_dsl_output = None
+                        # except Exception as e:
+                        #     logging.error(f"Error processing API response: {e}")
+                        #     generated_dsl_output = None
 
 
                         if response.status_code == 200:
@@ -259,7 +266,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                             end_time = perf_counter()
                             time_taken = end_time - start_time  # Calculate time taken in seconds
                             
-                            log_result(time_taken, nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters="unknown", time_taken=time_taken)
+                            log_result(nl_dsl, expected_output, generated_dsl_output, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters, time_taken=time_taken)
                             break
                         else:
                             logging.error(f"Error: {response.status_code} - {response.text}")
@@ -269,7 +276,7 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if attempt < MAX_RETRIES - 1:
                             time.sleep(RETRY_DELAY)
                         else:
-                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=None, time_taken=None)
+                            log_result(nl_dsl, expected_output, None, example['example_id'], model_name, system_prompt_version, complexity_level, parameters=parameters, time_taken=None)
                             logging.error(f"Maximum retries reached for model {model_name}.")
                 
                 pbar.update(1)

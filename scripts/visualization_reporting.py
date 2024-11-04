@@ -67,7 +67,13 @@ def plot_parameter_combinations(df, model_name, model_results_path):
     """Generates a bar plot for different parameter combinations by overall accuracy."""
     
     # Create a readable string for each parameter combination
-    df['parameters_str'] = df['parameters'].apply(lambda x: f"top_k={x['top_k']}, top_p={x['top_p']}, temperature={x['temperature']}, version={df['system_prompt_version']}")
+    df['parameters_str'] = df.apply(
+        lambda row: f"top_k={row['parameters'].get('top_k', 'N/A')}, "
+                    f"top_p={row['parameters'].get('top_p', 'N/A')}, "
+                    f"temperature={row['parameters'].get('temperature', 'N/A')}, "
+                    f"version={row['system_prompt_version']}",
+        axis=1
+    )
     
     # Generate the bar plot
     plt.figure(figsize=(10, 6))
@@ -322,7 +328,7 @@ def plot_performance_by_vram(metrics_folder="logs/models_results/overall_results
     plt.xlabel("VRAM Requirement")
     plt.ylabel("Performance Metric (Average BLEU Score)")
     plt.title("Model Performance by VRAM Requirement")
-    plt.legend(title="VRAM Category")
+    #plt.legend(title="VRAM Category")
     
     # Save plot
     plot_path = os.path.join(results_folder, "model_performance_by_vram.png")
@@ -396,7 +402,7 @@ def plot_performance_by_parameters(metrics_folder="logs/models_results/overall_r
     plt.xlabel("Parameter Category")
     plt.ylabel("Performance Metric (Average BLEU Score)")
     plt.title("Model Performance by Parameter Category")
-    plt.legend(title="Parameter Category")
+    # plt.legend(title="Parameter Category")
 
     # Save plot
     plot_path = os.path.join(results_folder, "model_performance_by_parameters.png")

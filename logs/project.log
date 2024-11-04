@@ -1,119 +1,52 @@
-2024-10-30 18:21:41,785:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-30 18:21:41,785:INFO:Starting data validation...
-2024-10-30 18:21:42,771:INFO:Simple examples loaded successfully.
-2024-10-30 18:21:42,772:INFO:Complex examples loaded successfully.
-2024-10-30 18:21:42,780:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-30 18:21:42,781:INFO:Updating prompt versions...
-2024-10-30 18:21:42,970:INFO:Deploying models...
-2024-10-30 18:21:42,972:INFO:Available supported models: ['Codellama (7B) quantized 4bit', 'Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
-2024-10-30 18:21:43,549:INFO:Selected model: Codellama (7B) quantized 4bit
-2024-10-30 18:21:47,321:INFO:Parameters for model Codellama (7B) quantized 4bit configured successfully.
-2024-10-30 18:21:47,322:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-30 18:21:47,322:WARNING:No specific configuration found for model (LOCAL_TEST) Codellama (7B) quantized 4bit. Using default settings.
-2024-10-30 18:21:47,322:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-30 18:21:47,323:INFO:Grammar for sensors loaded successfully.
-2024-10-30 18:21:47,324:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-30 18:21:47,324:ERROR:Ollama command for model (LOCAL_TEST) Codellama (7B) quantized 4bit not found.
-2024-10-30 18:21:47,324:ERROR:Model (LOCAL_TEST) Codellama (7B) quantized 4bit failed testing.
-2024-10-30 18:21:47,324:INFO:Analyzing results...
-2024-10-30 18:21:47,324:ERROR:Models result folder logs/models_results does not exist.
-2024-10-30 18:21:47,324:INFO:Generating plots...
-2024-10-30 18:21:47,324:INFO:Generating visualizations...
-2024-10-30 18:21:47,329:ERROR:Unexpected error in __main__.run_pipeline: 'overall_accuracy'
-2024-10-30 18:21:47,336:ERROR:Traceback: Traceback (most recent call last):
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 122, in run_pipeline
-    generate_visualizations()
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/visualization_reporting.py", line 412, in generate_visualizations
-    plot_best_performing_combinations()
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/visualization_reporting.py", line 161, in plot_best_performing_combinations
-    top_combinations = df.nlargest(top_n, 'overall_accuracy')
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/frame.py", line 7644, in nlargest
-    return selectn.SelectNFrame(self, n=n, keep=keep, columns=columns).nlargest()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/methods/selectn.py", line 57, in nlargest
-    return self.compute("nlargest")
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/methods/selectn.py", line 199, in compute
-    dtype = frame[column].dtype
-            ~~~~~^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
-    indexer = self.columns.get_loc(key)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
-    raise KeyError(key)
-KeyError: 'overall_accuracy'
-
-2024-10-30 18:21:56,544:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-30 18:21:56,544:INFO:Starting data validation...
-2024-10-30 18:21:57,860:INFO:Simple examples loaded successfully.
-2024-10-30 18:21:57,861:INFO:Complex examples loaded successfully.
-2024-10-30 18:21:57,867:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-30 18:21:57,868:INFO:Updating prompt versions...
-2024-10-30 18:21:58,175:INFO:Deploying models...
-2024-10-30 18:21:58,176:INFO:Available supported models: ['Codellama (7B) quantized 4bit', 'Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
-2024-10-30 18:21:58,974:INFO:Selected model: Codellama (7B) quantized 4bit
-2024-10-30 18:21:59,606:INFO:Parameters for model Codellama (7B) quantized 4bit configured successfully.
-2024-10-30 18:21:59,607:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-30 18:21:59,607:WARNING:No specific configuration found for model (LOCAL_TEST) Codellama (7B) quantized 4bit. Using default settings.
-2024-10-30 18:21:59,607:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-30 18:21:59,608:INFO:Grammar for sensors loaded successfully.
-2024-10-30 18:21:59,608:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-30 18:21:59,609:ERROR:Ollama command for model (LOCAL_TEST) Codellama (7B) quantized 4bit not found.
-2024-10-30 18:21:59,609:ERROR:Model (LOCAL_TEST) Codellama (7B) quantized 4bit failed testing.
-2024-10-30 18:21:59,609:INFO:Analyzing results...
-2024-10-30 18:21:59,609:INFO:Generating plots...
-2024-10-30 18:21:59,609:INFO:Generating visualizations...
-2024-10-30 18:21:59,612:ERROR:Unexpected error in __main__.run_pipeline: 'overall_accuracy'
-2024-10-30 18:21:59,619:ERROR:Traceback: Traceback (most recent call last):
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/main.py", line 122, in run_pipeline
-    generate_visualizations()
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/visualization_reporting.py", line 412, in generate_visualizations
-    plot_best_performing_combinations()
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/scripts/visualization_reporting.py", line 161, in plot_best_performing_combinations
-    top_combinations = df.nlargest(top_n, 'overall_accuracy')
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/frame.py", line 7644, in nlargest
-    return selectn.SelectNFrame(self, n=n, keep=keep, columns=columns).nlargest()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/methods/selectn.py", line 57, in nlargest
-    return self.compute("nlargest")
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/methods/selectn.py", line 199, in compute
-    dtype = frame[column].dtype
-            ~~~~~^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
-    indexer = self.columns.get_loc(key)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/lucasala/Documents/Projects/Maktaba/text-to-DSL/env_texttodsl/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
-    raise KeyError(key)
-KeyError: 'overall_accuracy'
-
-2024-10-30 18:23:32,401:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-10-30 18:23:32,401:INFO:Starting data validation...
-2024-10-30 18:23:33,399:INFO:Simple examples loaded successfully.
-2024-10-30 18:23:33,399:INFO:Complex examples loaded successfully.
-2024-10-30 18:23:33,406:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-10-30 18:23:33,406:INFO:Updating prompt versions...
-2024-10-30 18:23:34,348:INFO:Deploying models...
-2024-10-30 18:23:34,349:INFO:Available supported models: ['Codellama (7B) quantized 4bit', 'Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini', 'Claude 3.5 sonnet']
-2024-10-30 18:23:35,500:INFO:Selected model: Codellama (7B) quantized 4bit
-2024-10-30 18:23:36,009:INFO:Parameters for model Codellama (7B) quantized 4bit configured successfully.
-2024-10-30 18:23:36,010:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-10-30 18:23:36,011:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-10-30 18:23:36,011:INFO:Grammar for sensors loaded successfully.
-2024-10-30 18:23:36,012:INFO:Few-shot examples for sensors loaded successfully.
-2024-10-30 18:23:36,013:INFO:Testing model Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 16384, 'top_k': 40, 'top_p': 0.9, 'temperature': 0.7}.
-2024-10-30 18:24:08,391:INFO:Model Codellama (7B) quantized 4bit tested successfully.
-2024-10-30 18:24:08,393:INFO:Analyzing results...
-2024-10-30 18:24:08,483:INFO:Metrics analysis completed for model: Codellama_(7B)_quantized_4bit
-2024-10-30 18:24:08,483:INFO:Generating plots...
-2024-10-30 18:24:08,483:INFO:Generating visualizations...
-2024-10-30 18:24:08,925:INFO:Scatter plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_accuracy_scatter.png
-2024-10-30 18:24:09,024:INFO:Parameter combinations plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_parameter_combinations.png
-2024-10-30 18:24:09,107:INFO:Scatter plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
-2024-10-30 18:24:09,198:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
-2024-10-30 18:24:09,307:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
-2024-10-30 18:24:09,383:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
-2024-10-30 18:24:09,462:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
-2024-10-30 18:24:09,463:INFO:Process completed successfully.
+2024-11-04 11:55:28,938:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-04 11:55:28,938:INFO:Analyzing results...
+2024-11-04 11:55:28,948:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-11-04 11:55:28,948:INFO:Generating plots...
+2024-11-04 11:55:28,948:INFO:Generating visualizations...
+2024-11-04 11:55:29,095:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
+2024-11-04 11:55:29,150:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
+2024-11-04 11:55:29,202:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
+2024-11-04 11:55:29,267:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-04 11:55:29,341:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-04 11:55:29,391:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-04 11:55:29,438:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-04 11:55:29,438:INFO:Process completed successfully.
+2024-11-04 12:10:48,230:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-04 12:10:48,230:INFO:Analyzing results...
+2024-11-04 12:10:48,258:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-11-04 12:10:48,258:INFO:Generating plots...
+2024-11-04 12:10:48,258:INFO:Generating visualizations...
+2024-11-04 12:10:48,406:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
+2024-11-04 12:10:48,459:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
+2024-11-04 12:10:48,513:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
+2024-11-04 12:10:48,574:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-04 12:10:48,651:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-04 12:10:48,700:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-04 12:10:48,748:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-04 12:10:48,748:INFO:Process completed successfully.
+2024-11-04 12:15:01,085:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-04 12:15:01,086:INFO:Analyzing results...
+2024-11-04 12:15:01,096:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-11-04 12:15:01,096:INFO:Generating plots...
+2024-11-04 12:15:01,096:INFO:Generating visualizations...
+2024-11-04 12:15:01,259:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
+2024-11-04 12:15:01,312:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
+2024-11-04 12:15:01,362:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
+2024-11-04 12:15:01,422:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-04 12:15:01,495:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-04 12:15:01,540:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-04 12:15:01,584:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-04 12:15:01,584:INFO:Process completed successfully.
+2024-11-04 12:16:06,342:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-04 12:16:06,342:INFO:Analyzing results...
+2024-11-04 12:16:06,353:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-11-04 12:16:06,353:INFO:Generating plots...
+2024-11-04 12:16:06,353:INFO:Generating visualizations...
+2024-11-04 12:16:06,494:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
+2024-11-04 12:16:06,549:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
+2024-11-04 12:16:06,600:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
+2024-11-04 12:16:06,659:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-04 12:16:06,731:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-04 12:16:06,776:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-04 12:16:06,820:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-04 12:16:06,820:INFO:Process completed successfully.

@@ -286,6 +286,7 @@
           "defaultLayer": "stationobservation-layer",
           "time": 300,
           "isMoving": false,
+          "factTableEntity": "StationObservationMeasurement",
           "geom": "Point",
           "measureData": [
             {

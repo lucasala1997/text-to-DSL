@@ -292,18 +292,28 @@
         "model_name": "OpenAI GPT4o",
         "type": "closed source",
         "supported": true,
-        "deployment_type": "remote"
+        "deployment_type": "remote",
+        "parameters": {
+            "seed": 7,
+            "top_p": 1,
+            "temperature": 0.5
+        }
     },
     "OpenAI GPT4o mini": {
         "model_name": "OpenAI GPT4o mini",
         "type": "closed source",
         "supported": true,
-        "deployment_type": "remote"
+        "deployment_type": "remote",
+        "parameters": {
+            "seed": 7,
+            "top_p": 1,
+            "temperature": 0.5
+        }
     },
     "Claude 3.5 sonnet": {
         "model_name": "Claude 3.5 sonnet",
         "type": "closed source",
-        "supported": true,
+        "supported": false,
         "deployment_type": "remote"
     },
     "PaLM (62B)": {

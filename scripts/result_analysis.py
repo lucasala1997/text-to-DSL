@@ -38,6 +38,7 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
         #print("\nresult: "+ str(result) + "\n")
         #print("is_valid? "+ str(result.get("is_valid")) + "\n\n\n")
         #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
+        print("result: "+ str(result))
         return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
     except requests.exceptions.RequestException as e:
         logging.error(f"Request to DSL validator failed: {e}")
@@ -86,7 +87,7 @@ def analyze_results():
                 for result in results:
                     parameters = json.dumps(result['parameters'])  # Use the parameters as part of the key
                     system_prompt_version = result['system_prompt_version']['version']
-                    time_taken = result.get('time_taken', 0)  # Ensure time_taken is available
+                    time_taken = result.get('time_taken') or 0
 
                     key = (model_name, parameters, system_prompt_version)
 
@@ -104,7 +105,7 @@ def analyze_results():
                     
                     # Update or set the 'success' key based on validation result
                     result['success'] = dsl_validator(result['expected_dsl_output'], result['generated_dsl_output'])[0]
-                    
+                    print("success: "+ str(result['success']))
                     if result['success']:
                         metrics[key]["accurate_dsl"] += 1
                         total_correct += 1

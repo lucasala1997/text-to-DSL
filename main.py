@@ -87,26 +87,26 @@ def run_pipeline(selected_steps):
 
     dataset_name = "GIS"
     try:
-        if 'data_validation' in selected_steps:
-            print('Starting data validation...')
-            logging.info('Starting data validation...')
-            dataset_name = validate_data()
-            print('Data validated successfully.')
-            print('--------------------------')
+        # if 'data_validation' in selected_steps:
+        #     print('Starting data validation...')
+        #     logging.info('Starting data validation...')
+        #     dataset_name = validate_data()
+        #     print('Data validated successfully.')
+        #     print('--------------------------')
 
-        if 'configure_prompt_version' in selected_steps:
-            print('Updating prompt versions...')
-            logging.info('Updating prompt versions...')
-            prompt_version = configure_prompt_version()
-            print(f"Selected prompt version: {prompt_version}")
-            print('--------------------------')
+        # if 'configure_prompt_version' in selected_steps:
+        #     print('Updating prompt versions...')
+        #     logging.info('Updating prompt versions...')
+        #     prompt_version = configure_prompt_version()
+        #     print(f"Selected prompt version: {prompt_version}")
+        #     print('--------------------------')
 
-        if 'test_model' in selected_steps:
-            print('Deploying models...')
-            logging.info('Deploying models...')
-            #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
-            deploy_selected_model(dataset_name, prompt_version) if prompt_version else deploy_selected_model(dataset_name)
-            print('--------------------------')
+        # if 'test_model' in selected_steps:
+        #     print('Deploying models...')
+        #     logging.info('Deploying models...')
+        #     #if the user decide to not execute the configure_prompt_version step, the prompt_version will be None (default value)
+        #     deploy_selected_model(dataset_name, prompt_version) if prompt_version else deploy_selected_model(dataset_name)
+        #     print('--------------------------')
 
         if 'analyze_results' in selected_steps:
             print('Analyzing results...')
