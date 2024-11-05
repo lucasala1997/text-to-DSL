@@ -1,52 +1,30 @@
-2024-11-04 11:55:28,938:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-11-04 11:55:28,938:INFO:Analyzing results...
-2024-11-04 11:55:28,948:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
-2024-11-04 11:55:28,948:INFO:Generating plots...
-2024-11-04 11:55:28,948:INFO:Generating visualizations...
-2024-11-04 11:55:29,095:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
-2024-11-04 11:55:29,150:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
-2024-11-04 11:55:29,202:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
-2024-11-04 11:55:29,267:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
-2024-11-04 11:55:29,341:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
-2024-11-04 11:55:29,391:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
-2024-11-04 11:55:29,438:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
-2024-11-04 11:55:29,438:INFO:Process completed successfully.
-2024-11-04 12:10:48,230:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-11-04 12:10:48,230:INFO:Analyzing results...
-2024-11-04 12:10:48,258:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
-2024-11-04 12:10:48,258:INFO:Generating plots...
-2024-11-04 12:10:48,258:INFO:Generating visualizations...
-2024-11-04 12:10:48,406:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
-2024-11-04 12:10:48,459:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
-2024-11-04 12:10:48,513:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
-2024-11-04 12:10:48,574:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
-2024-11-04 12:10:48,651:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
-2024-11-04 12:10:48,700:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
-2024-11-04 12:10:48,748:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
-2024-11-04 12:10:48,748:INFO:Process completed successfully.
-2024-11-04 12:15:01,085:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-11-04 12:15:01,086:INFO:Analyzing results...
-2024-11-04 12:15:01,096:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
-2024-11-04 12:15:01,096:INFO:Generating plots...
-2024-11-04 12:15:01,096:INFO:Generating visualizations...
-2024-11-04 12:15:01,259:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
-2024-11-04 12:15:01,312:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
-2024-11-04 12:15:01,362:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
-2024-11-04 12:15:01,422:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
-2024-11-04 12:15:01,495:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
-2024-11-04 12:15:01,540:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
-2024-11-04 12:15:01,584:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
-2024-11-04 12:15:01,584:INFO:Process completed successfully.
-2024-11-04 12:16:06,342:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-11-04 12:16:06,342:INFO:Analyzing results...
-2024-11-04 12:16:06,353:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
-2024-11-04 12:16:06,353:INFO:Generating plots...
-2024-11-04 12:16:06,353:INFO:Generating visualizations...
-2024-11-04 12:16:06,494:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
-2024-11-04 12:16:06,549:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
-2024-11-04 12:16:06,600:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
-2024-11-04 12:16:06,659:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
-2024-11-04 12:16:06,731:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
-2024-11-04 12:16:06,776:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
-2024-11-04 12:16:06,820:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
-2024-11-04 12:16:06,820:INFO:Process completed successfully.
+2024-11-04 15:19:59,006:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-04 15:19:59,006:INFO:Starting data validation...
+2024-11-04 15:19:59,942:INFO:Simple examples loaded successfully.
+2024-11-04 15:19:59,943:INFO:Complex examples loaded successfully.
+2024-11-04 15:19:59,953:INFO:Data validation completed successfully. All entries conform to the schema.
+2024-11-04 15:19:59,953:INFO:Updating prompt versions...
+2024-11-04 15:20:00,656:INFO:Deploying models...
+2024-11-04 15:20:00,656:INFO:Available supported models: ['Codellama (7B) quantized 4bit', 'Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini']
+2024-11-04 15:20:01,283:INFO:Selected model: Codellama (7B) quantized 4bit
+2024-11-04 15:20:01,896:INFO:Parameters for model Codellama (7B) quantized 4bit configured successfully.
+2024-11-04 15:20:01,897:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-04 15:20:01,897:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-04 15:20:01,897:INFO:Grammar for sensors loaded successfully.
+2024-11-04 15:20:01,898:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-04 15:20:01,898:INFO:Testing model Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 16384, 'top_k': 40, 'top_p': 0.7, 'temperature': 0.7}.
+2024-11-04 15:20:08,729:INFO:Model Codellama (7B) quantized 4bit tested successfully.
+2024-11-04 15:20:08,729:INFO:Analyzing results...
+2024-11-04 15:20:08,733:ERROR:Request to DSL validator failed: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/sensor/validate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f084d761310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-11-04 15:20:08,738:ERROR:Request to DSL validator failed: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/sensor/validate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f084dfd57f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-11-04 15:20:08,742:INFO:Metrics analysis completed for model: Codellama_(7B)_quantized_4bit
+2024-11-04 15:20:08,743:INFO:Generating plots...
+2024-11-04 15:20:08,743:INFO:Generating visualizations...
+2024-11-04 15:20:08,902:INFO:Scatter plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_accuracy_scatter.png
+2024-11-04 15:20:09,049:INFO:Parameter combinations plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_parameter_combinations.png
+2024-11-04 15:20:09,217:INFO:Scatter plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
+2024-11-04 15:20:09,357:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-04 15:20:09,522:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-04 15:20:09,600:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-04 15:20:09,676:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-04 15:20:09,676:INFO:Process completed successfully.

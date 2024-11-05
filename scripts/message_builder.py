@@ -55,8 +55,7 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
 
         message.append({"role": "system", "content": system_prompt})
 
-        message.append({"role": "user", "content": "Rules that need to be followed to write the code:"})
-        message.append({"role": "user", "content": grammar})
+        message.append({"role": "user", "content": f"Rules that need to be followed to write the code:\n{grammar}"})
 
         if few_shot_examples:
             for idx, example in enumerate(few_shot_examples, 1):
