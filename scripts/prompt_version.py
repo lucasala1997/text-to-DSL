@@ -39,9 +39,13 @@ def load_prompt_versions():
         print(f"An unexpected error occurred while loading prompt versions: {e}")
         return []
 
-def configure_prompt_version():
+def configure_prompt_version(automatic_prompt=None):
     """Interactively configure the prompt version to use based on user selection."""
     prompt_versions = load_prompt_versions()
+
+    if automatic_prompt:
+        return prompt_versions[automatic_prompt - 1]
+
 
     if not prompt_versions:
         print("No prompt versions available to configure.")

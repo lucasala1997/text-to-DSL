@@ -16,13 +16,13 @@ logging.basicConfig(
     format=config['logging']['format']
 )
 
-def configure_model_parameters(model_name=None):
-    """Interactively configure parameters for a specific model and save updates immediately.
-
-    If a model_name is provided, it skips the model selection step and directly updates the given model.
+def configure_model_parameters(model_name=None, new_parameters=None):
+    """
+    Configure parameters for a specific model programmatically.
 
     Args:
-        model_name (str, optional): The name of the model to configure. If not provided, prompts user for selection.
+        model_name (str): The name of the model to configure.
+        new_parameters (dict): A dictionary of new parameters to set.
     """
     try:
         config_file = config['paths']['model_parameters_file']
@@ -38,6 +38,8 @@ def configure_model_parameters(model_name=None):
             logging.warning("No supported models available for configuration.")
             print("No supported models available for configuration.")
             return None
+
+        
 
         # If no model_name is provided, prompt the user to select a model
         if not model_name:

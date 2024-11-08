@@ -1,30 +1,86 @@
-2024-11-04 15:19:59,006:INFO:Starting the pipeline with the following steps: ['data_validation', 'configure_prompt_version', 'test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
-2024-11-04 15:19:59,006:INFO:Starting data validation...
-2024-11-04 15:19:59,942:INFO:Simple examples loaded successfully.
-2024-11-04 15:19:59,943:INFO:Complex examples loaded successfully.
-2024-11-04 15:19:59,953:INFO:Data validation completed successfully. All entries conform to the schema.
-2024-11-04 15:19:59,953:INFO:Updating prompt versions...
-2024-11-04 15:20:00,656:INFO:Deploying models...
-2024-11-04 15:20:00,656:INFO:Available supported models: ['Codellama (7B) quantized 4bit', 'Llama3.1 (8B) quantized 4bit', 'Qwen 2.5-coder (7B) quantized 4bit', 'Qwen 2.5-coder (7B) full precision', 'Qwen 2.5 (32B) full precision', 'Qwen 2.5 (72B) quantized 4bit', 'Qwen 2.5 (72B) quantized 8bit', 'Codellama (7B) full precision', 'Codellama (13B) full precision', 'Codellama (34B) full precision', 'Codellama (70B) full precision', 'LLaMA 3.1 (8B) full precision', 'LLaMA 3.1 (70B) quantized 4bit', 'LLaMA 3.1 (70B) quantized 8bit', 'StarCoder2 (3B) full precision', 'StarCoder2 (7B) full precision', 'StarCoder2 (15B) full precision', 'Mistral (7B) full precision', 'OpenAI GPT4o', 'OpenAI GPT4o mini']
-2024-11-04 15:20:01,283:INFO:Selected model: Codellama (7B) quantized 4bit
-2024-11-04 15:20:01,896:INFO:Parameters for model Codellama (7B) quantized 4bit configured successfully.
-2024-11-04 15:20:01,897:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
-2024-11-04 15:20:01,897:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
-2024-11-04 15:20:01,897:INFO:Grammar for sensors loaded successfully.
-2024-11-04 15:20:01,898:INFO:Few-shot examples for sensors loaded successfully.
-2024-11-04 15:20:01,898:INFO:Testing model Codellama (7B) quantized 4bit with 2 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 16384, 'top_k': 40, 'top_p': 0.7, 'temperature': 0.7}.
-2024-11-04 15:20:08,729:INFO:Model Codellama (7B) quantized 4bit tested successfully.
-2024-11-04 15:20:08,729:INFO:Analyzing results...
-2024-11-04 15:20:08,733:ERROR:Request to DSL validator failed: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/sensor/validate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f084d761310>: Failed to establish a new connection: [Errno 111] Connection refused'))
-2024-11-04 15:20:08,738:ERROR:Request to DSL validator failed: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/sensor/validate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f084dfd57f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-2024-11-04 15:20:08,742:INFO:Metrics analysis completed for model: Codellama_(7B)_quantized_4bit
-2024-11-04 15:20:08,743:INFO:Generating plots...
-2024-11-04 15:20:08,743:INFO:Generating visualizations...
-2024-11-04 15:20:08,902:INFO:Scatter plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_accuracy_scatter.png
-2024-11-04 15:20:09,049:INFO:Parameter combinations plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_parameter_combinations.png
-2024-11-04 15:20:09,217:INFO:Scatter plot saved for Codellama (7B) quantized 4bit at results/Codellama (7B) quantized 4bit/Codellama (7B) quantized 4bit_complexity_accuracy_scatter.png
-2024-11-04 15:20:09,357:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
-2024-11-04 15:20:09,522:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
-2024-11-04 15:20:09,600:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
-2024-11-04 15:20:09,676:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
-2024-11-04 15:20:09,676:INFO:Process completed successfully.
+2024-11-06 15:34:28,070:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-06 15:34:28,070:INFO:Selecting prompt versions...
+2024-11-06 15:34:28,070:INFO:Deploying models with automatic parameters test...
+2024-11-06 15:34:28,073:INFO:Updated parameters for model OpenAI GPT4o mini: {'temperature': 1, 'top_p': 1, 'top_k': 0}
+2024-11-06 15:34:28,074:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-06 15:34:28,074:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-06 15:34:28,074:INFO:Grammar for sensors loaded successfully.
+2024-11-06 15:34:28,074:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-06 15:35:38,468:INFO:Model OpenAI GPT4o mini tested successfully.
+2024-11-06 15:35:38,469:INFO:Analyzing results...
+2024-11-06 15:35:38,779:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-11-06 15:35:38,779:INFO:Generating plots...
+2024-11-06 15:35:38,779:INFO:Generating visualizations...
+2024-11-06 15:35:38,989:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
+2024-11-06 15:35:39,148:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
+2024-11-06 15:35:39,318:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
+2024-11-06 15:35:39,466:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-06 15:35:39,656:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-06 15:35:39,797:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-06 15:35:39,931:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-06 15:35:39,931:INFO:Process completed successfully.
+2024-11-06 15:39:02,370:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-06 15:39:02,370:INFO:Selecting prompt versions...
+2024-11-06 15:39:02,370:INFO:Deploying models with automatic parameters test...
+2024-11-06 15:39:02,373:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-06 15:39:02,374:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-06 15:39:02,374:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-06 15:39:02,374:INFO:Grammar for sensors loaded successfully.
+2024-11-06 15:39:02,374:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-06 15:39:19,460:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27695, Requested 2509. Please try again in 408ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-06 15:39:19,461:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-06 15:39:46,838:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 28190, Requested 2658. Please try again in 1.696s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-06 15:39:46,839:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-06 15:40:29,753:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 28460, Requested 2563. Please try again in 2.046s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-06 15:40:29,753:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-06 15:40:37,342:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27581, Requested 2574. Please try again in 310ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-06 15:40:37,342:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-06 15:40:52,166:INFO:Model OpenAI GPT4o tested successfully.
+2024-11-06 15:40:52,167:INFO:Analyzing results...
+2024-11-06 15:40:52,436:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-11-06 15:40:52,700:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-06 15:40:52,700:INFO:Generating plots...
+2024-11-06 15:40:52,700:INFO:Generating visualizations...
+2024-11-06 15:40:52,904:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_accuracy_scatter.png
+2024-11-06 15:40:53,062:INFO:Parameter combinations plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_parameter_combinations.png
+2024-11-06 15:40:53,222:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-06 15:40:53,375:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-06 15:40:53,544:INFO:Scatter plot saved for OpenAI GPT4o mini at results/OpenAI GPT4o mini/OpenAI GPT4o mini_complexity_accuracy_scatter.png
+2024-11-06 15:40:53,713:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-06 15:40:53,867:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-06 15:40:54,139:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-06 15:40:54,300:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-06 15:40:54,460:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-06 15:40:54,460:INFO:Process completed successfully.

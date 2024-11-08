@@ -212,8 +212,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                 expected_output = example['expected_dsl_output']
                 complexity_level = example['complexity_level']
 
-                # TODO: check system prompt
-                # TODO: reimplement the message
                 message = build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
                 if model_name == "Claude 3.5 sonnet":
                 # Claude expects a 'prompt' field
@@ -241,23 +239,6 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
 
                         if 'choices' in response_json:
                             response_content = response_json["choices"][0]["message"]["content"]
-                        
-                        # #TODO: questo pezzo non credo serva più
-                        # try:
-                        #     response_json = response.json()
-                        #     logging.info(f"Full API response: {response_json}")
-                            
-                        #     if 'choices' in response_json and len(response_json['choices']) > 0:
-                        #         response_content = response_json["choices"][0]["message"]["content"]
-                        #         generated_dsl_output = response_content.strip()
-                        #         logging.info(f"Generated DSL output: {generated_dsl_output}")
-                        #     else:
-                        #         logging.error("API response did not return expected 'choices' structure.")
-                        #         generated_dsl_output = None
-                        # except Exception as e:
-                        #     logging.error(f"Error processing API response: {e}")
-                        #     generated_dsl_output = None
-
 
                         if response.status_code == 200:
                             generated_dsl_output = response_content

@@ -26,7 +26,6 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
     """
 
     # TODO: Implement the message construction logic for each model (if needed)
-    # TODO: Create a dict of models and separators
 
     
     if model_name == "Claude 3.5 sonnet":
@@ -50,24 +49,19 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
     else:
         message = []
         # General message construction for other models
-        #TODO: Ask if it's correct compared to codellama doc
-        # message += (f"Rules that need to be followed to write the code:\n{grammar}\n\n")
-
         message.append({"role": "system", "content": system_prompt})
 
-        message.append({"role": "user", "content": f"Rules that need to be followed to write the code:\n{grammar}"})
-
         if few_shot_examples:
-            for idx, example in enumerate(few_shot_examples, 1):
+            first_example = few_shot_examples[0]
+            combined_content = f"Rules that need to be followed to write the code:\n{grammar}\n\n" \
+                            f"Example:\nUser: {first_example['input_text']}\nAssistant: {first_example['expected_dsl_output']}"
+            message.append({"role": "user", "content": combined_content})
+
+            # Add the remaining few-shot examples, if any
+            for example in few_shot_examples[1:]:
                 message.append({"role": "user", "content": example['input_text']})
                 message.append({"role": "assistant", "content": example['expected_dsl_output']})
-    
-                # message += f"Example {idx}:\n"
-                # message += f"Question: {ex['input_text']}\n"
-                # message += f"Answer: {ex['expected_dsl_output']}\n\n"
-
+        # Final input message
         message.append({"role": "user", "content": nl_dsl})
-        # message += f"Question: {nl_dsl}\n"
-        # message += f"Answer:"
-    
+
     return message

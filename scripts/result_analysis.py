@@ -24,6 +24,12 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
         expected_dsl_output = "CREATE PRODUCT test USING 4326; " + expected_dsl_output
     if not generated_dsl_output.startswith("CREATE PRODUCT "):
         generated_dsl_output = "CREATE PRODUCT test USING 4326; " + generated_dsl_output
+    
+    # Ensure both outputs end with a semicolon
+    if not expected_dsl_output.endswith(";"):
+        expected_dsl_output += ";"
+    if not generated_dsl_output.endswith(";"):
+        generated_dsl_output += ";"
 
     data = {
         "expected_dsl_output": expected_dsl_output,
@@ -31,14 +37,11 @@ def dsl_validator(expected_dsl_output, generated_dsl_output):
     }
     try:
         response = requests.post(validator_url, json=data)
-        #print("reuest: "+ str(data))
-        #print(response)
         response.raise_for_status()
         result = response.json()
-        #print("\nresult: "+ str(result) + "\n")
-        #print("is_valid? "+ str(result.get("is_valid")) + "\n\n\n")
         #TODO: chiedi di cambiare la post e ritornare l'errore se c'è
-        print("result: "+ str(result))
+        if not result.get("is_valid"):
+            return False, result.get("full_output")
         return result.get("is_valid"), result.get("full_output")  # Returning both is_valid and full output for logging if needed
     except requests.exceptions.RequestException as e:
         logging.error(f"Request to DSL validator failed: {e}")
@@ -110,30 +113,28 @@ def analyze_results():
                         metrics[key]["accurate_dsl"] += 1
                         total_correct += 1
 
-                    # After processing all results, save the updated list back to the file
-                    with open(model_file_path, 'w') as file:
-                        json.dump(results, file, indent=4)
+                    # Calculate BLEU score if possible
+                    if result['expected_dsl_output'] and result['generated_dsl_output']:
+                        bleu_score = sentence_bleu([result['expected_dsl_output'].split()], result['generated_dsl_output'].split())
+                        result['bleu_score'] = bleu_score
+                        metrics[key]["total_bleu_score"] += bleu_score
+                        total_bleu_score += bleu_score
+                    else:
+                        result['bleu_score'] = 0
 
-                    # Calculate BLEU score
-                    bleu_score = sentence_bleu([result['expected_dsl_output'].split()], result['generated_dsl_output'].split())
-                    result['bleu_score'] = bleu_score
-                    metrics[key]["total_bleu_score"] += bleu_score
-                    total_bleu_score += bleu_score
+                # After processing all results, save the updated list back to the file
+                with open(model_file_path, 'w') as file:
+                    json.dump(results, file, indent=4)
 
                 # Calculate overall metrics for this model
                 overall_accuracy = total_correct / total_examples
                 overall_average_bleu_score = total_bleu_score / total_examples
                 overall_average_time = total_time / total_examples if total_examples > 0 else 0
 
-                # Save the updated test results back to the individual model file
-                with open(model_file_path, 'w') as file:
-                    json.dump(results, file, indent=4)
-
                 # Add detailed metrics for each combination of parameters and system_prompt_version
                 model_data = []
                 for key, value in metrics.items():
                     model_name, parameters, system_prompt_version = key
-
                     # Calculate average times for each complexity level
                     avg_complex_time = value["complex_time"] / value["complex_count"] if value["complex_count"] > 0 else 0
                     avg_simple_time = value["simple_time"] / value["simple_count"] if value["simple_count"] > 0 else 0

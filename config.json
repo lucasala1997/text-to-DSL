@@ -10,7 +10,10 @@
       "test_results_file": "logs/test_results.json",
       "individual_metrics_file": "logs/individual_metrics.json",
       "overall_metrics_file": "logs/overall_metrics.json",
-      "project_log_file": "logs/project.log"
+      "project_log_file": "logs/project.log",
+      "parameter_to_test": "metadata/parameters_to_test.json",
+      "dummy_parameter_to_test": "metadata/dummy_parameter_to_test.json"
+      
     },
     "logging": {
       "level": "INFO",

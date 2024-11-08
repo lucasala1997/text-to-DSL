@@ -52,7 +52,7 @@ app.post("/api/sensor/validate", (req, res) => {
 
     // check if deep equals the two objects
     res.json({
-        is_valid: JSON.stringify(expected) === JSON.stringify(generated),
+        is_valid: expected != null && generated != null && JSON.stringify(expected) === JSON.stringify(generated),
         full_output: {
             expected,
             generated
