@@ -1,6 +1,11 @@
 {
     "parameter_grid": [
       {
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 30
+      },
+      {
         "temperature": 0,
         "top_p": 0,
         "top_k": 0

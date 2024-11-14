@@ -26,9 +26,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 41,
+            "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.0
+            "temperature": 0.1
         }
     },
     "Qwen 2.5-coder (7B) quantized 4bit": {

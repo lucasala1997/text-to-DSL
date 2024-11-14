@@ -104,7 +104,7 @@ def deploy_selected_model(dataset_name, prompt_version=None, automatic=False):
             for params in tqdm(parameter_grid, desc="Testing parameter combinations"):
                 # Pass the current parameter combination to automatic_configure_model_parameters
                 #TODO: passagli anche il nome del modello altrimenti lo chiede ogni volta (da file)
-                selected_model = automatic_configure_model_parameters(model_names[18], new_parameters=params)
+                selected_model = automatic_configure_model_parameters(model_names[1], new_parameters=params)
                 
                 if selected_model:
                     print(f"\nDeploying and prompting the model: {selected_model}")

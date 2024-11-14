@@ -84,3 +84,150 @@
 2024-11-06 15:40:54,300:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
 2024-11-06 15:40:54,460:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
 2024-11-06 15:40:54,460:INFO:Process completed successfully.
+2024-11-08 13:42:01,686:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-08 13:42:01,686:INFO:Selecting prompt versions...
+2024-11-08 13:42:01,686:INFO:Deploying models with automatic parameters test...
+2024-11-08 13:42:01,689:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-08 13:42:01,690:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-08 13:42:01,690:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-08 13:42:01,690:INFO:Grammar for sensors loaded successfully.
+2024-11-08 13:42:01,690:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-08 13:42:20,968:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27624, Requested 2560. Please try again in 368ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:42:20,968:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:42:29,412:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 29241, Requested 2485. Please try again in 3.452s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:42:29,412:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:42:35,886:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 28827, Requested 2537. Please try again in 2.728s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:42:35,886:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:42:42,730:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 28316, Requested 2570. Please try again in 1.772s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:42:42,730:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:42:49,683:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27795, Requested 2699. Please try again in 988ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:42:49,683:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:43:03,292:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27433, Requested 2793. Please try again in 452ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:43:03,292:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:43:16,096:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27470, Requested 2616. Please try again in 172ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:43:16,096:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:43:27,288:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 28012, Requested 2696. Please try again in 1.416s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:43:27,288:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:43:38,312:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 28679, Requested 2615. Please try again in 2.588s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:43:38,312:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:43:46,887:ERROR:Error: 429 - {
+    "error": {
+        "message": "Rate limit reached for gpt-4o in organization org-hy0g6yD4BloYr0Woo4DQZyMK on tokens per min (TPM): Limit 30000, Used 27424, Requested 2614. Please try again in 76ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}
+
+2024-11-08 13:43:46,887:WARNING:Attempt 1 failed for model OpenAI GPT4o: API request failed with status code 429
+2024-11-08 13:43:55,456:INFO:Model OpenAI GPT4o tested successfully.
+2024-11-08 13:43:55,457:INFO:Analyzing results...
+2024-11-08 13:43:55,825:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-08 13:43:55,825:INFO:Generating plots...
+2024-11-08 13:43:55,825:INFO:Generating visualizations...
+2024-11-08 13:43:56,016:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-08 13:43:56,174:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-08 13:43:56,335:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-08 13:43:56,479:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-08 13:43:56,669:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-08 13:43:56,790:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-08 13:43:56,909:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-08 13:43:56,910:INFO:Process completed successfully.
+2024-11-08 20:03:23,332:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-08 20:03:23,332:INFO:Selecting prompt versions...
+2024-11-08 20:03:23,333:INFO:Deploying models with automatic parameters test...
+2024-11-08 20:03:23,336:INFO:Updated parameters for model Llama3.1 (8B) quantized 4bit: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-08 20:03:23,337:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-08 20:03:23,337:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-08 20:03:23,337:INFO:Grammar for sensors loaded successfully.
+2024-11-08 20:03:23,337:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-08 20:03:23,338:INFO:Testing model Llama3.1 (8B) quantized 4bit with 28 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 132000, 'top_k': 50, 'top_p': 0.9, 'temperature': 0.1}.
+2024-11-08 20:04:23,129:INFO:Model Llama3.1 (8B) quantized 4bit tested successfully.
+2024-11-08 20:04:23,130:INFO:Analyzing results...
+2024-11-08 20:04:23,244:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-08 20:04:23,358:INFO:Metrics analysis completed for model: Llama3.1_(8B)_quantized_4bit
+2024-11-08 20:04:23,358:INFO:Generating plots...
+2024-11-08 20:04:23,358:INFO:Generating visualizations...
+2024-11-08 20:04:23,539:INFO:Scatter plot saved for Llama3.1 (8B) quantized 4bit at results/Llama3.1 (8B) quantized 4bit/Llama3.1 (8B) quantized 4bit_accuracy_scatter.png
+2024-11-08 20:04:23,658:INFO:Parameter combinations plot saved for Llama3.1 (8B) quantized 4bit at results/Llama3.1 (8B) quantized 4bit/Llama3.1 (8B) quantized 4bit_parameter_combinations.png
+2024-11-08 20:04:23,763:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-08 20:04:23,865:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-08 20:04:23,970:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-08 20:04:24,081:INFO:Scatter plot saved for Llama3.1 (8B) quantized 4bit at results/Llama3.1 (8B) quantized 4bit/Llama3.1 (8B) quantized 4bit_complexity_accuracy_scatter.png
+2024-11-08 20:04:24,179:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-08 20:04:24,437:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-08 20:04:24,576:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-08 20:04:24,713:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-08 20:04:24,713:INFO:Process completed successfully.
