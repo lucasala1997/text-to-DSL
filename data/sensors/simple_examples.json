@@ -47,8 +47,8 @@
     {
         "example_id": "5",
         "DSL_type": "sensor",
-        "input_text": "Create three sparial dimensions: The first one is called Municipality representing a polygon with the property cMum as Integer, the second one is called District representing a polygon with the property cDis as Integer and the last one is called Section representing a polygon with the property cSec as Integer. A Section is contained inside a District and a Distric is contained inside a Municipality.",
-        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
+        "input_text": "Create three sparial dimensions: The first one is called Municipality representing a polygon with the property cMun as Integer, the second one is called District representing a polygon with the property cDis as Integer and the last one is called Section representing a polygon with the property cSec as Integer. A Section is contained inside a District and a Distric is contained inside a Municipality.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
         "complexity_level": "simple",
         "description": "Spatial dimension with hierarchy",
         "synthetic_data": false
@@ -101,8 +101,8 @@
     {
         "example_id": "13",
         "DSL_type": "sensor",
-        "input_text": "Create a sensor with the property name as String and the following measurements: value as Double and quality as Integer. It will be necessary to aggregate by a spatial dimension called ZoneDimension with the property name as String. It will be necessary to aggregate by categorical dimension called SensorType that differences sensors by its type. The data is retrieved each 10 seconds.",
-        "expected_dsl_output": "CREATE CATEGORICAL DIMENSION SensorType (field: type); CREATE SPATIAL DIMENSION ZoneDimension (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 10, geometry: Polygon) WITH PROPERTIES (name String) WITH MEASUREMENT DATA (value Double, quality Integer) WITH SPATIAL GROUP ZoneDimension (ZoneDimension) WITH CATEGORICAL GROUP (SensorType);",
+        "input_text": "Create a sensor called StationObservation with the property name as String, the geometry as type Polygon and the following measurements: value as Double and quality as Integer. It will be necessary to aggregate by a spatial dimension called ZoneDimension with the property name as String. It will be necessary to aggregate by categorical dimension called SensorType that differences sensors by its type. The data is retrieved each 10 seconds.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION ZoneDimension (geometry: Polygon) WITH PROPERTIES (name String); CREATE CATEGORICAL DIMENSION SensorType (field: type); CREATE SENSOR StationObservation (interval: 10, geometry: Polygon) WITH PROPERTIES (name String) WITH MEASUREMENT DATA (value Double, quality Integer) WITH SPATIAL GROUP ZoneDimension (ZoneDimension) WITH CATEGORICAL GROUP (SensorType);",
         "complexity_level": "simple",
         "description": "Sensor observation creation with categorical aggregation",
         "synthetic_data": false
@@ -146,8 +146,8 @@
     {
         "example_id": "18",
         "DSL_type": "sensor",
-        "input_text": "Create a sensor with the following properties: description as String, code as String and name as String. The sensor will measure the parameter noise_level as a Double with units 'db' and icon 'speedometer'. The data will be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
-        "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'dB' ICON 'speedometer') WITH BBOX ([40.42, -3.7], 12);",
+        "input_text": "Create a sensor called StationObservation with the following properties: description as String, code as String and name as String. The sensor will measure the parameter noise_level as a Double with units 'db' and icon 'speedometer'. The data will be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+        "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH BBOX ([40.42, -3.7], 12);",
         "complexity_level": "simple",
         "description": "Sensor observation creation without any aggregation",
         "synthetic_data": false
@@ -161,4 +161,4 @@
         "description": "Sensor observation creation without simple aggregation",
         "synthetic_data": false
     }
-  ]
+]

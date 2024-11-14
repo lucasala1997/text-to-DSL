@@ -1,0 +1,19 @@
+[
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16000,
+            "top_k": 50,
+            "top_p": 0.9,
+            "temperature": 0.1
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5357142857142857,
+        "average_bleu_score": 0.81153307297799,
+        "average_time": 18.69405217801354,
+        "average_complex_time": 33.71795043495949,
+        "average_simple_time": 10.347442035265784,
+        "total_examples": 28
+    }
+]

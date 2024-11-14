@@ -240,6 +240,12 @@ def test_model(dataset_name, model_name, system_prompt_version=None, data_type='
                         if 'choices' in response_json:
                             response_content = response_json["choices"][0]["message"]["content"]
 
+                        if response.status_code == 429:  # Handle rate limit error
+                            retry_after = max(float(response.headers.get("Retry-After", 60)), 60)
+                            logging.warning(f"Rate limit exceeded. Retrying in {retry_after} seconds...")
+                            time.sleep(retry_after)
+                            raise Exception("Rate limit exceeded; retrying request")  # Throw exception to trigger retry logic
+
                         if response.status_code == 200:
                             generated_dsl_output = response_content
                             

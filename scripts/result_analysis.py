@@ -108,7 +108,7 @@ def analyze_results():
                     
                     # Update or set the 'success' key based on validation result
                     result['success'] = dsl_validator(result['expected_dsl_output'], result['generated_dsl_output'])[0]
-                    print("success: "+ str(result['success']))
+                    # print("success: "+ str(result['success']))
                     if result['success']:
                         metrics[key]["accurate_dsl"] += 1
                         total_correct += 1

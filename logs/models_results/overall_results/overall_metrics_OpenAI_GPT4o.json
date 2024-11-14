@@ -7,11 +7,11 @@
             "top_k": 50
         },
         "system_prompt_version": "1.0",
-        "overall_accuracy": 0.6785714285714286,
-        "average_bleu_score": 0.9044916700371418,
-        "average_time": 4.060657829773845,
-        "average_complex_time": 6.598739312379621,
-        "average_simple_time": 2.6506125616595253,
+        "overall_accuracy": 0.9285714285714286,
+        "average_bleu_score": 0.9296177787500431,
+        "average_time": 4.4912262655146025,
+        "average_complex_time": 3.3735975092742594,
+        "average_simple_time": 5.11213113009257,
         "total_examples": 28
     }
 ]

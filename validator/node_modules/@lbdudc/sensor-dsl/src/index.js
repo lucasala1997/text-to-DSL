@@ -24,9 +24,7 @@ export function parse(inputStr, debug = false) {
   visitor.start(tree);
 
   // return store.getProduct();
-  return transformation(store.getProduct());
-}
-
-export function reset() {
+  const res = transformation(store.getProduct());
   store.reset();
+  return res;
 }

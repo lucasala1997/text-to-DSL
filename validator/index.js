@@ -3,8 +3,6 @@ import dotenv from "dotenv";
 import express from "express";
 import parser from "@lbdudc/sensor-dsl";
 
-
-
 dotenv.config();
 dotenv.config({ path: `.env.local`, override: true });
 
@@ -17,7 +15,7 @@ app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(express.json());
 
 
-app.post("/api/sensor/validate", (req, res) => {
+app.post("/api/sensor/validate", async (req, res) => {
     const { expected_dsl_output, generated_dsl_output } = req.body;
 
     if (!expected_dsl_output || !generated_dsl_output) {
@@ -26,26 +24,20 @@ app.post("/api/sensor/validate", (req, res) => {
 
     let expected, generated;
 
-    parser.reset();
-
     try {
         expected = parser.parse(expected_dsl_output);
     } catch (error) {
-        console.log("error", error);
         return res.json({
-            error: error.message,
+            error: JSON.stringify(error),
             dsl_output_file_with_errors: "expected_dsl_output"
         });
     }
 
-    parser.reset();
-
     try {
         generated = parser.parse(generated_dsl_output);
     } catch (error) {
-        console.log("error", error);
         return res.json({
-            error: error.message,
+            error: JSON.stringify(error),
             dsl_output_file_with_errors: "generated_dsl_output"
         });
     }

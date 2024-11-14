@@ -2,23 +2,13 @@
     "parameter_grid": [
       {
         "temperature": 0.1,
-        "top_p": 0.9,
+        "top_p": 0.8,
         "top_k": 30
       },
       {
-        "temperature": 0,
-        "top_p": 0,
-        "top_k": 0
-      },
-      {
         "temperature": 0.5,
-        "top_p": 0.5,
+        "top_p": 0.9,
         "top_k": 50
-      },
-      {
-        "temperature": 1,
-        "top_p": 1,
-        "top_k": 100
       }
     ]
 }
