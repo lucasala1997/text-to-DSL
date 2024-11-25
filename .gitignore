@@ -4,3 +4,4 @@ tests/
 env_ollama/
 env_texttodsl/
 z_possible_prompt_style/
+validator/node_modules/

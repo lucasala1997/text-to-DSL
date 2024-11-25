@@ -1,11 +1,11 @@
 [
   {
-      "example_id": "example_1",
-      "DSL_type": "sensors",
-      "input_text": "New product called meteorological using 4326 as srid.",
-      "expected_dsl_output": "CREATE PRODUCT meteorological USING 4326;",
-      "complexity_level": "simple",
-      "description": "An example of creating a spatial dimension with a geometry and property.",
-      "synthetic_data": false
+    "example_id": "example_1",
+    "DSL_type": "sensors",
+    "input_text": "New product called meteorological using 4326 as srid.",
+    "expected_dsl_output": "CREATE PRODUCT meteorological USING 4326;",
+    "complexity_level": "simple",
+    "description": "An example of creating a product with a specific SRID.",
+    "synthetic_data": false
   }
 ]
