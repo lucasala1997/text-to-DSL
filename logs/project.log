@@ -10101,3 +10101,318 @@ KeyError: 'overall_accuracy'
 2024-11-25 14:51:38,612:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
 2024-11-25 14:51:38,736:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
 2024-11-25 14:51:38,736:INFO:Process completed successfully.
+2024-11-25 15:39:29,787:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 15:39:29,787:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 15:39:29,787:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 15:39:30,210:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 15:39:30,210:INFO:Selecting prompt versions...
+2024-11-25 15:39:30,210:INFO:Deploying models with automatic parameters test...
+2024-11-25 15:39:30,211:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 15:39:30,212:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-25 15:39:30,213:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-25 15:39:30,213:INFO:Grammar for sensors loaded successfully.
+2024-11-25 15:39:30,213:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-25 15:39:46,912:WARNING:Rate limit exceeded. Retrying in 60 seconds...
+2024-11-25 15:40:46,972:WARNING:Attempt 1 failed for model OpenAI GPT4o: Rate limit exceeded; retrying request
+2024-11-25 15:41:48,326:INFO:Model OpenAI GPT4o tested successfully.
+2024-11-25 15:41:48,327:INFO:Analyzing results...
+2024-11-25 15:41:48,594:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 15:41:48,595:INFO:Generating plots...
+2024-11-25 15:41:48,595:INFO:Generating visualizations...
+2024-11-25 15:41:48,897:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 15:41:49,048:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 15:41:49,210:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 15:41:49,361:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 15:41:49,556:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 15:41:49,678:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 15:41:49,801:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 15:41:49,801:INFO:Process completed successfully.
+2024-11-25 15:54:11,916:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 15:54:11,916:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 15:54:11,916:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 15:54:12,346:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 15:54:12,346:INFO:Selecting prompt versions...
+2024-11-25 15:54:12,346:INFO:Deploying models with automatic parameters test...
+2024-11-25 15:54:12,347:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 15:54:12,349:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-25 15:54:12,349:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-25 15:54:12,349:INFO:Grammar for sensors loaded successfully.
+2024-11-25 15:54:12,349:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-25 15:54:35,582:WARNING:Rate limit exceeded. Retrying in 60 seconds...
+2024-11-25 15:55:35,642:WARNING:Attempt 1 failed for model OpenAI GPT4o: Rate limit exceeded; retrying request
+2024-11-25 15:56:30,426:INFO:Model OpenAI GPT4o tested successfully.
+2024-11-25 15:56:30,427:INFO:Analyzing results...
+2024-11-25 15:56:30,686:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 15:56:30,686:INFO:Generating plots...
+2024-11-25 15:56:30,686:INFO:Generating visualizations...
+2024-11-25 15:56:30,970:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 15:56:31,067:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 15:56:31,175:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 15:56:31,262:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 15:56:31,386:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 15:56:31,466:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 15:56:31,546:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 15:56:31,546:INFO:Process completed successfully.
+2024-11-25 16:01:14,772:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:01:14,772:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:01:14,772:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:01:15,207:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:01:15,207:INFO:Selecting prompt versions...
+2024-11-25 16:01:15,207:INFO:Deploying models with automatic parameters test...
+2024-11-25 16:01:15,208:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 16:01:15,209:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-25 16:01:15,209:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-25 16:01:15,209:INFO:Grammar for sensors loaded successfully.
+2024-11-25 16:01:15,209:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-25 16:01:27,785:WARNING:Rate limit exceeded. Retrying in 60 seconds...
+2024-11-25 16:02:27,846:WARNING:Attempt 1 failed for model OpenAI GPT4o: Rate limit exceeded; retrying request
+2024-11-25 16:03:42,524:INFO:Model OpenAI GPT4o tested successfully.
+2024-11-25 16:03:42,525:INFO:Analyzing results...
+2024-11-25 16:03:42,761:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:03:42,761:INFO:Generating plots...
+2024-11-25 16:03:42,761:INFO:Generating visualizations...
+2024-11-25 16:03:43,089:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:03:43,249:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:03:43,422:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:03:43,562:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:03:43,758:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:03:43,888:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:03:44,017:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:03:44,017:INFO:Process completed successfully.
+2024-11-25 16:11:40,199:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:11:40,200:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:11:40,200:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:11:40,629:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:11:40,629:INFO:Analyzing results...
+2024-11-25 16:11:40,771:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:11:40,771:INFO:Generating plots...
+2024-11-25 16:11:40,771:INFO:Generating visualizations...
+2024-11-25 16:11:41,057:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:11:41,206:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:11:41,388:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:11:41,540:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:11:41,736:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:11:41,861:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:11:41,983:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:11:41,983:INFO:Process completed successfully.
+2024-11-25 16:17:38,824:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:17:38,824:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:17:38,824:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:17:39,256:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:17:39,256:INFO:Analyzing results...
+2024-11-25 16:17:39,398:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:17:39,398:INFO:Generating plots...
+2024-11-25 16:17:39,398:INFO:Generating visualizations...
+2024-11-25 16:17:39,679:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:17:39,847:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:17:40,031:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:17:40,174:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:17:40,373:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:17:40,498:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:17:40,623:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:17:40,623:INFO:Process completed successfully.
+2024-11-25 16:17:46,148:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:17:46,148:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:17:46,148:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:17:46,591:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:17:46,592:INFO:Selecting prompt versions...
+2024-11-25 16:17:46,592:INFO:Deploying models with automatic parameters test...
+2024-11-25 16:17:46,593:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 16:17:46,594:ERROR:Error decoding JSON: Expecting value: line 1 column 1 (char 0)
+2024-11-25 16:17:46,595:ERROR:Traceback: Traceback (most recent call last):
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/model_testing.py", line 103, in test_model
+    real_data = [
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/model_testing.py", line 104, in <listcomp>
+    json.load(open(config['paths']['data_directory']+ dataset_name + '/' + file, 'r'))
+  File "/home/lucasala/anaconda3/lib/python3.9/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/home/lucasala/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/lucasala/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/lucasala/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2024-11-25 16:17:46,595:ERROR:Model OpenAI GPT4o failed testing.
+2024-11-25 16:17:46,595:INFO:Analyzing results...
+2024-11-25 16:17:46,737:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:17:46,737:INFO:Generating plots...
+2024-11-25 16:17:46,738:INFO:Generating visualizations...
+2024-11-25 16:17:47,048:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:17:47,217:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:17:47,397:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:17:47,537:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:17:47,733:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:17:47,857:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:17:47,982:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:17:47,982:INFO:Process completed successfully.
+2024-11-25 16:17:55,511:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:17:55,511:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:17:55,511:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:17:55,954:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:17:55,954:INFO:Selecting prompt versions...
+2024-11-25 16:17:55,955:INFO:Deploying models with automatic parameters test...
+2024-11-25 16:17:55,956:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 16:17:55,956:ERROR:Error decoding JSON: Expecting value: line 1 column 1 (char 0)
+2024-11-25 16:17:55,957:ERROR:Traceback: Traceback (most recent call last):
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/model_testing.py", line 103, in test_model
+    real_data = [
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/model_testing.py", line 104, in <listcomp>
+    json.load(open(config['paths']['data_directory']+ dataset_name + '/' + file, 'r'))
+  File "/home/lucasala/anaconda3/lib/python3.9/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/home/lucasala/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/lucasala/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/lucasala/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2024-11-25 16:17:55,957:ERROR:Model OpenAI GPT4o failed testing.
+2024-11-25 16:17:55,957:INFO:Analyzing results...
+2024-11-25 16:17:55,957:ERROR:Models result folder logs/models_results does not exist.
+2024-11-25 16:17:55,957:INFO:Generating plots...
+2024-11-25 16:17:55,957:INFO:Generating visualizations...
+2024-11-25 16:17:55,958:ERROR:Unexpected error in __main__.run_pipeline: 'overall_accuracy'
+2024-11-25 16:17:55,960:ERROR:Traceback: Traceback (most recent call last):
+  File "/home/lucasala/text_to_dsl/text-to-DSL/main.py", line 183, in run_pipeline
+    generate_visualizations()
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/visualization_reporting.py", line 418, in generate_visualizations
+    plot_best_performing_combinations()
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/visualization_reporting.py", line 167, in plot_best_performing_combinations
+    top_combinations = df.nlargest(top_n, 'overall_accuracy')
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 7644, in nlargest
+    return selectn.SelectNFrame(self, n=n, keep=keep, columns=columns).nlargest()
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/methods/selectn.py", line 57, in nlargest
+    return self.compute("nlargest")
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/methods/selectn.py", line 199, in compute
+    dtype = frame[column].dtype
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'overall_accuracy'
+
+2024-11-25 16:18:13,495:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:18:13,495:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:18:13,495:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:18:13,922:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:18:13,922:INFO:Selecting prompt versions...
+2024-11-25 16:18:13,922:INFO:Deploying models with automatic parameters test...
+2024-11-25 16:18:13,923:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 16:18:13,924:ERROR:Error decoding JSON: Expecting value: line 1 column 1 (char 0)
+2024-11-25 16:18:13,924:ERROR:Traceback: Traceback (most recent call last):
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/model_testing.py", line 103, in test_model
+    real_data = [
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/model_testing.py", line 104, in <listcomp>
+    json.load(open(config['paths']['data_directory']+ dataset_name + '/' + file, 'r'))
+  File "/home/lucasala/anaconda3/lib/python3.9/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/home/lucasala/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/lucasala/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/lucasala/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2024-11-25 16:18:13,924:ERROR:Model OpenAI GPT4o failed testing.
+2024-11-25 16:18:13,925:INFO:Analyzing results...
+2024-11-25 16:18:13,925:INFO:Generating plots...
+2024-11-25 16:18:13,925:INFO:Generating visualizations...
+2024-11-25 16:18:13,926:ERROR:Unexpected error in __main__.run_pipeline: 'overall_accuracy'
+2024-11-25 16:18:13,927:ERROR:Traceback: Traceback (most recent call last):
+  File "/home/lucasala/text_to_dsl/text-to-DSL/main.py", line 183, in run_pipeline
+    generate_visualizations()
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/visualization_reporting.py", line 418, in generate_visualizations
+    plot_best_performing_combinations()
+  File "/home/lucasala/text_to_dsl/text-to-DSL/scripts/visualization_reporting.py", line 167, in plot_best_performing_combinations
+    top_combinations = df.nlargest(top_n, 'overall_accuracy')
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 7644, in nlargest
+    return selectn.SelectNFrame(self, n=n, keep=keep, columns=columns).nlargest()
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/methods/selectn.py", line 57, in nlargest
+    return self.compute("nlargest")
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/methods/selectn.py", line 199, in compute
+    dtype = frame[column].dtype
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/lucasala/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'overall_accuracy'
+
+2024-11-25 16:18:34,791:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:18:34,792:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:18:34,792:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:18:35,227:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:18:35,227:INFO:Selecting prompt versions...
+2024-11-25 16:18:35,228:INFO:Deploying models with automatic parameters test...
+2024-11-25 16:18:35,229:INFO:Updated parameters for model OpenAI GPT4o: {'temperature': 0.1, 'top_p': 0.9, 'top_k': 50}
+2024-11-25 16:18:35,230:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-11-25 16:18:35,230:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-11-25 16:18:35,230:INFO:Grammar for sensors loaded successfully.
+2024-11-25 16:18:35,230:INFO:Few-shot examples for sensors loaded successfully.
+2024-11-25 16:18:51,209:WARNING:Rate limit exceeded. Retrying in 60 seconds...
+2024-11-25 16:19:51,225:WARNING:Attempt 1 failed for model OpenAI GPT4o: Rate limit exceeded; retrying request
+2024-11-25 16:20:49,267:INFO:Model OpenAI GPT4o tested successfully.
+2024-11-25 16:20:49,268:INFO:Analyzing results...
+2024-11-25 16:20:49,498:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:20:49,499:INFO:Generating plots...
+2024-11-25 16:20:49,499:INFO:Generating visualizations...
+2024-11-25 16:20:49,860:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:20:50,019:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:20:50,188:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:20:50,326:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:20:50,518:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:20:50,651:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:20:50,786:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:20:50,786:INFO:Process completed successfully.
+2024-11-25 16:25:09,429:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:25:09,429:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:25:09,429:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:25:09,913:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:25:09,913:INFO:Analyzing results...
+2024-11-25 16:25:10,069:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:25:10,069:INFO:Generating plots...
+2024-11-25 16:25:10,069:INFO:Generating visualizations...
+2024-11-25 16:25:10,374:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:25:10,532:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:25:10,693:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:25:10,831:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:25:11,077:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:25:11,428:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:25:11,566:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:25:11,566:INFO:Process completed successfully.
+2024-11-25 16:25:35,232:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:25:35,232:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:25:35,232:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:25:35,660:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:25:35,660:INFO:Analyzing results...
+2024-11-25 16:25:35,801:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:25:35,801:INFO:Generating plots...
+2024-11-25 16:25:35,801:INFO:Generating visualizations...
+2024-11-25 16:25:36,075:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:25:36,224:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:25:36,405:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:25:36,572:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:25:36,768:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:25:36,896:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:25:37,020:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:25:37,020:INFO:Process completed successfully.
+2024-11-25 16:26:18,588:INFO:Note: detected 128 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2024-11-25 16:26:18,588:INFO:Note: NumExpr detected 128 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-11-25 16:26:18,588:INFO:NumExpr defaulting to 8 threads.
+2024-11-25 16:26:19,019:INFO:Starting the pipeline with the following steps: ['configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs', 'generate_visualizations']
+2024-11-25 16:26:19,019:INFO:Analyzing results...
+2024-11-25 16:26:19,162:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-11-25 16:26:19,162:INFO:Generating plots...
+2024-11-25 16:26:19,162:INFO:Generating visualizations...
+2024-11-25 16:26:19,444:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_accuracy_scatter.png
+2024-11-25 16:26:19,609:INFO:Parameter combinations plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_parameter_combinations.png
+2024-11-25 16:26:19,790:INFO:Scatter plot saved for OpenAI GPT4o at results/OpenAI GPT4o/OpenAI GPT4o_complexity_accuracy_scatter.png
+2024-11-25 16:26:19,930:INFO:Best performing parameter combinations plot saved at results/top_5_best_performing_combinations.png
+2024-11-25 16:26:20,122:INFO:Average processing times plot saved at results/average_processing_times_by_complexity.png
+2024-11-25 16:26:20,245:INFO:VRAM-based performance plot saved to results/model_performance_by_vram.png
+2024-11-25 16:26:20,367:INFO:Parameter-based performance plot saved to results/model_performance_by_parameters.png
+2024-11-25 16:26:20,367:INFO:Process completed successfully.
