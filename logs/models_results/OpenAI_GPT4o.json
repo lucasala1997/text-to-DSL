@@ -1,6 +1,6 @@
 [
     {
-        "test_id": "test_run_1731617523",
+        "test_id": "test_run_1732542569",
         "example_id": "0",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -11,7 +11,7 @@
         },
         "input_text": "Create a spatial dimension called Municipality representing a polygon with the attributes shortName as String, code as String and population as Integer.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, code String, population Integer);",
-        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, code String, population Integer);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (\n\tgeometry: Polygon\n) WITH PROPERTIES (\n\tshortName String,\n\tcode String,\n\tpopulation Integer\n);\n\n",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -19,13 +19,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.0973856700584292,
-        "timestamp": "2024-11-14 21:52:03",
+        "time_taken": 1.301208341959864,
+        "timestamp": "2024-11-25 14:49:29",
         "success": true,
-        "bleu_score": 1.0
+        "bleu_score": 0.2955043237121875
     },
     {
-        "test_id": "test_run_1731617524",
+        "test_id": "test_run_1732542569",
         "example_id": "1",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -44,13 +44,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 0.6263718781992793,
-        "timestamp": "2024-11-14 21:52:04",
+        "time_taken": 0.6031941901892424,
+        "timestamp": "2024-11-25 14:49:29",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617525",
+        "test_id": "test_run_1732542570",
         "example_id": "2",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -69,13 +69,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 0.7133560271468014,
-        "timestamp": "2024-11-14 21:52:05",
+        "time_taken": 0.4848128189332783,
+        "timestamp": "2024-11-25 14:49:30",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617526",
+        "test_id": "test_run_1732542570",
         "example_id": "3",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -84,7 +84,7 @@
             "rationale": "Basic system prompt",
             "timestamp": "2024-10-10T10:00:00"
         },
-        "input_text": "Create a spatial dimension called Floor representing a polygon with the attribures code as String and number as Integer.",
+        "input_text": "Create a spatial dimension called Floor representing a polygon with the attributes code as String and number as Integer.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (code String, number Integer);",
         "generated_dsl_output": "CREATE SPATIAL DIMENSION Floor (\n\tgeometry: Polygon\n) WITH PROPERTIES (\n\tcode String,\n\tnumber Integer\n);\n\n",
         "complexity_level": "simple",
@@ -94,13 +94,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 0.8405919859651476,
-        "timestamp": "2024-11-14 21:52:06",
+        "time_taken": 0.7845090981572866,
+        "timestamp": "2024-11-25 14:49:30",
         "success": true,
         "bleu_score": 0.20687206010259407
     },
     {
-        "test_id": "test_run_1731617527",
+        "test_id": "test_run_1732542572",
         "example_id": "4",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -119,13 +119,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.2630100259557366,
-        "timestamp": "2024-11-14 21:52:07",
+        "time_taken": 1.3444584519602358,
+        "timestamp": "2024-11-25 14:49:32",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617529",
+        "test_id": "test_run_1732542574",
         "example_id": "5",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -135,7 +135,7 @@
             "timestamp": "2024-10-10T10:00:00"
         },
         "input_text": "Create three sparial dimensions: The first one is called Municipality representing a polygon with the property cMun as Integer, the second one is called District representing a polygon with the property cDis as Integer and the last one is called Section representing a polygon with the property cSec as Integer. A Section is contained inside a District and a Distric is contained inside a Municipality.",
-        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
         "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
         "complexity_level": "simple",
         "parameters": {
@@ -144,13 +144,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.622112785000354,
-        "timestamp": "2024-11-14 21:52:09",
-        "success": true,
-        "bleu_score": 1.0
+        "time_taken": 1.7452026321552694,
+        "timestamp": "2024-11-25 14:49:34",
+        "success": false,
+        "bleu_score": 0.9257518071011758
     },
     {
-        "test_id": "test_run_1731617530",
+        "test_id": "test_run_1732542574",
         "example_id": "6",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -169,13 +169,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.2556728250347078,
-        "timestamp": "2024-11-14 21:52:10",
+        "time_taken": 0.7788013401441276,
+        "timestamp": "2024-11-25 14:49:34",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617531",
+        "test_id": "test_run_1732542576",
         "example_id": "7",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -186,7 +186,7 @@
         },
         "input_text": "Create two spatial aggregations, the first one called Province representing a polygon with the property name as String, and the second one called Council representing a polygon with the property name as String. A Council is located inside a Province.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
-        "generated_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String);\n\nCREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -194,13 +194,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.2462605708278716,
-        "timestamp": "2024-11-14 21:52:11",
+        "time_taken": 1.611467035021633,
+        "timestamp": "2024-11-25 14:49:36",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617532",
+        "test_id": "test_run_1732542577",
         "example_id": "9",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -219,13 +219,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.2784775961190462,
-        "timestamp": "2024-11-14 21:52:12",
+        "time_taken": 0.9347641579806805,
+        "timestamp": "2024-11-25 14:49:37",
         "success": true,
         "bleu_score": 0.5081327481546147
     },
     {
-        "test_id": "test_run_1731617533",
+        "test_id": "test_run_1732542578",
         "example_id": "10",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -236,7 +236,7 @@
         },
         "input_text": "Create a categorical dimension called Alarm.",
         "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Alarm (field: alarm);",
-        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Alarm (field: alarm);\\n\\n",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Alarm (FIELD: alarm);\\n\\n",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -244,13 +244,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 0.8915699049830437,
-        "timestamp": "2024-11-14 21:52:13",
+        "time_taken": 1.1689885878004134,
+        "timestamp": "2024-11-25 14:49:38",
         "success": true,
-        "bleu_score": 0.7598356856515925
+        "bleu_score": 0.5081327481546147
     },
     {
-        "test_id": "test_run_1731617534",
+        "test_id": "test_run_1732542579",
         "example_id": "11",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -259,9 +259,9 @@
             "rationale": "Basic system prompt",
             "timestamp": "2024-10-10T10:00:00"
         },
-        "input_text": "Create a categorical dimension called Level with the following ranges: low from 0 to 3, medium from 31 to 70 and high from 71 to 100.",
+        "input_text": "Create a categorical dimension called Level with the following ranges: low from 0 to 30, medium from 31 to 70 and high from 71 to 100.",
         "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Level (field: level); CREATE RANGE LevelRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high');",
-        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Level (field: level); CREATE RANGE LevelRange (0 TO 3 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high');",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Level (field: level); CREATE RANGE LevelRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high');",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -269,13 +269,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.1313628628849983,
-        "timestamp": "2024-11-14 21:52:14",
+        "time_taken": 1.1500534508377314,
+        "timestamp": "2024-11-25 14:49:39",
         "success": true,
-        "bleu_score": 0.8843865924896842
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617536",
+        "test_id": "test_run_1732542581",
         "example_id": "13",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -294,13 +294,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 2.032548885094002,
-        "timestamp": "2024-11-14 21:52:16",
+        "time_taken": 1.8994346060790122,
+        "timestamp": "2024-11-25 14:49:41",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617538",
+        "test_id": "test_run_1732542583",
         "example_id": "14",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -309,7 +309,7 @@
             "rationale": "Basic system prompt",
             "timestamp": "2024-10-10T10:00:00"
         },
-        "input_text": "Create a sensor with properties code as String, name as String and type as String. The sensor will measure the following elements: incline as Double with units '\u00ba' displacement as Double with units '\u00ba' and deformation as Double with units '\u00ba'. It will be necessary to aggregate by a spatial dimension called municipality with the property name as String. The data is retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "input_text": "Create a sensor called StationObservation with properties code as String, name as String and type as String. The sensor will measure the following elements: incline as Double with units '\u00ba' displacement as Double with units '\u00ba' and deformation as Double with units '\u00ba'. It will be necessary to aggregate by a spatial dimension called Municipality with the property name as String. The data is retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
         "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "simple",
@@ -319,13 +319,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.9694260521791875,
-        "timestamp": "2024-11-14 21:52:18",
+        "time_taken": 2.1893708878196776,
+        "timestamp": "2024-11-25 14:49:43",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617607",
+        "test_id": "test_run_1732542651",
         "example_id": "15",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -334,9 +334,9 @@
             "rationale": "Basic system prompt",
             "timestamp": "2024-10-10T10:00:00"
         },
-        "input_text": "Create a sensor that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units Hz, max_ultrasound_bound_time as Double with units Hz. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9. The data will be retrieved every 300 seconds",
+        "input_text": "Create a sensor called StationObservation that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units Hz, max_ultrasound_bound_time as Double with units Hz. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9. The data will be retrieved every 300 seconds",
         "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz') WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE SENSOR VibrationSensor (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz') WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz') WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -344,13 +344,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 68.44417839404196,
-        "timestamp": "2024-11-14 21:53:27",
-        "success": false,
-        "bleu_score": 0.9316103763537943
+        "time_taken": 67.86143452022225,
+        "timestamp": "2024-11-25 14:50:51",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617610",
+        "test_id": "test_run_1732542653",
         "example_id": "16",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -369,13 +369,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 2.7934344781097025,
-        "timestamp": "2024-11-14 21:53:30",
+        "time_taken": 1.8536529503762722,
+        "timestamp": "2024-11-25 14:50:53",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617611",
+        "test_id": "test_run_1732542658",
         "example_id": "17",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -394,13 +394,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.356637157034129,
-        "timestamp": "2024-11-14 21:53:31",
+        "time_taken": 4.726990790106356,
+        "timestamp": "2024-11-25 14:50:58",
         "success": true,
         "bleu_score": 0.8492326635760689
     },
     {
-        "test_id": "test_run_1731617613",
+        "test_id": "test_run_1732542659",
         "example_id": "18",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -419,13 +419,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.7446650359779596,
-        "timestamp": "2024-11-14 21:53:33",
+        "time_taken": 1.354312448296696,
+        "timestamp": "2024-11-25 14:50:59",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617614",
+        "test_id": "test_run_1732542661",
         "example_id": "19",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -434,7 +434,7 @@
             "rationale": "Basic system prompt",
             "timestamp": "2024-10-10T10:00:00"
         },
-        "input_text": "Create a sensor with the following properties: code as Srting, name as String, description as String, material as String and date as DateTime. The sensor will measure the following properties: water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City with the property name as String. The data is retireved each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "input_text": "Create a sensor called StationObservation with the following properties: code as String, name as String, description as String, material as String and date as DateTime. The sensor will measure the following properties: water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City with the property name as String. The data is retireved each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
         "generated_dsl_output": "CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "simple",
@@ -444,13 +444,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 1.7112982070539147,
-        "timestamp": "2024-11-14 21:53:34",
+        "time_taken": 2.279675528872758,
+        "timestamp": "2024-11-25 14:51:01",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617618",
+        "test_id": "test_run_1732542666",
         "example_id": "2",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -469,13 +469,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 3.9331122578587383,
-        "timestamp": "2024-11-14 21:53:38",
+        "time_taken": 4.634440252091736,
+        "timestamp": "2024-11-25 14:51:06",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617622",
+        "test_id": "test_run_1732542671",
         "example_id": "3",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -485,8 +485,8 @@
             "timestamp": "2024-10-10T10:00:00"
         },
         "input_text": "Create an application with sensors called magist using the SRID 4326 that have the following properties: descripcion as String, accesoAsociado as Long, subarea as Long, codCent as String and nombre as String. The sensors will measure the following properties: so2 as Double, co as Double, no as Double, no2 as Double, pm25 as Double, pm10 as Double, nox as Double, co3 as Double, tol as Double, ben as Double, ebe as Double, mxy as Double, pxy as Double, oxy as Double, tch as Double, ch4 as Double and nmhc as Double. It will be necessary to have the following spatial dimensions: Municipality representing a geometry with the property cMun as Integer, District representing a geometry with the property cDis as Integer, Section representing a geometry with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio dimension. The data is going to be retrived each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
-        "expected_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
-        "generated_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
+        "expected_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR magist (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
+        "generated_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR magist (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -494,13 +494,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 3.9984143460169435,
-        "timestamp": "2024-11-14 21:53:42",
+        "time_taken": 4.690576851833612,
+        "timestamp": "2024-11-25 14:51:11",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617628",
+        "test_id": "test_run_1732542677",
         "example_id": "4",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -510,8 +510,8 @@
             "timestamp": "2024-10-10T10:00:00"
         },
         "input_text": "Create an application with sensors called intecmar_2 using the SRID 4326 that measure the following values: temperature_ITS90 as Double with units '\u00baC' and icon 'thermometer-low', salinity as Double with units 'PSU', pressure as Double with units 'dbar' and icon 'speedometer', ph as Double with units 'ph' and icon 'ph', oxygen as Double with units 'mg/l' and icon 'gas-cylinder', transmittance as Double with units 'm', irradiance as Double with units 'W/m2', uv_flourescence as Double with units 'mg/m3', density as Double with units 'kg/m3', conductivity as Double with units 'S/m'. The sensors has the following properties: maxDepth as Float, code as String, name as String, description as String, startTime as DateTime and endTime as DateTime. It will be necessary to aggregate by a spatial polygon dimension called Estuary, a categorical dimension called Depth and another categorical dimension called alarm. The spatial dimension Estuary represents a polygon and has the follwing properties: shortName as String, name as String and zone as String. The categorical dimension Depth has the following ranges: surface from 0 to 3, 5m from 4.75 to 5.25, 10m from 9.75 to 10.25, 15m from 14.75 to 15.25, and 20m from 19.75 to 20.25. The data is retrieved every 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE CATEGORICAL DIMENSION Alarm (field: alarm); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange, Alarm) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE CATEGORICAL DIMENSION Alarm (field: alarm); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange) WITH CATEGORICAL GROUP Alarm (Alarm) WITH BBOX ([42.7, -8.1], 9);",
+        "expected_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE CATEGORICAL DIMENSION Alarm (field: alarm); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE SENSOR intecmar_2 (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange, Alarm) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE CATEGORICAL DIMENSION Alarm (field: alarm); CREATE SENSOR intecmar_2 (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange) WITH CATEGORICAL GROUP (Alarm) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -519,13 +519,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 5.51668505417183,
-        "timestamp": "2024-11-14 21:53:48",
-        "success": false,
-        "bleu_score": 0.9347257802782303
+        "time_taken": 5.958148699719459,
+        "timestamp": "2024-11-25 14:51:17",
+        "success": true,
+        "bleu_score": 0.9409784751845911
     },
     {
-        "test_id": "test_run_1731617630",
+        "test_id": "test_run_1732542679",
         "example_id": "5",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -535,8 +535,8 @@
             "timestamp": "2024-10-10T10:00:00"
         },
         "input_text": "Create an application with sensors called water_pipes using the SRID 4326 that have the following properties: code as String, name as String, description as String, material as String and date as DateTime. The sensors measurements will be water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City representing a polygon with a property called shortName as String. The data will be retrieve each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
+        "expected_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR water_pipes (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT application USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR water_pipes (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -544,13 +544,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 2.5751619359944016,
-        "timestamp": "2024-11-14 21:53:50",
-        "success": true,
-        "bleu_score": 1.0
+        "time_taken": 2.0892174830660224,
+        "timestamp": "2024-11-25 14:51:19",
+        "success": false,
+        "bleu_score": 0.9540058159737559
     },
     {
-        "test_id": "test_run_1731617634",
+        "test_id": "test_run_1732542682",
         "example_id": "6",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -569,13 +569,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 3.495961548993364,
-        "timestamp": "2024-11-14 21:53:54",
+        "time_taken": 3.1276402100920677,
+        "timestamp": "2024-11-25 14:51:22",
         "success": true,
         "bleu_score": 0.9545018983946276
     },
     {
-        "test_id": "test_run_1731617637",
+        "test_id": "test_run_1732542685",
         "example_id": "7",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -594,13 +594,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 3.1952043718192726,
-        "timestamp": "2024-11-14 21:53:57",
+        "time_taken": 3.42377208173275,
+        "timestamp": "2024-11-25 14:51:25",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617640",
+        "test_id": "test_run_1732542689",
         "example_id": "8",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -619,13 +619,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 3.2879155778791755,
-        "timestamp": "2024-11-14 21:54:00",
+        "time_taken": 3.692150871735066,
+        "timestamp": "2024-11-25 14:51:29",
         "success": true,
         "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1731617643",
+        "test_id": "test_run_1732542691",
         "example_id": "9",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -636,7 +636,7 @@
         },
         "input_text": "Create an application with sensors called structure_deformation using the SRID 4326 that have the following properties: code as String, name as String and type as String. The sensors measure the following parameters: incline as Double with units '\u00ba', displacement as double with units '\u00ba' and deformation as double with units '\u00ba'. There is a spatial dimension called Municipality representing a polygon with the properties shortName as String, name as String and code as String. The sensor has a spatial group called Municipality containing the Municipality spatial dimension. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT structure_deformation USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT structure_deformation USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT application USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR structure_deformation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -644,13 +644,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 2.1371643028687686,
-        "timestamp": "2024-11-14 21:54:03",
-        "success": true,
-        "bleu_score": 1.0
+        "time_taken": 2.263950397260487,
+        "timestamp": "2024-11-25 14:51:31",
+        "success": false,
+        "bleu_score": 0.9200496837979196
     },
     {
-        "test_id": "test_run_1731617646",
+        "test_id": "test_run_1732542694",
         "example_id": "10",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -661,7 +661,7 @@
         },
         "input_text": "Create an application with sensors called toxic_elements using the SRID 4326 that have the following properties: description as String and name as String. The sensors measure the following parameters: co as Double, co2 as Double, so2 as Double, nox as Double, o3 as Double, nh3 as Double, h2 as Double, rn as Double. There is one spatial dimension called Building representing a polygon with the following properties: short name as String, name as String, type as String, area as Double, and constructionDate as DateTime. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT application USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR toxic_elements (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -669,13 +669,13 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 3.036538900109008,
-        "timestamp": "2024-11-14 21:54:06",
-        "success": true,
-        "bleu_score": 1.0
+        "time_taken": 2.388243363238871,
+        "timestamp": "2024-11-25 14:51:34",
+        "success": false,
+        "bleu_score": 0.9277603329015974
     },
     {
-        "test_id": "test_run_1731617648",
+        "test_id": "test_run_1732542697",
         "example_id": "11",
         "model_name": "OpenAI GPT4o",
         "system_prompt_version": {
@@ -684,9 +684,9 @@
             "rationale": "Basic system prompt",
             "timestamp": "2024-10-10T10:00:00"
         },
-        "input_text": "Create an application with sensors called ships using the SRID 4326 that have the following properties: description as String, name as String and country as String. The sensors measure the following properties: temperature as Double with units '\u00baC' and incon 'thermometer-low', salinity as Double with units 'PSU' and pressure as Double with units 'dbar' and icon 'speedometer'. There is one spatial dimension called Ocean representing a polygon with the following properties: shortName as String and name as String. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9",
-        "expected_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
+        "expected_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE S        "input_text": "Create an application with sensors called ships using the SRID 4326 that have the following properties: description as String, name as String and country as String. The sensors measure the following properties: temperature as Double with units '\u00baC' and incon 'thermometer-low', salinity as Double with units 'PSU' and pressure as Double with units 'dbar' and icon 'speedometer'. There is one spatial dimension called Ocean representing a polygon with the following properties: shortName as String and name as String. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9",
+PATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT application USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR ships (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -694,9 +694,9 @@
             "temperature": 0.1,
             "top_k": 50
         },
-        "time_taken": 2.5598167970310897,
-        "timestamp": "2024-11-14 21:54:08",
-        "success": true,
-        "bleu_score": 1.0
+        "time_taken": 3.0541325290687382,
+        "timestamp": "2024-11-25 14:51:37",
+        "success": false,
+        "bleu_score": 0.9227967538528401
     }
 ]

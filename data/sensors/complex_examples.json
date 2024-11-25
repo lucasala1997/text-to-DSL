@@ -1,102 +1,102 @@
 [
-    {
-        "example_id": "2",
-        "example_name": "magist_traffic",
-        "DSL_type": "sensor",
-        "input_text": "Create a product called magist using the SRID 4326, with a sensor called StationObservation that have these properties: descripcion as String, accesoAsociado as Long, subarea as Long codCent as String, nombre as String. The sensor measures are: intensidad as Double with units 'veh/h' and icon 'network_check', velocidad as Double with units 'km/h' and icon 'speed', ocupacion as Double with units '%' and icon 'emoji_transportation'. It will be necessary to have the following spatial dimensions: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer, Section representing a polygon with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio spatial dimension. The data is going to be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
-        "expected_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (intensidad Double UNITS 'veh/h' ICON 'network_check', velocidad Double UNITS 'km/h' ICON 'speed', ocupacion Double UNITS '%' ICON 'emoji_transportation') WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure urban traffic parameters",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "3",
-        "example_name": "magist_air",
-        "DSL_type": "sensor",
-        "input_text": "Create an application with sensors called magist using the SRID 4326 that have the following properties: descripcion as String, accesoAsociado as Long, subarea as Long, codCent as String and nombre as String. The sensors will measure the following properties: so2 as Double, co as Double, no as Double, no2 as Double, pm25 as Double, pm10 as Double, nox as Double, co3 as Double, tol as Double, ben as Double, ebe as Double, mxy as Double, pxy as Double, oxy as Double, tch as Double, ch4 as Double and nmhc as Double. It will be necessary to have the following spatial dimensions: Municipality representing a geometry with the property cMun as Integer, District representing a geometry with the property cDis as Integer, Section representing a geometry with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio dimension. The data is going to be retrived each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
-        "expected_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure urban air quality parameters",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "4",
-        "example_name": "intecmar_2",
-        "DSL_type": "sensor",
-        "input_text": "Create an application with sensors called intecmar_2 using the SRID 4326 that measure the following values: temperature_ITS90 as Double with units 'ºC' and icon 'thermometer-low', salinity as Double with units 'PSU', pressure as Double with units 'dbar' and icon 'speedometer', ph as Double with units 'ph' and icon 'ph', oxygen as Double with units 'mg/l' and icon 'gas-cylinder', transmittance as Double with units 'm', irradiance as Double with units 'W/m2', uv_flourescence as Double with units 'mg/m3', density as Double with units 'kg/m3', conductivity as Double with units 'S/m'. The sensors has the following properties: maxDepth as Float, code as String, name as String, description as String, startTime as DateTime and endTime as DateTime. It will be necessary to aggregate by a spatial polygon dimension called Estuary, a categorical dimension called Depth and another categorical dimension called alarm. The spatial dimension Estuary represents a polygon and has the follwing properties: shortName as String, name as String and zone as String. The categorical dimension Depth has the following ranges: surface from 0 to 3, 5m from 4.75 to 5.25, 10m from 9.75 to 10.25, 15m from 14.75 to 15.25, and 20m from 19.75 to 20.25. The data is retrieved every 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE CATEGORICAL DIMENSION Alarm (field: alarm); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS 'ºC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange, Alarm) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure sea parameters",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "5",
-        "example_name": "water_pipes",
-        "DSL_type": "sensor",
-        "input_text": "Create an application with sensors called water_pipes using the SRID 4326 that have the following properties: code as String, name as String, description as String, material as String and date as DateTime. The sensors measurements will be water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City representing a polygon with a property called shortName as String. The data will be retrieve each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure urban water-pipeline parameters",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "6",
-        "example_name": "fuel_tanks",
-        "DSL_type": "sensor",
-        "input_text": "Create an application called fuel_tanks using the SRID 4326, with a sensor called TankObservation that has the following properties: code as String, name as String, description as String, total_capacity as Double and element_type as String. The sensors will measure the property current_capacity as Double. There are one spatial dimension called Section representing a polygon with the property shortName as String and a categorical dimension called TankState with the field of tankState with the following ranges: low from 0 to 30, medium from 31 to 70 and high from 71 to 100. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT fuel_tanks USING 4326; CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE CATEGORICAL DIMENSION TankState (field: tankState); CREATE RANGE TankStateRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high'); CREATE SENSOR TankObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String, total_capacity Double, element_type String) WITH MEASUREMENT DATA (current_capacity Double) WITH SPATIAL GROUP Section (Section) WITH CATEGORICAL GROUP(TankState RANGE TankStateRange) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure fuel tanks capacity",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "7",
-        "example_name": "noise_levels",
-        "DSL_type": "sensor",
-        "input_text": "Create an application called noise_levels using the SRID 4326, with a sensor called NoiseLevelObservation that has the following properties: description as String, code as String and name as String. The sensors will measure the property noise_level as Double with the units db and icon speedometer. The following spatial dimensions will be required: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer and Section representing a polygon with the property cSec as Integer. A Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension. The data is going to be retrieved every 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
-        "expected_dsl_output": "CREATE PRODUCT noise_levels USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SENSOR NoiseLevelObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure urban noise levels",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "8",
-        "example_name": "movement_detector",
-        "DSL_type": "sensor",
-        "input_text": "Create a product movement_detector using the SRID 4326, with a sensor called MovementObservation that has the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properites shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR MovementObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure movement parameters",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "9",
-        "example_name": "structure_deformation",
-        "DSL_type": "sensor",
-        "input_text": "Create an application with sensors called structure_deformation using the SRID 4326 that have the following properties: code as String, name as String and type as String. The sensors measure the following parameters: incline as Double with units 'º', displacement as double with units 'º' and deformation as double with units 'º'. There is a spatial dimension called Municipality representing a polygon with the properties shortName as String, name as String and code as String. The sensor has a spatial group called Municipality containing the Municipality spatial dimension. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT structure_deformation USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS 'º', displacement Double UNITS 'º', deformation Double UNITS 'º') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of sensors to measure deformations in urban structures like bridges, roads or buildings",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "10",
-        "example_name": "toxic_elements",
-        "DSL_type": "sensor",
-        "input_text": "Create an application with sensors called toxic_elements using the SRID 4326 that have the following properties: description as String and name as String. The sensors measure the following parameters: co as Double, co2 as Double, so2 as Double, nox as Double, o3 as Double, nh3 as Double, h2 as Double, rn as Double. There is one spatial dimension called Building representing a polygon with the following properties: short name as String, name as String, type as String, area as Double, and constructionDate as DateTime. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
-        "expected_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of building toxicity sensors",
-        "synthetic_data": false
-    },
-    {
-        "example_id": "11",
-        "example_name": "ships",
-        "DSL_type": "sensor",
-        "input_text": "Create an application with sensors called ships using the SRID 4326 that have the following properties: description as String, name as String and country as String. The sensors measure the following properties: temperature as Double with units 'ºC' and incon 'thermometer-low', salinity as Double with units 'PSU' and pressure as Double with units 'dbar' and icon 'speedometer'. There is one spatial dimension called Ocean representing a polygon with the following properties: shortName as String and name as String. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9",
-        "expected_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS 'ºC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
-        "complexity_level": "complex",
-        "description": "Complete definition of ship's sensors",
-        "synthetic_data": false
-    }
+  {
+      "example_id": "2",
+      "example_name": "magist_traffic",
+      "DSL_type": "sensor",
+      "input_text": "Create an application called magist_traffic with a sensor called StationObservation using the SRID 4326 that have these properties: description as String, accesoAsociado as Long, subarea as Long codCent as String, nombre as String. The sensor measures are: intensidad as Double with units 'veh/h' and icon 'network_check', velocidad as Double with units 'km/h' and icon 'speed', ocupacion as Double with units '%' and icon 'emoji_transportation'. It will be necessary to have the following spatial dimensions: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer, Section representing a polygon with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio spatial dimension. The data is going to be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+      "expected_dsl_output": "CREATE PRODUCT magist_traffic USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (intensidad Double UNITS 'veh/h' ICON 'network_check', velocidad Double UNITS 'km/h' ICON 'speed', ocupacion Double UNITS '%' ICON 'emoji_transportation') WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure urban traffic parameters",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "3",
+      "example_name": "magist_air",
+      "DSL_type": "sensor",
+      "input_text": "Create an application with sensors called magist using the SRID 4326 that have the following properties: descripcion as String, accesoAsociado as Long, subarea as Long, codCent as String and nombre as String. The sensors will measure the following properties: so2 as Double, co as Double, no as Double, no2 as Double, pm25 as Double, pm10 as Double, nox as Double, co3 as Double, tol as Double, ben as Double, ebe as Double, mxy as Double, pxy as Double, oxy as Double, tch as Double, ch4 as Double and nmhc as Double. It will be necessary to have the following spatial dimensions: Municipality representing a geometry with the property cMun as Integer, District representing a geometry with the property cDis as Integer, Section representing a geometry with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio dimension. The data is going to be retrived each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+      "expected_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Geometry) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Geometry) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Geometry) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR magist (interval: 300, geometry: Point) WITH PROPERTIES (descripcion String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure urban air quality parameters",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "4",
+      "example_name": "intecmar_2",
+      "DSL_type": "sensor",
+      "input_text": "Create an application with sensors called intecmar_2 using the SRID 4326 that measure the following values: temperature_ITS90 as Double with units 'ºC' and icon 'thermometer-low', salinity as Double with units 'PSU', pressure as Double with units 'dbar' and icon 'speedometer', ph as Double with units 'ph' and icon 'ph', oxygen as Double with units 'mg/l' and icon 'gas-cylinder', transmittance as Double with units 'm', irradiance as Double with units 'W/m2', uv_flourescence as Double with units 'mg/m3', density as Double with units 'kg/m3', conductivity as Double with units 'S/m'. The sensors has the following properties: maxDepth as Float, code as String, name as String, description as String, startTime as DateTime and endTime as DateTime. It will be necessary to aggregate by a spatial polygon dimension called Estuary, a categorical dimension called Depth and another categorical dimension called alarm. The spatial dimension Estuary represents a polygon and has the follwing properties: shortName as String, name as String and zone as String. The categorical dimension Depth has the following ranges: surface from 0 to 3, 5m from 4.75 to 5.25, 10m from 9.75 to 10.25, 15m from 14.75 to 15.25, and 20m from 19.75 to 20.25. The data is retrieved every 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+      "expected_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE CATEGORICAL DIMENSION Alarm (field: alarm); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE SENSOR intecmar_2 (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS 'ºC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange, Alarm) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure sea parameters",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "5",
+      "example_name": "water_pipes",
+      "DSL_type": "sensor",
+      "input_text": "Create an application with sensors called water_pipes using the SRID 4326 that have the following properties: code as String, name as String, description as String, material as String and date as DateTime. The sensors measurements will be water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City representing a polygon with a property called shortName as String. The data will be retrieve each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+      "expected_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR water_pipes (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure urban water-pipeline parameters",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "6",
+      "example_name": "fuel_tanks",
+      "DSL_type": "sensor",
+      "input_text": "Create an application called fuel_tanks using the SRID 4326, with a sensor called TankObservation that has the following properties: code as String, name as String, description as String, total_capacity as Double and element_type as String. The sensors will measure the property current_capacity as Double. There are one spatial dimension called Section representing a polygon with the property shortName as String and a categorical dimension called TankState with the field of tankState with the following ranges: low from 0 to 30, medium from 31 to 70 and high from 71 to 100. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+      "expected_dsl_output": "CREATE PRODUCT fuel_tanks USING 4326; CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE CATEGORICAL DIMENSION TankState (field: tankState); CREATE RANGE TankStateRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high'); CREATE SENSOR TankObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String, total_capacity Double, element_type String) WITH MEASUREMENT DATA (current_capacity Double) WITH SPATIAL GROUP Section (Section) WITH CATEGORICAL GROUP(TankState RANGE TankStateRange) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure fuel tanks capacity",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "7",
+      "example_name": "noise_levels",
+      "DSL_type": "sensor",
+      "input_text": "Create an application called noise_levels using the SRID 4326, with a sensor called NoiseLevelObservation that has the following properties: description as String, code as String and name as String. The sensors will measure the property noise_level as Double with the units db and icon speedometer. The following spatial dimensions will be required: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer and Section representing a polygon with the property cSec as Integer. A Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension. The data is going to be retrieved every 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+      "expected_dsl_output": "CREATE PRODUCT noise_levels USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SENSOR NoiseLevelObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure urban noise levels",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "8",
+      "example_name": "movement_detector",
+      "DSL_type": "sensor",
+      "input_text": "Create a product movement_detector using the SRID 4326, with a sensor called MovementObservation that has the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properites shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+      "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR MovementObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure movement parameters",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "9",
+      "example_name": "structure_deformation",
+      "DSL_type": "sensor",
+      "input_text": "Create an application with sensors called structure_deformation using the SRID 4326 that have the following properties: code as String, name as String and type as String. The sensors measure the following parameters: incline as Double with units 'º', displacement as double with units 'º' and deformation as double with units 'º'. There is a spatial dimension called Municipality representing a polygon with the properties shortName as String, name as String and code as String. The sensor has a spatial group called Municipality containing the Municipality spatial dimension. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+      "expected_dsl_output": "CREATE PRODUCT structure_deformation USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS 'º', displacement Double UNITS 'º', deformation Double UNITS 'º') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of sensors to measure deformations in urban structures like bridges, roads or buildings",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "10",
+      "example_name": "toxic_elements",
+      "DSL_type": "sensor",
+      "input_text": "Create an application with sensors called toxic_elements using the SRID 4326 that have the following properties: description as String and name as String. The sensors measure the following parameters: co as Double, co2 as Double, so2 as Double, nox as Double, o3 as Double, nh3 as Double, h2 as Double, rn as Double. There is one spatial dimension called Building representing a polygon with the following properties: short name as String, name as String, type as String, area as Double, and constructionDate as DateTime. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+      "expected_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of building toxicity sensors",
+      "synthetic_data": false
+  },
+  {
+      "example_id": "11",
+      "example_name": "ships",
+      "DSL_type": "sensor",
+      "input_text": "Create an application with sensors called ships using the SRID 4326 that have the following properties: description as String, name as String and country as String. The sensors measure the following properties: temperature as Double with units 'ºC' and incon 'thermometer-low', salinity as Double with units 'PSU' and pressure as Double with units 'dbar' and icon 'speedometer'. There is one spatial dimension called Ocean representing a polygon with the following properties: shortName as String and name as String. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9",
+      "expected_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS 'ºC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
+      "complexity_level": "complex",
+      "description": "Complete definition of ship's sensors",
+      "synthetic_data": false
+  }
 ]
