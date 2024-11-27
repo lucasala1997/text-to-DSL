@@ -32,7 +32,7 @@
         }
     },
     "Qwen 2.5-coder (7B) quantized 4bit": {
-        "model_name": "Qwen 2.5-coder quantized 4bit",
+        "model_name": "Qwen 2.5-coder (7B) quantized 4bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwen2.5-coder:7b-instruct-q4_K_S",
@@ -42,9 +42,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 32768,
-            "top_k": 40,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.0
+            "temperature": 0.5
         }
     },
     "Qwen 2.5-coder (7B) full precision": {
@@ -74,9 +74,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 32768,
-            "top_k": 50,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0.5
         }
     },
     "Qwen 2.5 (32B) full precision": {
@@ -89,9 +89,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 128000,
-            "top_k": 30,
+            "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.1
         }
     },
     "Qwen 2.5 (72B) quantized 4bit": {
@@ -121,9 +121,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 128000,
-            "top_k": 50,
-            "top_p": 0.8,
-            "temperature": 0.1
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
         }
     },
     "Codellama (7B) full precision": {
@@ -153,9 +153,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 30,
+            "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.1
         }
     },
     "Codellama (34B) full precision": {
@@ -170,8 +170,8 @@
             "num_predict": -1,
             "num_ctx": 16000,
             "top_k": 50,
-            "top_p": 0.9,
-            "temperature": 0.1
+            "top_p": 0.8,
+            "temperature": 0.5
         }
     },
     "Codellama (70B) full precision": {
@@ -185,9 +185,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 30,
+            "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.1
         }
     },
     "LLaMA 3.1 (8B) full precision": {
@@ -201,13 +201,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 30,
+            "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.1
         }
     },
     "LLaMA 3.1 (70B) quantized 4bit": {
-        "model_name": "LLaMA 3.1 (70B)",
+        "model_name": "LLaMA 3.1 (70B) quantized 4bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "llama3.1:70b-instruct-q4_K_M",
@@ -218,13 +218,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 40,
-            "top_p": 0.9,
-            "temperature": 0.0
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.1
         }
     },
     "LLaMA 3.1 (70B) quantized 8bit": {
-        "model_name": "LLaMA 3.1 (70B)",
+        "model_name": "LLaMA 3.1 (70B) quantized 8bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "llama3.1:70b-instruct-q8_0",
@@ -241,7 +241,7 @@
         }
     },
     "StarCoder2 (3B) full precision": {
-        "model_name": "StarCoder (3B) full precision",
+        "model_name": "StarCoder2 (3B) full precision",
         "type": "open source",
         "supported": false,
         "ollama_command": "starcoder2:3b-fp16",
@@ -257,7 +257,7 @@
         }
     },
     "StarCoder2 (7B) full precision": {
-        "model_name": "StarCoder (7B) full precision",
+        "model_name": "StarCoder2 (7B) full precision",
         "type": "open source",
         "supported": false,
         "ollama_command": "starcoder2:7b-fp16",
@@ -273,7 +273,7 @@
         }
     },
     "StarCoder2 (15B) full precision": {
-        "model_name": "StarCoder (15B) full precision",
+        "model_name": "StarCoder2 (15B) full precision",
         "type": "open source",
         "supported": true,
         "ollama_command": "starcoder2:15b-instruct-v0.1-fp16",
@@ -350,7 +350,7 @@
         "supported": false,
         "deployment_type": "remote"
     },
-    "Nvidia Nemotron": {
+    "Nemotron 70B full precision": {
         "model_name": "Nemotron 70B full precision",
         "type": "open source",
         "supported": true,
@@ -366,8 +366,8 @@
             "temperature": 0.5
         }
     },
-    "Mistral Large 2": {
-        "model_name": "Mistral-large (123B) quantized 8bit",
+    "Mistral-large2 (123B) quantized 8bit": {
+        "model_name": "Mistral-large2 (123B) quantized 8bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "mistral-large:123b-instruct-2407-q8_0",
@@ -382,7 +382,7 @@
             "temperature": 0.5
         }
     },
-    "Mistral Nemo 12B full precision": {
+    "Mistral Nemo (12B) full precision": {
         "model_name": "Mistral Nemo (12B) full precision",
         "type": "open source",
         "supported": true,
@@ -393,9 +393,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 8000,
-            "top_k": 30,
+            "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.1
         }
     },
     "PaLM (62B)": {

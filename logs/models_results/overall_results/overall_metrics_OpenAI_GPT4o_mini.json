@@ -1,0 +1,32 @@
+[
+    {
+        "parameters": {
+            "seed": 7,
+            "top_p": 0.8,
+            "temperature": 0.1,
+            "top_k": 50
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.9285714285714286,
+        "average_bleu_score": 0.9962855560361599,
+        "average_time": 1.516792268525543,
+        "average_complex_time": 0,
+        "average_simple_time": 1.516792268525543,
+        "total_examples": 14
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "top_p": 0.9,
+            "temperature": 0.1,
+            "top_k": 50
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.6785714285714286,
+        "average_bleu_score": 0.9737784937893764,
+        "average_time": 4.034860660188964,
+        "average_complex_time": 7.203206713218242,
+        "average_simple_time": 2.2746684085060327,
+        "total_examples": 28
+    }
+]

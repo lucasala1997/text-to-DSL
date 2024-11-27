@@ -83,7 +83,7 @@ def deploy_selected_model(dataset_name, prompt_version=None, automatic=False):
 
             try:
                 #parameters_to_test=config['paths']['parameter_to_test']
-                parameters_to_test=config['paths']['dummy_parameter_to_test']
+                parameters_to_test=config['paths']['parameter_to_test']
                 with open(parameters_to_test, 'r') as file:
                     parameters = json.load(file)
                     parameter_grid = parameters['parameter_grid']
@@ -104,7 +104,8 @@ def deploy_selected_model(dataset_name, prompt_version=None, automatic=False):
             for params in tqdm(parameter_grid, desc="Testing parameter combinations"):
                 # Pass the current parameter combination to automatic_configure_model_parameters
                 #TODO: passagli anche il nome del modello altrimenti lo chiede ogni volta (da file)
-                selected_model = automatic_configure_model_parameters(model_names[20], new_parameters=params)
+                print(f'model name: {model_names[13]}')
+                selected_model = automatic_configure_model_parameters(model_names[13], new_parameters=params)
                 
                 if selected_model:
                     print(f"\nDeploying and prompting the model: {selected_model}")
@@ -169,20 +170,20 @@ def run_pipeline(selected_steps):
             deploy_selected_model(dataset_name, prompt_version, automatic=True) if prompt_version else deploy_selected_model(dataset_name, prompt_version=0, automatic=True)
             print('--------------------------')
 
-        if 'analyze_results' in selected_steps:
-            print('Analyzing results...')
-            logging.info('Analyzing results...')
-            analyze_results()
-            print('Analysis saved.')
-            print('--------------------------')
+        # if 'analyze_results' in selected_steps:
+        #     print('Analyzing results...')
+        #     logging.info('Analyzing results...')
+        #     analyze_results()
+        #     print('Analysis saved.')
+        #     print('--------------------------')
 
-        if 'generate_visualizations' in selected_steps:
-            print('Generating plots...')
-            logging.info('Generating plots...')
-            logging.info('Generating visualizations...')
-            generate_visualizations()
-            print('Plot saved.')
-            print('--------------------------')
+        # if 'generate_visualizations' in selected_steps:
+        #     print('Generating plots...')
+        #     logging.info('Generating plots...')
+        #     logging.info('Generating visualizations...')
+        #     generate_visualizations()
+        #     print('Plot saved.')
+        #     print('--------------------------')
 
         logging.info('Process completed successfully.')
         print('Process completed successfully.')

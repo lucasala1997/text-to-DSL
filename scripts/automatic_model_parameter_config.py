@@ -77,5 +77,7 @@ def automatic_configure_model_parameters(model_name=None, new_parameters=None):
         return model_configs[model_name]['model_name']
 
     except Exception as e:
-        logging.error(f"Error in configure_model_parameters: {e}")
+        logging.error(f"Error in configure_model_parameters: {type(e).__name__} - {e}")
+        import traceback
+        logging.debug(traceback.format_exc())
         return None
