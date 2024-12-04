@@ -169,8 +169,8 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 50,
-            "top_p": 0.8,
+            "top_k": 30,
+            "top_p": 0.9,
             "temperature": 0.5
         }
     },
@@ -185,9 +185,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 50,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0.5
         }
     },
     "LLaMA 3.1 (8B) full precision": {
@@ -218,9 +218,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 50,
-            "top_p": 0.8,
-            "temperature": 0.1
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
         }
     },
     "LLaMA 3.1 (70B) quantized 8bit": {
@@ -235,9 +235,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 40,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.0
+            "temperature": 0.5
         }
     },
     "StarCoder2 (3B) full precision": {
@@ -251,13 +251,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 8192,
-            "top_k": 40,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.0
+            "temperature": 0.5
         }
     },
-    "StarCoder2 (7B) full precision": {
-        "model_name": "StarCoder2 (7B) full precision",
+    "StarCoder2 (7B) full precision test2": {
+        "model_name": "StarCoder2 (7B) full precision test2",
         "type": "open source",
         "supported": false,
         "ollama_command": "starcoder2:7b-fp16",
@@ -267,13 +267,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 8192,
-            "top_k": 40,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.0
+            "temperature": 0.5
         }
     },
-    "StarCoder2 (15B) full precision": {
-        "model_name": "StarCoder2 (15B) full precision",
+    "StarCoder2 (15B) full precision test2": {
+        "model_name": "StarCoder2 (15B) full precision test2",
         "type": "open source",
         "supported": true,
         "ollama_command": "starcoder2:15b-instruct-v0.1-fp16",
@@ -283,9 +283,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 8192,
-            "top_k": 40,
-            "top_p": 0.9,
-            "temperature": 0.0
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.1
         }
     },
     "Mistral (7B) full precision": {
@@ -388,6 +388,22 @@
         "supported": true,
         "ollama_command": "mistral-nemo:12b-instruct-2407-fp16",
         "vram_requirement": "25GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
+    },
+    "qwq (32B) full precision test2": {
+        "model_name": "qwq (32B) full precision test2",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "qwq:32b-preview-fp16",
+        "vram_requirement": "66GB",
         "deployment_type": "local",
         "parameters": {
             "seed": 7,

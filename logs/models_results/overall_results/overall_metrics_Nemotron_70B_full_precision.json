@@ -1,0 +1,138 @@
+[
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.1
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5714285714285714,
+        "average_bleu_score": 0.3490257615840574,
+        "average_time": 190.0938477609639,
+        "average_complex_time": 117.9186835354194,
+        "average_simple_time": 230.19116121959976,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.8,
+            "temperature": 0.1
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5714285714285714,
+        "average_bleu_score": 0.3490257615840574,
+        "average_time": 116.34684963482765,
+        "average_complex_time": 117.45292313760146,
+        "average_simple_time": 115.73236435550886,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 50,
+            "top_p": 0.9,
+            "temperature": 0.1
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5714285714285714,
+        "average_bleu_score": 0.36504309735979795,
+        "average_time": 113.21426263962141,
+        "average_complex_time": 117.07313122423366,
+        "average_simple_time": 111.07044675928127,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.1
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5714285714285714,
+        "average_bleu_score": 0.36504309735979795,
+        "average_time": 111.76384202859897,
+        "average_complex_time": 117.44985086964444,
+        "average_simple_time": 108.60494822801815,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.3271172448543097,
+        "average_time": 115.06041971150054,
+        "average_complex_time": 117.54228560025804,
+        "average_simple_time": 113.68160532885749,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.8,
+            "temperature": 0.5
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.3271172448543097,
+        "average_time": 116.04712532918036,
+        "average_complex_time": 119.29609918845817,
+        "average_simple_time": 114.24213985180378,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 50,
+            "top_p": 0.9,
+            "temperature": 0.5
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.37786330965446374,
+        "average_time": 115.5478750922318,
+        "average_complex_time": 116.97965603182092,
+        "average_simple_time": 114.75244123690452,
+        "total_examples": 28
+    },
+    {
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        },
+        "system_prompt_version": "1.0",
+        "overall_accuracy": 0.5,
+        "average_bleu_score": 0.3773890064459361,
+        "average_time": 91.96505436367754,
+        "average_complex_time": 70.93801174266264,
+        "average_simple_time": 103.64674470868583,
+        "total_examples": 28
+    }
+]

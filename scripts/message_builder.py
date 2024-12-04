@@ -42,6 +42,24 @@ def build_message(model_name, system_prompt, grammar, few_shot_examples, nl_dsl)
         # Add the final user input
         message += f"Human: {nl_dsl}\n\nAssistant:"
 
+    elif ("qwq" in model_name):
+        print("USING QWQ by ALIBABA")
+        message = []
+        # Combine system prompt and grammar according to qwq's recipe
+        if system_prompt or grammar:
+            system_content = f"{system_prompt}\n\n{grammar}"
+            message.append({"role": "system", "content": system_content})
+
+        # Add few-shot examples if required by qwq
+        if few_shot_examples:
+            for example in few_shot_examples:
+                # Adjust the format as per qwq's requirements
+                message.append({"role": "user", "content": example['input_text']})
+                message.append({"role": "assistant", "content": example['expected_dsl_output']})
+
+        # Add the final user input
+        message.append({"role": "user", "content": nl_dsl})
+
     else:
         message = []
         # Combine system prompt and grammar in the system message

@@ -12,6 +12,8 @@ from scripts.model_testing import test_model
 from scripts.result_analysis import analyze_results
 from scripts.visualization_reporting import generate_visualizations
 from scripts.automatic_model_parameter_config import automatic_configure_model_parameters
+from scripts.generate_best_results import generate_best_results_table
+
 # import tensorflow as tf
 
 
@@ -104,8 +106,8 @@ def deploy_selected_model(dataset_name, prompt_version=None, automatic=False):
             for params in tqdm(parameter_grid, desc="Testing parameter combinations"):
                 # Pass the current parameter combination to automatic_configure_model_parameters
                 #TODO: passagli anche il nome del modello altrimenti lo chiede ogni volta (da file)
-                print(f'model name: {model_names[13]}')
-                selected_model = automatic_configure_model_parameters(model_names[13], new_parameters=params)
+                print(f'model name: {model_names[17]}')
+                selected_model = automatic_configure_model_parameters(model_names[17], new_parameters=params)
                 
                 if selected_model:
                     print(f"\nDeploying and prompting the model: {selected_model}")
@@ -170,20 +172,27 @@ def run_pipeline(selected_steps):
             deploy_selected_model(dataset_name, prompt_version, automatic=True) if prompt_version else deploy_selected_model(dataset_name, prompt_version=0, automatic=True)
             print('--------------------------')
 
-        # if 'analyze_results' in selected_steps:
-        #     print('Analyzing results...')
-        #     logging.info('Analyzing results...')
-        #     analyze_results()
-        #     print('Analysis saved.')
-        #     print('--------------------------')
+        if 'analyze_results' in selected_steps:
+            print('Analyzing results...')
+            logging.info('Analyzing results...')
+            analyze_results()
+            print('Analysis saved.')
+            print('--------------------------')
 
-        # if 'generate_visualizations' in selected_steps:
-        #     print('Generating plots...')
-        #     logging.info('Generating plots...')
-        #     logging.info('Generating visualizations...')
-        #     generate_visualizations()
-        #     print('Plot saved.')
-        #     print('--------------------------')
+        if 'generate_visualizations' in selected_steps:
+            print('Generating plots...')
+            logging.info('Generating plots...')
+            logging.info('Generating visualizations...')
+            generate_visualizations()
+            print('Plot saved.')
+            print('--------------------------')
+
+        if 'generate_best_results' in selected_steps:
+            print('Generating best results table...')
+            logging.info('Generating best results table...')
+            generate_best_results_table()
+            print('Best results table generated.')
+            print('--------------------------')
 
         logging.info('Process completed successfully.')
         print('Process completed successfully.')
@@ -203,7 +212,7 @@ def main():
             nargs='+',
             default=[
                 'configure_prompt_version', 'automatic_test_model', 'analyze_results', 'manage_experiment_logs',
-                'generate_visualizations'
+                'generate_visualizations', "generate_best_results"
             ],
             help="""Specify which steps to run in the pipeline. Options include:
         data_validation             : Validates data before using it.
