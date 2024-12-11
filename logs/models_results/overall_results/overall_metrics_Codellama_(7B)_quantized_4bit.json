@@ -11,9 +11,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.690253526538682,
-        "average_time": 2.715223044722474,
-        "average_complex_time": 4.3111822488717735,
-        "average_simple_time": 1.8285790424173076,
+        "average_time": 2.1271894703053738,
+        "average_complex_time": 3.573438448924571,
+        "average_simple_time": 1.3237178155169305,
         "total_examples": 28
     },
     {
@@ -28,9 +28,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.690253526538682,
-        "average_time": 2.561333306532885,
-        "average_complex_time": 4.345467446604744,
-        "average_simple_time": 1.5701476731596307,
+        "average_time": 2.1072722812116678,
+        "average_complex_time": 3.527256699139252,
+        "average_simple_time": 1.3183920490296765,
         "total_examples": 28
     },
     {
@@ -45,9 +45,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.6865103068523081,
-        "average_time": 2.5157334530293674,
-        "average_complex_time": 4.21658002641052,
-        "average_simple_time": 1.5708186900398384,
+        "average_time": 2.0593205226884623,
+        "average_complex_time": 3.414423321560025,
+        "average_simple_time": 1.3064856344264828,
         "total_examples": 28
     },
     {
@@ -62,9 +62,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.6865103068523081,
-        "average_time": 2.526820243968229,
-        "average_complex_time": 4.240692144073546,
-        "average_simple_time": 1.5746691883541644,
+        "average_time": 2.0629209745841632,
+        "average_complex_time": 3.4151721636764707,
+        "average_simple_time": 1.311670313977326,
         "total_examples": 28
     },
     {
@@ -79,9 +79,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.6260469479312105,
-        "average_time": 46.53322545916308,
-        "average_complex_time": 4.022927853278816,
-        "average_simple_time": 70.15005746243212,
+        "average_time": 36.65506280353293,
+        "average_complex_time": 3.2126916479784997,
+        "average_simple_time": 55.23415788995206,
         "total_examples": 28
     },
     {
@@ -96,9 +96,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.6260469479312105,
-        "average_time": 38.911159290682654,
-        "average_complex_time": 3.2266445950139313,
-        "average_simple_time": 58.73588967716528,
+        "average_time": 36.63462515981934,
+        "average_complex_time": 3.2056100849993525,
+        "average_simple_time": 55.20630020138601,
         "total_examples": 28
     },
     {
@@ -113,9 +113,9 @@
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.2857142857142857,
         "average_bleu_score": 0.5820525306339219,
-        "average_time": 37.68995441710909,
-        "average_complex_time": 102.90550739327446,
-        "average_simple_time": 1.459091652572776,
+        "average_time": 37.49530032553178,
+        "average_complex_time": 102.3245659106411,
+        "average_simple_time": 1.479041667137709,
         "total_examples": 28
     },
     {
@@ -128,11 +128,11 @@
             "temperature": 0.5
         },
         "system_prompt_version": "1.0",
-        "overall_accuracy": 0.32,
-        "average_bleu_score": 0.6051961643972075,
-        "average_time": 2.9152983235940337,
-        "average_complex_time": 6.585489550938031,
-        "average_simple_time": 1.488001735182479,
-        "total_examples": 25
+        "overall_accuracy": 0.2857142857142857,
+        "average_bleu_score": 0.5820525306339219,
+        "average_time": 37.465154692580526,
+        "average_complex_time": 102.23006872683763,
+        "average_simple_time": 1.4846468957710184,
+        "total_examples": 28
     }
 ]

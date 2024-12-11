@@ -1,0 +1,758 @@
+[
+    {
+        "test_id": "test_run_1733414329",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a spatial dimension called Municipality representing a polygon with the attributes shortName as String, code as String and population as Integer.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, code String, population Integer);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, code String, population Integer);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 7.271149026229978,
+        "timestamp": "2024-12-05 16:58:49",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414331",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "New product called meteorological using SRID 4326.",
+        "expected_dsl_output": "CREATE PRODUCT meteorological USING 4326;",
+        "generated_dsl_output": "CREATE PRODUCT meteorological USING 4326;",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.3379455236718059,
+        "timestamp": "2024-12-05 16:58:51",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414332",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "New product called magist using SRID 4326.",
+        "expected_dsl_output": "CREATE PRODUCT magist USING 4326;",
+        "generated_dsl_output": "CREATE PRODUCT magist USING 4326;",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.9053344172425568,
+        "timestamp": "2024-12-05 16:58:52",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414335",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a spatial dimension called Floor representing a polygon with the attributes code as String and number as Integer.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (code String, number Integer);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (code String, number Integer);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.2910217847675085,
+        "timestamp": "2024-12-05 16:58:55",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414338",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create two spatial aggregations. The first one is called Building representing a polygon with the properties shortName as String, code as String, address as String and buildingType as String. The second one is called Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 3.0358826401643455,
+        "timestamp": "2024-12-05 16:58:58",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414340",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create three sparial dimensions: The first one is called Municipality representing a polygon with the property cMun as Integer, the second one is called District representing a polygon with the property cDis as Integer and the last one is called Section representing a polygon with the property cSec as Integer. A Section is contained inside a District and a Distric is contained inside a Municipality.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.6461527845822275,
+        "timestamp": "2024-12-05 16:59:00",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414341",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create one spatial aggregation called Zone representing a polygon with the properties code as String, area as Integer and name as String.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Zone (geometry: Polygon) WITH PROPERTIES (code String, area Integer, name String);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Zone (geometry: Polygon) WITH PROPERTIES (code String, area Integer, name String);[",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.0440177698619664,
+        "timestamp": "2024-12-05 16:59:01",
+        "success": true,
+        "bleu_score": 0.9193227152249185
+    },
+    {
+        "test_id": "test_run_1733414343",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create two spatial aggregations, the first one called Province representing a polygon with the property name as String, and the second one called Council representing a polygon with the property name as String. A Council is located inside a Province.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
+        "generated_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.6735196909867227,
+        "timestamp": "2024-12-05 16:59:03",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414345",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a categorical dimension called SensorType.",
+        "expected_dsl_output": "CREATE CATEGORICAL DIMENSION SensorType (field: sensorType);",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION SensorType (field: sensorType) WITH PROPERTIES (name String, description String);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.7709072451107204,
+        "timestamp": "2024-12-05 16:59:05",
+        "success": false,
+        "bleu_score": 0.31702331385234306
+    },
+    {
+        "test_id": "test_run_1733414347",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a categorical dimension called Alarm.",
+        "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Alarm (field: alarm);",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Alarm;",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.8995389761403203,
+        "timestamp": "2024-12-05 16:59:07",
+        "success": false,
+        "bleu_score": 5.238101011110965e-78
+    },
+    {
+        "test_id": "test_run_1733414350",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a categorical dimension called Level with the following ranges: low from 0 to 30, medium from 31 to 70 and high from 71 to 100.",
+        "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Level (field: level); CREATE RANGE LevelRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high');",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Level (FIELD: level) WITH RANGES (LOW FROM 0 TO 30 AS \"Low\", MEDIUM FROM 31 TO 70 AS \"Medium\", HIGH FROM 71 TO 100 AS \"High\");",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.8719590310938656,
+        "timestamp": "2024-12-05 16:59:10",
+        "success": false,
+        "bleu_score": 0.27922385864623667
+    },
+    {
+        "test_id": "test_run_1733414353",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a sensor called StationObservation with the property name as String, the geometry as type Polygon and the following measurements: value as Double and quality as Integer. It will be necessary to aggregate by a spatial dimension called ZoneDimension with the property name as String. It will be necessary to aggregate by categorical dimension called SensorType that differences sensors by its type. The data is retrieved each 10 seconds.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION ZoneDimension (geometry: Polygon) WITH PROPERTIES (name String); CREATE CATEGORICAL DIMENSION SensorType (field: type); CREATE SENSOR StationObservation (interval: 10, geometry: Polygon) WITH PROPERTIES (name String) WITH MEASUREMENT DATA (value Double, quality Integer) WITH SPATIAL GROUP ZoneDimension (ZoneDimension) WITH CATEGORICAL GROUP (SensorType);",
+        "generated_dsl_output": "CREATE PRODUCT meteorological USING 4326; CREATE SPATIAL DIMENSION ZoneDimension (geometry: Polygon) WITH PROPERTIES (name String); CREATE CATEGORICAL DIMENSION SensorType (FIELD: type) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 10, geometry: Polygon) WITH PROPERTIES (name String) WITH MEASUREMENT DATA (value Double, quality Integer) WITH SPATIAL GROUP ZoneDimension (ZoneDimension) WITH CATEGORICAL GROUP SensorType (SensorType);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 3.7504803058691323,
+        "timestamp": "2024-12-05 16:59:13",
+        "success": false,
+        "bleu_score": 0.7217426491893056
+    },
+    {
+        "test_id": "test_run_1733414356",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a sensor called StationObservation with properties code as String, name as String and type as String. The sensor will measure the following elements: incline as Double with units '\u00ba' displacement as Double with units '\u00ba' and deformation as Double with units '\u00ba'. It will be necessary to aggregate by a spatial dimension called Municipality with the property name as String. The data is retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (geometry: Polygon) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.861152993980795,
+        "timestamp": "2024-12-05 16:59:16",
+        "success": false,
+        "bleu_score": 0.7706819264702134
+    },
+    {
+        "test_id": "test_run_1733414359",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a sensor called StationObservation that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units Hz, max_ultrasound_bound_time as Double with units Hz. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9. The data will be retrieved every 300 seconds",
+        "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz') WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS Hz, max_ultrasound_bound_time Double UNITS Hz) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.8445913586765528,
+        "timestamp": "2024-12-05 16:59:19",
+        "success": false,
+        "bleu_score": 0.8452785147119855
+    },
+    {
+        "test_id": "test_run_1733414362",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a categorical dimension called Layer with the following ranges: layer1 from 0 to 300, layer2 from 301 to 700, layer3 from 701 to 1200, layer4 from 1201 to 2000 and last_layer from 2001 to 10000.",
+        "expected_dsl_output": "CREATE CATEGORICAL DIMENSION Layer (field: layer); CREATE RANGE LayerRange (0 TO 300 AS 'layer1', 301 TO 700 AS 'layer2', 701 TO 1200 AS 'layer3', 1201 TO 2000 AS 'layer4', 2001 TO 10000 AS 'last_layer');",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION Layer (FIELD: layer) WITH RANGES (layer1 FROM 0 TO 300, layer2 FROM 301 TO 700, layer3 FROM 701 TO 1200, layer4 FROM 1201 TO 2000, last_layer FROM 2001 TO 10000);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.59093211684376,
+        "timestamp": "2024-12-05 16:59:22",
+        "success": false,
+        "bleu_score": 0.11319329220173284
+    },
+    {
+        "test_id": "test_run_1733414363",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a categorical dimension called SimpleGrade with the following ranges: failed from 0 to 4.99 and approved from 5 to 10.",
+        "expected_dsl_output": "CREATE CATEGORICAL DIMENSION SimpleGrade (field: simpleGrade); CREATE RANGE SimpleGradeRange (0 TO 4.99 AS 'failed', 5 TO 10 AS 'approved');",
+        "generated_dsl_output": "CREATE CATEGORICAL DIMENSION SimpleGrade (FIELD: grade) WITH RANGES (failed FROM 0 TO 4.99 AS \"red\", approved FROM 5 TO 10 AS \"green\");",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 1.5605121599510312,
+        "timestamp": "2024-12-05 16:59:23",
+        "success": false,
+        "bleu_score": 0.26608125176434144
+    },
+    {
+        "test_id": "test_run_1733414366",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a sensor called StationObservation with the following properties: description as String, code as String and name as String. The sensor will measure the parameter noise_level as a Double with units 'db' and icon 'speedometer'. The data will be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+        "expected_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH BBOX ([40.42, -3.7], 12);",
+        "generated_dsl_output": "CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH BBOX ([40.42, -3.7], 12);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.272328722756356,
+        "timestamp": "2024-12-05 16:59:26",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414368",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create a sensor called StationObservation with the following properties: code as String, name as String, description as String, material as String and date as DateTime. The sensor will measure the following properties: water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City with the property name as String. The data is retireved each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (name String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_pressure Double) WITH SPATIAL GROUP City (name String) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "simple",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 2.5027022613212466,
+        "timestamp": "2024-12-05 16:59:28",
+        "success": false,
+        "bleu_score": 0.6523489229580903
+    },
+    {
+        "test_id": "test_run_1733414375",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called magist_traffic with a sensor called StationObservation using the SRID 4326 that have these properties: description as String, accesoAsociado as Long, subarea as Long codCent as String, nombre as String. The sensor measures are: intensidad as Double with units 'veh/h' and icon 'network_check', velocidad as Double with units 'km/h' and icon 'speed', ocupacion as Double with units '%' and icon 'emoji_transportation'. It will be necessary to have the following spatial dimensions: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer, Section representing a polygon with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio spatial dimension. The data is going to be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+        "expected_dsl_output": "CREATE PRODUCT magist_traffic USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (intensidad Double UNITS 'veh/h' ICON 'network_check', velocidad Double UNITS 'km/h' ICON 'speed', ocupacion Double UNITS '%' ICON 'emoji_transportation') WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
+        "generated_dsl_output": "CREATE PRODUCT magist_traffic USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (intensidad Double UNITS 'veh/h' ICON 'network_check', velocidad Double UNITS 'km/h' ICON 'speed', ocupacion Double UNITS '%' ICON 'emoji_transportation') WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 7.2380749899894,
+        "timestamp": "2024-12-05 16:59:35",
+        "success": false,
+        "bleu_score": 0.9444071855977146
+    },
+    {
+        "test_id": "test_run_1733414384",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called magist with a sensor called StationObservation using the SRID 4326 that have the following properties: description as String, accesoAsociado as Long, subarea as Long, codCent as String and nombre as String. The sensors will measure the following properties: so2 as Double, co as Double, no as Double, no2 as Double, pm25 as Double, pm10 as Double, nox as Double, co3 as Double, tol as Double, ben as Double, ebe as Double, mxy as Double, pxy as Double, oxy as Double, tch as Double, ch4 as Double and nmhc as Double. It will be necessary to have the following spatial dimensions: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer, Section representing a polygon with the property cSec as Integer and Barrio representing a polygon with the property cBarrio as Integer. The Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension and another spatial group Barrio containing Barrio dimension. The data is going to be retrieved each 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+        "expected_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH SPATIAL GROUP Barrio (Barrio) WITH BBOX ([40.42, -3.7], 12);",
+        "generated_dsl_output": "CREATE PRODUCT magist USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SPATIAL DIMENSION Barrio (geometry: Polygon) WITH PROPERTIES (cBarrio Integer) WITH PARENT (Municipality); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, accesoAsociado Long, subarea Long, codCent String, nombre String) WITH MEASUREMENT DATA (so2 Double, co Double, no Double, no2 Double, pm25 Double, pm10 Double, nox Double, co3 Double, tol Double, ben Double, ebe Double, mxy Double, pxy Double, oxy Double, tch Double, ch4 Double, nmhc Double) WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 8.694682936184108,
+        "timestamp": "2024-12-05 16:59:44",
+        "success": false,
+        "bleu_score": 0.9333017955418722
+    },
+    {
+        "test_id": "test_run_1733414396",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called intecmar_2 with a sensor called StationObservation using the SRID 4326 that measure the following values: temperature_ITS90 as Double with units '\u00baC' and icon 'thermometer-low', salinity as Double with units 'PSU', pressure as Double with units 'dbar' and icon 'speedometer', ph as Double with units 'ph' and icon 'ph', oxygen as Double with units 'mg/l' and icon 'gas-cylinder', transmittance as Double with units 'm', irradiance as Double with units 'W/m2', uv_flourescence as Double with units 'mg/m3', density as Double with units 'kg/m3', conductivity as Double with units 'S/m'. The sensors has the following properties: maxDepth as Float, code as String, name as String, description as String, startTime as DateTime and endTime as DateTime. It will be necessary to aggregate by a spatial polygon dimension called Estuary, a categorical dimension called Depth and another categorical dimension called alarm. The spatial dimension Estuary represents a polygon and has the follwing properties: shortName as String, name as String and zone as String. The categorical dimension Depth has the following ranges: surface from 0 to 3, 5m from 4.75 to 5.25, 10m from 9.75 to 10.25, 15m from 14.75 to 15.25, and 20m from 19.75 to 20.25. The data is retrieved every 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth (field: depth); CREATE CATEGORICAL DIMENSION alarm (field: alarm); CREATE RANGE DepthRange (0 TO 3 AS 'surface', 4.75 TO 5.25 AS '5m', 9.75 TO 10.25 AS '10m', 14.75 TO 15.25 AS '15m', 19.75 TO 20.25 AS '20m'); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'pH' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH CATEGORICAL GROUP (Depth RANGE DepthRange) WITH CATEGORICAL GROUP alarm (alarm) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT intecmar_2 USING 4326; CREATE SPATIAL DIMENSION Estuary (geometry: Polygon) WITH PROPERTIES (shortName String, name String, zone String); CREATE CATEGORICAL DIMENSION Depth WITH RANGES (surface from 0 to 3, 5m from 4.75 to 5.25, 10m from 9.75 to 10.25, 15m from 14.75 to 15.25, and 20m from 19.75 to 20.25); CREATE CATEGORICAL DIMENSION alarm; CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (maxDepth Float, code String, name String, description String, startTime DateTime, endTime DateTime) WITH MEASUREMENT DATA (temperature_ITS90 Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU' ICON 'speedometer', pressure Double UNITS 'dbar' ICON 'speedometer', ph Double UNITS 'ph' ICON 'ph', oxygen Double UNITS 'mg/l' ICON 'gas-cylinder', transmittance Double UNITS 'm', irradiance Double UNITS 'W/m2', uv_flourescence Double UNITS 'mg/m3', density Double UNITS 'kg/m3', conductivity Double UNITS 'S/m') WITH SPATIAL GROUP Estuary (Estuary) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 11.782949254848063,
+        "timestamp": "2024-12-05 16:59:56",
+        "success": false,
+        "bleu_score": 0.6535573167312395
+    },
+    {
+        "test_id": "test_run_1733414400",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called water_pipes with a sensor called StationObservation using the SRID 4326 that have the following properties: code as String, name as String, description as String, material as String and date as DateTime. The sensors measurements will be water_flow as Double and water_preassure as Double. It will be necessary to aggregate by a spatial dimension called City representing a polygon with a property called shortName as String. The data will be retrieve each 900 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_preassure Double) WITH SPATIAL GROUP City (City) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT water_pipes USING 4326; CREATE SPATIAL DIMENSION City (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE SENSOR StationObservation (interval: 900, geometry: Point) WITH PROPERTIES (code String, name String, description String, material String, date DateTime) WITH MEASUREMENT DATA (water_flow Double, water_pressure Double) WITH SPATIAL GROUP City ([42.7, -8.1], 9);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 4.179809521883726,
+        "timestamp": "2024-12-05 17:00:00",
+        "success": false,
+        "bleu_score": 0.8561674873356324
+    },
+    {
+        "test_id": "test_run_1733414404",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called fuel_tanks with a sensor called StationObservation using the SRID 4326 that have the following properties: code as String, name as String, description as String, total_capacity as Double and element_type as String. The sensors will measure the property current_capacity as Double. There are one spatial dimension called Section representing a polygon with the property shortName as String and a categorical dimension called TankState with the field of tankState with the following ranges: low from 0 to 30, medium from 31 to 70 and high from 71 to 100. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE PRODUCT fuel_tanks USING 4326; CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE CATEGORICAL DIMENSION TankState (field: tankState); CREATE RANGE TankStateRange (0 TO 30 AS 'low', 31 TO 70 AS 'medium', 71 TO 100 AS 'high'); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String, total_capacity Double, element_type String) WITH MEASUREMENT DATA (current_capacity Double) WITH SPATIAL GROUP Section (Section) WITH CATEGORICAL GROUP(TankState RANGE TankStateRange) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT fuel_tanks USING 4326; CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (shortName String); CREATE CATEGORICAL DIMENSION TankState (FIELD: tankState) RANGES (LOW FROM 0 TO 30, MEDIUM FROM 31 TO 70, HIGH FROM 71 TO 100); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String, total_capacity Double, element_type String) WITH MEASUREMENT DATA (current_capacity Double);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 4.401296402793378,
+        "timestamp": "2024-12-05 17:00:04",
+        "success": false,
+        "bleu_score": 0.5156857734086884
+    },
+    {
+        "test_id": "test_run_1733414410",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called noise_levels with a sensor called StationObservation using the SRID 4326 that have the following properties: description as String, code as String and name as String. The sensors will measure the property noise_level as Double with the units db and icon speedometer. The following spatial dimensions will be required: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer and Section representing a polygon with the property cSec as Integer. A Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension. The data is going to be retrieved every 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
+        "expected_dsl_output": "CREATE PRODUCT noise_levels USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
+        "generated_dsl_output": "CREATE PRODUCT noise_levels USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON speedometer) WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 5.194872833322734,
+        "timestamp": "2024-12-05 17:00:10",
+        "success": false,
+        "bleu_score": 0.9656187881844999
+    },
+    {
+        "test_id": "test_run_1733414416",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 6.220313324127346,
+        "timestamp": "2024-12-05 17:00:16",
+        "success": false,
+        "bleu_score": 0.9361465742178202
+    },
+    {
+        "test_id": "test_run_1733414421",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called structure_deformation with a sensor called StationObservation using the SRID 4326 that have the following properties: code as String, name as String and type as String. The sensors measure the following parameters: incline as Double with units '\u00ba', displacement as double with units '\u00ba' and deformation as double with units '\u00ba'. There is a spatial dimension called Municipality representing a polygon with the properties shortName as String, name as String and code as String. The sensor has a spatial group called Municipality containing the Municipality spatial dimension. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE PRODUCT structure_deformation USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT structure_deformation USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (shortName String, name String, code String); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (code String, name String, type String) WITH MEASUREMENT DATA (incline Double UNITS '\u00ba', displacement Double UNITS '\u00ba', deformation Double UNITS '\u00ba') WITH SPATIAL GROUP Municipality (Municipality) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 4.936950120609254,
+        "timestamp": "2024-12-05 17:00:21",
+        "success": true,
+        "bleu_score": 1.0
+    },
+    {
+        "test_id": "test_run_1733414425",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called toxic_elements with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: description as String and name as String. The sensors measure the following parameters: co as Double, co2 as Double, so2 as Double, nox as Double, o3 as Double, nh3 as Double, h2 as Double, rn as Double. There is one spatial dimension called Building representing a polygon with the following properties: shortName as String, name as String, type as String, area as Double, and constructionDate as DateTime. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
+        "expected_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Administrative (Building) WITH BBOX ([42.7, -8.1], 9);",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 4.223844561725855,
+        "timestamp": "2024-12-05 17:00:25",
+        "success": false,
+        "bleu_score": 0.9601328622880726
+    },
+    {
+        "test_id": "test_run_1733414429",
+        "example_id": "0",
+        "model_name": "codellama:13b",
+        "system_prompt_version": {
+            "version": "1.0",
+            "prompt": "You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.",
+            "rationale": "Basic system prompt",
+            "timestamp": "2024-10-10T10:00:00"
+        },
+        "input_text": "Create an application called ships with a sensor called StationObservation using the SRID 4326 that have the following properties: description as String, name as String and country as String. The sensors measure the following properties: temperature as Double with units '\u00baC' and icon 'thermometer-low', salinity as Double with units 'PSU' and pressure as Double with units 'dbar' and icon 'speedometer'. There is one spatial dimension called Ocean representing a polygon with the following properties: shortName as String and name as String. The data will be retrieved each 300 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9",
+        "expected_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean (Ocean) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT ships USING 4326; CREATE SPATIAL DIMENSION Ocean (geometry: Polygon) WITH PROPERTIES (shortName String, name String); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, name String, country String) WITH MEASUREMENT DATA (temperature Double UNITS '\u00baC' ICON 'thermometer-low', salinity Double UNITS 'PSU' ICON 'speedometer', pressure Double UNITS 'dbar' ICON 'speedometer') WITH SPATIAL GROUP Ocean;",
+        "complexity_level": "complex",
+        "parameters": {
+            "temperature": 0.1,
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_p": 0.9,
+            "top_k": 50
+        },
+        "time_taken": 3.8395898840390146,
+        "timestamp": "2024-12-05 17:00:29",
+        "success": false,
+        "bleu_score": 0.839176584327327
+    }
+]

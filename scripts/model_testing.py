@@ -35,6 +35,14 @@ closed_source_models = {
         },
         "model_name_api": "gpt-4o"
     },
+    "OpenAI GPT4o test2": {
+        "api_url": "https://api.openai.com/v1/chat/completions",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {config['api_keys']['openai_key']}"
+        },
+        "model_name_api": "gpt-4o"
+    },
     "OpenAI GPT4o mini": {
         "api_url": "https://api.openai.com/v1/chat/completions",
         "headers": {

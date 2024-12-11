@@ -201,9 +201,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 50,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0.5
         }
     },
     "LLaMA 3.1 (70B) quantized 4bit": {
@@ -283,9 +283,9 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 8192,
-            "top_k": 50,
-            "top_p": 0.8,
-            "temperature": 0.1
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
         }
     },
     "Mistral (7B) full precision": {
@@ -339,7 +339,7 @@
         "deployment_type": "remote",
         "parameters": {
             "seed": 7,
-            "top_p": 0.9,
+            "top_p": 0.8,
             "temperature": 0.1,
             "top_k": 50
         }
@@ -410,6 +410,82 @@
             "num_predict": -1,
             "num_ctx": 8000,
             "top_k": 50,
+            "top_p": 0.9,
+            "temperature": 0.1
+        }
+    },
+    "StarCoder2 (15B) no instruct full precision test": {
+        "model_name": "StarCoder2 (15B) no instruct full precision test",
+        "type": "open source",
+        "supported": false,
+        "ollama_command": "starcoder2:15b-fp16",
+        "vram_requirement": "32GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8192,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
+    },
+    "qwq (32B) quantized 4bit": {
+        "model_name": "qwq (32B) quantized 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "qwq:32b-preview-q4_K_M",
+        "vram_requirement": "33GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
+    },
+    "qwq (32B) quantized 8bit": {
+        "model_name": "qwq (32B) quantized 8bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "qwq:32b-preview-q8_0",
+        "vram_requirement": "33GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
+    },
+    "OpenAI GPT4o test2": {
+        "model_name": "OpenAI GPT4o test2",
+        "type": "closed source",
+        "supported": true,
+        "deployment_type": "remote",
+        "parameters": {
+            "seed": 7,
+            "top_p": 0.8,
+            "temperature": 0.1,
+            "top_k": 50
+        }
+    },
+    "LLaMa 3.3 (70B) full precision": {
+        "model_name": "LLaMa 3.3 (70B) full precision",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "llama3.3:70b-instruct-fp16",
+        "vram_requirement": "71GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
             "top_p": 0.9,
             "temperature": 0.1
         }

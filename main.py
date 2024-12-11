@@ -106,8 +106,8 @@ def deploy_selected_model(dataset_name, prompt_version=None, automatic=False):
             for params in tqdm(parameter_grid, desc="Testing parameter combinations"):
                 # Pass the current parameter combination to automatic_configure_model_parameters
                 #TODO: passagli anche il nome del modello altrimenti lo chiede ogni volta (da file)
-                print(f'model name: {model_names[17]}')
-                selected_model = automatic_configure_model_parameters(model_names[17], new_parameters=params)
+                print(f'model name: {model_names[31]}')
+                selected_model = automatic_configure_model_parameters(model_names[31], new_parameters=params)
                 
                 if selected_model:
                     print(f"\nDeploying and prompting the model: {selected_model}")
@@ -179,13 +179,13 @@ def run_pipeline(selected_steps):
             print('Analysis saved.')
             print('--------------------------')
 
-        if 'generate_visualizations' in selected_steps:
-            print('Generating plots...')
-            logging.info('Generating plots...')
-            logging.info('Generating visualizations...')
-            generate_visualizations()
-            print('Plot saved.')
-            print('--------------------------')
+        # if 'generate_visualizations' in selected_steps:
+        #     print('Generating plots...')
+        #     logging.info('Generating plots...')
+        #     logging.info('Generating visualizations...')
+        #     generate_visualizations()
+        #     print('Plot saved.')
+        #     print('--------------------------')
 
         if 'generate_best_results' in selected_steps:
             print('Generating best results table...')
