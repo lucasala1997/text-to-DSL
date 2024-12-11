@@ -14520,3 +14520,91 @@ ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mism
 2024-12-11 12:47:25,660:INFO:Grammar for sensors loaded successfully.
 2024-12-11 12:47:25,660:INFO:Few-shot examples for sensors loaded successfully.
 2024-12-11 12:47:25,660:INFO:Testing model LLaMa 3.3 (70B) full precision with 28 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 8000, 'top_k': 30, 'top_p': 0.9, 'temperature': 0.1}.
+2024-12-11 13:00:09,554:INFO:Model LLaMa 3.3 (70B) full precision tested successfully.
+2024-12-11 13:00:09,556:INFO:Updated parameters for model LLaMa 3.3 (70B) full precision: {'temperature': 0.5, 'top_p': 0.8, 'top_k': 50}
+2024-12-11 13:00:09,559:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-12-11 13:00:09,559:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-12-11 13:00:09,560:INFO:Grammar for sensors loaded successfully.
+2024-12-11 13:00:09,560:INFO:Few-shot examples for sensors loaded successfully.
+2024-12-11 13:00:09,560:INFO:Testing model LLaMa 3.3 (70B) full precision with 28 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 8000, 'top_k': 50, 'top_p': 0.8, 'temperature': 0.5}.
+2024-12-11 13:12:48,570:INFO:Model LLaMa 3.3 (70B) full precision tested successfully.
+2024-12-11 13:12:48,572:INFO:Updated parameters for model LLaMa 3.3 (70B) full precision: {'temperature': 0.5, 'top_p': 0.8, 'top_k': 30}
+2024-12-11 13:12:48,575:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-12-11 13:12:48,576:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-12-11 13:12:48,576:INFO:Grammar for sensors loaded successfully.
+2024-12-11 13:12:48,576:INFO:Few-shot examples for sensors loaded successfully.
+2024-12-11 13:12:48,577:INFO:Testing model LLaMa 3.3 (70B) full precision with 28 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 8000, 'top_k': 30, 'top_p': 0.8, 'temperature': 0.5}.
+2024-12-11 13:25:27,830:INFO:Model LLaMa 3.3 (70B) full precision tested successfully.
+2024-12-11 13:25:27,832:INFO:Updated parameters for model LLaMa 3.3 (70B) full precision: {'temperature': 0.5, 'top_p': 0.9, 'top_k': 50}
+2024-12-11 13:25:27,835:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-12-11 13:25:27,835:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-12-11 13:25:27,836:INFO:Grammar for sensors loaded successfully.
+2024-12-11 13:25:27,836:INFO:Few-shot examples for sensors loaded successfully.
+2024-12-11 13:25:27,836:INFO:Testing model LLaMa 3.3 (70B) full precision with 28 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 8000, 'top_k': 50, 'top_p': 0.9, 'temperature': 0.5}.
+2024-12-11 13:38:11,937:INFO:Model LLaMa 3.3 (70B) full precision tested successfully.
+2024-12-11 13:38:11,939:INFO:Updated parameters for model LLaMa 3.3 (70B) full precision: {'temperature': 0.5, 'top_p': 0.9, 'top_k': 30}
+2024-12-11 13:38:11,942:WARNING:Synthetic data file not found: [Errno 2] No such file or directory: 'data/sensors/augmented_examples.json'. Continuing without synthetic data.
+2024-12-11 13:38:11,943:INFO:Using system prompt: You are a helpful assistant. You are tasked with generating Domain Specific Language (DSL) code for a given input. Respond only with the DSL code.
+2024-12-11 13:38:11,943:INFO:Grammar for sensors loaded successfully.
+2024-12-11 13:38:11,943:INFO:Few-shot examples for sensors loaded successfully.
+2024-12-11 13:38:11,944:INFO:Testing model LLaMa 3.3 (70B) full precision with 28 examples and parameters: {'seed': 7, 'num_predict': -1, 'num_ctx': 8000, 'top_k': 30, 'top_p': 0.9, 'temperature': 0.5}.
+2024-12-11 13:50:56,034:INFO:Model LLaMa 3.3 (70B) full precision tested successfully.
+2024-12-11 13:50:56,036:INFO:Analyzing results...
+2024-12-11 13:50:56,608:INFO:Metrics analysis completed for model: OpenAI_GPT4o_mini
+2024-12-11 13:50:58,421:INFO:Metrics analysis completed for model: StarCoder2_(3B)_full_precision
+2024-12-11 13:50:59,842:INFO:Metrics analysis completed for model: Qwen_2.5-coder_(7B)_full_precision
+2024-12-11 13:51:01,147:INFO:Metrics analysis completed for model: qwq_(32B)_quantized_4bit
+2024-12-11 13:51:01,286:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:01,493:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:02,476:INFO:Metrics analysis completed for model: StarCoder2_(7B)_full_precision
+2024-12-11 13:51:04,528:INFO:Metrics analysis completed for model: StarCoder2_(15B)_no_instruct_full_precision_test
+2024-12-11 13:51:05,541:INFO:Metrics analysis completed for model: qwq_(32B)_quantized_8bit
+2024-12-11 13:51:05,547:INFO:Metrics analysis completed for model: qwen2.5-coder:7b-base-fp16
+2024-12-11 13:51:05,798:INFO:Metrics analysis completed for model: codellama:7b-instruct-q4_K_M
+2024-12-11 13:51:06,794:INFO:Metrics analysis completed for model: Qwen_2.5-coder_(32B)_full_precision
+2024-12-11 13:51:07,951:INFO:Metrics analysis completed for model: Nemotron_70B_full_precision
+2024-12-11 13:51:08,971:INFO:Metrics analysis completed for model: LLaMA_3.1_(70B)_quantized_8bit
+2024-12-11 13:51:09,084:INFO:Metrics analysis completed for model: OpenAI_GPT4o
+2024-12-11 13:51:09,179:INFO:Metrics analysis completed for model: codellama:7b
+2024-12-11 13:51:09,909:INFO:Metrics analysis completed for model: Mistral_Nemo_(12B)_full_precision
+2024-12-11 13:51:10,625:INFO:Metrics analysis completed for model: Qwen_2.5-coder_(7B)_quantized_4bit
+2024-12-11 13:51:10,716:INFO:Metrics analysis completed for model: starcoder2:7b-fp16
+2024-12-11 13:51:11,515:INFO:Metrics analysis completed for model: Mistral-large2_(123B)_quantized_8bit
+2024-12-11 13:51:12,118:INFO:Metrics analysis completed for model: Mistral_(7B)_full_precision
+2024-12-11 13:51:12,769:INFO:Metrics analysis completed for model: Qwen_2.5_(72B)_quantized_8bit
+2024-12-11 13:51:13,450:INFO:Metrics analysis completed for model: Llama3.1_(8B)_quantized_4bit
+2024-12-11 13:51:13,817:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:13,858:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:13,958:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:13,998:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:14,125:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:14,249:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:14,300:INFO:Metrics analysis completed for model: Codellama_(34B)_full_precision
+2024-12-11 13:51:14,712:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:14,836:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:14,991:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:15,115:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:15,166:INFO:Metrics analysis completed for model: Codellama_(7B)_quantized_4bit
+2024-12-11 13:51:15,936:INFO:Metrics analysis completed for model: LLaMa_3.3_(70B)_full_precision
+2024-12-11 13:51:16,632:INFO:Metrics analysis completed for model: qwq_(32B)_full_precision
+2024-12-11 13:51:17,337:INFO:Metrics analysis completed for model: Qwen_2.5_(72B)_quantized_4bit
+2024-12-11 13:51:18,029:INFO:Metrics analysis completed for model: LLaMA_3.1_(70B)_quantized_4bit
+2024-12-11 13:51:18,417:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:18,525:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:18,727:INFO:Metrics analysis completed for model: Codellama_(7B)_full_precision
+2024-12-11 13:51:18,803:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:18,936:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:19,070:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:19,201:ERROR:Request to DSL validator failed: 413 Client Error: Payload Too Large for url: http://localhost:3000/api/sensor/validate
+2024-12-11 13:51:19,641:INFO:Metrics analysis completed for model: LLaMA_3.1_(8B)_full_precision
+2024-12-11 13:51:19,738:INFO:Metrics analysis completed for model: starcoder2:3b-fp16
+2024-12-11 13:51:19,834:INFO:Metrics analysis completed for model: Codellama_(13B)_full_precision
+2024-12-11 13:51:20,541:INFO:Metrics analysis completed for model: StarCoder2_(15B)_full_precision
+2024-12-11 13:51:20,636:INFO:Metrics analysis completed for model: OpenAI_GPT4o_test2
+2024-12-11 13:51:20,726:INFO:Metrics analysis completed for model: codellama:13b
+2024-12-11 13:51:21,507:INFO:Metrics analysis completed for model: Qwen_2.5_(32B)_full_precision
+2024-12-11 13:51:22,052:INFO:Metrics analysis completed for model: Codellama_(70B)_full_precision
+2024-12-11 13:51:22,770:INFO:Metrics analysis completed for model: Mistral_(123B)_quantized_6bit
+2024-12-11 13:51:22,770:INFO:Generating best results table...
+2024-12-11 13:51:22,772:INFO:Best results per model have been saved to logs/best_model_results.csv
+2024-12-11 13:51:22,772:INFO:Process completed successfully.
