@@ -158,8 +158,8 @@
             "temperature": 0.1
         }
     },
-    "Codellama (34B) full precision": {
-        "model_name": "Codellama (34B) full precision",
+    "Codellama (34B) full precision test2": {
+        "model_name": "Codellama (34B) full precision test2",
         "type": "open source",
         "supported": true,
         "ollama_command": "codellama:34b-instruct-fp16",

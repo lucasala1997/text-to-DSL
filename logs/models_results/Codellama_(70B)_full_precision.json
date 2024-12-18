@@ -1,6 +1,6 @@
 [
     {
-        "test_id": "test_run_1732745439",
+        "test_id": "test_run_1734352795",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -21,13 +21,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 41.24050144990906,
-        "timestamp": "2024-11-27 23:10:39",
+        "time_taken": 1504.255369608989,
+        "timestamp": "2024-12-16 13:39:55",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745500",
+        "test_id": "test_run_1734352798",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -48,13 +48,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 61.407463347073644,
-        "timestamp": "2024-11-27 23:11:40",
+        "time_taken": 2.067062067973893,
+        "timestamp": "2024-12-16 13:39:58",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745561",
+        "test_id": "test_run_1734352798",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -75,13 +75,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 60.66344189085066,
-        "timestamp": "2024-11-27 23:12:41",
+        "time_taken": 0.6543619600124657,
+        "timestamp": "2024-12-16 13:39:58",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745623",
+        "test_id": "test_run_1734352800",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -102,13 +102,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 62.606601300649345,
-        "timestamp": "2024-11-27 23:13:43",
+        "time_taken": 1.3707708680303767,
+        "timestamp": "2024-12-16 13:40:00",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745685",
+        "test_id": "test_run_1734352800",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -129,13 +129,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 61.43730621598661,
-        "timestamp": "2024-11-27 23:14:45",
+        "time_taken": 0.6481246919720434,
+        "timestamp": "2024-12-16 13:40:00",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745740",
+        "test_id": "test_run_1734352801",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -156,13 +156,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 55.176217623986304,
-        "timestamp": "2024-11-27 23:15:40",
+        "time_taken": 0.6591549889999442,
+        "timestamp": "2024-12-16 13:40:01",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745801",
+        "test_id": "test_run_1734352801",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -183,13 +183,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 60.446802554186434,
-        "timestamp": "2024-11-27 23:16:41",
+        "time_taken": 0.6029528630315326,
+        "timestamp": "2024-12-16 13:40:01",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732745875",
+        "test_id": "test_run_1734352818",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -210,13 +210,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 74.34651174629107,
-        "timestamp": "2024-11-27 23:17:55",
+        "time_taken": 16.96183279901743,
+        "timestamp": "2024-12-16 13:40:18",
         "success": false,
         "bleu_score": 0.8466657105524215
     },
     {
-        "test_id": "test_run_1732745961",
+        "test_id": "test_run_1734352821",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -237,13 +237,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 86.31214894587174,
-        "timestamp": "2024-11-27 23:19:21",
+        "time_taken": 2.084169823967386,
+        "timestamp": "2024-12-16 13:40:21",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746048",
+        "test_id": "test_run_1734352821",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -264,13 +264,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 86.51305944332853,
-        "timestamp": "2024-11-27 23:20:48",
+        "time_taken": 0.6499425179790705,
+        "timestamp": "2024-12-16 13:40:21",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746152",
+        "test_id": "test_run_1734352823",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -291,13 +291,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 104.04015381727368,
-        "timestamp": "2024-11-27 23:22:32",
+        "time_taken": 1.382744092028588,
+        "timestamp": "2024-12-16 13:40:23",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746221",
+        "test_id": "test_run_1734352823",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -318,13 +318,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 68.91522265318781,
-        "timestamp": "2024-11-27 23:23:41",
+        "time_taken": 0.6688663589884527,
+        "timestamp": "2024-12-16 13:40:23",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746295",
+        "test_id": "test_run_1734352824",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -345,13 +345,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 74.03860659012571,
-        "timestamp": "2024-11-27 23:24:55",
+        "time_taken": 0.690326834039297,
+        "timestamp": "2024-12-16 13:40:24",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746368",
+        "test_id": "test_run_1734352825",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -372,13 +372,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 73.26245916681364,
-        "timestamp": "2024-11-27 23:26:08",
+        "time_taken": 0.6869091419503093,
+        "timestamp": "2024-12-16 13:40:25",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746451",
+        "test_id": "test_run_1734352825",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -399,13 +399,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 82.84230276988819,
-        "timestamp": "2024-11-27 23:27:31",
+        "time_taken": 0.6541705849813297,
+        "timestamp": "2024-12-16 13:40:25",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746518",
+        "test_id": "test_run_1734352826",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -426,13 +426,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 66.92888984177262,
-        "timestamp": "2024-11-27 23:28:38",
+        "time_taken": 0.6059770960127935,
+        "timestamp": "2024-12-16 13:40:26",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746584",
+        "test_id": "test_run_1734352827",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -453,13 +453,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 65.85137869697064,
-        "timestamp": "2024-11-27 23:29:44",
+        "time_taken": 0.6669823210104369,
+        "timestamp": "2024-12-16 13:40:27",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746649",
+        "test_id": "test_run_1734352827",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -480,13 +480,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 65.13923297217116,
-        "timestamp": "2024-11-27 23:30:49",
+        "time_taken": 0.6802550809807144,
+        "timestamp": "2024-12-16 13:40:27",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746704",
+        "test_id": "test_run_1734352828",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -507,13 +507,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 55.48827333096415,
-        "timestamp": "2024-11-27 23:31:44",
+        "time_taken": 0.9506822760449722,
+        "timestamp": "2024-12-16 13:40:28",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746757",
+        "test_id": "test_run_1734352829",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -534,13 +534,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 52.36308061890304,
-        "timestamp": "2024-11-27 23:32:37",
+        "time_taken": 1.0238733519800007,
+        "timestamp": "2024-12-16 13:40:29",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746808",
+        "test_id": "test_run_1734352830",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -561,13 +561,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 51.50825094105676,
-        "timestamp": "2024-11-27 23:33:28",
+        "time_taken": 1.2258102769847028,
+        "timestamp": "2024-12-16 13:40:30",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746862",
+        "test_id": "test_run_1734352831",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -588,13 +588,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 53.90723702730611,
-        "timestamp": "2024-11-27 23:34:22",
+        "time_taken": 0.7583899199962616,
+        "timestamp": "2024-12-16 13:40:31",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732746922",
+        "test_id": "test_run_1734352832",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -615,13 +615,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 59.83144960878417,
-        "timestamp": "2024-11-27 23:35:22",
+        "time_taken": 0.7678030999959446,
+        "timestamp": "2024-12-16 13:40:32",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732747036",
+        "test_id": "test_run_1734352887",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -642,13 +642,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 113.8456849930808,
-        "timestamp": "2024-11-27 23:37:16",
+        "time_taken": 54.80857010697946,
+        "timestamp": "2024-12-16 13:41:27",
         "success": false,
         "bleu_score": 0.9656187881844999
     },
     {
-        "test_id": "test_run_1732747090",
+        "test_id": "test_run_1734352953",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -659,7 +659,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -669,13 +669,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 54.70603656116873,
-        "timestamp": "2024-11-27 23:38:10",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 66.05969222198473,
+        "timestamp": "2024-12-16 13:42:33",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732747148",
+        "test_id": "test_run_1734352957",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -696,13 +696,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 57.11323500610888,
-        "timestamp": "2024-11-27 23:39:08",
+        "time_taken": 3.784417764050886,
+        "timestamp": "2024-12-16 13:42:37",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732748632",
+        "test_id": "test_run_1734352999",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -723,13 +723,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 1484.9270778847858,
-        "timestamp": "2024-11-28 00:03:52",
+        "time_taken": 42.20316765096504,
+        "timestamp": "2024-12-16 13:43:19",
         "success": false,
         "bleu_score": 0.9601328622880726
     },
     {
-        "test_id": "test_run_1732748705",
+        "test_id": "test_run_1734353000",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -750,13 +750,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 72.30685481568798,
-        "timestamp": "2024-11-28 00:05:05",
+        "time_taken": 0.7854235090198927,
+        "timestamp": "2024-12-16 13:43:20",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732748858",
+        "test_id": "test_run_1734353000",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -777,13 +777,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 152.94825211912394,
-        "timestamp": "2024-11-28 00:07:38",
+        "time_taken": 0.605199723970145,
+        "timestamp": "2024-12-16 13:43:20",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732748924",
+        "test_id": "test_run_1734353003",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -804,13 +804,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 65.7881102883257,
-        "timestamp": "2024-11-28 00:08:44",
+        "time_taken": 2.403036637988407,
+        "timestamp": "2024-12-16 13:43:23",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732748997",
+        "test_id": "test_run_1734353003",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -831,13 +831,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 73.33550516003743,
-        "timestamp": "2024-11-28 00:09:57",
+        "time_taken": 0.6573411200079136,
+        "timestamp": "2024-12-16 13:43:23",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732759243",
+        "test_id": "test_run_1734353005",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -858,13 +858,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 10246.563982732128,
-        "timestamp": "2024-11-28 03:00:43",
+        "time_taken": 1.6657585699576885,
+        "timestamp": "2024-12-16 13:43:25",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732759323",
+        "test_id": "test_run_1734353006",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -885,13 +885,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 79.78205540031195,
-        "timestamp": "2024-11-28 03:02:03",
+        "time_taken": 0.6524076309869997,
+        "timestamp": "2024-12-16 13:43:26",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732759392",
+        "test_id": "test_run_1734353006",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -912,13 +912,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 68.57410188019276,
-        "timestamp": "2024-11-28 03:03:12",
+        "time_taken": 0.6185341539676301,
+        "timestamp": "2024-12-16 13:43:26",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732769636",
+        "test_id": "test_run_1734353007",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -939,13 +939,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 10244.542949505616,
-        "timestamp": "2024-11-28 05:53:56",
+        "time_taken": 0.562576913041994,
+        "timestamp": "2024-12-16 13:43:27",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732769717",
+        "test_id": "test_run_1734353024",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -966,13 +966,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 80.87808786984533,
-        "timestamp": "2024-11-28 05:55:17",
+        "time_taken": 17.123860610998236,
+        "timestamp": "2024-12-16 13:43:44",
         "success": false,
         "bleu_score": 0.8466657105524215
     },
     {
-        "test_id": "test_run_1732769772",
+        "test_id": "test_run_1734353026",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -993,13 +993,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 54.620126713998616,
-        "timestamp": "2024-11-28 05:56:12",
+        "time_taken": 2.4085404709912837,
+        "timestamp": "2024-12-16 13:43:46",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732769825",
+        "test_id": "test_run_1734353027",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1020,13 +1020,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 52.85259097488597,
-        "timestamp": "2024-11-28 05:57:05",
+        "time_taken": 0.6492560540209524,
+        "timestamp": "2024-12-16 13:43:47",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732769876",
+        "test_id": "test_run_1734353029",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1047,13 +1047,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 51.200816601049155,
-        "timestamp": "2024-11-28 05:57:56",
+        "time_taken": 1.7404053790378384,
+        "timestamp": "2024-12-16 13:43:49",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732769931",
+        "test_id": "test_run_1734353029",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1074,13 +1074,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 55.08551891986281,
-        "timestamp": "2024-11-28 05:58:51",
+        "time_taken": 0.666497883037664,
+        "timestamp": "2024-12-16 13:43:49",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732769990",
+        "test_id": "test_run_1734353030",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1101,13 +1101,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 59.375701969023794,
-        "timestamp": "2024-11-28 05:59:50",
+        "time_taken": 0.6907900260412134,
+        "timestamp": "2024-12-16 13:43:50",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770053",
+        "test_id": "test_run_1734353031",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1128,13 +1128,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 62.42248435271904,
-        "timestamp": "2024-11-28 06:00:53",
+        "time_taken": 0.6872567300451919,
+        "timestamp": "2024-12-16 13:43:51",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770107",
+        "test_id": "test_run_1734353032",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1155,13 +1155,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 53.89086486212909,
-        "timestamp": "2024-11-28 06:01:47",
+        "time_taken": 0.6579553279443644,
+        "timestamp": "2024-12-16 13:43:52",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770164",
+        "test_id": "test_run_1734353032",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1182,13 +1182,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 57.563247265294194,
-        "timestamp": "2024-11-28 06:02:44",
+        "time_taken": 0.5629565629642457,
+        "timestamp": "2024-12-16 13:43:52",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770221",
+        "test_id": "test_run_1734353033",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1209,13 +1209,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 56.7278046309948,
-        "timestamp": "2024-11-28 06:03:41",
+        "time_taken": 0.6709744569961913,
+        "timestamp": "2024-12-16 13:43:53",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770273",
+        "test_id": "test_run_1734353033",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1236,13 +1236,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 51.46174573712051,
-        "timestamp": "2024-11-28 06:04:33",
+        "time_taken": 0.684713231981732,
+        "timestamp": "2024-12-16 13:43:53",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770328",
+        "test_id": "test_run_1734353034",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1263,13 +1263,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 55.70442789327353,
-        "timestamp": "2024-11-28 06:05:28",
+        "time_taken": 0.9566159910173155,
+        "timestamp": "2024-12-16 13:43:54",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770389",
+        "test_id": "test_run_1734353035",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1290,13 +1290,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 60.61823917878792,
-        "timestamp": "2024-11-28 06:06:29",
+        "time_taken": 1.0376546260085888,
+        "timestamp": "2024-12-16 13:43:55",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770450",
+        "test_id": "test_run_1734353037",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1317,13 +1317,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 61.27407590392977,
-        "timestamp": "2024-11-28 06:07:30",
+        "time_taken": 1.2216336940182373,
+        "timestamp": "2024-12-16 13:43:57",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770513",
+        "test_id": "test_run_1734353037",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1344,13 +1344,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 62.87674590293318,
-        "timestamp": "2024-11-28 06:08:33",
+        "time_taken": 0.7013968410319649,
+        "timestamp": "2024-12-16 13:43:57",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770574",
+        "test_id": "test_run_1734353038",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1371,13 +1371,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 60.886126527097076,
-        "timestamp": "2024-11-28 06:09:34",
+        "time_taken": 0.803887007990852,
+        "timestamp": "2024-12-16 13:43:58",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770682",
+        "test_id": "test_run_1734353094",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1398,13 +1398,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 107.77162799984217,
-        "timestamp": "2024-11-28 06:11:22",
+        "time_taken": 55.443159235990606,
+        "timestamp": "2024-12-16 13:44:54",
         "success": false,
         "bleu_score": 0.9656187881844999
     },
     {
-        "test_id": "test_run_1732770743",
+        "test_id": "test_run_1734353160",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1415,7 +1415,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -1425,13 +1425,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 61.4346238700673,
-        "timestamp": "2024-11-28 06:12:23",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 66.51130888599437,
+        "timestamp": "2024-12-16 13:46:00",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732770802",
+        "test_id": "test_run_1734353164",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1452,13 +1452,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 59.21758240601048,
-        "timestamp": "2024-11-28 06:13:22",
+        "time_taken": 3.7940803189994767,
+        "timestamp": "2024-12-16 13:46:04",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732770927",
+        "test_id": "test_run_1734353206",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1479,13 +1479,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 124.77141505479813,
-        "timestamp": "2024-11-28 06:15:27",
+        "time_taken": 42.1932489600149,
+        "timestamp": "2024-12-16 13:46:46",
         "success": false,
         "bleu_score": 0.9601328622880726
     },
     {
-        "test_id": "test_run_1732771000",
+        "test_id": "test_run_1734353207",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1506,13 +1506,13 @@
             "top_p": 0.8,
             "temperature": 0.1
         },
-        "time_taken": 73.25590486684814,
-        "timestamp": "2024-11-28 06:16:40",
+        "time_taken": 0.7838476930046454,
+        "timestamp": "2024-12-16 13:46:47",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732771153",
+        "test_id": "test_run_1734353208",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1533,13 +1533,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 152.82781687984243,
-        "timestamp": "2024-11-28 06:19:13",
+        "time_taken": 0.6032617439632304,
+        "timestamp": "2024-12-16 13:46:48",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732771219",
+        "test_id": "test_run_1734353210",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1560,13 +1560,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 65.41572734108195,
-        "timestamp": "2024-11-28 06:20:19",
+        "time_taken": 2.4179897279827856,
+        "timestamp": "2024-12-16 13:46:50",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732771292",
+        "test_id": "test_run_1734353211",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1587,13 +1587,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 72.94158009625971,
-        "timestamp": "2024-11-28 06:21:32",
+        "time_taken": 0.6537051039631478,
+        "timestamp": "2024-12-16 13:46:51",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732781540",
+        "test_id": "test_run_1734353212",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1614,13 +1614,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 10248.022207289934,
-        "timestamp": "2024-11-28 09:12:20",
+        "time_taken": 1.705574492982123,
+        "timestamp": "2024-12-16 13:46:52",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732781620",
+        "test_id": "test_run_1734353213",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1641,13 +1641,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 80.07698549423367,
-        "timestamp": "2024-11-28 09:13:40",
+        "time_taken": 0.6523584460373968,
+        "timestamp": "2024-12-16 13:46:53",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732781689",
+        "test_id": "test_run_1734353214",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1668,13 +1668,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 69.4720531241037,
-        "timestamp": "2024-11-28 09:14:49",
+        "time_taken": 0.6548330480000004,
+        "timestamp": "2024-12-16 13:46:54",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732793343",
+        "test_id": "test_run_1734353214",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1695,13 +1695,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 11654.186232102104,
-        "timestamp": "2024-11-28 12:29:03",
+        "time_taken": 0.5591742830001749,
+        "timestamp": "2024-12-16 13:46:54",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732793469",
+        "test_id": "test_run_1734353231",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1722,13 +1722,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 125.49224476609379,
-        "timestamp": "2024-11-28 12:31:09",
+        "time_taken": 17.062947332975455,
+        "timestamp": "2024-12-16 13:47:11",
         "success": false,
         "bleu_score": 0.8466657105524215
     },
     {
-        "test_id": "test_run_1732793621",
+        "test_id": "test_run_1734353234",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1749,13 +1749,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 151.87717896094546,
-        "timestamp": "2024-11-28 12:33:41",
+        "time_taken": 2.4133089869865216,
+        "timestamp": "2024-12-16 13:47:14",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732793780",
+        "test_id": "test_run_1734353234",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1776,13 +1776,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 159.39700380014256,
-        "timestamp": "2024-11-28 12:36:20",
+        "time_taken": 0.6480337019893341,
+        "timestamp": "2024-12-16 13:47:14",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732793966",
+        "test_id": "test_run_1734353236",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1803,13 +1803,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 185.67442505201325,
-        "timestamp": "2024-11-28 12:39:26",
+        "time_taken": 1.6932208110229112,
+        "timestamp": "2024-12-16 13:47:16",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794069",
+        "test_id": "test_run_1734353237",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1830,13 +1830,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 103.2280615568161,
-        "timestamp": "2024-11-28 12:41:09",
+        "time_taken": 0.6683589080348611,
+        "timestamp": "2024-12-16 13:47:17",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794199",
+        "test_id": "test_run_1734353237",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1857,13 +1857,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 129.5516445352696,
-        "timestamp": "2024-11-28 12:43:19",
+        "time_taken": 0.6502305599860847,
+        "timestamp": "2024-12-16 13:47:17",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794321",
+        "test_id": "test_run_1734353238",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1884,13 +1884,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 122.53559750691056,
-        "timestamp": "2024-11-28 12:45:21",
+        "time_taken": 0.6865745639661327,
+        "timestamp": "2024-12-16 13:47:18",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794457",
+        "test_id": "test_run_1734353239",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1911,13 +1911,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 135.25621029688045,
-        "timestamp": "2024-11-28 12:47:37",
+        "time_taken": 0.6631543220137246,
+        "timestamp": "2024-12-16 13:47:19",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794565",
+        "test_id": "test_run_1734353239",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1938,13 +1938,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 108.77117299567908,
-        "timestamp": "2024-11-28 12:49:25",
+        "time_taken": 0.560523379012011,
+        "timestamp": "2024-12-16 13:47:19",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794684",
+        "test_id": "test_run_1734353240",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1965,13 +1965,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 118.71595583390445,
-        "timestamp": "2024-11-28 12:51:24",
+        "time_taken": 0.665851000987459,
+        "timestamp": "2024-12-16 13:47:20",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794794",
+        "test_id": "test_run_1734353241",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -1992,13 +1992,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 110.26249623438343,
-        "timestamp": "2024-11-28 12:53:14",
+        "time_taken": 0.6817490949761122,
+        "timestamp": "2024-12-16 13:47:21",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794870",
+        "test_id": "test_run_1734353242",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2019,13 +2019,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 75.6612809128128,
-        "timestamp": "2024-11-28 12:54:30",
+        "time_taken": 1.0056954620522447,
+        "timestamp": "2024-12-16 13:47:22",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732794941",
+        "test_id": "test_run_1734353243",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2046,13 +2046,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 70.53324147919193,
-        "timestamp": "2024-11-28 12:55:41",
+        "time_taken": 1.0357699239975773,
+        "timestamp": "2024-12-16 13:47:23",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795009",
+        "test_id": "test_run_1734353244",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2073,13 +2073,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 68.42219188204035,
-        "timestamp": "2024-11-28 12:56:49",
+        "time_taken": 1.275278847955633,
+        "timestamp": "2024-12-16 13:47:24",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795082",
+        "test_id": "test_run_1734353245",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2100,13 +2100,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 73.37906533898786,
-        "timestamp": "2024-11-28 12:58:02",
+        "time_taken": 0.7591833940241486,
+        "timestamp": "2024-12-16 13:47:25",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795170",
+        "test_id": "test_run_1734353246",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2127,13 +2127,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 88.01007108623162,
-        "timestamp": "2024-11-28 12:59:30",
+        "time_taken": 0.8077057779883035,
+        "timestamp": "2024-12-16 13:47:26",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795368",
+        "test_id": "test_run_1734353355",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2154,13 +2154,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 197.69984359899536,
-        "timestamp": "2024-11-28 13:02:48",
+        "time_taken": 109.2254215980065,
+        "timestamp": "2024-12-16 13:49:15",
         "success": false,
         "bleu_score": 0.4778907757173721
     },
     {
-        "test_id": "test_run_1732795443",
+        "test_id": "test_run_1734353424",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2171,7 +2171,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -2181,13 +2181,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 75.14418940478936,
-        "timestamp": "2024-11-28 13:04:03",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 69.38415929803159,
+        "timestamp": "2024-12-16 13:50:24",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732795524",
+        "test_id": "test_run_1734353428",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2208,13 +2208,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 81.22894851490855,
-        "timestamp": "2024-11-28 13:05:24",
+        "time_taken": 3.783644496987108,
+        "timestamp": "2024-12-16 13:50:28",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795634",
+        "test_id": "test_run_1734353470",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2235,13 +2235,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 109.52188487071544,
-        "timestamp": "2024-11-28 13:07:14",
+        "time_taken": 42.12129440502031,
+        "timestamp": "2024-12-16 13:51:10",
         "success": false,
         "bleu_score": 0.9601328622880726
     },
     {
-        "test_id": "test_run_1732795705",
+        "test_id": "test_run_1734353471",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2262,13 +2262,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 70.53132999083027,
-        "timestamp": "2024-11-28 13:08:25",
+        "time_taken": 0.7773434429545887,
+        "timestamp": "2024-12-16 13:51:11",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795780",
+        "test_id": "test_run_1734353472",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2289,13 +2289,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 75.8451363267377,
-        "timestamp": "2024-11-28 13:09:40",
+        "time_taken": 0.5599611650104634,
+        "timestamp": "2024-12-16 13:51:12",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795884",
+        "test_id": "test_run_1734353474",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2316,13 +2316,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 103.8620121772401,
-        "timestamp": "2024-11-28 13:11:24",
+        "time_taken": 2.4185010520159267,
+        "timestamp": "2024-12-16 13:51:14",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732795991",
+        "test_id": "test_run_1734353475",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2343,13 +2343,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 107.11987198516726,
-        "timestamp": "2024-11-28 13:13:11",
+        "time_taken": 0.6509616830153391,
+        "timestamp": "2024-12-16 13:51:15",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796088",
+        "test_id": "test_run_1734353476",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2370,13 +2370,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 96.40805028704926,
-        "timestamp": "2024-11-28 13:14:48",
+        "time_taken": 1.6586398860090412,
+        "timestamp": "2024-12-16 13:51:16",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796173",
+        "test_id": "test_run_1734353477",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2397,13 +2397,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 85.53919172100723,
-        "timestamp": "2024-11-28 13:16:13",
+        "time_taken": 0.6004723310470581,
+        "timestamp": "2024-12-16 13:51:17",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796252",
+        "test_id": "test_run_1734353478",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2424,13 +2424,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 78.84920405875891,
-        "timestamp": "2024-11-28 13:17:32",
+        "time_taken": 0.661794249957893,
+        "timestamp": "2024-12-16 13:51:18",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796338",
+        "test_id": "test_run_1734353478",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2451,13 +2451,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 85.98821824183688,
-        "timestamp": "2024-11-28 13:18:58",
+        "time_taken": 0.6023283030372113,
+        "timestamp": "2024-12-16 13:51:18",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796459",
+        "test_id": "test_run_1734353495",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2478,13 +2478,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 120.26244345493615,
-        "timestamp": "2024-11-28 13:20:59",
+        "time_taken": 17.056503006024286,
+        "timestamp": "2024-12-16 13:51:35",
         "success": false,
         "bleu_score": 0.8466657105524215
     },
     {
-        "test_id": "test_run_1732796610",
+        "test_id": "test_run_1734353498",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2505,13 +2505,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 150.9883905677125,
-        "timestamp": "2024-11-28 13:23:30",
+        "time_taken": 2.416988907963969,
+        "timestamp": "2024-12-16 13:51:38",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796770",
+        "test_id": "test_run_1734353499",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2532,13 +2532,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 160.15599123574793,
-        "timestamp": "2024-11-28 13:26:10",
+        "time_taken": 0.6517446170328185,
+        "timestamp": "2024-12-16 13:51:39",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732796956",
+        "test_id": "test_run_1734353500",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2559,13 +2559,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 186.44361834740266,
-        "timestamp": "2024-11-28 13:29:16",
+        "time_taken": 1.6901947329752147,
+        "timestamp": "2024-12-16 13:51:40",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797061",
+        "test_id": "test_run_1734353501",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2586,13 +2586,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 104.58614927902818,
-        "timestamp": "2024-11-28 13:31:01",
+        "time_taken": 0.6654553490225226,
+        "timestamp": "2024-12-16 13:51:41",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797191",
+        "test_id": "test_run_1734353502",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2613,13 +2613,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 130.29754720209166,
-        "timestamp": "2024-11-28 13:33:11",
+        "time_taken": 0.6885305719915777,
+        "timestamp": "2024-12-16 13:51:42",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797313",
+        "test_id": "test_run_1734353502",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2640,13 +2640,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 122.26096559595317,
-        "timestamp": "2024-11-28 13:35:13",
+        "time_taken": 0.6431073669809848,
+        "timestamp": "2024-12-16 13:51:42",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797449",
+        "test_id": "test_run_1734353503",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2667,13 +2667,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 135.3344649928622,
-        "timestamp": "2024-11-28 13:37:29",
+        "time_taken": 0.6603774930117652,
+        "timestamp": "2024-12-16 13:51:43",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797556",
+        "test_id": "test_run_1734353503",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2694,13 +2694,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 107.74808996776119,
-        "timestamp": "2024-11-28 13:39:16",
+        "time_taken": 0.5617490380536765,
+        "timestamp": "2024-12-16 13:51:43",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797674",
+        "test_id": "test_run_1734353504",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2721,13 +2721,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 117.85669718170539,
-        "timestamp": "2024-11-28 13:41:14",
+        "time_taken": 0.6683229940244928,
+        "timestamp": "2024-12-16 13:51:44",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797784",
+        "test_id": "test_run_1734353505",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2748,13 +2748,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 109.53194732638076,
-        "timestamp": "2024-11-28 13:43:04",
+        "time_taken": 0.6826717339572497,
+        "timestamp": "2024-12-16 13:51:45",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797858",
+        "test_id": "test_run_1734353506",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2775,13 +2775,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 74.37021621875465,
-        "timestamp": "2024-11-28 13:44:18",
+        "time_taken": 0.9983694009715691,
+        "timestamp": "2024-12-16 13:51:46",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797929",
+        "test_id": "test_run_1734353507",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2802,13 +2802,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 70.70207066228613,
-        "timestamp": "2024-11-28 13:45:29",
+        "time_taken": 1.0347774969995953,
+        "timestamp": "2024-12-16 13:51:47",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732797998",
+        "test_id": "test_run_1734353508",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2829,13 +2829,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 69.03360640304163,
-        "timestamp": "2024-11-28 13:46:38",
+        "time_taken": 1.2778209539828822,
+        "timestamp": "2024-12-16 13:51:48",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798072",
+        "test_id": "test_run_1734353509",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2856,13 +2856,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 73.93303090892732,
-        "timestamp": "2024-11-28 13:47:52",
+        "time_taken": 0.7587339370511472,
+        "timestamp": "2024-12-16 13:51:49",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798160",
+        "test_id": "test_run_1734353510",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2883,13 +2883,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 88.06106349267066,
-        "timestamp": "2024-11-28 13:49:20",
+        "time_taken": 0.8096014849725179,
+        "timestamp": "2024-12-16 13:51:50",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798355",
+        "test_id": "test_run_1734353619",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2910,13 +2910,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 195.2283220803365,
-        "timestamp": "2024-11-28 13:52:35",
+        "time_taken": 109.30835846898844,
+        "timestamp": "2024-12-16 13:53:39",
         "success": false,
         "bleu_score": 0.4778907757173721
     },
     {
-        "test_id": "test_run_1732798430",
+        "test_id": "test_run_1734353689",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2927,7 +2927,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -2937,13 +2937,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 74.46834197174758,
-        "timestamp": "2024-11-28 13:53:50",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 69.4143148039584,
+        "timestamp": "2024-12-16 13:54:49",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732798513",
+        "test_id": "test_run_1734353692",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2964,13 +2964,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 82.96227444894612,
-        "timestamp": "2024-11-28 13:55:13",
+        "time_taken": 3.787119279964827,
+        "timestamp": "2024-12-16 13:54:52",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798623",
+        "test_id": "test_run_1734353735",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -2991,13 +2991,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 110.38678351417184,
-        "timestamp": "2024-11-28 13:57:03",
+        "time_taken": 42.19495608104626,
+        "timestamp": "2024-12-16 13:55:35",
         "success": false,
         "bleu_score": 0.9601328622880726
     },
     {
-        "test_id": "test_run_1732798692",
+        "test_id": "test_run_1734353735",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3018,13 +3018,13 @@
             "top_p": 0.9,
             "temperature": 0.1
         },
-        "time_taken": 68.85515810083598,
-        "timestamp": "2024-11-28 13:58:12",
+        "time_taken": 0.7836415130295791,
+        "timestamp": "2024-12-16 13:55:35",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798766",
+        "test_id": "test_run_1734353736",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3045,13 +3045,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 74.19534863717854,
-        "timestamp": "2024-11-28 13:59:26",
+        "time_taken": 0.6025245310156606,
+        "timestamp": "2024-12-16 13:55:36",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798870",
+        "test_id": "test_run_1734353738",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3072,13 +3072,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 103.54627392906696,
-        "timestamp": "2024-11-28 14:01:10",
+        "time_taken": 2.4201749860076234,
+        "timestamp": "2024-12-16 13:55:38",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732798975",
+        "test_id": "test_run_1734353739",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3099,13 +3099,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 105.42424070369452,
-        "timestamp": "2024-11-28 14:02:55",
+        "time_taken": 0.658470056951046,
+        "timestamp": "2024-12-16 13:55:39",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732799072",
+        "test_id": "test_run_1734353741",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3126,13 +3126,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 96.4426207030192,
-        "timestamp": "2024-11-28 14:04:32",
+        "time_taken": 1.6648820420377888,
+        "timestamp": "2024-12-16 13:55:41",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732799164",
+        "test_id": "test_run_1734353741",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3153,13 +3153,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 91.8225140790455,
-        "timestamp": "2024-11-28 14:06:04",
+        "time_taken": 0.6516118809813634,
+        "timestamp": "2024-12-16 13:55:41",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732799245",
+        "test_id": "test_run_1734353742",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3180,13 +3180,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 81.77531874272972,
-        "timestamp": "2024-11-28 14:07:25",
+        "time_taken": 0.6506116650416516,
+        "timestamp": "2024-12-16 13:55:42",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732799336",
+        "test_id": "test_run_1734353743",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3207,13 +3207,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 90.6949592246674,
-        "timestamp": "2024-11-28 14:08:56",
+        "time_taken": 0.6044346719863825,
+        "timestamp": "2024-12-16 13:55:43",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732799569",
+        "test_id": "test_run_1734353867",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3234,13 +3234,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 232.5557139790617,
-        "timestamp": "2024-11-28 14:12:49",
+        "time_taken": 124.58345065900357,
+        "timestamp": "2024-12-16 13:57:47",
         "success": false,
         "bleu_score": 0.09718530267609975
     },
     {
-        "test_id": "test_run_1732799721",
+        "test_id": "test_run_1734353872",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3261,13 +3261,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 151.9594939155504,
-        "timestamp": "2024-11-28 14:15:21",
+        "time_taken": 4.343964293948375,
+        "timestamp": "2024-12-16 13:57:52",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732799882",
+        "test_id": "test_run_1734353872",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3288,13 +3288,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 161.6171860070899,
-        "timestamp": "2024-11-28 14:18:02",
+        "time_taken": 0.6545539840008132,
+        "timestamp": "2024-12-16 13:57:52",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800068",
+        "test_id": "test_run_1734353874",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3315,13 +3315,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 185.62813716521487,
-        "timestamp": "2024-11-28 14:21:08",
+        "time_taken": 1.6872356469975784,
+        "timestamp": "2024-12-16 13:57:54",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800172",
+        "test_id": "test_run_1734353875",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3342,13 +3342,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 104.0900181713514,
-        "timestamp": "2024-11-28 14:22:52",
+        "time_taken": 0.6646550560253672,
+        "timestamp": "2024-12-16 13:57:55",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800301",
+        "test_id": "test_run_1734353875",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3369,13 +3369,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 128.84870616625994,
-        "timestamp": "2024-11-28 14:25:01",
+        "time_taken": 0.6914968939963728,
+        "timestamp": "2024-12-16 13:57:55",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800425",
+        "test_id": "test_run_1734353876",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3396,13 +3396,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 123.91492648702115,
-        "timestamp": "2024-11-28 14:27:05",
+        "time_taken": 0.6900299970293418,
+        "timestamp": "2024-12-16 13:57:56",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800560",
+        "test_id": "test_run_1734353877",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3423,13 +3423,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 135.68984083179384,
-        "timestamp": "2024-11-28 14:29:20",
+        "time_taken": 0.6216421779827215,
+        "timestamp": "2024-12-16 13:57:57",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800669",
+        "test_id": "test_run_1734353877",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3450,13 +3450,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 108.0551737472415,
-        "timestamp": "2024-11-28 14:31:09",
+        "time_taken": 0.6056075850501657,
+        "timestamp": "2024-12-16 13:57:57",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800790",
+        "test_id": "test_run_1734353878",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3477,13 +3477,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 121.16354774078354,
-        "timestamp": "2024-11-28 14:33:10",
+        "time_taken": 0.6646861060289666,
+        "timestamp": "2024-12-16 13:57:58",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800898",
+        "test_id": "test_run_1734353879",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3504,13 +3504,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 108.71734225610271,
-        "timestamp": "2024-11-28 14:34:58",
+        "time_taken": 0.6439807909773663,
+        "timestamp": "2024-12-16 13:57:59",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732800974",
+        "test_id": "test_run_1734353880",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3531,13 +3531,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 75.47806696593761,
-        "timestamp": "2024-11-28 14:36:14",
+        "time_taken": 0.9168971249600872,
+        "timestamp": "2024-12-16 13:58:00",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801043",
+        "test_id": "test_run_1734353881",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3558,13 +3558,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 69.27476529497653,
-        "timestamp": "2024-11-28 14:37:23",
+        "time_taken": 1.038353041978553,
+        "timestamp": "2024-12-16 13:58:01",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801113",
+        "test_id": "test_run_1734353882",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3585,13 +3585,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 70.08561201300472,
-        "timestamp": "2024-11-28 14:38:33",
+        "time_taken": 1.2703289769706316,
+        "timestamp": "2024-12-16 13:58:02",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801186",
+        "test_id": "test_run_1734353883",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3612,13 +3612,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 72.91436119098216,
-        "timestamp": "2024-11-28 14:39:46",
+        "time_taken": 0.7551547060138546,
+        "timestamp": "2024-12-16 13:58:03",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801275",
+        "test_id": "test_run_1734353884",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3639,13 +3639,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 88.73373880703002,
-        "timestamp": "2024-11-28 14:41:15",
+        "time_taken": 0.8115641739568673,
+        "timestamp": "2024-12-16 13:58:04",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801421",
+        "test_id": "test_run_1734353939",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3666,13 +3666,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 145.84455522941425,
-        "timestamp": "2024-11-28 14:43:41",
+        "time_taken": 55.435719580971636,
+        "timestamp": "2024-12-16 13:58:59",
         "success": false,
         "bleu_score": 0.9656187881844999
     },
     {
-        "test_id": "test_run_1732801496",
+        "test_id": "test_run_1734354006",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3683,7 +3683,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -3693,13 +3693,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 74.65853514103219,
-        "timestamp": "2024-11-28 14:44:56",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 66.47187024302548,
+        "timestamp": "2024-12-16 14:00:06",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732801577",
+        "test_id": "test_run_1734354009",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3720,13 +3720,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 81.76763939391822,
-        "timestamp": "2024-11-28 14:46:17",
+        "time_taken": 3.7906457579811104,
+        "timestamp": "2024-12-16 14:00:09",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801684",
+        "test_id": "test_run_1734354075",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3737,7 +3737,7 @@
         },
         "input_text": "Create an application called toxic_elements with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: description as String and name as String. The sensors measure the following parameters: co as Double, co2 as Double, so2 as Double, nox as Double, o3 as Double, nh3 as Double, h2 as Double, rn as Double. There is one spatial dimension called Building representing a polygon with the following properties: shortName as String, name as String, type as String, area as Double, and constructionDate as DateTime. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT toxic_elements USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime);\nCREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Administrative (Building) WITH BBOX ([42.7, -8.1], 9);\n\nThe code above is a DSL representation of the input you provided. Please note that this is not a valid Python or Java code and should be used as an example only. It's important to understand that the syntax may vary depending on the specific language you are using. Additionally, it's crucial to validate the code against your system's requirements and perform any necessary adjustments before deploying it in production.",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -3747,13 +3747,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 106.5578371156007,
-        "timestamp": "2024-11-28 14:48:04",
+        "time_taken": 65.6732317849528,
+        "timestamp": "2024-12-16 14:01:15",
         "success": false,
-        "bleu_score": 0.9079093050626746
+        "bleu_score": 0.45663762442225403
     },
     {
-        "test_id": "test_run_1732801753",
+        "test_id": "test_run_1734354076",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3774,13 +3774,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 68.90776077192277,
-        "timestamp": "2024-11-28 14:49:13",
+        "time_taken": 0.7833578980062157,
+        "timestamp": "2024-12-16 14:01:16",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801829",
+        "test_id": "test_run_1734354077",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3801,13 +3801,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 75.72295599197969,
-        "timestamp": "2024-11-28 14:50:29",
+        "time_taken": 0.5619587049586698,
+        "timestamp": "2024-12-16 14:01:17",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732801931",
+        "test_id": "test_run_1734354079",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3828,13 +3828,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 101.85504741827026,
-        "timestamp": "2024-11-28 14:52:11",
+        "time_taken": 2.420207030023448,
+        "timestamp": "2024-12-16 14:01:19",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802036",
+        "test_id": "test_run_1734354080",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3855,13 +3855,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 105.22111364081502,
-        "timestamp": "2024-11-28 14:53:56",
+        "time_taken": 0.6565070169745013,
+        "timestamp": "2024-12-16 14:01:20",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802133",
+        "test_id": "test_run_1734354081",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3882,13 +3882,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 97.54346080776304,
-        "timestamp": "2024-11-28 14:55:33",
+        "time_taken": 1.6481444969540462,
+        "timestamp": "2024-12-16 14:01:21",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802218",
+        "test_id": "test_run_1734354082",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3909,13 +3909,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 84.8385182232596,
-        "timestamp": "2024-11-28 14:56:58",
+        "time_taken": 0.6515389369451441,
+        "timestamp": "2024-12-16 14:01:22",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802297",
+        "test_id": "test_run_1734354083",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3936,13 +3936,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 78.5289828022942,
-        "timestamp": "2024-11-28 14:58:17",
+        "time_taken": 0.6607286130310968,
+        "timestamp": "2024-12-16 14:01:23",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802385",
+        "test_id": "test_run_1734354083",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3963,13 +3963,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 88.14689208008349,
-        "timestamp": "2024-11-28 14:59:45",
+        "time_taken": 0.5599382990039885,
+        "timestamp": "2024-12-16 14:01:23",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802606",
+        "test_id": "test_run_1734354208",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -3990,13 +3990,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 221.58468121523038,
-        "timestamp": "2024-11-28 15:03:26",
+        "time_taken": 124.5496495339903,
+        "timestamp": "2024-12-16 14:03:28",
         "success": false,
         "bleu_score": 0.09718530267609975
     },
     {
-        "test_id": "test_run_1732802759",
+        "test_id": "test_run_1734354212",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4017,13 +4017,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 152.18024513311684,
-        "timestamp": "2024-11-28 15:05:59",
+        "time_taken": 4.3387128750327975,
+        "timestamp": "2024-12-16 14:03:32",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732802918",
+        "test_id": "test_run_1734354213",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4044,13 +4044,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 159.58882365189493,
-        "timestamp": "2024-11-28 15:08:38",
+        "time_taken": 0.653707064979244,
+        "timestamp": "2024-12-16 14:03:33",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803104",
+        "test_id": "test_run_1734354215",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4071,13 +4071,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 185.51601540576667,
-        "timestamp": "2024-11-28 15:11:44",
+        "time_taken": 1.6860784229938872,
+        "timestamp": "2024-12-16 14:03:35",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803207",
+        "test_id": "test_run_1734354215",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4098,13 +4098,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 102.90922634769231,
-        "timestamp": "2024-11-28 15:13:27",
+        "time_taken": 0.6673057390144095,
+        "timestamp": "2024-12-16 14:03:35",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803337",
+        "test_id": "test_run_1734354216",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4125,13 +4125,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 130.19038531417027,
-        "timestamp": "2024-11-28 15:15:37",
+        "time_taken": 0.6923967039911076,
+        "timestamp": "2024-12-16 14:03:36",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803462",
+        "test_id": "test_run_1734354217",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4152,13 +4152,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 124.7636577822268,
-        "timestamp": "2024-11-28 15:17:42",
+        "time_taken": 0.6863957429886796,
+        "timestamp": "2024-12-16 14:03:37",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803598",
+        "test_id": "test_run_1734354217",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4179,13 +4179,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 135.96781994216144,
-        "timestamp": "2024-11-28 15:19:58",
+        "time_taken": 0.6590975759900175,
+        "timestamp": "2024-12-16 14:03:37",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803705",
+        "test_id": "test_run_1734354218",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4206,13 +4206,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 107.52778400713578,
-        "timestamp": "2024-11-28 15:21:45",
+        "time_taken": 0.5621129900100641,
+        "timestamp": "2024-12-16 14:03:38",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803829",
+        "test_id": "test_run_1734354219",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4233,13 +4233,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 123.30033267801628,
-        "timestamp": "2024-11-28 15:23:49",
+        "time_taken": 0.6630556110176258,
+        "timestamp": "2024-12-16 14:03:39",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732803939",
+        "test_id": "test_run_1734354219",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4260,13 +4260,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 109.96631894493476,
-        "timestamp": "2024-11-28 15:25:39",
+        "time_taken": 0.6749112510005943,
+        "timestamp": "2024-12-16 14:03:39",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804013",
+        "test_id": "test_run_1734354220",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4287,13 +4287,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 74.49124612100422,
-        "timestamp": "2024-11-28 15:26:53",
+        "time_taken": 0.9960996450390667,
+        "timestamp": "2024-12-16 14:03:40",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804083",
+        "test_id": "test_run_1734354221",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4314,13 +4314,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 69.61560557410121,
-        "timestamp": "2024-11-28 15:28:03",
+        "time_taken": 1.0450462099979632,
+        "timestamp": "2024-12-16 14:03:41",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804151",
+        "test_id": "test_run_1734354223",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4341,13 +4341,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 68.23029722599313,
-        "timestamp": "2024-11-28 15:29:11",
+        "time_taken": 1.2749355059931986,
+        "timestamp": "2024-12-16 14:03:43",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804223",
+        "test_id": "test_run_1734354223",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4368,13 +4368,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 71.99823261005804,
-        "timestamp": "2024-11-28 15:30:23",
+        "time_taken": 0.7561310840537772,
+        "timestamp": "2024-12-16 14:03:43",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804311",
+        "test_id": "test_run_1734354224",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4395,13 +4395,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 87.57166029931977,
-        "timestamp": "2024-11-28 15:31:51",
+        "time_taken": 0.8133114569936879,
+        "timestamp": "2024-12-16 14:03:44",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804458",
+        "test_id": "test_run_1734354280",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4422,13 +4422,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 147.01507889432833,
-        "timestamp": "2024-11-28 15:34:18",
+        "time_taken": 55.45019057800528,
+        "timestamp": "2024-12-16 14:04:40",
         "success": false,
         "bleu_score": 0.9656187881844999
     },
     {
-        "test_id": "test_run_1732804533",
+        "test_id": "test_run_1734354346",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4439,7 +4439,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -4449,13 +4449,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 75.16721005458385,
-        "timestamp": "2024-11-28 15:35:33",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 66.53368931397563,
+        "timestamp": "2024-12-16 14:05:46",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732804615",
+        "test_id": "test_run_1734354350",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4476,13 +4476,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 82.54293535090983,
-        "timestamp": "2024-11-28 15:36:55",
+        "time_taken": 3.792369630013127,
+        "timestamp": "2024-12-16 14:05:50",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804721",
+        "test_id": "test_run_1734354416",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4493,7 +4493,7 @@
         },
         "input_text": "Create an application called toxic_elements with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: description as String and name as String. The sensors measure the following parameters: co as Double, co2 as Double, so2 as Double, nox as Double, o3 as Double, nh3 as Double, h2 as Double, rn as Double. There is one spatial dimension called Building representing a polygon with the following properties: shortName as String, name as String, type as String, area as Double, and constructionDate as DateTime. The data will be retrieved each 1500 seconds. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Building (Building) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "CREATE PRODUCT toxic_elements USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime); CREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "CREATE PRODUCT toxic_elements USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, name String, type String, area Double, constructionDate DateTime);\nCREATE SENSOR StationObservation (interval: 1500, geometry: Point) WITH PROPERTIES (description String, name String) WITH MEASUREMENT DATA (co Double, co2 Double, so2 Double, nox Double, o3 Double, nh3 Double, h2 Double, rn Double) WITH SPATIAL GROUP Administrative (Building) WITH BBOX ([42.7, -8.1], 9);\n\nThe code above is a DSL representation of the input you provided. Please note that this is not a valid Python or Java code and should be used as an example only. It's important to understand that the syntax may vary depending on the specific language you are using. Additionally, it's crucial to validate the code against your system's requirements and perform any necessary adjustments before deploying it in production.",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -4503,13 +4503,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 105.91954757692292,
-        "timestamp": "2024-11-28 15:38:41",
+        "time_taken": 65.66474365803879,
+        "timestamp": "2024-12-16 14:06:56",
         "success": false,
-        "bleu_score": 0.9079093050626746
+        "bleu_score": 0.45663762442225403
     },
     {
-        "test_id": "test_run_1732804791",
+        "test_id": "test_run_1734354417",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4530,13 +4530,13 @@
             "top_p": 0.8,
             "temperature": 0.5
         },
-        "time_taken": 69.43051786301658,
-        "timestamp": "2024-11-28 15:39:51",
+        "time_taken": 0.7803054669639096,
+        "timestamp": "2024-12-16 14:06:57",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804867",
+        "test_id": "test_run_1734354417",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4557,13 +4557,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 75.73266513179988,
-        "timestamp": "2024-11-28 15:41:07",
+        "time_taken": 0.5574808960082009,
+        "timestamp": "2024-12-16 14:06:57",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732804968",
+        "test_id": "test_run_1734354420",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4584,13 +4584,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 101.79033798491582,
-        "timestamp": "2024-11-28 15:42:48",
+        "time_taken": 2.422428924997803,
+        "timestamp": "2024-12-16 14:07:00",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732805061",
+        "test_id": "test_run_1734354420",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4611,13 +4611,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 92.949142314028,
-        "timestamp": "2024-11-28 15:44:21",
+        "time_taken": 0.6609015740104951,
+        "timestamp": "2024-12-16 14:07:00",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732805175",
+        "test_id": "test_run_1734354422",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4638,13 +4638,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 113.59785499377176,
-        "timestamp": "2024-11-28 15:46:15",
+        "time_taken": 1.6684771010186523,
+        "timestamp": "2024-12-16 14:07:02",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732805261",
+        "test_id": "test_run_1734354423",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4665,13 +4665,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 85.81024219701067,
-        "timestamp": "2024-11-28 15:47:41",
+        "time_taken": 0.6495845469762571,
+        "timestamp": "2024-12-16 14:07:03",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732805335",
+        "test_id": "test_run_1734354423",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4692,13 +4692,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 73.81742293201387,
-        "timestamp": "2024-11-28 15:48:55",
+        "time_taken": 0.6545882589998655,
+        "timestamp": "2024-12-16 14:07:03",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732805422",
+        "test_id": "test_run_1734354424",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4719,13 +4719,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 87.38450146373361,
-        "timestamp": "2024-11-28 15:50:22",
+        "time_taken": 0.6043383210198954,
+        "timestamp": "2024-12-16 14:07:04",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732805665",
+        "test_id": "test_run_1734354442",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4736,7 +4736,7 @@
         },
         "input_text": "Create two spatial aggregations, the first one called Province representing a polygon with the property name as String, and the second one called Council representing a polygon with the property name as String. A Council is located inside a Province.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
-        "generated_dsl_output": "1. Define the product meteorological using SRID 4326.\n CREATE PRODUCT meteorological USING 4326;\n\n2. Create two spatial dimensions, Province and Council.\nCREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String);\nCREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String);\n\n3. Establish the relationship between the two spatial dimensions, indicating that a Council is located inside a Province.\nWITH PARENT (Province);\n\n4. Create the sensor StationObservation with an interval of 500 seconds and a geometry type Point. It has two properties: name as String and registrationDate as DateTime.\nCREATE SENSOR StationObservation (interval: 500, geometry: Point) WITH PROPERTIES (name String, registrationDate DateTime);\n\n5. Define the measurement data for the sensor with the following properties: precipitation as Double with units 'L/m2', pressure as Double with units 'hPa', reducedPressure as Double with units 'hPa', solarRadiation as Double with units 'W/m2', relativeHumidity as Double with units '%', temperature15 as Double with units '\u00baC', temperature11 as Double with units '\u00baC', windDirection10m as Double with units '\u00ba', windDirection2m as Double with units '\u00ba', windSpeed10m as Double with units 'm/s', and windSpeed2m as Double with units 'm/s'.\nWITH MEASUREMENT DATA (precipitation Double UNITS 'L/m2', pressure Double UNITS 'hPa', reducedPressure Double UNITS 'hPa', solarRadiation Double UNITS 'W/m2', relativeHumidity Double UNITS '%', temperature15 Double UNITS '\u00baC', temperature11 Double UNITS '\u00baC', windDirection10m Double UNITS '\u00ba', windDirection2m Double UNITS '\u00ba', windSpeed10m Double UNITS 'm/s', windSpeed2m Double UNITS 'm/s');\n\n6. Define the bounding box for the data with a latitude of 42.7, a longitude of -8.1, and a zoom of 9.\nWITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "1.  CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String);\n2.  CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -4746,13 +4746,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 242.87570047425106,
-        "timestamp": "2024-11-28 15:54:25",
+        "time_taken": 17.612919775012415,
+        "timestamp": "2024-12-16 14:07:22",
         "success": false,
-        "bleu_score": 0.07442820605530691
+        "bleu_score": 0.8466657105524215
     },
     {
-        "test_id": "test_run_1732805815",
+        "test_id": "test_run_1734354444",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4773,13 +4773,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 149.85712631465867,
-        "timestamp": "2024-11-28 15:56:55",
+        "time_taken": 2.416348109021783,
+        "timestamp": "2024-12-16 14:07:24",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806002",
+        "test_id": "test_run_1734354445",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4800,13 +4800,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 187.25219287211075,
-        "timestamp": "2024-11-28 16:00:02",
+        "time_taken": 0.6496696699759923,
+        "timestamp": "2024-12-16 14:07:25",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806203",
+        "test_id": "test_run_1734354446",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4827,13 +4827,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 201.16286727692932,
-        "timestamp": "2024-11-28 16:03:23",
+        "time_taken": 1.688288404024206,
+        "timestamp": "2024-12-16 14:07:26",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806307",
+        "test_id": "test_run_1734354447",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4854,13 +4854,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 103.42569106025621,
-        "timestamp": "2024-11-28 16:05:07",
+        "time_taken": 0.6689147829893045,
+        "timestamp": "2024-12-16 14:07:27",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806443",
+        "test_id": "test_run_1734354448",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4881,13 +4881,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 136.46622443106025,
-        "timestamp": "2024-11-28 16:07:23",
+        "time_taken": 0.6531109409988858,
+        "timestamp": "2024-12-16 14:07:28",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806565",
+        "test_id": "test_run_1734354449",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4908,13 +4908,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 121.90385229187086,
-        "timestamp": "2024-11-28 16:09:25",
+        "time_taken": 0.6897025849903002,
+        "timestamp": "2024-12-16 14:07:29",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806701",
+        "test_id": "test_run_1734354449",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4935,13 +4935,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 135.98978559020907,
-        "timestamp": "2024-11-28 16:11:41",
+        "time_taken": 0.65939938405063,
+        "timestamp": "2024-12-16 14:07:29",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806808",
+        "test_id": "test_run_1734354450",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4962,13 +4962,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 107.19549070904031,
-        "timestamp": "2024-11-28 16:13:28",
+        "time_taken": 0.6003595149959438,
+        "timestamp": "2024-12-16 14:07:30",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732806927",
+        "test_id": "test_run_1734354451",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -4989,13 +4989,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 118.64007845055312,
-        "timestamp": "2024-11-28 16:15:27",
+        "time_taken": 0.6686149740125984,
+        "timestamp": "2024-12-16 14:07:31",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807037",
+        "test_id": "test_run_1734354451",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5016,13 +5016,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 110.02410072693601,
-        "timestamp": "2024-11-28 16:17:17",
+        "time_taken": 0.6842812949907966,
+        "timestamp": "2024-12-16 14:07:31",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807112",
+        "test_id": "test_run_1734354452",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5043,13 +5043,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 74.93446181807667,
-        "timestamp": "2024-11-28 16:18:32",
+        "time_taken": 1.0037921220064163,
+        "timestamp": "2024-12-16 14:07:32",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807181",
+        "test_id": "test_run_1734354453",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5070,13 +5070,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 69.28239872027189,
-        "timestamp": "2024-11-28 16:19:41",
+        "time_taken": 1.0456534459954128,
+        "timestamp": "2024-12-16 14:07:33",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807250",
+        "test_id": "test_run_1734354455",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5097,13 +5097,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 68.19881994789466,
-        "timestamp": "2024-11-28 16:20:50",
+        "time_taken": 1.2763114430126734,
+        "timestamp": "2024-12-16 14:07:35",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807324",
+        "test_id": "test_run_1734354455",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5124,13 +5124,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 73.90990972612053,
-        "timestamp": "2024-11-28 16:22:04",
+        "time_taken": 0.7572845820104703,
+        "timestamp": "2024-12-16 14:07:35",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807412",
+        "test_id": "test_run_1734354456",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5151,13 +5151,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 87.94164455169812,
-        "timestamp": "2024-11-28 16:23:32",
+        "time_taken": 0.7716565410373732,
+        "timestamp": "2024-12-16 14:07:36",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807593",
+        "test_id": "test_run_1734354542",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5168,7 +5168,7 @@
         },
         "input_text": "Create an application called noise_levels with a sensor called StationObservation using the SRID 4326 that have the following properties: description as String, code as String and name as String. The sensors will measure the property noise_level as Double with the units db and icon speedometer. The following spatial dimensions will be required: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer and Section representing a polygon with the property cSec as Integer. A Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension. The data is going to be retrieved every 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
         "expected_dsl_output": "CREATE PRODUCT noise_levels USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
-        "generated_dsl_output": "CREATE PRODUCT noise_levels USING 4326;\nCREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer);\nCREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality);\nCREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON speedometer) WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);\nCREATE RANGE noise_level_range (0 TO 50 AS \"VERY LOW\" COLOR \"#00FF00\", 50 TO 60 AS \"LOW\" COLOR \"#FFFF00\", 60 TO 80 AS \"MEDIUM\" COLOR \"#FFA500\", 80 TO 100 AS \"HIGH\" COLOR \"#FF0000\");\nCREATE AGGREGATION noise_level_avg (noise_level AVG);\nCREATE VIEW noise_level_view WITH noise_level_range;\nCREATE DASHBOARD noise_levels_dashboard WITH noise_level_view;",
+        "generated_dsl_output": "CREATE PRODUCT noise_levels USING 4326;\nCREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer);\nCREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality);\nCREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON speedometer) WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);\nCREATE RANGE noise_level_range (0 TO 50 AS \"VERY LOW\" COLOR \"#00FF00\", 50 TO 60 AS \"LOW\" COLOR \"#FFFF00\", 60 TO 80 AS \"MEDIUM\" COLOR \"#FFA500\", 80 TO 100 AS \"HIGH\" COLOR \"#FF0000\");\nCREATE STYLE noise_level_style (noise_level RANGE noise_level_range);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -5178,13 +5178,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 181.73394357366487,
-        "timestamp": "2024-11-28 16:26:33",
+        "time_taken": 86.07379151898203,
+        "timestamp": "2024-12-16 14:09:02",
         "success": false,
-        "bleu_score": 0.588944594572724
+        "bleu_score": 0.6364873252267648
     },
     {
-        "test_id": "test_run_1732807668",
+        "test_id": "test_run_1734354612",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5195,7 +5195,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -5205,13 +5205,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 74.73530405806378,
-        "timestamp": "2024-11-28 16:27:48",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 69.4307031869539,
+        "timestamp": "2024-12-16 14:10:12",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732807751",
+        "test_id": "test_run_1734354616",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5232,13 +5232,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 83.41747165704146,
-        "timestamp": "2024-11-28 16:29:11",
+        "time_taken": 3.793810336966999,
+        "timestamp": "2024-12-16 14:10:16",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732807918",
+        "test_id": "test_run_1734354717",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5259,13 +5259,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 166.47613069508225,
-        "timestamp": "2024-11-28 16:31:58",
+        "time_taken": 101.57136909803376,
+        "timestamp": "2024-12-16 14:11:57",
         "success": false,
         "bleu_score": 0.3428399091404
     },
     {
-        "test_id": "test_run_1732807988",
+        "test_id": "test_run_1734354721",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5286,13 +5286,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 70.35571594722569,
-        "timestamp": "2024-11-28 16:33:08",
+        "time_taken": 3.7823686090414412,
+        "timestamp": "2024-12-16 14:12:01",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808065",
+        "test_id": "test_run_1734354722",
         "example_id": "0",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5313,13 +5313,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 76.21963767986745,
-        "timestamp": "2024-11-28 16:34:25",
+        "time_taken": 0.6091657869983464,
+        "timestamp": "2024-12-16 14:12:02",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808168",
+        "test_id": "test_run_1734354724",
         "example_id": "1",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5340,13 +5340,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 103.6793162128888,
-        "timestamp": "2024-11-28 16:36:08",
+        "time_taken": 2.421204033016693,
+        "timestamp": "2024-12-16 14:12:04",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808264",
+        "test_id": "test_run_1734354725",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5367,13 +5367,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 95.58962049195543,
-        "timestamp": "2024-11-28 16:37:44",
+        "time_taken": 0.6593322660191916,
+        "timestamp": "2024-12-16 14:12:05",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808378",
+        "test_id": "test_run_1734354726",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5394,13 +5394,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 113.93930412083864,
-        "timestamp": "2024-11-28 16:39:38",
+        "time_taken": 1.6694270489970222,
+        "timestamp": "2024-12-16 14:12:06",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808424",
+        "test_id": "test_run_1734354727",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5421,13 +5421,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 46.36400047317147,
-        "timestamp": "2024-11-28 16:40:24",
+        "time_taken": 0.6493425199878402,
+        "timestamp": "2024-12-16 14:12:07",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808514",
+        "test_id": "test_run_1734354728",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5448,13 +5448,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 89.29264910100028,
-        "timestamp": "2024-11-28 16:41:54",
+        "time_taken": 0.6587982930359431,
+        "timestamp": "2024-12-16 14:12:08",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808589",
+        "test_id": "test_run_1734354728",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5475,13 +5475,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 75.56627142382786,
-        "timestamp": "2024-11-28 16:43:09",
+        "time_taken": 0.6051380090066232,
+        "timestamp": "2024-12-16 14:12:08",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732808817",
+        "test_id": "test_run_1734354746",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5492,7 +5492,7 @@
         },
         "input_text": "Create two spatial aggregations, the first one called Province representing a polygon with the property name as String, and the second one called Council representing a polygon with the property name as String. A Council is located inside a Province.",
         "expected_dsl_output": "CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String); CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
-        "generated_dsl_output": "1. Define the product meteorological using SRID 4326.\n CREATE PRODUCT meteorological USING 4326;\n\n2. Create two spatial dimensions, Province and Council.\nCREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String);\nCREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String);\n\n3. Establish the relationship between the two spatial dimensions, indicating that a Council is located inside a Province.\nWITH PARENT (Province);\n\n4. Create the sensor StationObservation with an interval of 500 seconds and a geometry type Point. It has two properties: name as String and registrationDate as DateTime.\nCREATE SENSOR StationObservation (interval: 500, geometry: Point) WITH PROPERTIES (name String, registrationDate DateTime);\n\n5. Define the measurement data for the sensor with the following properties: precipitation as Double with units 'L/m2', pressure as Double with units 'hPa', reducedPressure as Double with units 'hPa', solarRadiation as Double with units 'W/m2', relativeHumidity as Double with units '%', temperature15 as Double with units '\u00baC', temperature11 as Double with units '\u00baC', windDirection10m as Double with units '\u00ba', windDirection2m as Double with units '\u00ba', windSpeed10m as Double with units 'm/s', and windSpeed2m as Double with units 'm/s'.\nWITH MEASUREMENT DATA (precipitation Double UNITS 'L/m2', pressure Double UNITS 'hPa', reducedPressure Double UNITS 'hPa', solarRadiation Double UNITS 'W/m2', relativeHumidity Double UNITS '%', temperature15 Double UNITS '\u00baC', temperature11 Double UNITS '\u00baC', windDirection10m Double UNITS '\u00ba', windDirection2m Double UNITS '\u00ba', windSpeed10m Double UNITS 'm/s', windSpeed2m Double UNITS 'm/s');\n\n6. Define the bounding box for the data with a latitude of 42.7, a longitude of -8.1, and a zoom of 9.\nWITH BBOX ([42.7, -8.1], 9);",
+        "generated_dsl_output": "1.  CREATE SPATIAL DIMENSION Province (geometry: Polygon) WITH PROPERTIES (name String);\n2.  CREATE SPATIAL DIMENSION Council (geometry: Polygon) WITH PROPERTIES (name String) WITH PARENT (Province);",
         "complexity_level": "simple",
         "parameters": {
             "seed": 7,
@@ -5502,13 +5502,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 227.88729676092044,
-        "timestamp": "2024-11-28 16:46:57",
+        "time_taken": 17.636227353010327,
+        "timestamp": "2024-12-16 14:12:26",
         "success": false,
-        "bleu_score": 0.07442820605530691
+        "bleu_score": 0.8466657105524215
     },
     {
-        "test_id": "test_run_1732808924",
+        "test_id": "test_run_1734354749",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5529,13 +5529,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 106.69283336820081,
-        "timestamp": "2024-11-28 16:48:44",
+        "time_taken": 2.421632183017209,
+        "timestamp": "2024-12-16 14:12:29",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809076",
+        "test_id": "test_run_1734354749",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5556,13 +5556,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 152.24414651189,
-        "timestamp": "2024-11-28 16:51:16",
+        "time_taken": 0.6524373249849305,
+        "timestamp": "2024-12-16 14:12:29",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809266",
+        "test_id": "test_run_1734354751",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5583,13 +5583,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 190.1408152030781,
-        "timestamp": "2024-11-28 16:54:26",
+        "time_taken": 1.6860676759970374,
+        "timestamp": "2024-12-16 14:12:31",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809326",
+        "test_id": "test_run_1734354752",
         "example_id": "13",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5610,13 +5610,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 59.88945935573429,
-        "timestamp": "2024-11-28 16:55:26",
+        "time_taken": 0.665848401025869,
+        "timestamp": "2024-12-16 14:12:32",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809527",
+        "test_id": "test_run_1734354752",
         "example_id": "14",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5637,13 +5637,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 200.8018378908746,
-        "timestamp": "2024-11-28 16:58:47",
+        "time_taken": 0.6925301119918004,
+        "timestamp": "2024-12-16 14:12:32",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809629",
+        "test_id": "test_run_1734354753",
         "example_id": "15",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5664,13 +5664,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 102.32427974790335,
-        "timestamp": "2024-11-28 17:00:29",
+        "time_taken": 0.6865878149983473,
+        "timestamp": "2024-12-16 14:12:33",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809766",
+        "test_id": "test_run_1734354754",
         "example_id": "16",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5691,13 +5691,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 136.84154585329816,
-        "timestamp": "2024-11-28 17:02:46",
+        "time_taken": 0.6582209899788722,
+        "timestamp": "2024-12-16 14:12:34",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732809889",
+        "test_id": "test_run_1734354754",
         "example_id": "17",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5718,13 +5718,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 122.30806939071044,
-        "timestamp": "2024-11-28 17:04:49",
+        "time_taken": 0.6038038590340875,
+        "timestamp": "2024-12-16 14:12:34",
         "success": true,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810023",
+        "test_id": "test_run_1734354755",
         "example_id": "18",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5745,13 +5745,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 134.283756040968,
-        "timestamp": "2024-11-28 17:07:03",
+        "time_taken": 0.666243439016398,
+        "timestamp": "2024-12-16 14:12:35",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810131",
+        "test_id": "test_run_1734354756",
         "example_id": "19",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5772,13 +5772,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 107.53189027030021,
-        "timestamp": "2024-11-28 17:08:51",
+        "time_taken": 0.683624675963074,
+        "timestamp": "2024-12-16 14:12:36",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810251",
+        "test_id": "test_run_1734354757",
         "example_id": "2",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5799,13 +5799,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 119.99786069709808,
-        "timestamp": "2024-11-28 17:10:51",
+        "time_taken": 1.000134831003379,
+        "timestamp": "2024-12-16 14:12:37",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810362",
+        "test_id": "test_run_1734354758",
         "example_id": "3",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5826,13 +5826,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 111.5072333808057,
-        "timestamp": "2024-11-28 17:12:42",
+        "time_taken": 1.0384435799787752,
+        "timestamp": "2024-12-16 14:12:38",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810439",
+        "test_id": "test_run_1734354759",
         "example_id": "4",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5853,13 +5853,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 76.61139032617211,
-        "timestamp": "2024-11-28 17:13:59",
+        "time_taken": 1.271148320985958,
+        "timestamp": "2024-12-16 14:12:39",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810508",
+        "test_id": "test_run_1734354760",
         "example_id": "5",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5880,13 +5880,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 69.58472616644576,
-        "timestamp": "2024-11-28 17:15:08",
+        "time_taken": 0.7558728440199047,
+        "timestamp": "2024-12-16 14:12:40",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810576",
+        "test_id": "test_run_1734354761",
         "example_id": "6",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5907,13 +5907,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 68.01672304281965,
-        "timestamp": "2024-11-28 17:16:16",
+        "time_taken": 0.8079778110259213,
+        "timestamp": "2024-12-16 14:12:41",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732810740",
+        "test_id": "test_run_1734354847",
         "example_id": "7",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5924,7 +5924,7 @@
         },
         "input_text": "Create an application called noise_levels with a sensor called StationObservation using the SRID 4326 that have the following properties: description as String, code as String and name as String. The sensors will measure the property noise_level as Double with the units db and icon speedometer. The following spatial dimensions will be required: Municipality representing a polygon with the property cMun as Integer, District representing a polygon with the property cDis as Integer and Section representing a polygon with the property cSec as Integer. A Section is located inside a District and a District is located inside a Municipality. The sensor has a spatial group called Section containing the Section spatial dimension. The data is going to be retrieved every 300 seconds. The bounding box has a latitude of 40.42, a longitude of -3.7 and a zoom of 12.",
         "expected_dsl_output": "CREATE PRODUCT noise_levels USING 4326; CREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer); CREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality); CREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON 'speedometer') WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);",
-        "generated_dsl_output": "CREATE PRODUCT noise_levels USING 4326;\nCREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer);\nCREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality);\nCREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON speedometer) WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);\nCREATE RANGE noise_level_range (0 TO 50 AS \"VERY LOW\" COLOR \"#00FF00\", 50 TO 60 AS \"LOW\" COLOR \"#FFFF00\", 60 TO 80 AS \"MEDIUM\" COLOR \"#FFA500\", 80 TO 100 AS \"HIGH\" COLOR \"#FF0000\");\nCREATE AGGREGATION noise_level_avg (noise_level AVG);\nCREATE VIEW noise_level_view WITH noise_level_range;\nCREATE DASHBOARD noise_levels_dashboard WITH noise_level_view;",
+        "generated_dsl_output": "CREATE PRODUCT noise_levels USING 4326;\nCREATE SPATIAL DIMENSION Municipality (geometry: Polygon) WITH PROPERTIES (cMun Integer);\nCREATE SPATIAL DIMENSION District (geometry: Polygon) WITH PROPERTIES (cDis Integer) WITH PARENT (Municipality);\nCREATE SPATIAL DIMENSION Section (geometry: Polygon) WITH PROPERTIES (cSec Integer) WITH PARENT (District);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (description String, code String, name String) WITH MEASUREMENT DATA (noise_level Double UNITS 'db' ICON speedometer) WITH SPATIAL GROUP Section (Section) WITH BBOX ([40.42, -3.7], 12);\nCREATE RANGE noise_level_range (0 TO 50 AS \"VERY LOW\" COLOR \"#00FF00\", 50 TO 60 AS \"LOW\" COLOR \"#FFFF00\", 60 TO 80 AS \"MEDIUM\" COLOR \"#FFA500\", 80 TO 100 AS \"HIGH\" COLOR \"#FF0000\");\nCREATE STYLE noise_level_style (noise_level RANGE noise_level_range);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -5934,13 +5934,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 163.82207199186087,
-        "timestamp": "2024-11-28 17:19:00",
+        "time_taken": 86.03413365304004,
+        "timestamp": "2024-12-16 14:14:07",
         "success": false,
-        "bleu_score": 0.588944594572724
+        "bleu_score": 0.6364873252267648
     },
     {
-        "test_id": "test_run_1732810829",
+        "test_id": "test_run_1734354916",
         "example_id": "8",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5951,7 +5951,7 @@
         },
         "input_text": "Create an application called movement_detector with a sensor called StationObservation with sensors using the SRID 4326 that have the following properties: code as String, name as String and description as String. The sensors will measure the following parameters: vibration as Double with units 'db', min_ultrasound_bound_time as Double with units 'Hz', max_ultrasound_bound_time as Double with units 'Hz', min_microwave_bound_time as Double with units 'Hz', max_microwave_bound_time as Double with units 'Hz' and movement_detected as Boolean. The first spatial dimension is Building representing a polygon with the properties shortName as String, code as String, name as String, address as String and buildingType as String. The second spatial dimension is Floor representing a polygon with the properties shortName as String and code as String. A Floor is located inside a Building. The data will be retrieved each 300 seconds. The sensor has a spatial group called Floor containing the Floor spatial dimension. The bounding box has a latitude of 42.7, a longitude of -8.1 and a zoom of 9.",
         "expected_dsl_output": "CREATE PRODUCT movement_detector USING 4326; CREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String); CREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building); CREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
-        "generated_dsl_output": "",
+        "generated_dsl_output": "CREATE PRODUCT movement_detector USING 4326;\nCREATE SPATIAL DIMENSION Building (geometry: Polygon) WITH PROPERTIES (shortName String, code String, name String, address String, buildingType String);\nCREATE SPATIAL DIMENSION Floor (geometry: Polygon) WITH PROPERTIES (shortName String, code String) WITH PARENT (Building);\nCREATE SENSOR StationObservation (interval: 300, geometry: Point) WITH PROPERTIES (code String, name String, description String) WITH MEASUREMENT DATA (vibration Double UNITS 'db', min_ultrasound_bound_time Double UNITS 'Hz', max_ultrasound_bound_time Double UNITS 'Hz', min_microwave_bound_time Double UNITS 'Hz', max_microwave_bound_time Double UNITS 'Hz', movement_detected Boolean) WITH SPATIAL GROUP Floor (Floor) WITH BBOX ([42.7, -8.1], 9);",
         "complexity_level": "complex",
         "parameters": {
             "seed": 7,
@@ -5961,13 +5961,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 88.87620821082965,
-        "timestamp": "2024-11-28 17:20:29",
-        "success": false,
-        "bleu_score": 0
+        "time_taken": 69.40411688800668,
+        "timestamp": "2024-12-16 14:15:16",
+        "success": true,
+        "bleu_score": 1.0
     },
     {
-        "test_id": "test_run_1732810923",
+        "test_id": "test_run_1734354920",
         "example_id": "9",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -5988,13 +5988,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 93.70464838901535,
-        "timestamp": "2024-11-28 17:22:03",
+        "time_taken": 3.7926490739919245,
+        "timestamp": "2024-12-16 14:15:20",
         "success": false,
         "bleu_score": 0
     },
     {
-        "test_id": "test_run_1732811098",
+        "test_id": "test_run_1734355022",
         "example_id": "10",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -6015,13 +6015,13 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 175.2433942789212,
-        "timestamp": "2024-11-28 17:24:58",
+        "time_taken": 101.53235422598664,
+        "timestamp": "2024-12-16 14:17:02",
         "success": false,
         "bleu_score": 0.3428399091404
     },
     {
-        "test_id": "test_run_1732811182",
+        "test_id": "test_run_1734355026",
         "example_id": "11",
         "model_name": "Codellama (70B) full precision",
         "system_prompt_version": {
@@ -6042,8 +6042,8 @@
             "top_p": 0.9,
             "temperature": 0.5
         },
-        "time_taken": 83.41979117924348,
-        "timestamp": "2024-11-28 17:26:22",
+        "time_taken": 3.7687205330003053,
+        "timestamp": "2024-12-16 14:17:06",
         "success": false,
         "bleu_score": 0
     }
