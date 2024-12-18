@@ -490,6 +490,38 @@
             "temperature": 0.5
         }
     },
+    "Falcon3 (10B) fp": {
+        "model_name": "Falcon3 (10B) fp",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "falcon3:10b-instruct-fp16",
+        "vram_requirement": "71GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
+    },
+    "Falcon3 (7B) fp": {
+        "model_name": "Falcon3 (7B) fp",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "falcon3:7b-instruct-fp16",
+        "vram_requirement": "71GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
+    },
     "PaLM (62B)": {
         "model_name": "PaLM (62B)",
         "type": "open source",
