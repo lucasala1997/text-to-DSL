@@ -207,12 +207,12 @@ def run_pipeline(selected_steps):
             print('Analysis saved.')
             print('--------------------------')
 
-        if 'generate_visualizations' in selected_steps:
-            print('Generating plots...')
-            logging.info('Generating visualizations...')
-            generate_visualizations()
-            print('Plot saved.')
-            print('--------------------------')
+        # if 'generate_visualizations' in selected_steps:
+        #     print('Generating plots...')
+        #     logging.info('Generating visualizations...')
+        #     generate_visualizations()
+        #     print('Plot saved.')
+        #     print('--------------------------')
 
         if 'generate_best_results' in selected_steps:
             print('Generating best results table...')

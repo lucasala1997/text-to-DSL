@@ -46,5 +46,5 @@ def process_json(json_path):
     print(f"Processed JSON saved to: {new_json_path}")
 
 # Example usage
-json_path = "/home/lucasala/text_to_dsl/text-to-DSL/logs/models_results/Deepseek_(70B)_fp.json"
+json_path = "/home/lucasala/text_to_dsl/text-to-DSL/logs/models_results/Deepseek_r1_(70B)_fp.json"
 process_json(json_path)
