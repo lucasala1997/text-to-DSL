@@ -16,8 +16,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.0828465861268342,
         "timestamp": "2025-02-06 11:32:48",
@@ -41,8 +40,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.7175289397127926,
         "timestamp": "2025-02-06 11:32:52",
@@ -66,8 +64,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.6851461622864008,
         "timestamp": "2025-02-06 11:32:52",
@@ -91,8 +88,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.000686767976731,
         "timestamp": "2025-02-06 11:32:53",
@@ -116,8 +112,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.270584319718182,
         "timestamp": "2025-02-06 11:32:55",
@@ -141,8 +136,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.5409564031288028,
         "timestamp": "2025-02-06 11:32:56",
@@ -166,8 +160,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.8469352871179581,
         "timestamp": "2025-02-06 11:32:57",
@@ -191,8 +184,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.516144152265042,
         "timestamp": "2025-02-06 11:32:59",
@@ -216,8 +208,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.138762870337814,
         "timestamp": "2025-02-06 11:33:01",
@@ -241,8 +232,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.1639647791162133,
         "timestamp": "2025-02-06 11:33:02",
@@ -266,8 +256,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.140465856064111,
         "timestamp": "2025-02-06 11:33:03",
@@ -291,8 +280,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.180387598928064,
         "timestamp": "2025-02-06 11:33:05",
@@ -316,8 +304,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.7777114170603454,
         "timestamp": "2025-02-06 11:33:07",
@@ -341,8 +328,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.6250728662125766,
         "timestamp": "2025-02-06 11:33:09",
@@ -366,8 +352,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.524215484969318,
         "timestamp": "2025-02-06 11:33:10",
@@ -391,8 +376,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.3817697777412832,
         "timestamp": "2025-02-06 11:33:12",
@@ -416,8 +400,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.6161869610659778,
         "timestamp": "2025-02-06 11:33:13",
@@ -441,8 +424,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 5.200177523773164,
         "timestamp": "2025-02-06 11:33:18",
@@ -466,8 +448,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 6.527422273997217,
         "timestamp": "2025-02-06 11:33:25",
@@ -491,8 +472,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.430459985975176,
         "timestamp": "2025-02-06 11:33:28",
@@ -516,8 +496,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 4.454657454974949,
         "timestamp": "2025-02-06 11:33:33",
@@ -541,8 +520,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.1648990702815354,
         "timestamp": "2025-02-06 11:33:35",
@@ -566,8 +544,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.162338466849178,
         "timestamp": "2025-02-06 11:33:38",
@@ -591,8 +568,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.584292666055262,
         "timestamp": "2025-02-06 11:33:41",
@@ -616,8 +592,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.608547617215663,
         "timestamp": "2025-02-06 11:33:44",
@@ -641,8 +616,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.107562070712447,
         "timestamp": "2025-02-06 11:33:46",
@@ -666,8 +640,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.7972647678107023,
         "timestamp": "2025-02-06 11:33:49",
@@ -691,8 +664,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.63310519605875,
         "timestamp": "2025-02-06 11:33:52",
@@ -716,8 +688,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.8640891672112048,
         "timestamp": "2025-02-06 11:33:53",
@@ -741,8 +712,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.5773910521529615,
         "timestamp": "2025-02-06 11:33:54",
@@ -766,8 +736,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 4.519220010843128,
         "timestamp": "2025-02-06 11:33:59",
@@ -791,8 +760,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.0646419986151159,
         "timestamp": "2025-02-06 11:34:00",
@@ -816,8 +784,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.3578689279966056,
         "timestamp": "2025-02-06 11:34:01",
@@ -841,8 +808,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.3722858778201044,
         "timestamp": "2025-02-06 11:34:03",
@@ -866,8 +832,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.9108222550712526,
         "timestamp": "2025-02-06 11:34:04",
@@ -891,8 +856,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.205727742984891,
         "timestamp": "2025-02-06 11:34:05",
@@ -916,8 +880,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.8323254641145468,
         "timestamp": "2025-02-06 11:34:06",
@@ -941,8 +904,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.7955356822349131,
         "timestamp": "2025-02-06 11:34:06",
@@ -966,8 +928,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.017828432843089,
         "timestamp": "2025-02-06 11:34:08",
@@ -991,8 +952,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.898796710651368,
         "timestamp": "2025-02-06 11:34:09",
@@ -1016,8 +976,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 3.056202072184533,
         "timestamp": "2025-02-06 11:34:12",
@@ -1041,8 +1000,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.9410366690717638,
         "timestamp": "2025-02-06 11:34:14",
@@ -1066,8 +1024,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.4948063557967544,
         "timestamp": "2025-02-06 11:34:16",
@@ -1091,8 +1048,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.9744158936664462,
         "timestamp": "2025-02-06 11:34:17",
@@ -1116,8 +1072,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.499047385994345,
         "timestamp": "2025-02-06 11:34:18",
@@ -1141,8 +1096,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.8881846042349935,
         "timestamp": "2025-02-06 11:34:20",
@@ -1166,8 +1120,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 8.645772158633918,
         "timestamp": "2025-02-06 11:34:29",
@@ -1191,8 +1144,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 4.214731943793595,
         "timestamp": "2025-02-06 11:34:33",
@@ -1216,8 +1168,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 6.0278063849546015,
         "timestamp": "2025-02-06 11:34:39",
@@ -1241,8 +1192,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.1003697752021253,
         "timestamp": "2025-02-06 11:34:41",
@@ -1266,8 +1216,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 7.52163552865386,
         "timestamp": "2025-02-06 11:34:49",
@@ -1291,8 +1240,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 3.444575484842062,
         "timestamp": "2025-02-06 11:34:52",
@@ -1316,8 +1264,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.775903125759214,
         "timestamp": "2025-02-06 11:34:55",
@@ -1341,8 +1288,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.8110202411189675,
         "timestamp": "2025-02-06 11:34:57",
@@ -1366,8 +1312,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.4859891906380653,
         "timestamp": "2025-02-06 11:34:59",
@@ -1391,8 +1336,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.3086881348863244,
         "timestamp": "2025-02-06 11:35:02",
@@ -1416,8 +1360,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.1664602127857506,
         "timestamp": "2025-02-06 11:35:03",
@@ -1441,8 +1384,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.7503366768360138,
         "timestamp": "2025-02-06 11:35:04",
@@ -1466,8 +1408,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.722906680777669,
         "timestamp": "2025-02-06 11:35:04",
@@ -1491,8 +1432,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.9668599306605756,
         "timestamp": "2025-02-06 11:35:05",
@@ -1516,8 +1456,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.2880964218638837,
         "timestamp": "2025-02-06 11:35:07",
@@ -1541,8 +1480,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.8685281979851425,
         "timestamp": "2025-02-06 11:35:09",
@@ -1566,8 +1504,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.9058235688135028,
         "timestamp": "2025-02-06 11:35:09",
@@ -1591,8 +1528,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.1206499822437763,
         "timestamp": "2025-02-06 11:35:11",
@@ -1616,8 +1552,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.9448224352672696,
         "timestamp": "2025-02-06 11:35:12",
@@ -1641,8 +1576,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 0.8270305572077632,
         "timestamp": "2025-02-06 11:35:12",
@@ -1666,8 +1600,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.1791238551959395,
         "timestamp": "2025-02-06 11:35:14",
@@ -1691,8 +1624,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.5477337022311985,
         "timestamp": "2025-02-06 11:35:15",
@@ -1716,8 +1648,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.8553021969273686,
         "timestamp": "2025-02-06 11:35:17",
@@ -1741,8 +1672,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.2387448982335627,
         "timestamp": "2025-02-06 11:35:19",
@@ -1766,8 +1696,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.5802685329690576,
         "timestamp": "2025-02-06 11:35:21",
@@ -1791,8 +1720,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.0369070349261165,
         "timestamp": "2025-02-06 11:35:22",
@@ -1816,8 +1744,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.4147565895691514,
         "timestamp": "2025-02-06 11:35:23",
@@ -1841,8 +1768,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.564276593271643,
         "timestamp": "2025-02-06 11:35:25",
@@ -1866,8 +1792,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.2739068660885096,
         "timestamp": "2025-02-06 11:35:28",
@@ -1891,8 +1816,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 4.584145898930728,
         "timestamp": "2025-02-06 11:35:33",
@@ -1916,8 +1840,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 7.442903414834291,
         "timestamp": "2025-02-06 11:35:40",
@@ -1941,8 +1864,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.3296508309431374,
         "timestamp": "2025-02-06 11:35:43",
@@ -1966,8 +1888,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 4.203023471869528,
         "timestamp": "2025-02-06 11:35:47",
@@ -1991,8 +1912,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.3323037871159613,
         "timestamp": "2025-02-06 11:35:50",
@@ -2016,8 +1936,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.377341496758163,
         "timestamp": "2025-02-06 11:35:53",
@@ -2041,8 +1960,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 1.898035524878651,
         "timestamp": "2025-02-06 11:35:55",
@@ -2066,8 +1984,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 2.9282991620711982,
         "timestamp": "2025-02-06 11:35:58",
@@ -2091,8 +2008,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "time_taken": 3.503523317165673,
         "timestamp": "2025-02-06 11:36:02",
@@ -2116,8 +2032,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.0759935160167515,
         "timestamp": "2025-02-06 11:36:03",
@@ -2141,8 +2056,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.6428770306520164,
         "timestamp": "2025-02-06 11:36:04",
@@ -2166,8 +2080,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.8920758147723973,
         "timestamp": "2025-02-06 11:36:04",
@@ -2191,8 +2104,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.9747645682655275,
         "timestamp": "2025-02-06 11:36:05",
@@ -2216,8 +2128,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 4.573309641331434,
         "timestamp": "2025-02-06 11:36:10",
@@ -2241,8 +2152,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.6225606328807771,
         "timestamp": "2025-02-06 11:36:12",
@@ -2266,8 +2176,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.584391221869737,
         "timestamp": "2025-02-06 11:36:13",
@@ -2291,8 +2200,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.7187381582334638,
         "timestamp": "2025-02-06 11:36:15",
@@ -2316,8 +2224,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 0.7548247901722789,
         "timestamp": "2025-02-06 11:36:16",
@@ -2341,8 +2248,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 5.530268200207502,
         "timestamp": "2025-02-06 11:36:21",
@@ -2366,8 +2272,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.7557156910188496,
         "timestamp": "2025-02-06 11:36:24",
@@ -2391,8 +2296,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.6052869008854032,
         "timestamp": "2025-02-06 11:36:26",
@@ -2416,8 +2320,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.7658804268576205,
         "timestamp": "2025-02-06 11:36:27",
@@ -2441,8 +2344,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.179903720971197,
         "timestamp": "2025-02-06 11:36:30",
@@ -2466,8 +2368,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.527777578216046,
         "timestamp": "2025-02-06 11:36:31",
@@ -2491,8 +2392,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.196084809023887,
         "timestamp": "2025-02-06 11:36:33",
@@ -2516,8 +2416,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.2658278420567513,
         "timestamp": "2025-02-06 11:36:35",
@@ -2541,8 +2440,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.5758028076961637,
         "timestamp": "2025-02-06 11:36:36",
@@ -2566,8 +2464,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 7.024970958940685,
         "timestamp": "2025-02-06 11:36:43",
@@ -2591,8 +2488,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 10.620673018041998,
         "timestamp": "2025-02-06 11:36:54",
@@ -2616,8 +2512,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 4.927219958975911,
         "timestamp": "2025-02-06 11:36:59",
@@ -2641,8 +2536,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 1.9204527591355145,
         "timestamp": "2025-02-06 11:37:01",
@@ -2666,8 +2560,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 4.044468855019659,
         "timestamp": "2025-02-06 11:37:05",
@@ -2691,8 +2584,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.8904026690870523,
         "timestamp": "2025-02-06 11:37:08",
@@ -2716,8 +2608,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 3.260640538763255,
         "timestamp": "2025-02-06 11:37:11",
@@ -2741,8 +2632,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.7014535241760314,
         "timestamp": "2025-02-06 11:37:14",
@@ -2766,8 +2656,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 3.513959104195237,
         "timestamp": "2025-02-06 11:37:17",
@@ -2791,8 +2680,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "time_taken": 2.4402267867699265,
         "timestamp": "2025-02-06 11:37:20",
@@ -2816,8 +2704,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.8839462781324983,
         "timestamp": "2025-02-06 11:37:21",
@@ -2841,8 +2728,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.6584788379259408,
         "timestamp": "2025-02-06 11:37:21",
@@ -2866,8 +2752,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.7248822199180722,
         "timestamp": "2025-02-06 11:37:22",
@@ -2891,8 +2776,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.9886047537438571,
         "timestamp": "2025-02-06 11:37:23",
@@ -2916,8 +2800,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.5737153878435493,
         "timestamp": "2025-02-06 11:37:25",
@@ -2941,8 +2824,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.595067533198744,
         "timestamp": "2025-02-06 11:37:26",
@@ -2966,8 +2848,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.7164383651688695,
         "timestamp": "2025-02-06 11:37:27",
@@ -2991,8 +2872,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.0560470730997622,
         "timestamp": "2025-02-06 11:37:28",
@@ -3016,8 +2896,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.6476209098473191,
         "timestamp": "2025-02-06 11:37:29",
@@ -3041,8 +2920,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.8093797173351049,
         "timestamp": "2025-02-06 11:37:30",
@@ -3066,8 +2944,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.3114092471078038,
         "timestamp": "2025-02-06 11:37:31",
@@ -3091,8 +2968,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.5690260147675872,
         "timestamp": "2025-02-06 11:37:32",
@@ -3116,8 +2992,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.9877726370468736,
         "timestamp": "2025-02-06 11:37:34",
@@ -3141,8 +3016,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.631168921943754,
         "timestamp": "2025-02-06 11:37:37",
@@ -3166,8 +3040,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.640230274759233,
         "timestamp": "2025-02-06 11:37:39",
@@ -3191,8 +3064,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.0863506798632443,
         "timestamp": "2025-02-06 11:37:40",
@@ -3216,8 +3088,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.2155575351789594,
         "timestamp": "2025-02-06 11:37:41",
@@ -3241,8 +3112,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.612328890711069,
         "timestamp": "2025-02-06 11:37:44",
@@ -3266,8 +3136,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 9.491063895169646,
         "timestamp": "2025-02-06 11:37:53",
@@ -3291,8 +3160,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 4.93504733312875,
         "timestamp": "2025-02-06 11:37:58",
@@ -3316,8 +3184,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 8.338416061829776,
         "timestamp": "2025-02-06 11:38:07",
@@ -3341,8 +3208,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.4062387691810727,
         "timestamp": "2025-02-06 11:38:09",
@@ -3366,8 +3232,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 3.458593748975545,
         "timestamp": "2025-02-06 11:38:12",
@@ -3391,8 +3256,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 3.2774664917960763,
         "timestamp": "2025-02-06 11:38:16",
@@ -3416,8 +3280,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.9967306652106345,
         "timestamp": "2025-02-06 11:38:19",
@@ -3441,8 +3304,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.555655399337411,
         "timestamp": "2025-02-06 11:38:21",
@@ -3466,8 +3328,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 6.662093983963132,
         "timestamp": "2025-02-06 11:38:28",
@@ -3491,8 +3352,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.2902815002016723,
         "timestamp": "2025-02-06 11:38:30",
@@ -3516,8 +3376,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.9380041742697358,
         "timestamp": "2025-02-06 11:38:32",
@@ -3541,8 +3400,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.6552912029437721,
         "timestamp": "2025-02-06 11:38:33",
@@ -3566,8 +3424,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.0397950569167733,
         "timestamp": "2025-02-06 11:38:34",
@@ -3591,8 +3448,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.7933976608328521,
         "timestamp": "2025-02-06 11:38:35",
@@ -3616,8 +3472,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.32075718883425,
         "timestamp": "2025-02-06 11:38:36",
@@ -3641,8 +3496,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.6832914371043444,
         "timestamp": "2025-02-06 11:38:38",
@@ -3666,8 +3520,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.8460745173506439,
         "timestamp": "2025-02-06 11:38:39",
@@ -3691,8 +3544,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.0739675811491907,
         "timestamp": "2025-02-06 11:38:40",
@@ -3716,8 +3568,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.8871649811044335,
         "timestamp": "2025-02-06 11:38:41",
@@ -3741,8 +3592,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.647320905700326,
         "timestamp": "2025-02-06 11:38:41",
@@ -3766,8 +3616,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.1439713751897216,
         "timestamp": "2025-02-06 11:38:43",
@@ -3791,8 +3640,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.8016305770725012,
         "timestamp": "2025-02-06 11:38:44",
@@ -3816,8 +3664,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.9182651941664517,
         "timestamp": "2025-02-06 11:38:46",
@@ -3841,8 +3688,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.5986839174292982,
         "timestamp": "2025-02-06 11:38:48",
@@ -3866,8 +3712,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.3868518359959126,
         "timestamp": "2025-02-06 11:38:49",
@@ -3891,8 +3736,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.3250487758778036,
         "timestamp": "2025-02-06 11:38:51",
@@ -3916,8 +3760,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.6733354809693992,
         "timestamp": "2025-02-06 11:38:52",
@@ -3941,8 +3784,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.213907273951918,
         "timestamp": "2025-02-06 11:38:55",
@@ -3966,8 +3808,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 4.599133104085922,
         "timestamp": "2025-02-06 11:38:59",
@@ -3991,8 +3832,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 4.99210801301524,
         "timestamp": "2025-02-06 11:39:04",
@@ -4016,8 +3856,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 6.508197183255106,
         "timestamp": "2025-02-06 11:39:11",
@@ -4041,8 +3880,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.0352422879077494,
         "timestamp": "2025-02-06 11:39:13",
@@ -4066,8 +3904,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 3.045261942781508,
         "timestamp": "2025-02-06 11:39:16",
@@ -4091,8 +3928,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 5.982180670835078,
         "timestamp": "2025-02-06 11:39:22",
@@ -4116,8 +3952,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 4.283444372937083,
         "timestamp": "2025-02-06 11:39:26",
@@ -4141,8 +3976,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.8115654443390667,
         "timestamp": "2025-02-06 11:39:28",
@@ -4166,8 +4000,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 4.224899458233267,
         "timestamp": "2025-02-06 11:39:32",
@@ -4191,8 +4024,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.959617585875094,
         "timestamp": "2025-02-06 11:39:35",
@@ -4216,8 +4048,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.7898496030829847,
         "timestamp": "2025-02-06 11:39:36",
@@ -4241,8 +4072,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.6235794499516487,
         "timestamp": "2025-02-06 11:39:38",
@@ -4266,8 +4096,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.7030205042101443,
         "timestamp": "2025-02-06 11:39:38",
@@ -4291,8 +4120,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.744493633043021,
         "timestamp": "2025-02-06 11:39:39",
@@ -4316,8 +4144,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.137158207129687,
         "timestamp": "2025-02-06 11:39:40",
@@ -4341,8 +4168,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.3608079962432384,
         "timestamp": "2025-02-06 11:39:42",
@@ -4366,8 +4192,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.6130264969542623,
         "timestamp": "2025-02-06 11:39:43",
@@ -4391,8 +4216,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.008783002384007,
         "timestamp": "2025-02-06 11:39:44",
@@ -4416,8 +4240,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 6.117148234974593,
         "timestamp": "2025-02-06 11:39:50",
@@ -4441,8 +4264,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 0.8095281636342406,
         "timestamp": "2025-02-06 11:39:51",
@@ -4466,8 +4288,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.140825199894607,
         "timestamp": "2025-02-06 11:39:52",
@@ -4491,8 +4312,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.4171978291124105,
         "timestamp": "2025-02-06 11:39:54",
@@ -4516,8 +4336,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 6.8756202277727425,
         "timestamp": "2025-02-06 11:40:01",
@@ -4541,8 +4360,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.7011273088864982,
         "timestamp": "2025-02-06 11:40:02",
@@ -4566,8 +4384,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.9374660919420421,
         "timestamp": "2025-02-06 11:40:04",
@@ -4591,8 +4408,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.0978707820177078,
         "timestamp": "2025-02-06 11:40:05",
@@ -4616,8 +4432,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.1695464728400111,
         "timestamp": "2025-02-06 11:40:07",
@@ -4641,8 +4456,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 1.5964581058360636,
         "timestamp": "2025-02-06 11:40:08",
@@ -4666,8 +4480,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 3.1089074281044304,
         "timestamp": "2025-02-06 11:40:11",
@@ -4691,8 +4504,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 6.093398365192115,
         "timestamp": "2025-02-06 11:40:17",
@@ -4716,8 +4528,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 8.178741930052638,
         "timestamp": "2025-02-06 11:40:26",
@@ -4741,8 +4552,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.2817246951162815,
         "timestamp": "2025-02-06 11:40:28",
@@ -4766,8 +4576,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 3.074715218041092,
         "timestamp": "2025-02-06 11:40:31",
@@ -4791,8 +4600,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.5317403692752123,
         "timestamp": "2025-02-06 11:40:34",
@@ -4816,8 +4624,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 3.256741350982338,
         "timestamp": "2025-02-06 11:40:37",
@@ -4841,8 +4648,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.308498752769083,
         "timestamp": "2025-02-06 11:40:39",
@@ -4866,8 +4672,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.2351148943416774,
         "timestamp": "2025-02-06 11:40:41",
@@ -4891,8 +4696,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "time_taken": 2.267599418759346,
         "timestamp": "2025-02-06 11:40:44",
@@ -4916,8 +4720,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.830242179799825,
         "timestamp": "2025-02-06 11:40:45",
@@ -4941,8 +4744,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.6393427029252052,
         "timestamp": "2025-02-06 11:40:45",
@@ -4966,8 +4768,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.7346545257605612,
         "timestamp": "2025-02-06 11:40:46",
@@ -4991,8 +4792,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.8639666861854494,
         "timestamp": "2025-02-06 11:40:47",
@@ -5016,8 +4816,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.1863166419789195,
         "timestamp": "2025-02-06 11:40:48",
@@ -5041,8 +4840,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.4722224078141153,
         "timestamp": "2025-02-06 11:40:49",
@@ -5066,8 +4864,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.6986393402330577,
         "timestamp": "2025-02-06 11:40:51",
@@ -5091,8 +4888,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.3276084931567311,
         "timestamp": "2025-02-06 11:40:53",
@@ -5116,8 +4912,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.3621059372089803,
         "timestamp": "2025-02-06 11:40:54",
@@ -5141,8 +4936,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.9042211691848934,
         "timestamp": "2025-02-06 11:40:55",
@@ -5166,8 +4960,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.1040601977147162,
         "timestamp": "2025-02-06 11:40:56",
@@ -5191,8 +4984,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 3.7412192379124463,
         "timestamp": "2025-02-06 11:41:00",
@@ -5216,8 +5008,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.089440147858113,
         "timestamp": "2025-02-06 11:41:02",
@@ -5241,8 +5032,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.5472714439965785,
         "timestamp": "2025-02-06 11:41:03",
@@ -5266,8 +5056,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.061479658819735,
         "timestamp": "2025-02-06 11:41:05",
@@ -5291,8 +5080,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 0.9820474190637469,
         "timestamp": "2025-02-06 11:41:06",
@@ -5316,8 +5104,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.1962043587118387,
         "timestamp": "2025-02-06 11:41:08",
@@ -5341,8 +5128,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 3.536423181183636,
         "timestamp": "2025-02-06 11:41:11",
@@ -5366,8 +5152,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 3.7008535931818187,
         "timestamp": "2025-02-06 11:41:15",
@@ -5391,8 +5176,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 6.19090754725039,
         "timestamp": "2025-02-06 11:41:21",
@@ -5416,8 +5200,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 9.260016332846135,
         "timestamp": "2025-02-06 11:41:30",
@@ -5441,8 +5224,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.619869763031602,
         "timestamp": "2025-02-06 11:41:32",
@@ -5466,8 +5248,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 3.4648953499272466,
         "timestamp": "2025-02-06 11:41:36",
@@ -5491,8 +5272,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 3.622399701271206,
         "timestamp": "2025-02-06 11:41:39",
@@ -5516,8 +5296,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 4.312578324228525,
         "timestamp": "2025-02-06 11:41:44",
@@ -5541,8 +5320,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.6536429622210562,
         "timestamp": "2025-02-06 11:41:46",
@@ -5566,8 +5344,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 1.920400891918689,
         "timestamp": "2025-02-06 11:41:48",
@@ -5591,8 +5368,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "time_taken": 2.1067696600221097,
         "timestamp": "2025-02-06 11:41:50",

@@ -1,7 +1,7 @@
 {
     "parameter_grid": [
       {
-        "temperature": 0.1
+        "temperature": 0
       },
       {
         "top_p": 0.8

@@ -3,8 +3,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.7142857142857143,
@@ -22,8 +21,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6785714285714286,
@@ -41,8 +39,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6785714285714286,
@@ -60,8 +57,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6785714285714286,
@@ -79,8 +75,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6785714285714286,
@@ -98,8 +93,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6785714285714286,
@@ -117,8 +111,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6428571428571429,
@@ -136,8 +129,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.6785714285714286,

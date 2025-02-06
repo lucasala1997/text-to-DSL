@@ -3,27 +3,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.1,
-            "top_k": 50
-        },
-        "system_prompt_version": "1.0",
-        "overall_accuracy": 0.9642857142857143,
-        "complex_accuracy": 0.9,
-        "simple_accuracy": 1.0,
-        "average_bleu_score": 0.9405434847135961,
-        "complex_bleu_score": 0.9922512150886224,
-        "simple_bleu_score": 0.9118169678385813,
-        "average_time": 4.599491911940277,
-        "average_complex_time": 3.5314574995078147,
-        "average_simple_time": 5.192844363291645,
-        "total_examples": 28
-    },
-    {
-        "parameters": {
-            "seed": 7,
-            "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 1.0,
@@ -41,8 +21,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.9642857142857143,
@@ -60,8 +39,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 50
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.9642857142857143,
@@ -79,8 +57,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0,
-            "top_k": 30
+            "temperature": 0
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 1.0,
@@ -98,8 +75,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.9642857142857143,
@@ -117,8 +93,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.9642857142857143,
@@ -136,8 +111,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 50
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.9642857142857143,
@@ -155,8 +129,7 @@
         "parameters": {
             "seed": 7,
             "top_p": 0.9,
-            "temperature": 0.5,
-            "top_k": 30
+            "temperature": 0.5
         },
         "system_prompt_version": "1.0",
         "overall_accuracy": 0.9285714285714286,
