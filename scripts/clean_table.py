@@ -9,10 +9,13 @@ def clean_model_name(name):
     name = name.replace("full precision", "fp")  # Replace "full precision" with "fp"
     return name
 
-def format_parameters(param_str):
+def format_parameters(param_str, model_name):
     try:
         params = json.loads(param_str.replace("'", "\""))  # Ensure valid JSON format
-        formatted = f"top_k: {params.get('top_k', 'N/A')}, top_p: {params.get('top_p', 'N/A')}, t: {params.get('temperature', 'N/A')}"
+        if "OpenAI" in model_name:
+            formatted = f"top_p: {params.get('top_p', 'N/A')}, t: {params.get('temperature', 'N/A')}"
+        else:
+            formatted = f"top_k: {params.get('top_k', 'N/A')}, top_p: {params.get('top_p', 'N/A')}, t: {params.get('temperature', 'N/A')}"
         return formatted
     except json.JSONDecodeError:
         return "Invalid Params"
@@ -33,15 +36,14 @@ def process_csv(file_path, output_path):
     }, inplace=True)
     
     df["Models"] = df["Models"].apply(clean_model_name)
-    df["parameters"] = df["parameters"].apply(format_parameters)
+    df["parameters"] = df.apply(lambda row: format_parameters(row["parameters"], row["Models"]), axis=1)
     
     # Drop unnecessary columns
     df.drop(columns=["average_time", "average_complex_time", "average_simple_time", "system_prompt_version", "total_examples"], inplace=True)
     
-    # Limit all other numerical columns to at most 2 decimal places
-    for col in df.columns:
-        if df[col].dtype == 'float64':  # Apply rounding only to float columns
-            df[col] = df[col].round(2)
+    # Limit all other numerical columns to at most 3 decimal places, keeping leading digits
+    for col in df.select_dtypes(include=['float64']).columns:
+        df[col] = df[col].apply(lambda x: round(x, 3))
     
     # Save the processed CSV
     df.to_csv(output_path, index=False)
