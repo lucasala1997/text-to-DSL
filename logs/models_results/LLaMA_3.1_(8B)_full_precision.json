@@ -698,7 +698,7 @@
         },
         "time_taken": 2547.3672898751684,
         "timestamp": "2024-12-05 01:49:58",
-        "success": null,
+        "success": false,
         "bleu_score": 0.00124712871423636
     },
     {
@@ -725,7 +725,7 @@
         },
         "time_taken": 4.955270870123059,
         "timestamp": "2024-12-05 01:50:03",
-        "success": false,
+        "success": true,
         "bleu_score": 1.0
     },
     {
@@ -1454,7 +1454,7 @@
         },
         "time_taken": 2547.1181546887383,
         "timestamp": "2024-12-05 02:34:09",
-        "success": null,
+        "success": false,
         "bleu_score": 0.00124712871423636
     },
     {
@@ -1481,7 +1481,7 @@
         },
         "time_taken": 4.913633080665022,
         "timestamp": "2024-12-05 02:34:14",
-        "success": false,
+        "success": true,
         "bleu_score": 1.0
     },
     {
@@ -2210,7 +2210,7 @@
         },
         "time_taken": 2547.3195794778876,
         "timestamp": "2024-12-05 03:18:22",
-        "success": null,
+        "success": false,
         "bleu_score": 0.00124712871423636
     },
     {
@@ -2237,7 +2237,7 @@
         },
         "time_taken": 4.969213806092739,
         "timestamp": "2024-12-05 03:18:27",
-        "success": false,
+        "success": true,
         "bleu_score": 1.0
     },
     {
@@ -2966,7 +2966,7 @@
         },
         "time_taken": 2546.8609939017333,
         "timestamp": "2024-12-05 04:02:35",
-        "success": null,
+        "success": false,
         "bleu_score": 0.00124712871423636
     },
     {
@@ -2993,7 +2993,7 @@
         },
         "time_taken": 4.947384335100651,
         "timestamp": "2024-12-05 04:02:40",
-        "success": false,
+        "success": true,
         "bleu_score": 1.0
     },
     {

@@ -19,7 +19,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 309.81023201718926,
         "timestamp": "2024-11-25 18:16:01",
@@ -46,7 +46,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6360530545935035,
         "timestamp": "2024-11-25 18:16:01",
@@ -73,7 +73,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6302184029482305,
         "timestamp": "2024-11-25 18:16:02",
@@ -100,7 +100,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.8899647989310324,
         "timestamp": "2024-11-25 18:16:03",
@@ -127,7 +127,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.4681748119182885,
         "timestamp": "2024-11-25 18:16:04",
@@ -154,7 +154,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.401498249731958,
         "timestamp": "2024-11-25 18:16:07",
@@ -181,7 +181,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.5662132077850401,
         "timestamp": "2024-11-25 18:16:08",
@@ -208,7 +208,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.2124814419075847,
         "timestamp": "2024-11-25 18:16:09",
@@ -235,7 +235,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.636158739682287,
         "timestamp": "2024-11-25 18:16:10",
@@ -262,7 +262,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6278377780690789,
         "timestamp": "2024-11-25 18:16:11",
@@ -289,7 +289,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.417672242037952,
         "timestamp": "2024-11-25 18:16:12",
@@ -316,7 +316,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.0770787526853383,
         "timestamp": "2024-11-25 18:16:14",
@@ -343,7 +343,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.720058436971158,
         "timestamp": "2024-11-25 18:16:17",
@@ -370,7 +370,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.6551789199002087,
         "timestamp": "2024-11-25 18:16:18",
@@ -397,7 +397,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.1635958328843117,
         "timestamp": "2024-11-25 18:16:21",
@@ -424,7 +424,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.7994400351308286,
         "timestamp": "2024-11-25 18:16:22",
@@ -451,7 +451,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.5689264787361026,
         "timestamp": "2024-11-25 18:16:24",
@@ -478,7 +478,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.688341320026666,
         "timestamp": "2024-11-25 18:16:27",
@@ -505,7 +505,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 4.304906445089728,
         "timestamp": "2024-11-25 18:16:31",
@@ -532,7 +532,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 5.217433870770037,
         "timestamp": "2024-11-25 18:16:36",
@@ -559,7 +559,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 6.325860924087465,
         "timestamp": "2024-11-25 18:16:43",
@@ -586,7 +586,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.683621761854738,
         "timestamp": "2024-11-25 18:16:45",
@@ -613,7 +613,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.5040965541265905,
         "timestamp": "2024-11-25 18:16:49",
@@ -640,7 +640,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.0674070701934397,
         "timestamp": "2024-11-25 18:16:52",
@@ -667,7 +667,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.522535264957696,
         "timestamp": "2024-11-25 18:16:55",
@@ -694,7 +694,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.494905963074416,
         "timestamp": "2024-11-25 18:16:58",
@@ -721,7 +721,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.266416479833424,
         "timestamp": "2024-11-25 18:17:01",
@@ -748,7 +748,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.5190147757530212,
         "timestamp": "2024-11-25 18:17:04",
@@ -775,7 +775,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.4850102816708386,
         "timestamp": "2024-11-25 18:17:05",
@@ -802,7 +802,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6637717327103019,
         "timestamp": "2024-11-25 18:17:06",
@@ -829,7 +829,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6647110502235591,
         "timestamp": "2024-11-25 18:17:06",
@@ -856,7 +856,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.9205175982788205,
         "timestamp": "2024-11-25 18:17:07",
@@ -883,7 +883,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.4897506688721478,
         "timestamp": "2024-11-25 18:17:09",
@@ -910,7 +910,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.4296138579957187,
         "timestamp": "2024-11-25 18:17:11",
@@ -937,7 +937,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.5758665837347507,
         "timestamp": "2024-11-25 18:17:13",
@@ -964,7 +964,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.2046906519681215,
         "timestamp": "2024-11-25 18:17:14",
@@ -991,7 +991,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.7030084729194641,
         "timestamp": "2024-11-25 18:17:15",
@@ -1018,7 +1018,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6751266219653189,
         "timestamp": "2024-11-25 18:17:16",
@@ -1045,7 +1045,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.3261594246141613,
         "timestamp": "2024-11-25 18:17:17",
@@ -1072,7 +1072,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.0328639950603247,
         "timestamp": "2024-11-25 18:17:19",
@@ -1099,7 +1099,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.611120827961713,
         "timestamp": "2024-11-25 18:17:22",
@@ -1126,7 +1126,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.6367232371121645,
         "timestamp": "2024-11-25 18:17:23",
@@ -1153,7 +1153,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.113058667164296,
         "timestamp": "2024-11-25 18:17:25",
@@ -1180,7 +1180,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.7805773401632905,
         "timestamp": "2024-11-25 18:17:27",
@@ -1207,7 +1207,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.5590473851189017,
         "timestamp": "2024-11-25 18:17:29",
@@ -1234,7 +1234,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.6866888771764934,
         "timestamp": "2024-11-25 18:17:31",
@@ -1261,7 +1261,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 4.279738385695964,
         "timestamp": "2024-11-25 18:17:36",
@@ -1288,7 +1288,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 5.247097328770906,
         "timestamp": "2024-11-25 18:17:41",
@@ -1315,7 +1315,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 6.284557776059955,
         "timestamp": "2024-11-25 18:17:47",
@@ -1342,7 +1342,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.661015657708049,
         "timestamp": "2024-11-25 18:17:50",
@@ -1369,7 +1369,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.5214963941834867,
         "timestamp": "2024-11-25 18:17:53",
@@ -1396,7 +1396,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.9519721432588995,
         "timestamp": "2024-11-25 18:17:56",
@@ -1423,7 +1423,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.5180447129532695,
         "timestamp": "2024-11-25 18:18:00",
@@ -1450,7 +1450,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.5838487059809268,
         "timestamp": "2024-11-25 18:18:02",
@@ -1477,7 +1477,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.2717880657874048,
         "timestamp": "2024-11-25 18:18:06",
@@ -1504,7 +1504,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.8,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.5164558310061693,
         "timestamp": "2024-11-25 18:18:08",
@@ -1531,7 +1531,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.4322476731613278,
         "timestamp": "2024-11-25 18:18:10",
@@ -1558,7 +1558,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.668325284961611,
         "timestamp": "2024-11-25 18:18:10",
@@ -1585,7 +1585,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6495188688859344,
         "timestamp": "2024-11-25 18:18:11",
@@ -1612,7 +1612,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.9141620080918074,
         "timestamp": "2024-11-25 18:18:12",
@@ -1639,7 +1639,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.4813630850985646,
         "timestamp": "2024-11-25 18:18:13",
@@ -1666,7 +1666,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.444816701579839,
         "timestamp": "2024-11-25 18:18:16",
@@ -1693,7 +1693,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.508167282678187,
         "timestamp": "2024-11-25 18:18:17",
@@ -1720,7 +1720,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.236541817896068,
         "timestamp": "2024-11-25 18:18:19",
@@ -1747,7 +1747,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6775509468279779,
         "timestamp": "2024-11-25 18:18:19",
@@ -1774,7 +1774,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6707070060074329,
         "timestamp": "2024-11-25 18:18:20",
@@ -1801,7 +1801,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.2430999372154474,
         "timestamp": "2024-11-25 18:18:21",
@@ -1828,7 +1828,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.032325178850442,
         "timestamp": "2024-11-25 18:18:23",
@@ -1855,7 +1855,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.6127933878451586,
         "timestamp": "2024-11-25 18:18:26",
@@ -1882,7 +1882,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.6154006919823587,
         "timestamp": "2024-11-25 18:18:28",
@@ -1909,7 +1909,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.121443333104253,
         "timestamp": "2024-11-25 18:18:30",
@@ -1936,7 +1936,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.7906298069283366,
         "timestamp": "2024-11-25 18:18:32",
@@ -1963,7 +1963,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.5403376468457282,
         "timestamp": "2024-11-25 18:18:33",
@@ -1990,7 +1990,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.671479486860335,
         "timestamp": "2024-11-25 18:18:36",
@@ -2017,7 +2017,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 4.253650180064142,
         "timestamp": "2024-11-25 18:18:40",
@@ -2044,7 +2044,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 5.190827900078148,
         "timestamp": "2024-11-25 18:18:45",
@@ -2071,7 +2071,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 6.285949071869254,
         "timestamp": "2024-11-25 18:18:52",
@@ -2098,7 +2098,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.7122045909054577,
         "timestamp": "2024-11-25 18:18:54",
@@ -2125,7 +2125,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.5426598410122097,
         "timestamp": "2024-11-25 18:18:58",
@@ -2152,7 +2152,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.9909925311803818,
         "timestamp": "2024-11-25 18:19:01",
@@ -2179,7 +2179,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.5377749879844487,
         "timestamp": "2024-11-25 18:19:04",
@@ -2206,7 +2206,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.839710001833737,
         "timestamp": "2024-11-25 18:19:07",
@@ -2233,7 +2233,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.311227733269334,
         "timestamp": "2024-11-25 18:19:11",
@@ -2260,7 +2260,7 @@
             "num_ctx": 132000,
             "top_k": 50,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.495292189065367,
         "timestamp": "2024-11-25 18:19:13",
@@ -2287,7 +2287,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.415091817267239,
         "timestamp": "2024-11-25 18:19:14",
@@ -2314,7 +2314,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6461991998367012,
         "timestamp": "2024-11-25 18:19:15",
@@ -2341,7 +2341,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6680092522874475,
         "timestamp": "2024-11-25 18:19:16",
@@ -2368,7 +2368,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.9329025167971849,
         "timestamp": "2024-11-25 18:19:17",
@@ -2395,7 +2395,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.4942219238728285,
         "timestamp": "2024-11-25 18:19:18",
@@ -2422,7 +2422,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.4584847670048475,
         "timestamp": "2024-11-25 18:19:21",
@@ -2449,7 +2449,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.616533505730331,
         "timestamp": "2024-11-25 18:19:22",
@@ -2476,7 +2476,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.2359092012047768,
         "timestamp": "2024-11-25 18:19:24",
@@ -2503,7 +2503,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.671189455781132,
         "timestamp": "2024-11-25 18:19:24",
@@ -2530,7 +2530,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 0.6685147131793201,
         "timestamp": "2024-11-25 18:19:25",
@@ -2557,7 +2557,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.231445258948952,
         "timestamp": "2024-11-25 18:19:26",
@@ -2584,7 +2584,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.014928088989109,
         "timestamp": "2024-11-25 18:19:28",
@@ -2611,7 +2611,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.609713498968631,
         "timestamp": "2024-11-25 18:19:31",
@@ -2638,7 +2638,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.6167445918545127,
         "timestamp": "2024-11-25 18:19:33",
@@ -2665,7 +2665,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.1451566428877413,
         "timestamp": "2024-11-25 18:19:35",
@@ -2692,7 +2692,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.7664966126903892,
         "timestamp": "2024-11-25 18:19:36",
@@ -2719,7 +2719,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 1.5667561888694763,
         "timestamp": "2024-11-25 18:19:38",
@@ -2746,7 +2746,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.6513497661799192,
         "timestamp": "2024-11-25 18:19:41",
@@ -2773,7 +2773,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 4.129433241207153,
         "timestamp": "2024-11-25 18:19:45",
@@ -2800,7 +2800,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 5.179851264692843,
         "timestamp": "2024-11-25 18:19:50",
@@ -2827,7 +2827,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 6.399732038844377,
         "timestamp": "2024-11-25 18:19:56",
@@ -2854,7 +2854,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.717353363055736,
         "timestamp": "2024-11-25 18:19:59",
@@ -2881,7 +2881,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.5115182916633785,
         "timestamp": "2024-11-25 18:20:03",
@@ -2908,7 +2908,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.0183905120939016,
         "timestamp": "2024-11-25 18:20:06",
@@ -2935,7 +2935,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.392706054728478,
         "timestamp": "2024-11-25 18:20:09",
@@ -2962,7 +2962,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.8282625433057547,
         "timestamp": "2024-11-25 18:20:12",
@@ -2989,7 +2989,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 3.30941215204075,
         "timestamp": "2024-11-25 18:20:15",
@@ -3016,7 +3016,7 @@
             "num_ctx": 132000,
             "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0
         },
         "time_taken": 2.5270819263532758,
         "timestamp": "2024-11-25 18:20:18",

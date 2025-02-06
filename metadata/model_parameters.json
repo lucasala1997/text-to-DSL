@@ -1,38 +1,30 @@
 {
-    "Codellama (7B) quantized 4bit": {
-        "model_name": "Codellama (7B) quantized 4bit",
-        "type": "open source",
+    "OpenAI GPT4o": {
+        "model_name": "OpenAI GPT4o",
+        "type": "closed source",
         "supported": true,
-        "ollama_command": "codellama:7b-instruct-q4_K_M",
-        "vram_requirement": "5GB",
-        "deployment_type": "local",
+        "deployment_type": "remote",
         "parameters": {
             "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 16384,
-            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.5,
+            "top_k": 30
         }
     },
-    "Llama3.1 (8B) quantized 4bit": {
-        "model_name": "Llama3.1 (8B) quantized 4bit",
-        "type": "open source",
+    "OpenAI GPT4o mini": {
+        "model_name": "OpenAI GPT4o mini",
+        "type": "closed source",
         "supported": true,
-        "ollama_command": "llama3.1:8b-instruct-q4_K_M",
-        "vram_requirement": "5GB",
-        "deployment_type": "local",
+        "deployment_type": "remote",
         "parameters": {
             "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 132000,
-            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0.5,
+            "top_k": 30
         }
     },
-    "Qwen 2.5-coder (7B) quantized 4bit": {
-        "model_name": "Qwen 2.5-coder (7B) quantized 4bit",
+    "Qwen 2.5-coder (7B) 4bit": {
+        "model_name": "Qwen 2.5-coder (7B) 4bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwen2.5-coder:7b-instruct-q4_K_S",
@@ -42,13 +34,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 32768,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Qwen 2.5-coder (7B) full precision": {
-        "model_name": "Qwen 2.5-coder (7B) full precision",
+    "Qwen 2.5-coder (7B) fp": {
+        "model_name": "Qwen 2.5-coder (7B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwen2.5-coder:7b-instruct-fp16",
@@ -58,13 +50,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 32768,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0
         }
     },
-    "Qwen 2.5-coder (32B) full precision": {
-        "model_name": "Qwen 2.5-coder (32B) full precision",
+    "Qwen 2.5-coder (32B) fp": {
+        "model_name": "Qwen 2.5-coder (32B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwen2.5-coder:32b-instruct-fp16",
@@ -74,13 +66,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 32768,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0
         }
     },
-    "Qwen 2.5 (32B) full precision": {
-        "model_name": "Qwen 2.5 (32B) full precision",
+    "Qwen 2.5 (32B) fp": {
+        "model_name": "Qwen 2.5 (32B) fp",
         "supported": true,
         "ollama_command": "qwen2.5:32b-instruct-fp16",
         "vram_requirement": "66GB",
@@ -90,12 +82,12 @@
             "num_predict": -1,
             "num_ctx": 128000,
             "top_k": 50,
-            "top_p": 0.9,
-            "temperature": 0.1
+            "top_p": 0.8,
+            "temperature": 0
         }
     },
-    "Qwen 2.5 (72B) quantized 4bit": {
-        "model_name": "Qwen 2.5 (72B) quantized 4bit",
+    "Qwen 2.5 (72B) 4bit": {
+        "model_name": "Qwen 2.5 (72B) 4bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwen2.5:72b-instruct-q4_K_M",
@@ -105,13 +97,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 128000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Qwen 2.5 (72B) quantized 8bit": {
-        "model_name": "Qwen 2.5 (72B) quantized 8bit",
+    "Qwen 2.5 (72B) 8bit": {
+        "model_name": "Qwen 2.5 (72B) 8bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwen2.5:72b-instruct-q8_0",
@@ -121,13 +113,29 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 128000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Codellama (7B) full precision": {
-        "model_name": "Codellama (7B) full precision",
+    "Codellama (7B) 4bit": {
+        "model_name": "Codellama (7B) 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "codellama:7b-instruct-q4_K_M",
+        "vram_requirement": "5GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16384,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        }
+    },
+    "Codellama (7B) fp": {
+        "model_name": "Codellama (7B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "codellama:7b-instruct-fp16",
@@ -137,13 +145,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Codellama (13B) full precision": {
-        "model_name": "Codellama (13B) full precision",
+    "Codellama (13B) fp": {
+        "model_name": "Codellama (13B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "codellama:13b-instruct-fp16",
@@ -153,13 +161,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 50,
+            "top_k": 30,
             "top_p": 0.9,
-            "temperature": 0.1
+            "temperature": 0.5
         }
     },
-    "Codellama (34B) full precision test2": {
-        "model_name": "Codellama (34B) full precision test2",
+    "Codellama (34B) fp": {
+        "model_name": "Codellama (34B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "codellama:34b-instruct-fp16",
@@ -169,13 +177,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Codellama (70B) full precision": {
-        "model_name": "Codellama (70B) full precision",
+    "Codellama (70B) fp": {
+        "model_name": "Codellama (70B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "codellama:70b-instruct-fp16",
@@ -185,13 +193,29 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 16000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "LLaMA 3.1 (8B) full precision": {
-        "model_name": "LLaMA 3.1 (8B) full precision",
+    "Llama3.1 (8B) 4bit": {
+        "model_name": "Llama3.1 (8B) 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "llama3.1:8b-instruct-q4_K_M",
+        "vram_requirement": "5GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 132000,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        }
+    },
+    "LLaMA 3.1 (8B) fp": {
+        "model_name": "LLaMA 3.1 (8B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "llama3.1:8b-instruct-fp16",
@@ -201,13 +225,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "LLaMA 3.1 (70B) quantized 4bit": {
-        "model_name": "LLaMA 3.1 (70B) quantized 4bit",
+    "LLaMA 3.1 (70B) 4bit": {
+        "model_name": "LLaMA 3.1 (70B) 4bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "llama3.1:70b-instruct-q4_K_M",
@@ -218,13 +242,13 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "LLaMA 3.1 (70B) quantized 8bit": {
-        "model_name": "LLaMA 3.1 (70B) quantized 8bit",
+    "LLaMA 3.1 (70B) 8bit": {
+        "model_name": "LLaMA 3.1 (70B) 8bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "llama3.1:70b-instruct-q8_0",
@@ -235,13 +259,29 @@
             "seed": 7,
             "num_predict": -1,
             "num_ctx": 132000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "StarCoder2 (3B) full precision": {
-        "model_name": "StarCoder2 (3B) full precision",
+    "LLaMa 3.3 (70B) fp": {
+        "model_name": "LLaMa 3.3 (70B) fp",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "llama3.3:70b-instruct-fp16",
+        "vram_requirement": "141GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 8000,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        }
+    },
+    "StarCoder2 (3B) fp": {
+        "model_name": "StarCoder2 (3B) fp",
         "type": "open source",
         "supported": false,
         "ollama_command": "starcoder2:3b-fp16",
@@ -250,14 +290,14 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8192,
-            "top_k": 30,
-            "top_p": 0.9,
+            "num_ctx": 16384,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "StarCoder2 (7B) full precision test2": {
-        "model_name": "StarCoder2 (7B) full precision test2",
+    "StarCoder2 (7B) fp": {
+        "model_name": "StarCoder2 (7B) fp",
         "type": "open source",
         "supported": false,
         "ollama_command": "starcoder2:7b-fp16",
@@ -266,14 +306,14 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8192,
+            "num_ctx": 16384,
             "top_k": 30,
             "top_p": 0.9,
             "temperature": 0.5
         }
     },
-    "StarCoder2 (15B) full precision test2": {
-        "model_name": "StarCoder2 (15B) full precision test2",
+    "StarCoder2 (15B) fp": {
+        "model_name": "StarCoder2 (15B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "starcoder2:15b-instruct-v0.1-fp16",
@@ -282,76 +322,30 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8192,
-            "top_k": 30,
-            "top_p": 0.9,
+            "num_ctx": 16384,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Mistral (7B) full precision": {
-        "model_name": "Mistral (7B) full precision",
+    "Mistral (7B) fp": {
+        "model_name": "Mistral (7B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "mistral:7b-instruct-fp16",
-        "vram_requirement": "16GB",
+        "vram_requirement": "14GB",
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
-        }
-    },
-    "Mistral (123B) quantized 6bit": {
-        "model_name": "Mistral (123B) quantized 6bit",
-        "type": "open source",
-        "supported": true,
-        "ollama_command": "mistral-large:123b-instruct-2407-q6_K",
-        "vram_requirement": "101GB",
-        "deployment_type": "local",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
-        }
-    },
-    "OpenAI GPT4o": {
-        "model_name": "OpenAI GPT4o",
-        "type": "closed source",
-        "supported": true,
-        "deployment_type": "remote",
-        "parameters": {
-            "seed": 7,
-            "top_p": 0.9,
-            "temperature": 0.1,
-            "top_k": 50
-        }
-    },
-    "OpenAI GPT4o mini": {
-        "model_name": "OpenAI GPT4o mini",
-        "type": "closed source",
-        "supported": true,
-        "deployment_type": "remote",
-        "parameters": {
-            "seed": 7,
+            "num_ctx": 32768,
+            "top_k": 50,
             "top_p": 0.8,
-            "temperature": 0.1,
-            "top_k": 50
+            "temperature": 0.5
         }
     },
-    "Claude 3.5 sonnet": {
-        "model_name": "Claude 3.5 sonnet",
-        "type": "closed source",
-        "supported": false,
-        "deployment_type": "remote"
-    },
-    "Nemotron 70B full precision": {
-        "model_name": "Nemotron 70B full precision",
+    "Nemotron 70B fp": {
+        "model_name": "Nemotron 70B fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "nemotron:70b-instruct-fp16",
@@ -360,14 +354,30 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "num_ctx": 131072,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Mistral-large2 (123B) quantized 8bit": {
-        "model_name": "Mistral-large2 (123B) quantized 8bit",
+    "Mistral-large2 (123B) 6bit": {
+        "model_name": "Mistral-large2 (123B) 6bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "mistral-large:123b-instruct-2407-q6_K",
+        "vram_requirement": "101GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 131072,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        }
+    },
+    "Mistral-large2 (123B) 8bit": {
+        "model_name": "Mistral-large2 (123B) 8bit",
         "type": "open source",
         "supported": true,
         "ollama_command": "mistral-large:123b-instruct-2407-q8_0",
@@ -376,14 +386,14 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "num_ctx": 131072,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "Mistral Nemo (12B) full precision": {
-        "model_name": "Mistral Nemo (12B) full precision",
+    "Mistral Nemo (12B) fp": {
+        "model_name": "Mistral Nemo (12B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "mistral-nemo:12b-instruct-2407-fp16",
@@ -392,14 +402,46 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "num_ctx": 1024000,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
-    "qwq (32B) full precision test2": {
-        "model_name": "qwq (32B) full precision test2",
+    "qwq (32B) 4bit": {
+        "model_name": "qwq (32B) 4bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "qwq:32b-preview-q4_K_M",
+        "vram_requirement": "20GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 32768,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0
+        }
+    },
+    "qwq (32B) 8bit": {
+        "model_name": "qwq (32B) 8bit",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "qwq:32b-preview-q8_0",
+        "vram_requirement": "35GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 32768,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        }
+    },
+    "qwq (32B) fp": {
+        "model_name": "qwq (32B) fp",
         "type": "open source",
         "supported": true,
         "ollama_command": "qwq:32b-preview-fp16",
@@ -408,86 +450,10 @@
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
+            "num_ctx": 32768,
             "top_k": 50,
-            "top_p": 0.9,
-            "temperature": 0.1
-        }
-    },
-    "StarCoder2 (15B) no instruct full precision test": {
-        "model_name": "StarCoder2 (15B) no instruct full precision test",
-        "type": "open source",
-        "supported": false,
-        "ollama_command": "starcoder2:15b-fp16",
-        "vram_requirement": "32GB",
-        "deployment_type": "local",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 8192,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
-        }
-    },
-    "qwq (32B) quantized 4bit": {
-        "model_name": "qwq (32B) quantized 4bit",
-        "type": "open source",
-        "supported": true,
-        "ollama_command": "qwq:32b-preview-q4_K_M",
-        "vram_requirement": "33GB",
-        "deployment_type": "local",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
-        }
-    },
-    "qwq (32B) quantized 8bit": {
-        "model_name": "qwq (32B) quantized 8bit",
-        "type": "open source",
-        "supported": true,
-        "ollama_command": "qwq:32b-preview-q8_0",
-        "vram_requirement": "33GB",
-        "deployment_type": "local",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
-        }
-    },
-    "OpenAI GPT4o test2": {
-        "model_name": "OpenAI GPT4o test2",
-        "type": "closed source",
-        "supported": true,
-        "deployment_type": "remote",
-        "parameters": {
-            "seed": 7,
             "top_p": 0.8,
-            "temperature": 0.1,
-            "top_k": 50
-        }
-    },
-    "LLaMa 3.3 (70B) full precision": {
-        "model_name": "LLaMa 3.3 (70B) full precision",
-        "type": "open source",
-        "supported": true,
-        "ollama_command": "llama3.3:70b-instruct-fp16",
-        "vram_requirement": "71GB",
-        "deployment_type": "local",
-        "parameters": {
-            "seed": 7,
-            "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
-            "temperature": 0.5
+            "temperature": 0
         }
     },
     "Falcon3 (10B) fp": {
@@ -495,14 +461,14 @@
         "type": "open source",
         "supported": true,
         "ollama_command": "falcon3:10b-instruct-fp16",
-        "vram_requirement": "71GB",
+        "vram_requirement": "21GB",
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
-            "top_k": 30,
-            "top_p": 0.9,
+            "num_ctx": 32768,
+            "top_k": 50,
+            "top_p": 0.8,
             "temperature": 0.5
         }
     },
@@ -511,57 +477,79 @@
         "type": "open source",
         "supported": true,
         "ollama_command": "falcon3:7b-instruct-fp16",
-        "vram_requirement": "71GB",
+        "vram_requirement": "15GB",
         "deployment_type": "local",
         "parameters": {
             "seed": 7,
             "num_predict": -1,
-            "num_ctx": 8000,
+            "num_ctx": 32768,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0.5
+        }
+    },
+    "Deepseek r1 (32B) fp": {
+        "model_name": "Deepseek r1 (32B) fp",
+        "type": "open source",
+        "supported": true,
+        "ollama_command": "deepseek-r1:32b-qwen-distill-fp16",
+        "vram_requirement": "66GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16384,
             "top_k": 30,
             "top_p": 0.9,
             "temperature": 0.5
         }
     },
-    "PaLM (62B)": {
-        "model_name": "PaLM (62B)",
+    "Deepseek r1 (70B) fp": {
+        "model_name": "Deepseek r1 (70B) fp",
         "type": "open source",
-        "supported": false,
-        "vram_requirement": "128GB",
-        "deployment_type": "local"
+        "supported": true,
+        "ollama_command": "deepseek-r1:70b-llama-distill-fp16",
+        "vram_requirement": "141GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16384,
+            "top_k": 30,
+            "top_p": 0.9,
+            "temperature": 0.5
+        }
     },
-    "CodeGen (16B)": {
-        "model_name": "CodeGen (16B)",
+    "Deepseek-coder-v2 (16B) fp": {
+        "model_name": "Deepseek-coder-v2 (16B) fp",
         "type": "open source",
-        "supported": false,
-        "vram_requirement": "96GB",
-        "deployment_type": "local"
+        "supported": true,
+        "ollama_command": "deepseek-coder-v2:16b-lite-instruct-fp16",
+        "vram_requirement": "31GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16384,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0
+        }
     },
-    "GPT-J (6B)": {
-        "model_name": "GPT-J (6B)",
+    "Deepseek-coder-v2 (236B) 4bit": {
+        "model_name": "Deepseek-coder-v2 (236B) 4bit",
         "type": "open source",
-        "supported": false,
-        "vram_requirement": "24GB",
-        "deployment_type": "local"
-    },
-    "GPT-NeoX (20B)": {
-        "model_name": "GPT-NeoX (20B)",
-        "type": "open source",
-        "supported": false,
-        "vram_requirement": "24GB",
-        "deployment_type": "local"
-    },
-    "CodeGen-2 (6B)": {
-        "model_name": "CodeGen-2 (6B)",
-        "type": "open source",
-        "supported": false,
-        "vram_requirement": "24GB",
-        "deployment_type": "local"
-    },
-    "PolyCoder": {
-        "model_name": "PolyCoder",
-        "type": "open source",
-        "supported": false,
-        "vram_requirement": "24GB",
-        "deployment_type": "local"
+        "supported": true,
+        "ollama_command": "deepseek-coder-v2:236b-instruct-q4_1",
+        "vram_requirement": "148GB",
+        "deployment_type": "local",
+        "parameters": {
+            "seed": 7,
+            "num_predict": -1,
+            "num_ctx": 16384,
+            "top_k": 50,
+            "top_p": 0.8,
+            "temperature": 0
+        }
     }
 }

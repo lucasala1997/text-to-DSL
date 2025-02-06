@@ -60,7 +60,7 @@ def analyze_results():
         # Loop through each file in the models_results folder
         for model_file in os.listdir(models_results_folder):
             model_file_path = os.path.join(models_results_folder, model_file)
-            
+
             if model_file.endswith('.json'):
                 print(f"Analyzing results for model: {model_file}")
                 # Load the test results for this model
@@ -70,13 +70,17 @@ def analyze_results():
                 # Track metrics by model, parameters, and system prompt version
                 metrics = defaultdict(lambda: {
                     "accurate_dsl": 0,
+                    "complex_accurate_dsl": 0,
+                    "simple_accurate_dsl": 0,
                     "total_examples": 0,
+                    "complex_examples": 0,
+                    "simple_examples": 0,
                     "total_bleu_score": 0,
+                    "complex_bleu_score": 0,
+                    "simple_bleu_score": 0,
                     "total_time": 0,
                     "complex_time": 0,
-                    "simple_time": 0,
-                    "complex_count": 0,
-                    "simple_count": 0
+                    "simple_time": 0
                 })
 
                 # Overall counters for this model
@@ -101,17 +105,21 @@ def analyze_results():
                     # Separate time calculation based on complexity
                     if result['complexity_level'] == 'complex':
                         metrics[key]["complex_time"] += time_taken
-                        metrics[key]["complex_count"] += 1
+                        metrics[key]["complex_examples"] += 1
                     elif result['complexity_level'] == 'simple':
                         metrics[key]["simple_time"] += time_taken
-                        metrics[key]["simple_count"] += 1
-                    
+                        metrics[key]["simple_examples"] += 1
+
                     # Update or set the 'success' key based on validation result
                     result['success'] = dsl_validator(result['expected_dsl_output'], result['generated_dsl_output'])[0]
-                    # print("success: "+ str(result['success']))
                     if result['success']:
                         metrics[key]["accurate_dsl"] += 1
                         total_correct += 1
+
+                        if result['complexity_level'] == 'complex':
+                            metrics[key]["complex_accurate_dsl"] += 1
+                        elif result['complexity_level'] == 'simple':
+                            metrics[key]["simple_accurate_dsl"] += 1
 
                     # Calculate BLEU score if possible
                     if result['expected_dsl_output'] and result['generated_dsl_output']:
@@ -119,6 +127,11 @@ def analyze_results():
                         result['bleu_score'] = bleu_score
                         metrics[key]["total_bleu_score"] += bleu_score
                         total_bleu_score += bleu_score
+
+                        if result['complexity_level'] == 'complex':
+                            metrics[key]["complex_bleu_score"] += bleu_score
+                        elif result['complexity_level'] == 'simple':
+                            metrics[key]["simple_bleu_score"] += bleu_score
                     else:
                         result['bleu_score'] = 0
 
@@ -136,20 +149,23 @@ def analyze_results():
                 for key, value in metrics.items():
                     model_name, parameters, system_prompt_version = key
                     # Calculate average times for each complexity level
-                    avg_complex_time = value["complex_time"] / value["complex_count"] if value["complex_count"] > 0 else 0
-                    avg_simple_time = value["simple_time"] / value["simple_count"] if value["simple_count"] > 0 else 0
+                    avg_complex_time = value["complex_time"] / value["complex_examples"] if value["complex_examples"] > 0 else 0
+                    avg_simple_time = value["simple_time"] / value["simple_examples"] if value["simple_examples"] > 0 else 0
 
                     # Ensure dictionary format for detailed metrics
                     detailed_entry = {
                         'parameters': json.loads(parameters),
                         'system_prompt_version': system_prompt_version,
                         'overall_accuracy': value['accurate_dsl'] / value['total_examples'],
+                        'complex_accuracy': value['complex_accurate_dsl'] / value['complex_examples'] if value['complex_examples'] > 0 else 0,
+                        'simple_accuracy': value['simple_accurate_dsl'] / value['simple_examples'] if value['simple_examples'] > 0 else 0,
                         'average_bleu_score': value['total_bleu_score'] / value['total_examples'],
+                        'complex_bleu_score': value['complex_bleu_score'] / value['complex_examples'] if value['complex_examples'] > 0 else 0,
+                        'simple_bleu_score': value['simple_bleu_score'] / value['simple_examples'] if value['simple_examples'] > 0 else 0,
                         'average_time': value["total_time"] / value["total_examples"] if value["total_examples"] > 0 else 0,
                         'average_complex_time': avg_complex_time,
                         'average_simple_time': avg_simple_time,
-                        'total_examples': value['total_examples'],
-                        'system_prompt_version': system_prompt_version
+                        'total_examples': value['total_examples']
                     }
                     model_data.append(detailed_entry)
 

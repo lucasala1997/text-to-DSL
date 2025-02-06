@@ -12,7 +12,7 @@ const PORT = process.env.SERVER_PORT || 3000;
 const app = express();
 
 app.use(cors({ origin: CLIENT_URL, credentials: true }));
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 
 
 app.post("/api/sensor/validate", async (req, res) => {

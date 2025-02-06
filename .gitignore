@@ -1,6 +1,6 @@
-.env
 setup.py
 tests/
 env_ollama/
 env_texttodsl/
 z_possible_prompt_style/
+OLD/

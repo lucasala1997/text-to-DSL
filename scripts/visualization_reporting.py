@@ -61,7 +61,6 @@ def generate_complexity_scatter_plot(metrics_folder="logs/models_results", resul
             
             logging.info(f"Scatter plot saved for {model_name} at {plot_path}")
 
-
 # Helper function to create a bar plot for parameter combinations
 def plot_parameter_combinations(df, model_name, model_results_path):
     """Generates a bar plot for different parameter combinations by overall accuracy."""
@@ -186,55 +185,55 @@ def plot_best_performing_combinations(metrics_folder="logs/models_results/overal
     
     logging.info(f"Best performing parameter combinations plot saved at {plot_path}")
 
-def plot_average_processing_times(metrics_folder="logs/models_results/overall_results", results_folder="results"):
-    """Generates a bar plot comparing average processing times for each model based on complexity level."""
+# def plot_average_processing_times(metrics_folder="logs/models_results/overall_results", results_folder="results"):
+#     """Generates a bar plot comparing average processing times for each model based on complexity level."""
     
-    # List to store average times for each model and complexity level
-    time_data = []
+#     # List to store average times for each model and complexity level
+#     time_data = []
 
-    # Loop through each overall metrics file in the metrics folder
-    for file_name in os.listdir(metrics_folder):
-        if file_name.endswith(".json"):
-            model_name = file_name.replace("overall_metrics_", "").replace('.json', '').replace('_', ' ')
+#     # Loop through each overall metrics file in the metrics folder
+#     for file_name in os.listdir(metrics_folder):
+#         if file_name.endswith(".json"):
+#             model_name = file_name.replace("overall_metrics_", "").replace('.json', '').replace('_', ' ')
             
-            # Load the JSON data
-            with open(os.path.join(metrics_folder, file_name), 'r') as file:
-                data = json.load(file)
+#             # Load the JSON data
+#             with open(os.path.join(metrics_folder, file_name), 'r') as file:
+#                 data = json.load(file)
 
-            # Extract average times for complex and simple examples
-            for entry in data:
-                time_data.append({
-                    'model_name': model_name,
-                    'average_complex_time': entry['average_complex_time'],
-                    'average_simple_time': entry['average_simple_time']
-                })
+#             # Extract average times for complex and simple examples
+#             for entry in data:
+#                 time_data.append({
+#                     'model_name': model_name,
+#                     'average_complex_time': entry['average_complex_time'],
+#                     'average_simple_time': entry['average_simple_time']
+#                 })
 
-    # Convert the list to a DataFrame for easier plotting
-    df = pd.DataFrame(time_data)
+#     # Convert the list to a DataFrame for easier plotting
+#     df = pd.DataFrame(time_data)
 
-    # Set up the bar plot
-    plt.figure(figsize=(12, 8))
-    bar_width = 0.35
-    x = range(len(df['model_name'].unique()))
+#     # Set up the bar plot
+#     plt.figure(figsize=(12, 8))
+#     bar_width = 0.35
+#     x = range(len(df['model_name'].unique()))
 
-    # Plot complex and simple times side by side
-    plt.bar(x, df['average_complex_time'], width=bar_width, label='Complex Examples', color='salmon')
-    plt.bar([i + bar_width for i in x], df['average_simple_time'], width=bar_width, label='Simple Examples', color='skyblue')
+#     # Plot complex and simple times side by side
+#     plt.bar(x, df['average_complex_time'], width=bar_width, label='Complex Examples', color='salmon')
+#     plt.bar([i + bar_width for i in x], df['average_simple_time'], width=bar_width, label='Simple Examples', color='skyblue')
 
-    # Set the x-tick labels and other plot details
-    plt.xlabel("Model Name")
-    plt.ylabel("Average Processing Time (seconds)")
-    plt.title("Average Processing Time by Model and Complexity Level")
-    plt.xticks([i + bar_width / 2 for i in x], df['model_name'].unique(), rotation=45, ha="right")
-    plt.legend(title="Complexity Level")
-    plt.tight_layout()
+#     # Set the x-tick labels and other plot details
+#     plt.xlabel("Model Name")
+#     plt.ylabel("Average Processing Time (seconds)")
+#     plt.title("Average Processing Time by Model and Complexity Level")
+#     plt.xticks([i + bar_width / 2 for i in x], df['model_name'].unique(), rotation=45, ha="right")
+#     plt.legend(title="Complexity Level")
+#     plt.tight_layout()
 
-    # Save the plot in the results folder
-    plot_path = os.path.join(results_folder, "average_processing_times_by_complexity.png")
-    plt.savefig(plot_path)
-    plt.close()
+#     # Save the plot in the results folder
+#     plot_path = os.path.join(results_folder, "average_processing_times_by_complexity.png")
+#     plt.savefig(plot_path)
+#     plt.close()
 
-    logging.info(f"Average processing times plot saved at {plot_path}")
+#     logging.info(f"Average processing times plot saved at {plot_path}")
 
 def plot_performance_by_vram(metrics_folder="logs/models_results/overall_results", 
                              model_data_file="metadata/model_parameters.json", 
@@ -336,7 +335,6 @@ def plot_performance_by_vram(metrics_folder="logs/models_results/overall_results
     plt.close()
     logging.info(f"VRAM-based performance plot saved to {plot_path}")
 
-
 def plot_performance_by_parameters(metrics_folder="logs/models_results/overall_results",
                                    results_folder="results"):
     """Generates a bar plot showing model performance by parameter categories (<8B, <32B, <70B, >70B)."""
@@ -416,7 +414,7 @@ def generate_visualizations(metrics_folder="logs/models_results/overall_results"
     generate_scatter_plot(metrics_folder, results_folder)
     generate_complexity_scatter_plot()
     plot_best_performing_combinations()
-    plot_average_processing_times(metrics_folder, results_folder)  
+    # plot_average_processing_times(metrics_folder, results_folder)  
     plot_performance_by_vram()
     plot_performance_by_parameters()
 

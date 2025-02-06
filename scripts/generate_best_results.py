@@ -90,13 +90,17 @@ def generate_best_results_table():
         # Determine the fieldnames for CSV
         fieldnames = [
             'model_name',
-            'parameters',
-            'system_prompt_version',
             'overall_accuracy',
+            'complex_accuracy',
+            'simple_accuracy',
             'average_bleu_score',
+            'complex_bleu_score',
+            'simple_bleu_score',
             'average_time',
             'average_complex_time',
             'average_simple_time',
+            'parameters',
+            'system_prompt_version',
             'total_examples'
         ]
 
@@ -105,6 +109,8 @@ def generate_best_results_table():
 
             writer.writeheader()
             for result in best_results:
+                print(f"Model: {result['model_name']}, Overall Accuracy Type: {type(result['overall_accuracy'])}, BLEU Score Type: {type(result['average_bleu_score'])}")
+
                 # Flatten the parameters dictionary
                 parameters = result.get('parameters', {})
                 # Convert parameters dictionary to a string for CSV
